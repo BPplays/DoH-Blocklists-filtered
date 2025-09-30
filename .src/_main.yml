@@ -1,0 +1,22 @@
+lists:
+  - name: mini
+    input_files:
+    - path: "./.src/doh-domains_mini.txt"
+      cdncheck: true
+
+    - path: "./.src/doh-domains_mini_good.txt"
+      cdncheck: false
+
+
+    output_file_prefix: "./mini/mini"
+
+  - name: full
+    input_files:
+    - path: "./.src/doh-domains_full.txt"
+      cdncheck: true
+
+    - path: "./.src/doh-domains_mini_good.txt"
+      cdncheck: false
+
+
+    output_file_prefix: "./full/full"
