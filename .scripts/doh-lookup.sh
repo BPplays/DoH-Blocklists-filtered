@@ -52,8 +52,8 @@ done
 # pre-fill cache domains
 #
 for domain in ${cache_domains}; do
-	"${awk_tool}" -v d="${domain}" '$0~d{print $0}' "./doh-ipv4.txt" >>"./${output_prefix}ipv4_cache.tmp"
-	"${awk_tool}" -v d="${domain}" '$0~d{print $0}' "./doh-ipv6.txt" >>"./${output_prefix}ipv6_cache.tmp"
+	"${awk_tool}" -v d="${domain}" '$0~d{print $0}' "./${output_prefix}-doh-ipv4.txt" >>"./${output_prefix}ipv4_cache.tmp"
+	"${awk_tool}" -v d="${domain}" '$0~d{print $0}' "./${output_prefix}-doh-ipv6.txt" >>"./${output_prefix}ipv6_cache.tmp"
 done
 
 # domain processing
