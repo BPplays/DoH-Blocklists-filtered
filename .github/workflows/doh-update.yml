@@ -25,10 +25,10 @@ jobs:
 
       # install ipcalc-ng
       - name: Install ipcalc-ng
-        run: sudo apt-get install -y ipcalc-ng nushell
+        run: sudo apt-get install -y ipcalc-ng
 
       - name: get cdncheck
-        run: nu ./.scripts/get_cdncheck.nu
+        run: ./.src/nu ./.scripts/get_cdncheck.nu
 
       # Runs a single command using the runners shell
       - name: Run DoH lookup
