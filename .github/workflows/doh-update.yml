@@ -54,10 +54,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run DoH lookup
-        run: sh ./.scripts/doh-lookup.sh ./.src/doh-domains_mini.txt mini/mini
+        run: sudo sh ./.scripts/doh-lookup.sh ./.src/doh-domains_mini.txt mini/mini
 
       - name: Run DoH lookup
-        run: sh ./.scripts/doh-lookup.sh ./.src/doh-domains_overall.txt full/full
+        run: sudo sh ./.scripts/doh-lookup.sh ./.src/doh-domains_overall.txt full/full
 
       # Commit changed files to your repo
       - name: Git Auto Commit
