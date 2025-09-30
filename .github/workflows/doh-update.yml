@@ -27,6 +27,10 @@ jobs:
       - name: Install ipcalc-ng
         run: sudo apt-get install -y ipcalc-ng
 
+
+      - name: get cdncheck
+        run: sudo chmod 755 ./.src/nu
+
       - name: get cdncheck
         run: ./.src/nu ./.scripts/get_cdncheck.nu
 
