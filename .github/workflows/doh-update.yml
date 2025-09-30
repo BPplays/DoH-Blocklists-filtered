@@ -23,10 +23,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # install ipcalc-ng
-      - name: Install ipcalc-ng
-        run: sudo apt-get install -y ipcalc-ng
-
 
       - name: chmod
         run: sudo chmod 755 ./.src/nu
@@ -42,6 +38,12 @@ jobs:
 
       - name: get cdncheck
         run: ./.src/nu ./.scripts/get_cdncheck.nu
+
+      # install ipcalc-ng
+      - name: Install ipcalc-ng
+        run: sudo apt-get install -y ipcalc-ng
+
+
 
       # Runs a single command using the runners shell
       - name: Run DoH lookup
