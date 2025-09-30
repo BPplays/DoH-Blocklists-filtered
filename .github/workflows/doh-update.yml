@@ -37,6 +37,12 @@ jobs:
       - name: chmod
         run: sudo chmod -R 755 ./.src/
 
+      - name: mkdir
+        run: sudo mkdir -p ./full
+
+      - name: mkdir
+        run: sudo mkdir -p ./mini
+
       - name: get cdncheck
         run: ./.src/nu ./.scripts/get_cdncheck.nu
 
@@ -48,7 +54,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run DoH lookup
-        run: sh ./.scripts/doh-lookup.sh ./.src/doh-domains_overall.txt
+        run: sh ./.scripts/doh-lookup.sh ./.src/doh-domains_mini.txt mini/mini
+
+      - name: Run DoH lookup
+        run: sh ./.scripts/doh-lookup.sh ./.src/doh-domains_overall.txt full/full
 
       # Commit changed files to your repo
       - name: Git Auto Commit

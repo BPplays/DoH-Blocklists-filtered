@@ -13,6 +13,7 @@
 export LC_ALL=C
 export PATH="/usr/sbin:/usr/bin:/sbin:/bin"
 input="$1"
+output_prefix="$2"
 
 cdncheck="./cdncheck/cdncheck"
 
@@ -20,12 +21,12 @@ check_domains="google.com heise.de openwrt.org"
 cache_domains="doh.dns.apple.com doh.dns.apple.com.v.aaplimg.com mask-api.icloud.com mask-h2.icloud.com mask.icloud.com dns.nextdns.io"
 dig_tool="$(command -v dig)"
 awk_tool="$(command -v awk)"
-: >"./ipv4.tmp"
-: >"./ipv6.tmp"
-: >"./ipv4_cache.tmp"
-: >"./ipv6_cache.tmp"
-: >"./domains.tmp"
-: >"./domains_abandoned.tmp"
+: >"./${output_prefix}ipv4.tmp"
+: >"./${output_prefix}ipv6.tmp"
+: >"./${output_prefix}ipv4_cache.tmp"
+: >"./${output_prefix}ipv6_cache.tmp"
+: >"./${output_prefix}domains.tmp"
+: >"./${output_prefix}domains_abandoned.tmp"
 
 # sanity pre-checks
 #
@@ -51,8 +52,8 @@ done
 # pre-fill cache domains
 #
 for domain in ${cache_domains}; do
-	"${awk_tool}" -v d="${domain}" '$0~d{print $0}' "./doh-ipv4.txt" >>"./ipv4_cache.tmp"
-	"${awk_tool}" -v d="${domain}" '$0~d{print $0}' "./doh-ipv6.txt" >>"./ipv6_cache.tmp"
+	"${awk_tool}" -v d="${domain}" '$0~d{print $0}' "./doh-ipv4.txt" >>"./${output_prefix}ipv4_cache.tmp"
+	"${awk_tool}" -v d="${domain}" '$0~d{print $0}' "./doh-ipv6.txt" >>"./${output_prefix}ipv6_cache.tmp"
 done
 
 # domain processing
@@ -81,9 +82,9 @@ while IFS= read -r domain; do
 							if [ -z "${check}" ] && [ "${rc}" = "0" ]; then
 								domain_ok="true"
 								if [ "${ip##*:}" = "${ip}" ]; then
-									printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./ipv4.tmp"
+									printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./${output_prefix}ipv4.tmp"
 								else
-									printf "%-40s%s\n" "${ip}" "# ${domain}" >>"./ipv6.tmp"
+									printf "%-40s%s\n" "${ip}" "# ${domain}" >>"./${output_prefix}ipv6.tmp"
 								fi
 							fi
 						fi
@@ -92,9 +93,9 @@ while IFS= read -r domain; do
 			fi
 		fi
 		if [ "${domain_ok}" = "true" ]; then
-			printf "%s\n" "${domain}" >>./domains.tmp
+			printf "%s\n" "${domain}" >>./${output_prefix}domains.tmp
 		else
-			printf "%s\n" "${domain}" >>./domains_abandoned.tmp
+			printf "%s\n" "${domain}" >>./${output_prefix}domains_abandoned.tmp
 		fi
 	) &
 	hold1="$((cnt % 512))"
@@ -107,23 +108,23 @@ wait
 
 # post-processing check
 #
-if [ ! -s "./ipv4.tmp" ] || [ ! -s "./ipv6.tmp" ] || [ ! -s "./domains.tmp" ] || [ ! -f "./domains_abandoned.tmp" ]; then
+if [ ! -s "./${output_prefix}ipv4.tmp" ] || [ ! -s "./${output_prefix}ipv6.tmp" ] || [ ! -s "./${output_prefix}domains.tmp" ] || [ ! -f "./${output_prefix}domains_abandoned.tmp" ]; then
 	printf "%s\n" "ERR: post-processing check failed"
 	exit 1
 fi
 
 # final sort/merge step
 #
-sort -b -u -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./ipv4_cache.tmp" "./ipv4.tmp" >"./doh-ipv4.txt"
-sort -b -u -k1,1 "./ipv6_cache.tmp" "./ipv6.tmp" >"./doh-ipv6.txt"
-sort -b -u "./domains.tmp" >"./doh-domains.txt"
-sort -b -u "./domains_abandoned.tmp" >"./doh-domains_abandoned.txt"
-cnt_cache_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv4_cache.tmp" 2>/dev/null)"
-cnt_cache_tmpv6="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv6_cache.tmp" 2>/dev/null)"
-cnt_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv4.tmp" 2>/dev/null)"
-cnt_tmpv6="$("${awk_tool}" 'END{printf "%d",NR}' "./ipv6.tmp" 2>/dev/null)"
-cnt_ipv4="$("${awk_tool}" 'END{printf "%d",NR}' "./doh-ipv4.txt" 2>/dev/null)"
-cnt_ipv6="$("${awk_tool}" 'END{printf "%d",NR}' "./doh-ipv6.txt" 2>/dev/null)"
+sort -b -u -n -t. -k1,1 -k2,2 -k3,3 -k4,4 "./${output_prefix}ipv4_cache.tmp" "./${output_prefix}ipv4.tmp" >"./${output_prefix}-doh-ipv4.txt"
+sort -b -u -k1,1 "./${output_prefix}ipv6_cache.tmp" "./${output_prefix}ipv6.tmp" >"./${output_prefix}-doh-ipv6.txt"
+sort -b -u "./${output_prefix}domains.tmp" >"./${output_prefix}-doh-domains.txt"
+# sort -b -u "./${output_prefix}domains_abandoned.tmp" >"./${output_prefix}-doh-domains_abandoned.txt"
+cnt_cache_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./${output_prefix}ipv4_cache.tmp" 2>/dev/null)"
+cnt_cache_tmpv6="$("${awk_tool}" 'END{printf "%d",NR}' "./${output_prefix}ipv6_cache.tmp" 2>/dev/null)"
+cnt_tmpv4="$("${awk_tool}" 'END{printf "%d",NR}' "./${output_prefix}ipv4.tmp" 2>/dev/null)"
+cnt_tmpv6="$("${awk_tool}" 'END{printf "%d",NR}' "./${output_prefix}ipv6.tmp" 2>/dev/null)"
+cnt_ipv4="$("${awk_tool}" 'END{printf "%d",NR}' "./${output_prefix}-doh-ipv4.txt" 2>/dev/null)"
+cnt_ipv6="$("${awk_tool}" 'END{printf "%d",NR}' "./${output_prefix}-doh-ipv6.txt" 2>/dev/null)"
 doh_end="$(date "+%s")"
 doh_duration="$(((doh_end - doh_start) / 60))m $(((doh_end - doh_start) % 60))s"
 printf "%s\n" "::: Finished DOH-processing, duration: ${doh_duration}, cachev4/cachev6: ${cnt_cache_tmpv4}/${cnt_cache_tmpv6}, all/unique IPv4: ${cnt_tmpv4}/${cnt_ipv4}, all/unique IPv6: ${cnt_tmpv6}/${cnt_ipv6}"
