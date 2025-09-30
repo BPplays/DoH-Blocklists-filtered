@@ -28,8 +28,17 @@ jobs:
         run: sudo apt-get install -y ipcalc-ng
 
 
-      - name: get cdncheck
+      - name: chmod
         run: sudo chmod 755 ./.src/nu
+
+      - name: chmod
+        run: sudo chmod 755 ./.scripts/doh-lookup.sh
+
+      - name: chmod
+        run: sudo chmod -R 755 ./.scripts/
+
+      - name: chmod
+        run: sudo chmod -R 755 ./.src/
 
       - name: get cdncheck
         run: ./.src/nu ./.scripts/get_cdncheck.nu
