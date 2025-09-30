@@ -12,7 +12,7 @@
 #
 export LC_ALL=C
 export PATH="/usr/sbin:/usr/bin:/sbin:/bin"
-input="./doh-domains_overall.txt"
+input="$1"
 
 cdncheck="./cdncheck/cdncheck"
 
@@ -29,7 +29,7 @@ awk_tool="$(command -v awk)"
 
 # sanity pre-checks
 #
-if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -s "${input}" ]; then
+if [ ! -x "${dig_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -x "${awk_tool}" ] || [ ! -s "${input}" ]; then
 	printf "%s\n" "ERR: base pre-processing check failed"
 	exit 1
 fi
@@ -75,11 +75,16 @@ while IFS= read -r domain; do
 						check="$(ipcalc-ng -s --addrspace "${ip}" | "${awk_tool}" '!/Private/{print $0}')"
 						rc="${?}"
 						if [ -n "${check}" ] && [ "${rc}" = "0" ]; then
-							domain_ok="true"
-							if [ "${ip##*:}" = "${ip}" ]; then
-								printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./ipv4.tmp"
-							else
-								printf "%-40s%s\n" "${ip}" "# ${domain}" >>"./ipv6.tmp"
+
+							check="$($cdncheck -silent -i "${ip}")"
+							rc="${?}"
+							if [ -z "${check}" ] && [ "${rc}" = "0" ]; then
+								domain_ok="true"
+								if [ "${ip##*:}" = "${ip}" ]; then
+									printf "%-20s%s\n" "${ip}" "# ${domain}" >>"./ipv4.tmp"
+								else
+									printf "%-40s%s\n" "${ip}" "# ${domain}" >>"./ipv6.tmp"
+								fi
 							fi
 						fi
 					fi
