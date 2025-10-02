@@ -233,7 +233,7 @@ func preCheck() {
 
 func checkHost(host string, useCdnCheck bool) (outputV6 []string, outputV4 []string, err error) {
 	domainOk := false
-	data, err := queryWithResolvers(host, 5, 5 * time.Second, DefaultResolvers)
+	data, err := queryWithResolvers(host, 5, 3 * time.Second, DefaultResolvers)
 	if err != nil {
 		return outputV6, outputV4, err
 	}
