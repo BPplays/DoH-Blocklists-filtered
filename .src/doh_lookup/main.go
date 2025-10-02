@@ -292,6 +292,7 @@ func checkList(list List) ([]string, []string, []string) {
 		var hosts []string
 		file, err := os.ReadFile(ifile.Path)
 		if err != nil {
+			fmt.Printf("ifile read err %v\n", err)
 			continue
 		}
 
@@ -318,6 +319,7 @@ func checkList(list List) ([]string, []string, []string) {
 
 
 		}
+		wg.Wait()
 	}
 
 	return v6Ips, v4Ips, validDomains
@@ -340,6 +342,7 @@ func checkDns(cfg Config) {
 
 
 		if *dryRun {
+			fmt.Println(strings.Join(v6Out, "\n"))
 			continue
 		}
 
@@ -374,7 +377,10 @@ func main() {
 	makeDirs(cfg)
 	preCheck()
 
+	start := time.Now()
+
 	checkDns(cfg)
 
+	fmt.Printf("total resolve time: %v\n", time.Since(start))
 
 }
