@@ -324,6 +324,9 @@ func checkList(list List) ([]string, []string, []string) {
 
 				curReqsMu.Lock()
 				if curReqs < maxReqs {
+					if curReqs < 0 {
+						log.Fatalln("curReqs is negative")
+					}
 					// fmt.Println("req now avail", curReqs)
 					curReqsMu.Unlock()
 
