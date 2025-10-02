@@ -236,7 +236,7 @@ func checkHost(host string, useCdnCheck bool) (outputV6 []string, outputV4 []str
 
 	// start := time.Now()
 	domainOk := false
-	data, err := queryWithResolvers(host, 4, 2 * time.Second, DefaultResolvers)
+	data, err := queryWithResolvers(host, 5, 5 * time.Second, DefaultResolvers)
 	if err != nil {
 		return outputV6, outputV4, err
 	}
