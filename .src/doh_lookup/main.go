@@ -9,6 +9,7 @@ import (
 	"net/netip"
 	"os"
 	"path/filepath"
+	"slices"
 	"strings"
 	"sync"
 	"time"
@@ -360,6 +361,11 @@ func checkDns(cfg Config) {
 				fmt.Println(strings.Join(v6Out, "\n"))
 				return
 			}
+
+			slices.Sort(v6Out)
+			slices.Sort(v4Out)
+			slices.Sort(domainsOut)
+
 
 			os.WriteFile(
 				fmt.Sprintf("%v-doh-ipv6.txt", list.OutputFilePrefix),
