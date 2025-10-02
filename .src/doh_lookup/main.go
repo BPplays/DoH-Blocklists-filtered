@@ -263,10 +263,11 @@ func checkHost(host string, useCdnCheck bool) (outputV6 []string, outputV4 []str
 		uaddr := addr.Unmap()
 		client := cdncheck.New()
 
-		matched, _, err := client.CheckCDN(net.ParseIP(uaddr.String()))
+		matched, _, _, err := client.Check(net.ParseIP(uaddr.String()))
 		if err != nil {
 			continue
 		}
+		if matched {fmt.Printf("cdncheck:\n    %v\n\n", fmt.Sprintf("%-40s%s", addr, "# "+host))}
 
 		if useCdnCheck && matched {
 			continue
