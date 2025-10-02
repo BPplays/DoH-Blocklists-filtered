@@ -1,19 +1,25 @@
 package main
 
 import (
+	"errors"
 	"flag"
 	"fmt"
 	"log"
 	"net"
+	"net/netip"
 	"os"
 	"path/filepath"
+	"strings"
 	"sync"
 	"time"
 
 	"github.com/miekg/dns"
 	"github.com/projectdiscovery/retryabledns"
+	sliceutil "github.com/projectdiscovery/utils/slice"
 	"gopkg.in/yaml.v3"
 )
+
+var errDomainNotOk error = errors.New("domain not ok")
 
 var DefaultResolvers []string
 
@@ -198,15 +204,94 @@ func queryWithResolvers(
 }
 
 
-func preCheck(cfg Config) {
-	checkDomains := []string{"", "google.com"}
+func preCheck() {
+	checkDomains := []string{"google.com", "heise.de", "openwrt.org", "facebook.com"}
 	timeout := 5 * time.Second
 	tries := 5
 
 	for _, host := range checkDomains {
-		queryWithResolvers(host, tries, timeout, DefaultResolvers)
+		data, err := queryWithResolvers(host, tries, timeout, DefaultResolvers)
+		if err != nil {
+			continue
+		}
+		if (len(data.AAAA) <= 0) || (len(data.A) <= 0) {
+			continue
+		}
+
+		return
 	}
 
+	log.Fatalln("preCheck failed")
+
+}
+
+
+func checkHost(host string) (string, error) {
+	var output strings.Builder
+
+	domainOk := false
+	data, err := queryWithResolvers(host, 5, 5 * time.Second, DefaultResolvers)
+	if err != nil {
+		return "", err
+	}
+
+	for _, addrStr := range append(data.AAAA, data.A...) {
+		addr, err := netip.ParseAddr(addrStr)
+		if err != nil {
+			continue
+		}
+		if addr.IsPrivate() || addr.IsLinkLocalUnicast() {
+			continue
+		}
+
+
+		domainOk = true
+		uaddr := addr.Unmap()
+		if uaddr.Is6() {
+			output.WriteString(fmt.Sprintf("%-40s%s\n", addr, "# "+host))
+		} else if uaddr.Is4() {
+			output.WriteString(fmt.Sprintf("%-20s%s\n", addr, "# "+host))
+		}
+
+	}
+
+	if !domainOk || output.String() == "" {
+		return "", errDomainNotOk
+	}
+
+	return output.String(), nil
+
+}
+
+func checkList(list List) {
+	var wg sync.WaitGroup
+	var hosts []string
+	for _, ifile := range list.InputFiles {
+		file, err := os.ReadFile(ifile.Path)
+		if err != nil {
+			continue
+		}
+		strHosts := strings.Split(string(file), "\n")
+		for _, strHost := range strHosts {
+			hosts = append(hosts, strings.TrimSpace(strHost))
+		}
+	}
+
+	for _, host := range hosts {
+
+	}
+}
+
+func checkDns(cfg Config) {
+	var wg sync.WaitGroup
+	for _, list := range cfg.Lists {
+		wg.Add(1)
+		go func(){
+			queryWithResolvers()
+
+		}()
+
+	}
 }
 
 func main() {
@@ -215,5 +300,7 @@ func main() {
 
 	cfg := readConfig(*configPath)
 	makeDirs(cfg)
+	preCheck()
+
 
 }
