@@ -295,8 +295,8 @@ func checkList(list List) ([]string, []string, []string) {
 	var mu sync.Mutex
 
 
+	start := time.Now()
 	for _, ifile := range list.InputFiles {
-		start := time.Now()
 
 		var hosts []string
 		file, err := os.ReadFile(ifile.Path)
@@ -331,15 +331,18 @@ func checkList(list List) ([]string, []string, []string) {
 
 
 		}
-		wg.Wait()
-		fmt.Printf("time since hostcheck: %v\n", time.Since(start))
 	}
+	wg.Wait()
+	fmt.Printf("time since hostcheck: %v\n", time.Since(start))
 
 	return v6Ips, v4Ips, validDomains
 }
 
 func checkDns(cfg Config) {
 	var wg sync.WaitGroup
+
+	fmt.Println(len(cfg.Lists))
+	fmt.Println(cfg.Lists)
 	for _, list := range cfg.Lists {
 		wg.Add(1)
 		go func() {
