@@ -9,8 +9,6 @@ import (
 	"net/netip"
 	"os"
 	"path/filepath"
-	"slices"
-	"sort"
 	"strings"
 	"sync"
 	"time"
