@@ -23,6 +23,12 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+var (
+	curReqs int = 0
+	maxReqs int = 512
+	maxReqsMu sync.Mutex
+)
+
 var errDomainNotOk error = errors.New("domain not ok")
 
 var dryRun *bool
@@ -314,9 +320,35 @@ func checkList(list List) ([]string, []string, []string) {
 
 		start = time.Now()
 		for _, host := range hosts {
+			for {
+
+				maxReqsMu.Lock()
+				if curReqs < maxReqs {
+					// fmt.Println("req now avail", curReqs)
+					maxReqsMu.Unlock()
+
+					break
+				}
+				maxReqsMu.Unlock()
+				// fmt.Println("waiting util avail")
+
+				time.Sleep(500 * time.Millisecond)
+
+			}
+
+
+			maxReqsMu.Lock()
+			curReqs += 1
+			maxReqsMu.Unlock()
 			wg.Add(1)
 			go func(){
-				defer wg.Done()
+				defer func(){
+					wg.Done()
+					maxReqsMu.Lock()
+					curReqs -= 1
+					maxReqsMu.Unlock()
+				}()
+
 				hostIpsV6, hostIpsV4, err := checkHost(host, ifile.CdnCheck)
 				if err != nil {
 					return
