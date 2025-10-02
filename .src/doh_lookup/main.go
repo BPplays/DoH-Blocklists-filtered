@@ -9,12 +9,16 @@ import (
 	"net/netip"
 	"os"
 	"path/filepath"
+	"slices"
+	"sort"
 	"strings"
 	"sync"
 	"time"
 
 	"github.com/miekg/dns"
 	"github.com/projectdiscovery/retryabledns"
+	sliceutil "github.com/projectdiscovery/utils/slice"
+
 	// sliceutil "github.com/projectdiscovery/utils/slice"
 	"github.com/projectdiscovery/cdncheck"
 	"gopkg.in/yaml.v3"
@@ -326,12 +330,34 @@ func checkDns(cfg Config) {
 
 	for _, list := range cfg.Lists {
 		v6Ips, v4Ips, validDomains = checkList(list)
+		if (len(v6Ips) <= 0) && (len(v4Ips) <= 0) {
+			log.Fatalln("no ips found")
+		}
+
+		v6Out := sliceutil.Dedupe(v6Ips)
+		v4Out := sliceutil.Dedupe(v4Ips)
+		domainsOut := sliceutil.Dedupe(validDomains)
+
+		os.WriteFile(
+			fmt.Sprintf("%v-doh-ipv6.txt", list.OutputFilePrefix),
+			[]byte(strings.Join(v6Out, "\n")),
+			0755,
+		)
+
+		os.WriteFile(
+			fmt.Sprintf("%v-doh-ipv4.txt", list.OutputFilePrefix),
+			[]byte(strings.Join(v4Out, "\n")),
+			0755,
+		)
+
+		os.WriteFile(
+			fmt.Sprintf("%v-doh-domains.txt", list.OutputFilePrefix),
+			[]byte(strings.Join(domainsOut, "\n")),
+			0755,
+		)
 
 	}
 
-	if (len(v6Ips) <= 0) && (len(v4Ips) <= 0) {
-		log.Fatalln("no ips found")
-	}
 }
 
 func main() {
@@ -341,6 +367,8 @@ func main() {
 	cfg := readConfig(*configPath)
 	makeDirs(cfg)
 	preCheck()
+
+	checkDns(cfg)
 
 
 }
