@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: doh-update
+name: doh-update-mini
 
 # Controls when the workflow will run (on push, on schedule or manually)
 on:
@@ -8,8 +8,7 @@ on:
     branches:
      - 'master'
   schedule:
-    - cron: '0 5 * * *'
-    # - cron: '0 */1 * * *'
+    - cron: '0 */1 * * *'
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -60,7 +59,7 @@ jobs:
       #   run: sudo sh ./.scripts/doh-lookup.sh ./.src/doh-domains_overall.txt full/full
 
       - name: Run DoH lookup
-        run: sudo ./.scripts/doh_lookup -c ./.src/_main.yml
+        run: sudo ./.scripts/doh_lookup -c ./.src/_mini.yml
 
       # Commit changed files to your repo
       - name: Git Auto Commit
