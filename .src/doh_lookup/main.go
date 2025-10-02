@@ -15,7 +15,8 @@ import (
 
 	"github.com/miekg/dns"
 	"github.com/projectdiscovery/retryabledns"
-	sliceutil "github.com/projectdiscovery/utils/slice"
+	// sliceutil "github.com/projectdiscovery/utils/slice"
+	"github.com/projectdiscovery/cdncheck"
 	"gopkg.in/yaml.v3"
 )
 
@@ -226,13 +227,11 @@ func preCheck() {
 }
 
 
-func checkHost(host string) (string, error) {
-	var output strings.Builder
-
+func checkHost(host string, useCdnCheck bool) (outputV6 []string, outputV4 []string, err error) {
 	domainOk := false
 	data, err := queryWithResolvers(host, 5, 5 * time.Second, DefaultResolvers)
 	if err != nil {
-		return "", err
+		return outputV6, outputV4, err
 	}
 
 	for _, addrStr := range append(data.AAAA, data.A...) {
@@ -244,29 +243,49 @@ func checkHost(host string) (string, error) {
 			continue
 		}
 
+		uaddr := addr.Unmap()
+		client := cdncheck.New()
+
+		matched, _, err := client.CheckCDN(net.ParseIP(uaddr.String()))
+		if err != nil {
+			continue
+		}
+
+		if useCdnCheck && matched {
+			continue
+		}
+
+
 
 		domainOk = true
-		uaddr := addr.Unmap()
 		if uaddr.Is6() {
-			output.WriteString(fmt.Sprintf("%-40s%s\n", addr, "# "+host))
+			outputV6 = append(outputV6, fmt.Sprintf("%-40s%s", addr, "# "+host))
 		} else if uaddr.Is4() {
-			output.WriteString(fmt.Sprintf("%-20s%s\n", addr, "# "+host))
+			outputV4 = append(outputV4, fmt.Sprintf("%-20s%s", addr, "# "+host))
 		}
 
 	}
 
-	if !domainOk || output.String() == "" {
-		return "", errDomainNotOk
+	if !domainOk || (len(outputV6) <= 0 && len(outputV4) <= 0) {
+		return outputV6, outputV4, errDomainNotOk
 	}
 
-	return output.String(), nil
+	return outputV6, outputV4, nil
 
 }
 
-func checkList(list List) {
+func checkList(list List) ([]string, []string, []string) {
+
+	var v6Ips []string
+	var v4Ips []string
+	var validDomains []string
+
 	var wg sync.WaitGroup
-	var hosts []string
+	var mu sync.Mutex
+
+
 	for _, ifile := range list.InputFiles {
+		var hosts []string
 		file, err := os.ReadFile(ifile.Path)
 		if err != nil {
 			continue
@@ -275,22 +294,43 @@ func checkList(list List) {
 		for _, strHost := range strHosts {
 			hosts = append(hosts, strings.TrimSpace(strHost))
 		}
+
+		for _, host := range hosts {
+			wg.Add(1)
+			go func(){
+				defer wg.Done()
+				hostIpsV6, hostIpsV4, err := checkHost(host, ifile.CdnCheck)
+				if err != nil {
+					return
+				}
+
+				mu.Lock()
+				v6Ips = append(v6Ips, hostIpsV6...)
+				v4Ips = append(v4Ips, hostIpsV4...)
+				validDomains = append(validDomains, host)
+				mu.Unlock()
+
+			}()
+
+
+		}
 	}
 
-	for _, host := range hosts {
-
-	}
+	return v6Ips, v4Ips, validDomains
 }
 
 func checkDns(cfg Config) {
-	var wg sync.WaitGroup
+	var v6Ips []string
+	var v4Ips []string
+	var validDomains []string
+
 	for _, list := range cfg.Lists {
-		wg.Add(1)
-		go func(){
-			queryWithResolvers()
+		v6Ips, v4Ips, validDomains = checkList(list)
 
-		}()
+	}
 
+	if (len(v6Ips) <= 0) && (len(v4Ips) <= 0) {
+		log.Fatalln("no ips found")
 	}
 }
 
