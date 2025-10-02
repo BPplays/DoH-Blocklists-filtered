@@ -43,8 +43,8 @@ jobs:
       - name: mkdir
         run: sudo mkdir -p ./mini
 
-      - name: get cdncheck
-        run: ./.src/nu ./.scripts/get_cdncheck.nu
+      # - name: get cdncheck
+      #   run: ./.src/nu ./.scripts/get_cdncheck.nu
 
       # # install ipcalc-ng
       # - name: Install ipcalc-ng
@@ -60,7 +60,7 @@ jobs:
       #   run: sudo sh ./.scripts/doh-lookup.sh ./.src/doh-domains_overall.txt full/full
 
       - name: Run DoH lookup
-        run: sudo ./.scripts/doh-lookup -c ./.src/_main.yml
+        run: sudo ./.scripts/doh_lookup -c ./.src/_main.yml
 
       # Commit changed files to your repo
       - name: Git Auto Commit
