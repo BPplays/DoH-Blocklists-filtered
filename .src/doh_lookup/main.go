@@ -25,8 +25,8 @@ import (
 
 var (
 	curReqs int = 0
-	maxReqs int = 512
-	maxReqsMu sync.Mutex
+	maxReqs int = 256
+	curReqsMu sync.Mutex
 )
 
 var errDomainNotOk error = errors.New("domain not ok")
@@ -322,14 +322,14 @@ func checkList(list List) ([]string, []string, []string) {
 		for _, host := range hosts {
 			for {
 
-				maxReqsMu.Lock()
+				curReqsMu.Lock()
 				if curReqs < maxReqs {
 					// fmt.Println("req now avail", curReqs)
-					maxReqsMu.Unlock()
+					curReqsMu.Unlock()
 
 					break
 				}
-				maxReqsMu.Unlock()
+				curReqsMu.Unlock()
 				// fmt.Println("waiting util avail")
 
 				time.Sleep(500 * time.Millisecond)
@@ -337,16 +337,16 @@ func checkList(list List) ([]string, []string, []string) {
 			}
 
 
-			maxReqsMu.Lock()
+			curReqsMu.Lock()
 			curReqs += 1
-			maxReqsMu.Unlock()
+			curReqsMu.Unlock()
 			wg.Add(1)
 			go func(){
 				defer func(){
 					wg.Done()
-					maxReqsMu.Lock()
+					curReqsMu.Lock()
 					curReqs -= 1
-					maxReqsMu.Unlock()
+					curReqsMu.Unlock()
 				}()
 
 				hostIpsV6, hostIpsV4, err := checkHost(host, ifile.CdnCheck)
