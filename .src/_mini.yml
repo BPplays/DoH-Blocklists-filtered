@@ -1,5 +1,7 @@
 lists:
   - name: mini
+    cache: true
+    cache_time: 1d
     input_files:
     - path: "./.src/doh-domains_mini.txt"
       cdncheck: true
