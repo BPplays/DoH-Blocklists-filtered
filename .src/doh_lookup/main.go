@@ -7,13 +7,106 @@ import (
 	"net"
 	"os"
 	"path/filepath"
-	"strings"
+	"sync"
 	"time"
 
-
 	"github.com/miekg/dns"
+	"github.com/projectdiscovery/retryabledns"
 	"gopkg.in/yaml.v3"
 )
+
+var DefaultResolvers []string
+
+// IPv6Resolvers trusted IPv6 resolvers
+var IPv6Resolvers = []string{
+	"[2606:4700:4700::1111]:53",
+	"[2606:4700:4700::1001]:53",
+	"[2001:4860:4860::8888]:53",
+	"[2001:4860:4860::8844]:53",
+}
+
+// IPv4Resolvers trusted IPv4 resolvers
+var IPv4Resolvers = []string{
+	"1.1.1.1:53",
+	"1.0.0.1:53",
+	"8.8.8.8:53",
+	"8.8.4.4:53",
+}
+
+// checkConnectivity tests if connectivity is available to any of the IPs you input
+//
+// - IPs: IPs and ports (e.g. "[2001:db8::1]:53")
+//
+// - proto: protocol to use (e.g. "udp", "tcp", etc)
+func checkConnectivity(IPs []string, proto string) bool {
+	var wg sync.WaitGroup
+	results := make(chan bool, len(IPs))
+
+	for _, IP := range IPs {
+		wg.Add(1)
+		go func(){
+			defer wg.Done()
+
+			conn, err := net.DialTimeout(proto, IP, 3*time.Second)
+			if conn != nil {
+				defer conn.Close()
+			}
+
+			results <- err == nil
+		}()
+	}
+	wg.Wait()
+	close(results)
+
+	for result := range results {
+		if result { return true }
+	}
+	return false
+}
+
+func availableIpVersions() (hasV6 bool, hasV4 bool) {
+	var wg sync.WaitGroup
+
+	wg.Add(1)
+	go func(){
+		defer wg.Done()
+		if checkConnectivity([]string{"[2001:4860:4860::8888]:53"}, "udp") {
+			hasV6 = true
+		}
+	}()
+
+	wg.Add(1)
+	go func(){
+		defer wg.Done()
+		if checkConnectivity([]string{"8.8.8.8:53"}, "udp") {
+			hasV4 = true
+		}
+	}()
+
+	wg.Wait()
+
+	return hasV6, hasV4
+}
+
+
+// init checks for IPv6 and IPv4 connectivity and adds either group of resolvers if available, falls back to both if it can't detect any
+func init() {
+	hasV6, hasV4 := availableIpVersions()
+
+	if hasV6 {
+		DefaultResolvers = append(DefaultResolvers, IPv6Resolvers...)
+	}
+
+	if hasV4 {
+		DefaultResolvers = append(DefaultResolvers, IPv4Resolvers...)
+	}
+
+	if len(DefaultResolvers) <= 0 {
+		DefaultResolvers = append(DefaultResolvers, IPv6Resolvers...)
+		DefaultResolvers = append(DefaultResolvers, IPv4Resolvers...)
+	}
+}
+
 
 var typeMap map[string]string = map[string]string{
   "ipv6": "-doh-ipv6",
@@ -71,68 +164,48 @@ func readConfig(file string) (Config) {
 	return cfg
 }
 
-func queryWithResolvers(domain string, qtypes []uint16, resolvers []string, timeout time.Duration, tries int) ([]string, error) {
-	client := &dns.Client{Timeout: timeout}
-	seen := map[string]struct{}{}
-	results := []string{}
 
-	for _, qtype := range qtypes {
-		for _, resolver := range resolvers {
-			var lastErr error
-			for attempt := 0; attempt < tries; attempt++ {
-				msg := new(dns.Msg)
-				msg.SetQuestion(dns.Fqdn(domain), qtype)
-				in, _, err := client.Exchange(msg, resolver)
-				if err != nil {
-					lastErr = err
-					// retry same resolver up to tries
-					continue
-				}
-				if in == nil || in.Rcode != dns.RcodeSuccess {
-					lastErr = fmt.Errorf("bad rcode: %v", in)
-					continue
-				}
-				for _, ans := range in.Answer {
-					switch v := ans.(type) {
-					case *dns.AAAA:
-						if _, ok := seen[v.AAAA.String()]; !ok {
-							seen[v.AAAA.String()] = struct{}{}
-							results = append(results, v.AAAA.String())
-						}
-					case *dns.A:
-						if _, ok := seen[v.A.String()]; !ok {
-							seen[v.A.String()] = struct{}{}
-							results = append(results, v.A.String())
-						}
-					}
-				}
-				// break out of retry loop for this resolver (we got a response)
-				lastErr = nil
-				break
-			}
-			// if this resolver failed completely, try next resolver
-			if lastErr != nil {
-				// you can log lastErr if you want
-				continue
-			}
-			// if we already have answers for this qtype, optionally stop trying other resolvers
-			// here we continue so that we collect A and AAAA from all resolvers if they exist
-		}
+func queryWithResolvers(
+	Host string,
+	MaxRetries int,
+	timeout time.Duration,
+	resolvers []string,
+) (data *retryabledns.DNSData, err error) {
+
+	if len(resolvers) == 0 {
+		resolvers = DefaultResolvers
 	}
 
-	if len(results) == 0 {
-		return nil, fmt.Errorf("no answers from any resolver")
+	retryabledns, err := retryabledns.NewWithOptions(retryabledns.Options{
+		BaseResolvers: resolvers,
+		MaxRetries: MaxRetries,
+		Timeout: timeout,
+	})
+	if err != nil {
+		return nil, err
 	}
-	return results, nil
+
+	data, err = retryabledns.QueryMultiple(Host, []uint16{
+		dns.TypeAAAA,
+		dns.TypeA,
+	})
+	if err != nil {
+		return nil, err
+	}
+
+	return data, nil
+
 }
 
 
 func preCheck(cfg Config) {
-	checkDomains := []string{"example.com", "google.com"}
+	checkDomains := []string{"", "google.com"}
 	timeout := 5 * time.Second
 	tries := 5
 
-	queryWithResolvers()
+	for _, host := range checkDomains {
+		queryWithResolvers(host, tries, timeout, DefaultResolvers)
+	}
 
 }
 
