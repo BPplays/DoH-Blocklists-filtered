@@ -232,12 +232,18 @@ func preCheck() {
 
 
 func checkHost(host string, useCdnCheck bool) (outputV6 []string, outputV4 []string, err error) {
+
+	// start := time.Now()
 	domainOk := false
-	data, err := queryWithResolvers(host, 5, 3 * time.Second, DefaultResolvers)
+	data, err := queryWithResolvers(host, 4, 2 * time.Second, DefaultResolvers)
 	if err != nil {
 		return outputV6, outputV4, err
 	}
 
+	// fmt.Printf("qeury time %v\n", time.Since(start))
+
+
+	// start = time.Now()
 	for _, addrStr := range append(data.AAAA, data.A...) {
 		addr, err := netip.ParseAddr(addrStr)
 		if err != nil {
@@ -273,6 +279,7 @@ func checkHost(host string, useCdnCheck bool) (outputV6 []string, outputV4 []str
 	if !domainOk || (len(outputV6) <= 0 && len(outputV4) <= 0) {
 		return outputV6, outputV4, errDomainNotOk
 	}
+	// fmt.Printf("addresss formatting and check time time %v\n", time.Since(start))
 
 	return outputV6, outputV4, nil
 
@@ -289,6 +296,8 @@ func checkList(list List) ([]string, []string, []string) {
 
 
 	for _, ifile := range list.InputFiles {
+		start := time.Now()
+
 		var hosts []string
 		file, err := os.ReadFile(ifile.Path)
 		if err != nil {
@@ -300,6 +309,9 @@ func checkList(list List) ([]string, []string, []string) {
 			hosts = append(hosts, strings.TrimSpace(strHost))
 		}
 
+		fmt.Printf("time reading ifiles: %v\n", time.Since(start))
+
+		start = time.Now()
 		for _, host := range hosts {
 			wg.Add(1)
 			go func(){
@@ -320,52 +332,52 @@ func checkList(list List) ([]string, []string, []string) {
 
 		}
 		wg.Wait()
+		fmt.Printf("time since hostcheck: %v\n", time.Since(start))
 	}
 
 	return v6Ips, v4Ips, validDomains
 }
 
 func checkDns(cfg Config) {
-	var v6Ips []string
-	var v4Ips []string
-	var validDomains []string
-
+	var wg sync.WaitGroup
 	for _, list := range cfg.Lists {
-		v6Ips, v4Ips, validDomains = checkList(list)
-		if (len(v6Ips) <= 0) && (len(v4Ips) <= 0) {
-			log.Fatalln("no ips found")
-		}
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
 
-		v6Out := sliceutil.Dedupe(v6Ips)
-		v4Out := sliceutil.Dedupe(v4Ips)
-		domainsOut := sliceutil.Dedupe(validDomains)
+			v6Ips, v4Ips, validDomains := checkList(list)
+			if (len(v6Ips) <= 0) && (len(v4Ips) <= 0) {
+				log.Fatalln("no ips found")
+			}
 
+			v6Out := sliceutil.Dedupe(v6Ips)
+			v4Out := sliceutil.Dedupe(v4Ips)
+			domainsOut := sliceutil.Dedupe(validDomains)
+			if *dryRun {
+				fmt.Println(strings.Join(v6Out, "\n"))
+				return
+			}
 
-		if *dryRun {
-			fmt.Println(strings.Join(v6Out, "\n"))
-			continue
-		}
+			os.WriteFile(
+				fmt.Sprintf("%v-doh-ipv6.txt", list.OutputFilePrefix),
+				[]byte(strings.Join(v6Out, "\n")),
+				0755,
+				)
 
-		os.WriteFile(
-			fmt.Sprintf("%v-doh-ipv6.txt", list.OutputFilePrefix),
-			[]byte(strings.Join(v6Out, "\n")),
-			0755,
-		)
+			os.WriteFile(
+				fmt.Sprintf("%v-doh-ipv4.txt", list.OutputFilePrefix),
+				[]byte(strings.Join(v4Out, "\n")),
+				0755,
+				)
 
-		os.WriteFile(
-			fmt.Sprintf("%v-doh-ipv4.txt", list.OutputFilePrefix),
-			[]byte(strings.Join(v4Out, "\n")),
-			0755,
-		)
-
-		os.WriteFile(
-			fmt.Sprintf("%v-doh-domains.txt", list.OutputFilePrefix),
-			[]byte(strings.Join(domainsOut, "\n")),
-			0755,
-		)
-
+			os.WriteFile(
+				fmt.Sprintf("%v-doh-domains.txt", list.OutputFilePrefix),
+				[]byte(strings.Join(domainsOut, "\n")),
+				0755,
+				)
+		}()
 	}
-
+	wg.Wait()
 }
 
 func main() {
