@@ -24,6 +24,8 @@ import (
 
 var errDomainNotOk error = errors.New("domain not ok")
 
+var dryRun *bool
+
 var DefaultResolvers []string
 
 // IPv6Resolvers trusted IPv6 resolvers
@@ -292,8 +294,8 @@ func checkList(list List) ([]string, []string, []string) {
 		if err != nil {
 			continue
 		}
-		strHosts := strings.Split(string(file), "\n")
-		for _, strHost := range strHosts {
+
+		for strHost := range strings.SplitSeq(string(file), "\n") {
 			hosts = append(hosts, strings.TrimSpace(strHost))
 		}
 
@@ -336,6 +338,11 @@ func checkDns(cfg Config) {
 		v4Out := sliceutil.Dedupe(v4Ips)
 		domainsOut := sliceutil.Dedupe(validDomains)
 
+
+		if *dryRun {
+			continue
+		}
+
 		os.WriteFile(
 			fmt.Sprintf("%v-doh-ipv6.txt", list.OutputFilePrefix),
 			[]byte(strings.Join(v6Out, "\n")),
@@ -360,6 +367,7 @@ func checkDns(cfg Config) {
 
 func main() {
 	configPath := flag.String("c", "", "")
+	dryRun = flag.Bool("d", false, "")
 	flag.Parse()
 
 	cfg := readConfig(*configPath)
