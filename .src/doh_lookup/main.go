@@ -273,7 +273,7 @@ func writeCachesFromList(
 		list.cacheTime,
 	)
 	if err != nil {
-		log.Println("failed to save cache file")
+		log.Println("failed to save cache file:", err)
 	}
 
 
@@ -284,7 +284,7 @@ func writeCachesFromList(
 		list.cacheTime,
 	)
 	if err != nil {
-		log.Println("failed to save cache file")
+		log.Println("failed to save cache file:", err)
 	}
 
 
@@ -295,7 +295,7 @@ func writeCachesFromList(
 		list.cacheTime,
 	)
 	if err != nil {
-		log.Println("failed to save cache file")
+		log.Println("failed to save cache file:", err)
 	}
 }
 
@@ -453,6 +453,7 @@ func checkList(list List) ([]string, []string, []string) {
 	var mu sync.Mutex
 
 
+	fmt.Println(list)
 	if list.cache {
 		v6Ips, v4Ips, validDomains = readAndPutCachesFromList(
 			v6Ips,
@@ -533,7 +534,9 @@ func checkList(list List) ([]string, []string, []string) {
 	wg.Wait()
 	fmt.Printf("time since hostcheck: %v\n", time.Since(start))
 
-	writeCachesFromList(v6Ips, v4Ips, validDomains, list)
+	if list.cache {
+		writeCachesFromList(v6Ips, v4Ips, validDomains, list)
+	}
 
 	return v6Ips, v4Ips, validDomains
 }
