@@ -69,6 +69,4 @@ jobs:
         with:
           # Commit message
           commit_message: "full: automatic/regular ip address updates"
-          # File pattern used for `git add`. For example `src/*.js`
-          file_pattern: ./*.txt
-          # file_pattern: ./doh-ipv*.txt ./doh-domains.txt ./doh-domains_abandoned.txt
+          file_pattern: ./*.txt .cache/* .cache/**
