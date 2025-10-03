@@ -139,8 +139,8 @@ type Config struct {
 
 type List struct {
 	Name             string      `yaml:"name"`
-	cache bool      `yaml:"cache"`
-	cacheTime time.Duration      `yaml:"cache_time"`
+	Cache bool      `yaml:"cache"`
+	CacheTime time.Duration      `yaml:"cache_time"`
 	InputFiles       []InputFile `yaml:"input_files"`
 	OutputFilePrefix string      `yaml:"output_file_prefix"`
 }
@@ -233,7 +233,7 @@ func readAndPutCachesFromList(
 
 	caches, err := readCache(
 		filepath.Join(list.OutputFilePrefix, ".cache", "ipv6.yml"),
-		list.cacheTime,
+		list.CacheTime,
 	)
 	if err == nil {
 		appendCache(v6Ips, caches)
@@ -242,7 +242,7 @@ func readAndPutCachesFromList(
 
 	caches, err = readCache(
 		filepath.Join(list.OutputFilePrefix, ".cache", "ipv4.yml"),
-		list.cacheTime,
+		list.CacheTime,
 	)
 	if err == nil {
 		appendCache(v4Ips, caches)
@@ -250,7 +250,7 @@ func readAndPutCachesFromList(
 
 	caches, err = readCache(
 		filepath.Join(list.OutputFilePrefix, ".cache", "valid_domains.yml"),
-		list.cacheTime,
+		list.CacheTime,
 	)
 	if err == nil {
 		appendCache(validDomains, caches)
@@ -270,7 +270,7 @@ func writeCachesFromList(
 	err := writeCache(
 		filepath.Join(list.OutputFilePrefix, ".cache", "ipv6.yml"),
 		caches,
-		list.cacheTime,
+		list.CacheTime,
 	)
 	if err != nil {
 		log.Println("failed to save cache file:", err)
@@ -281,7 +281,7 @@ func writeCachesFromList(
 	err = writeCache(
 		filepath.Join(list.OutputFilePrefix, ".cache", "ipv4.yml"),
 		caches,
-		list.cacheTime,
+		list.CacheTime,
 	)
 	if err != nil {
 		log.Println("failed to save cache file:", err)
@@ -292,7 +292,7 @@ func writeCachesFromList(
 	err = writeCache(
 		filepath.Join(list.OutputFilePrefix, ".cache", "valid_domains.yml"),
 		caches,
-		list.cacheTime,
+		list.CacheTime,
 	)
 	if err != nil {
 		log.Println("failed to save cache file:", err)
@@ -454,7 +454,7 @@ func checkList(list List) ([]string, []string, []string) {
 
 
 	fmt.Println(list)
-	if list.cache {
+	if list.Cache {
 		v6Ips, v4Ips, validDomains = readAndPutCachesFromList(
 			v6Ips,
 			v4Ips,
@@ -534,7 +534,7 @@ func checkList(list List) ([]string, []string, []string) {
 	wg.Wait()
 	fmt.Printf("time since hostcheck: %v\n", time.Since(start))
 
-	if list.cache {
+	if list.Cache {
 		writeCachesFromList(v6Ips, v4Ips, validDomains, list)
 	}
 
