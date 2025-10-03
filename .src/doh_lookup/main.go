@@ -18,7 +18,6 @@ import (
 	"github.com/projectdiscovery/retryabledns"
 	sliceutil "github.com/projectdiscovery/utils/slice"
 
-	// sliceutil "github.com/projectdiscovery/utils/slice"
 	"github.com/projectdiscovery/cdncheck"
 	"gopkg.in/yaml.v3"
 )
@@ -140,6 +139,8 @@ type Config struct {
 
 type List struct {
 	Name             string      `yaml:"name"`
+	cache bool
+	cacheTime time.Duration
 	InputFiles       []InputFile `yaml:"input_files"`
 	OutputFilePrefix string      `yaml:"output_file_prefix"`
 }
@@ -147,6 +148,153 @@ type List struct {
 type InputFile struct {
 	Path     string `yaml:"path"`
 	CdnCheck bool   `yaml:"cdncheck"`
+}
+
+type Cache struct {
+	line string `yaml:"line"`
+	time time.Time `yaml:"time"`
+}
+
+
+func cacheFilterExpired(caches []Cache, expire time.Duration) ([]Cache) {
+	var output []Cache
+	for _, cache := range caches {
+		oldness := time.Since(cache.time)
+		if oldness > expire {
+			continue
+		}
+		output = append(output, cache)
+	}
+
+	return output
+}
+
+func sortCache(a, b Cache) int {
+	return strings.Compare(a.line, b.line)
+}
+
+func writeCache(path string, caches []Cache, expire time.Duration) (error) {
+	caches = cacheFilterExpired(caches, expire)
+	slices.SortFunc(caches, sortCache)
+
+	myaml, err := yaml.Marshal(caches)
+	if err != nil {
+		return err
+	}
+
+	os.MkdirAll(filepath.Dir(path), 0755)
+	os.WriteFile(path, myaml, 0755)
+	return nil
+}
+
+func readCache(path string, expire time.Duration) ([]Cache, error) {
+	var caches []Cache
+
+	cacheB, err := os.ReadFile(path)
+	if err != nil {
+		return caches, err
+	}
+
+	err = yaml.Unmarshal(cacheB, caches)
+	if err != nil {
+		return caches, err
+	}
+
+	caches = cacheFilterExpired(caches, expire)
+	slices.SortFunc(caches, sortCache)
+
+	return caches, nil
+}
+
+func makeNewCaches(strs []string) (caches []Cache) {
+	for _, str := range strs {
+		caches = append(
+			caches,
+			Cache{line: str, time: time.Now()},
+		)
+	}
+	return
+}
+
+
+func appendCache(strs []string, caches []Cache) (output []string) {
+	output = append(output, strs...)
+	for _, cache := range caches {
+		output = append(output, cache.line)
+	}
+	return
+}
+
+func readAndPutCachesFromList(
+	v6Ips, v4Ips, validDomains []string,
+	list List,
+) ([]string, []string, []string) {
+
+	caches, err := readCache(
+		filepath.Join(list.OutputFilePrefix, ".cache", "ipv6.yml"),
+		list.cacheTime,
+	)
+	if err == nil {
+		appendCache(v6Ips, caches)
+	}
+
+
+	caches, err = readCache(
+		filepath.Join(list.OutputFilePrefix, ".cache", "ipv4.yml"),
+		list.cacheTime,
+	)
+	if err == nil {
+		appendCache(v4Ips, caches)
+	}
+
+	caches, err = readCache(
+		filepath.Join(list.OutputFilePrefix, ".cache", "valid_domains.yml"),
+		list.cacheTime,
+	)
+	if err == nil {
+		appendCache(validDomains, caches)
+	}
+	return v6Ips, v4Ips, validDomains
+}
+
+func writeCachesFromList(
+	v6Ips, v4Ips, validDomains []string,
+	list List,
+) () {
+
+	var caches []Cache
+
+	caches = makeNewCaches(v6Ips)
+	err := writeCache(
+		filepath.Join(list.OutputFilePrefix, ".cache", "ipv6.yml"),
+		caches,
+		list.cacheTime,
+	)
+	if err != nil {
+		log.Println("failed to save cache file")
+	}
+
+
+	caches = makeNewCaches(v4Ips)
+	err = writeCache(
+		filepath.Join(list.OutputFilePrefix, ".cache", "ipv4.yml"),
+		caches,
+		list.cacheTime,
+	)
+	if err != nil {
+		log.Println("failed to save cache file")
+	}
+
+
+	caches = makeNewCaches(validDomains)
+	err = writeCache(
+		filepath.Join(list.OutputFilePrefix, ".cache", "valid_domains.yml"),
+		caches,
+		list.cacheTime,
+	)
+	if err != nil {
+		log.Println("failed to save cache file")
+	}
 }
 
 func makeDirs(cfg Config) {
@@ -303,8 +451,19 @@ func checkList(list List) ([]string, []string, []string) {
 	var mu sync.Mutex
 
 
+	if list.cache {
+		v6Ips, v4Ips, validDomains = readAndPutCachesFromList(
+			v6Ips,
+			v4Ips,
+			validDomains,
+			list,
+		)
+	}
+
+
 	start := time.Now()
 	for _, ifile := range list.InputFiles {
+
 
 		var hosts []string
 		file, err := os.ReadFile(ifile.Path)
@@ -371,6 +530,8 @@ func checkList(list List) ([]string, []string, []string) {
 	}
 	wg.Wait()
 	fmt.Printf("time since hostcheck: %v\n", time.Since(start))
+
+	writeCachesFromList(v6Ips, v4Ips, validDomains, list)
 
 	return v6Ips, v4Ips, validDomains
 }
