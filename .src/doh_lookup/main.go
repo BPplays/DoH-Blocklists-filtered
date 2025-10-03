@@ -152,15 +152,15 @@ type InputFile struct {
 }
 
 type Cache struct {
-	line string `yaml:"line"`
-	time time.Time `yaml:"time"`
+	Line string `yaml:"line"`
+	Time time.Time `yaml:"time"`
 }
 
 
 func cacheFilterExpired(caches []Cache, expire time.Duration) ([]Cache) {
 	var output []Cache
 	for _, cache := range caches {
-		oldness := time.Since(cache.time)
+		oldness := time.Since(cache.Time)
 		if oldness > expire {
 			continue
 		}
@@ -171,7 +171,7 @@ func cacheFilterExpired(caches []Cache, expire time.Duration) ([]Cache) {
 }
 
 func sortCache(a, b Cache) int {
-	return strings.Compare(a.line, b.line)
+	return strings.Compare(a.Line, b.Line)
 }
 
 func writeCache(path string, caches []Cache, expire time.Duration) (error) {
@@ -211,7 +211,7 @@ func makeNewCaches(strs []string) (caches []Cache) {
 	for _, str := range strs {
 		caches = append(
 			caches,
-			Cache{line: str, time: time.Now()},
+			Cache{Line: str, Time: time.Now()},
 		)
 	}
 	return
@@ -221,7 +221,7 @@ func makeNewCaches(strs []string) (caches []Cache) {
 func appendCache(strs []string, caches []Cache) (output []string) {
 	output = append(output, strs...)
 	for _, cache := range caches {
-		output = append(output, cache.line)
+		output = append(output, cache.Line)
 	}
 	return
 }
@@ -565,6 +565,11 @@ func checkList(list List) ([]string, []string, []string) {
 	}
 	wg.Wait()
 	fmt.Printf("time since hostcheck: %v\n", time.Since(start))
+
+
+	v6Ips = sliceutil.Dedupe(v6Ips)
+	v4Ips = sliceutil.Dedupe(v4Ips)
+	validDomains = sliceutil.Dedupe(validDomains)
 
 	if list.Cache {
 		writeCachesFromList(v6Ips, v4Ips, validDomains, list)
