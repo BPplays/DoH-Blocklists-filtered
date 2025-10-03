@@ -139,8 +139,8 @@ type Config struct {
 
 type List struct {
 	Name             string      `yaml:"name"`
-	cache bool
-	cacheTime time.Duration
+	cache bool      `yaml:"cache"`
+	cacheTime time.Duration      `yaml:"cache_time"`
 	InputFiles       []InputFile `yaml:"input_files"`
 	OutputFilePrefix string      `yaml:"output_file_prefix"`
 }
