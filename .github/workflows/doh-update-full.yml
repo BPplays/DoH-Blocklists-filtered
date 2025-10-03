@@ -69,4 +69,5 @@ jobs:
         with:
           # Commit message
           commit_message: "full: automatic/regular ip address updates"
-          file_pattern: ./*.txt ./**/.cache/*.yml
+          file_pattern: ./*.txt *.yml
+          disable_globbing: true
