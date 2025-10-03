@@ -233,7 +233,7 @@ func readAndPutCachesFromList(
 	fmt.Println(
 		"reading caches from list, test:",
 		fmt.Sprintf(
-			"%v/%v-valid_domains.yml",
+			"%v/.cache/%v-valid_domains.yml",
 			list.OutputDir,
 			list.OutputFilePrefix,
 			),
@@ -241,7 +241,7 @@ func readAndPutCachesFromList(
 
 	caches, err := readCache(
 		fmt.Sprintf(
-			"%v/%v-ipv6.yml",
+			"%v/.cache/%v-ipv6.yml",
 			list.OutputDir,
 			list.OutputFilePrefix,
 			),
@@ -254,7 +254,7 @@ func readAndPutCachesFromList(
 
 	caches, err = readCache(
 		fmt.Sprintf(
-			"%v/%v-ipv4.yml",
+			"%v/.cache/%v-ipv4.yml",
 			list.OutputDir,
 			list.OutputFilePrefix,
 			),
@@ -266,7 +266,7 @@ func readAndPutCachesFromList(
 
 	caches, err = readCache(
 		fmt.Sprintf(
-			"%v/%v-valid_domains.yml",
+			"%v/.cache/%v-valid_domains.yml",
 			list.OutputDir,
 			list.OutputFilePrefix,
 			),
@@ -289,7 +289,7 @@ func writeCachesFromList(
 	caches = makeNewCaches(v6Ips)
 	err := writeCache(
 		fmt.Sprintf(
-			"%v/%v-ipv6.yml",
+			"%v/.cache/%v-ipv6.yml",
 			list.OutputDir,
 			list.OutputFilePrefix,
 			),
@@ -304,7 +304,7 @@ func writeCachesFromList(
 	caches = makeNewCaches(v4Ips)
 	err = writeCache(
 		fmt.Sprintf(
-			"%v/%v-ipv4.yml",
+			"%v/.cache/%v-ipv4.yml",
 			list.OutputDir,
 			list.OutputFilePrefix,
 			),
@@ -319,7 +319,7 @@ func writeCachesFromList(
 	caches = makeNewCaches(validDomains)
 	err = writeCache(
 		fmt.Sprintf(
-			"%v/%v-valid_domains.yml",
+			"%v/.cache/%v-valid_domains.yml",
 			list.OutputDir,
 			list.OutputFilePrefix,
 			),
