@@ -142,6 +142,7 @@ type List struct {
 	Cache bool      `yaml:"cache"`
 	CacheTime time.Duration      `yaml:"cache_time"`
 	InputFiles       []InputFile `yaml:"input_files"`
+	OutputDir string      `yaml:"output_dir"`
 	OutputFilePrefix string      `yaml:"output_file_prefix"`
 }
 
@@ -231,11 +232,11 @@ func readAndPutCachesFromList(
 ) ([]string, []string, []string) {
 	fmt.Println(
 		"reading caches from list, test:",
-		filepath.Join(list.OutputFilePrefix, ".cache", "ipv6.yml"),
+		filepath.Join(list.OutputDir, ".cache", "ipv6.yml"),
 	)
 
 	caches, err := readCache(
-		filepath.Join(list.OutputFilePrefix, ".cache", "ipv6.yml"),
+		filepath.Join(list.OutputDir, ".cache", "ipv6.yml"),
 		list.CacheTime,
 	)
 	if err == nil {
@@ -244,7 +245,7 @@ func readAndPutCachesFromList(
 
 
 	caches, err = readCache(
-		filepath.Join(list.OutputFilePrefix, ".cache", "ipv4.yml"),
+		filepath.Join(list.OutputDir, ".cache", "ipv4.yml"),
 		list.CacheTime,
 	)
 	if err == nil {
@@ -252,7 +253,7 @@ func readAndPutCachesFromList(
 	}
 
 	caches, err = readCache(
-		filepath.Join(list.OutputFilePrefix, ".cache", "valid_domains.yml"),
+		filepath.Join(list.OutputDir, ".cache", "valid_domains.yml"),
 		list.CacheTime,
 	)
 	if err == nil {
@@ -271,7 +272,7 @@ func writeCachesFromList(
 
 	caches = makeNewCaches(v6Ips)
 	err := writeCache(
-		filepath.Join(list.OutputFilePrefix, ".cache", "ipv6.yml"),
+		filepath.Join(list.OutputDir, ".cache", "ipv6.yml"),
 		caches,
 		list.CacheTime,
 	)
@@ -282,7 +283,7 @@ func writeCachesFromList(
 
 	caches = makeNewCaches(v4Ips)
 	err = writeCache(
-		filepath.Join(list.OutputFilePrefix, ".cache", "ipv4.yml"),
+		filepath.Join(list.OutputDir, ".cache", "ipv4.yml"),
 		caches,
 		list.CacheTime,
 	)
@@ -293,7 +294,7 @@ func writeCachesFromList(
 
 	caches = makeNewCaches(validDomains)
 	err = writeCache(
-		filepath.Join(list.OutputFilePrefix, ".cache", "valid_domains.yml"),
+		filepath.Join(list.OutputDir, ".cache", "valid_domains.yml"),
 		caches,
 		list.CacheTime,
 	)
@@ -573,19 +574,31 @@ func checkDns(cfg Config) {
 
 
 			os.WriteFile(
-				fmt.Sprintf("%v-doh-ipv6.txt", list.OutputFilePrefix),
+				fmt.Sprintf(
+					"%v/%v-doh-ipv6.txt",
+					list.OutputDir,
+					list.OutputFilePrefix,
+				),
 				[]byte(strings.Join(v6Out, "\n")),
 				0755,
 				)
 
 			os.WriteFile(
-				fmt.Sprintf("%v-doh-ipv4.txt", list.OutputFilePrefix),
+				fmt.Sprintf(
+					"%v/%v-doh-ipv4.txt",
+					list.OutputDir,
+					list.OutputFilePrefix,
+				),
 				[]byte(strings.Join(v4Out, "\n")),
 				0755,
 				)
 
 			os.WriteFile(
-				fmt.Sprintf("%v-doh-domains.txt", list.OutputFilePrefix),
+				fmt.Sprintf(
+					"%v/%v-doh-domains.txt",
+					list.OutputDir,
+					list.OutputFilePrefix,
+				),
 				[]byte(strings.Join(domainsOut, "\n")),
 				0755,
 				)
