@@ -229,6 +229,7 @@ func readAndPutCachesFromList(
 	v6Ips, v4Ips, validDomains []string,
 	list List,
 ) ([]string, []string, []string) {
+	fmt.Println("reading caches from list")
 
 	caches, err := readCache(
 		filepath.Join(list.OutputFilePrefix, ".cache", "ipv6.yml"),
@@ -261,6 +262,7 @@ func writeCachesFromList(
 	v6Ips, v4Ips, validDomains []string,
 	list List,
 ) () {
+	fmt.Println("writing caches from list")
 
 	var caches []Cache
 
