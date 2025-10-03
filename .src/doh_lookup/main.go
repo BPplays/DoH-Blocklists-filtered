@@ -196,7 +196,7 @@ func readCache(path string, expire time.Duration) ([]Cache, error) {
 		return caches, err
 	}
 
-	err = yaml.Unmarshal(cacheB, caches)
+	err = yaml.Unmarshal(cacheB, &caches)
 	if err != nil {
 		return caches, err
 	}
