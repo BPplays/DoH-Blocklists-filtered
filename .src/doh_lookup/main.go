@@ -300,18 +300,17 @@ func readAndPutCachesFromListAndWriteOut(
 			list.CacheTime,
 			)
 		if err == nil {
-			appendCacheToStrs(*loop.lines, *loop.caches)
-
-
-			newCaches := putCacheToCache(
+			writeCaches := putCacheToCache(
 				*loop.caches,
 				makeNewCaches(*loop.lines),
 			)
 
-			err := writeCache(name, newCaches, list.CacheTime)
+			err := writeCache(name, writeCaches, list.CacheTime)
 			if err != nil {
 				log.Println("error writing cache:", err)
 			}
+
+			*loop.lines = appendCacheToStrs(*loop.lines, *loop.caches)
 
 		} else {
 			if os.IsNotExist(err) {
