@@ -129,6 +129,7 @@ var typeMap map[string]string = map[string]string{
   "ipv6": "-doh-ipv6",
   "ipv4":   "-doh-ipv4",
   "domains":   "-doh-domains",
+  "domain":   "-doh-domains",
 }
 
 
@@ -156,6 +157,11 @@ type Cache struct {
 	Time time.Time `yaml:"time"`
 }
 
+type CacheLoop struct {
+	name string
+	lines *[]string
+	caches *[]Cache
+}
 
 func cacheFilterExpired(caches []Cache, expire time.Duration) ([]Cache) {
 	var output []Cache
@@ -218,7 +224,7 @@ func makeNewCaches(strs []string) (caches []Cache) {
 }
 
 
-func appendCache(strs []string, caches []Cache) (output []string) {
+func appendCacheToStrs(strs []string, caches []Cache) (output []string) {
 	output = append(output, strs...)
 	for _, cache := range caches {
 		output = append(output, cache.Line)
@@ -226,110 +232,146 @@ func appendCache(strs []string, caches []Cache) (output []string) {
 	return
 }
 
-func readAndPutCachesFromList(
-	v6Ips, v4Ips, validDomains []string,
-	list List,
-) ([]string, []string, []string) {
-	fmt.Println(
-		"reading caches from list, test:",
-		fmt.Sprintf(
-			"%v/.cache/%v-valid_domains.yml",
-			list.OutputDir,
-			list.OutputFilePrefix,
-			),
-	)
+func putCacheToCache(caches []Cache, newCaches []Cache) (output []Cache) {
+	output = append(output, caches...)
 
-	caches, err := readCache(
-		fmt.Sprintf(
-			"%v/.cache/%v-ipv6.yml",
-			list.OutputDir,
-			list.OutputFilePrefix,
-			),
-		list.CacheTime,
-	)
-	if err == nil {
-		appendCache(v6Ips, caches)
+	cMap := make(map[string]int, len(output))
+	for i, cache := range output {
+		cMap[cache.Line] = i
 	}
 
-
-	caches, err = readCache(
-		fmt.Sprintf(
-			"%v/.cache/%v-ipv4.yml",
-			list.OutputDir,
-			list.OutputFilePrefix,
-			),
-		list.CacheTime,
-	)
-	if err == nil {
-		appendCache(v4Ips, caches)
+	for _, newCache := range newCaches {
+		if index, ok := cMap[newCache.Line]; ok {
+			if newCache.Time.Compare(output[index].Time) > 0 {
+				output[index] = newCache
+			}
+		} else {
+			output = append(output, newCache)
+		}
 	}
-
-	caches, err = readCache(
-		fmt.Sprintf(
-			"%v/.cache/%v-valid_domains.yml",
-			list.OutputDir,
-			list.OutputFilePrefix,
-			),
-		list.CacheTime,
-	)
-	if err == nil {
-		appendCache(validDomains, caches)
-	}
-	return v6Ips, v4Ips, validDomains
+	return
 }
 
-func writeCachesFromList(
+func readAndPutCachesFromListAndWriteOut(
 	v6Ips, v4Ips, validDomains []string,
 	list List,
-) () {
-	fmt.Println("writing caches from list")
+) ([]Cache, []Cache, []Cache, []string, []string, []string) {
+	var cachesV6, cachesV4, cachesDomain []Cache
+	var err error
 
-	var caches []Cache
+	fmt.Println("reading caches from list")
 
-	caches = makeNewCaches(v6Ips)
-	err := writeCache(
-		fmt.Sprintf(
-			"%v/.cache/%v-ipv6.yml",
-			list.OutputDir,
-			list.OutputFilePrefix,
-			),
-		caches,
-		list.CacheTime,
-	)
-	if err != nil {
-		log.Println("failed to save cache file:", err)
+
+
+
+	loops := []CacheLoop{
+		{
+			name: typeMap["ipv6"],
+			lines: &v6Ips,
+			caches: &cachesV6,
+		},
+
+		{
+			name: typeMap["ipv4"],
+			lines: &v4Ips,
+			caches: &cachesV4,
+		},
+
+		{
+			name: typeMap["domains"],
+			lines: &validDomains,
+			caches: &cachesDomain,
+		},
 	}
 
+	for _, loop := range loops {
 
-	caches = makeNewCaches(v4Ips)
-	err = writeCache(
-		fmt.Sprintf(
-			"%v/.cache/%v-ipv4.yml",
+		name := fmt.Sprintf(
+			"%v/.cache/%v%v.yml",
 			list.OutputDir,
 			list.OutputFilePrefix,
-			),
-		caches,
-		list.CacheTime,
-	)
-	if err != nil {
-		log.Println("failed to save cache file:", err)
-	}
+			loop.name,
+			)
+
+		*loop.caches, err = readCache(
+			name,
+			list.CacheTime,
+			)
+		if err == nil {
+			appendCacheToStrs(*loop.lines, *loop.caches)
 
 
-	caches = makeNewCaches(validDomains)
-	err = writeCache(
-		fmt.Sprintf(
-			"%v/.cache/%v-valid_domains.yml",
-			list.OutputDir,
-			list.OutputFilePrefix,
-			),
-		caches,
-		list.CacheTime,
-	)
-	if err != nil {
-		log.Println("failed to save cache file:", err)
+			newCaches := putCacheToCache(
+				*loop.caches,
+				makeNewCaches(*loop.lines),
+			)
+
+			err = writeCache(name, newCaches, list.CacheTime)
+			if err != nil {
+				log.Println("error writing cache:", err)
+			}
+
+		} else {
+			log.Println("error reading cache:", err)
+		}
+
 	}
+
+	return cachesV6, cachesV4, cachesDomain, v6Ips, v4Ips, validDomains
 }
+
+// func dontUseThisOne_writeCachesFromList(
+// 	v6Ips, v4Ips, validDomains []string,
+// 	list List,
+// ) () {
+// 	fmt.Println("writing caches from list")
+//
+// 	var caches []Cache
+//
+// 	caches = makeNewCaches(v6Ips)
+// 	err := writeCache(
+// 		fmt.Sprintf(
+// 			"%v/.cache/%v-ipv6.yml",
+// 			list.OutputDir,
+// 			list.OutputFilePrefix,
+// 			),
+// 		caches,
+// 		list.CacheTime,
+// 	)
+// 	if err != nil {
+// 		log.Println("failed to save cache file:", err)
+// 	}
+//
+//
+// 	caches = makeNewCaches(v4Ips)
+// 	err = writeCache(
+// 		fmt.Sprintf(
+// 			"%v/.cache/%v-ipv4.yml",
+// 			list.OutputDir,
+// 			list.OutputFilePrefix,
+// 			),
+// 		caches,
+// 		list.CacheTime,
+// 	)
+// 	if err != nil {
+// 		log.Println("failed to save cache file:", err)
+// 	}
+//
+//
+// 	caches = makeNewCaches(validDomains)
+// 	err = writeCache(
+// 		fmt.Sprintf(
+// 			"%v/.cache/%v-valid_domains.yml",
+// 			list.OutputDir,
+// 			list.OutputFilePrefix,
+// 			),
+// 		caches,
+// 		list.CacheTime,
+// 	)
+// 	if err != nil {
+// 		log.Println("failed to save cache file:", err)
+// 	}
+// }
 
 func makeDirs(cfg Config) {
 	for _, list := range cfg.Lists {
@@ -485,15 +527,6 @@ func checkList(list List) ([]string, []string, []string) {
 	var mu sync.Mutex
 
 
-	fmt.Println(list)
-	if list.Cache {
-		v6Ips, v4Ips, validDomains = readAndPutCachesFromList(
-			v6Ips,
-			v4Ips,
-			validDomains,
-			list,
-		)
-	}
 
 
 	start := time.Now()
@@ -571,8 +604,16 @@ func checkList(list List) ([]string, []string, []string) {
 	v4Ips = sliceutil.Dedupe(v4Ips)
 	validDomains = sliceutil.Dedupe(validDomains)
 
+	fmt.Println(list)
+	// var cachesV6, cachesV4, cachesDomain []Cache
+
 	if list.Cache {
-		writeCachesFromList(v6Ips, v4Ips, validDomains, list)
+		_, _, _, v6Ips, v4Ips, validDomains = readAndPutCachesFromListAndWriteOut(
+			v6Ips,
+			v4Ips,
+			validDomains,
+			list,
+		)
 	}
 
 	return v6Ips, v4Ips, validDomains
