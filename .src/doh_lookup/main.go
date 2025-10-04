@@ -314,13 +314,15 @@ func readAndPutCachesFromListAndWriteOut(
 
 		} else {
 			if os.IsNotExist(err) {
+				log.Println("making cache doesn't exist, for:", loop.name)
 				err := writeCache(name, makeNewCaches(*loop.lines), list.CacheTime)
 				if err != nil {
 					log.Println("error writing and making new cache:", err)
 				}
 
+			} else {
+				log.Println("error reading cache:", err)
 			}
-			log.Println("error reading cache:", err)
 		}
 
 	}
