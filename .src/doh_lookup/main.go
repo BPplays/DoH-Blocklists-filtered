@@ -26,6 +26,8 @@ var (
 	curReqs int = 0
 	maxReqs int = 256
 	curReqsMu sync.Mutex
+
+	cacheFormat string = "%v/.cache/%v%v.yml"
 )
 
 var errDomainNotOk error = errors.New("domain not ok")
@@ -287,7 +289,7 @@ func readAndPutCachesFromListAndWriteOut(
 	for _, loop := range loops {
 
 		name := fmt.Sprintf(
-			"%v/.cache/%v%v.yml",
+			cacheFormat,
 			list.OutputDir,
 			list.OutputFilePrefix,
 			loop.name,
@@ -306,12 +308,19 @@ func readAndPutCachesFromListAndWriteOut(
 				makeNewCaches(*loop.lines),
 			)
 
-			err = writeCache(name, newCaches, list.CacheTime)
+			err := writeCache(name, newCaches, list.CacheTime)
 			if err != nil {
 				log.Println("error writing cache:", err)
 			}
 
 		} else {
+			if os.IsNotExist(err) {
+				err := writeCache(name, makeNewCaches(*loop.lines), list.CacheTime)
+				if err != nil {
+					log.Println("error writing and making new cache:", err)
+				}
+
+			}
 			log.Println("error reading cache:", err)
 		}
 
