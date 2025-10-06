@@ -573,7 +573,7 @@ func checkList(list List) ([]string, []string, []string) {
 				curReqsMu.Unlock()
 				// fmt.Println("waiting util avail")
 
-				time.Sleep(500 * time.Millisecond)
+				time.Sleep(200 * time.Millisecond)
 
 			}
 
