@@ -12,14 +12,14 @@
 2001:1a88:10:ffff::2                    # doh.quickline.ch
 2001:4860:4860::64                      # dns64.dns.google
 2001:4860:4860::6464                    # dns64.dns.google
-2001:4860:4860::8844                    # 8888.google
-2001:4860:4860::8844                    # dns.google
 2001:4860:4860::8844                    # google-public-dns-b.google.com
+2001:4860:4860::8844                    # dns.google
+2001:4860:4860::8844                    # 8888.google
 2001:4860:4860::8844                    # dns.google.com
-2001:4860:4860::8888                    # dns.google.com
 2001:4860:4860::8888                    # 8888.google
 2001:4860:4860::8888                    # dns.google
 2001:4860:4860::8888                    # google-public-dns-a.google.com
+2001:4860:4860::8888                    # dns.google.com
 2400:3200::1                            # dns.alidns.com
 2400:3200:baba::1                       # dns.alidns.com
 2403:3a00:107:29:133:167:212:25         # dnsnl.alekberg.net
@@ -59,6 +59,10 @@
 2620:149:9c9::115                       # doh.dns.apple.com
 2620:149:9c9::116                       # doh.dns.apple.com
 2620:149:9c9::123                       # doh.dns.apple.com
+2620:149:9cb:0:17:132:89:11             # doh.dns.apple.com
+2620:149:9cb:0:17:132:89:14             # doh.dns.apple.com
+2620:149:9cb:0:17:132:89:15             # doh.dns.apple.com
+2620:149:9cb:0:17:132:89:16             # doh.dns.apple.com
 2620:171:80c::1                         # doh.dns.apple.com
 2620:171:80d::1                         # doh.dns.apple.com
 2803:f800:53::3                         # chrome.cloudflare-dns.com
@@ -67,6 +71,8 @@
 2803:f800:53::8                         # dns.cloudflare.com
 2803:f800:54::1                         # odoh.cloudflare-dns.com
 2803:f800:54::2                         # dooh.cloudflare-dns.com
+2a00:11c0:39:353::3                     # firefox.dns.nextdns.io
+2a00:11c0:39:353::3                     # chromium.dns.nextdns.io
 2a02:6b8::feed:ff                       # common.dot.dns.yandex.net
 2a02:6b8:0:1::feed:ff                   # common.dot.dns.yandex.net
 2a02:6ca3:0:1::2                        # dns.levonet.sk
@@ -77,8 +83,8 @@
 2a06:98c1:52::8                         # dns.cloudflare.com
 2a06:98c1:53::1                         # odoh.cloudflare-dns.com
 2a06:98c1:53::2                         # dooh.cloudflare-dns.com
-2a06:9f44:f3e0:b00b:beba::51d           # internetsehat.bebasid.com
 2a06:9f44:f3e0:b00b:beba::51d           # family-adblock.bebasid.com
+2a06:9f44:f3e0:b00b:beba::51d           # internetsehat.bebasid.com
 2a06:9f44:f3e0:beba:51d::53             # unfiltered.dns.bebasid.com
 2a06:9f44:f3e0:beba:51d::53             # dns.bebasid.com
 2a07:e340::2                            # dns.mullvad.net
@@ -88,6 +94,8 @@
 2a07:e340::6                            # family.dns.mullvad.net
 2a07:e340::9                            # all.dns.mullvad.net
 2a09:8280:1::1:7432                     # max.rethinkdns.com
+2a0e:6902:2002:12b:5054:ff:fed7:6b78    # firefox.dns.nextdns.io
+2a0e:6902:2002:12b:5054:ff:fed7:6b78    # chromium.dns.nextdns.io
 2a0f:3b03:100:2:5054:ff:fe90:4a77       # chromium.dns.nextdns.io
 2a0f:3b03:100:2:5054:ff:fe90:4a77       # firefox.dns.nextdns.io
 2a10:50c0::ad1:ff                       # dns.adguard.com
