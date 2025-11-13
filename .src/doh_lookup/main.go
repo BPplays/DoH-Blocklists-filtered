@@ -818,7 +818,7 @@ func checkDns(cfg Config) {
 func init() {
 	nat64Prefixs = append(
 		nat64Prefixs,
-		netip.MustParsePrefix("64:ff9b:1::/48"),
+		netip.MustParsePrefix("64:ff9b:1::/96"),
 	)
 	nat64Prefixs = append(
 		nat64Prefixs,
