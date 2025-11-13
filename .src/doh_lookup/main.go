@@ -333,10 +333,10 @@ func putCacheToCache(caches []Cache, newCaches []Cache) (output []Cache) {
 }
 
 func readAndPutCachesFromListAndWriteOut(
-	v6Ips, v4Ips, nat64Ips, validDomains []Line,
+	v6Ips, v4Ips, validDomains []Line,
 	list List,
-) ([]Cache, []Cache, []Cache, []Cache, []Line, []Line, []Line, []Line) {
-	var cachesV6, cachesV4, cachesNat64, cachesDomain []Cache
+) ([]Cache, []Cache, []Cache, []Line, []Line, []Line) {
+	var cachesV6, cachesV4, cachesDomain []Cache
 	var err error
 
 	fmt.Println("reading caches from list")
@@ -355,12 +355,6 @@ func readAndPutCachesFromListAndWriteOut(
 			name: typeMap["ipv4"],
 			lines: &v4Ips,
 			caches: &cachesV4,
-		},
-
-		{
-			name: typeMap["nat64"],
-			lines: &nat64Ips,
-			caches: &cachesNat64,
 		},
 
 		{
@@ -411,7 +405,7 @@ func readAndPutCachesFromListAndWriteOut(
 
 	}
 
-	return cachesV6, cachesV4, cachesNat64, cachesDomain, v6Ips, v4Ips, nat64Ips, validDomains
+	return cachesV6, cachesV4, cachesDomain, v6Ips, v4Ips, validDomains
 }
 
 // func dontUseThisOne_writeCachesFromList(
@@ -476,6 +470,25 @@ func makeDirs(cfg Config) {
 			}
 		}
 	}
+}
+
+func toNat64(ipv4s []Line) (nat64 []Line) {
+	for _, line := range ipv4s {
+		if (!line.Addr.Is4In6()) && (!line.Addr.Is4()) {
+			continue
+		}
+		for _, pref := range nat64Prefixs {
+			addr := mixPrefixIP(&pref, &line.Addr)
+			tmpLine := line
+			tmpLine.Addr = (*addr).Addr()
+			nat64 = append(nat64, tmpLine)
+		}
+	}
+
+	nat64 = sliceutil.Dedupe(nat64)
+	slices.SortFunc(nat64, sortLine)
+
+	return nat64
 }
 
 func readConfig(file string) (Config) {
@@ -562,7 +575,6 @@ func checkHost(
 ) (
 	outputV6 []Line,
 	outputV4 []Line,
-	outputNat64 []Line,
 	err error,
 ) {
 
@@ -570,7 +582,7 @@ func checkHost(
 	domainOk := false
 	data, err := queryWithResolvers(host, 5, 5 * time.Second, DefaultResolvers)
 	if err != nil {
-		return outputV6, outputV4, outputNat64, err
+		return outputV6, outputV4, err
 	}
 
 	// fmt.Printf("qeury time %v\n", time.Since(start))
@@ -609,16 +621,6 @@ func checkHost(
 			)
 
 		} else if uaddr.Is4() {
-			for _, pref := range nat64Prefixs {
-				addr := mixPrefixIP(&pref, &uaddr)
-				outputNat64 = append(
-					outputNat64,
-					Line{Addr: (*addr).Addr(), Host: host},
-					)
-
-			}
-
-
 			outputV4 = append(
 				outputV4,
 				Line{Addr: uaddr, Host: host},
@@ -628,19 +630,18 @@ func checkHost(
 	}
 
 	if !domainOk || (len(outputV6) <= 0 && len(outputV4) <= 0) {
-		return outputV6, outputV4, outputNat64, errDomainNotOk
+		return outputV6, outputV4, errDomainNotOk
 	}
 	// fmt.Printf("addresss formatting and check time time %v\n", time.Since(start))
 
-	return outputV6, outputV4, outputNat64, nil
+	return outputV6, outputV4, nil
 
 }
 
-func checkList(list List) ([]Line, []Line, []Line, []Line) {
+func checkList(list List) ([]Line, []Line, []Line) {
 
 	var v6Ips []Line
 	var v4Ips []Line
-	var nat64Ips []Line
 	var validDomains []Line
 
 	var wg sync.WaitGroup
@@ -700,7 +701,7 @@ func checkList(list List) ([]Line, []Line, []Line, []Line) {
 					curReqsMu.Unlock()
 				}()
 
-				hostIpsV6, hostIpsV4, hostIpsNat64, err := checkHost(host, ifile.CdnCheck)
+				hostIpsV6, hostIpsV4, err := checkHost(host, ifile.CdnCheck)
 				if err != nil {
 					return
 				}
@@ -708,7 +709,6 @@ func checkList(list List) ([]Line, []Line, []Line, []Line) {
 				mu.Lock()
 				v6Ips = append(v6Ips, hostIpsV6...)
 				v4Ips = append(v4Ips, hostIpsV4...)
-				nat64Ips = append(nat64Ips, hostIpsNat64...)
 				validDomains = append(validDomains, Line{
 					Host: host,
 					Addr: netip.IPv6Unspecified(),
@@ -726,23 +726,21 @@ func checkList(list List) ([]Line, []Line, []Line, []Line) {
 
 	v6Ips = sliceutil.Dedupe(v6Ips)
 	v4Ips = sliceutil.Dedupe(v4Ips)
-	nat64Ips = sliceutil.Dedupe(nat64Ips)
 	validDomains = sliceutil.Dedupe(validDomains)
 
 	fmt.Println(list)
 	// var cachesV6, cachesV4, cachesDomain []Cache
 
 	if list.Cache {
-		_, _, _, _, v6Ips, v4Ips, nat64Ips, validDomains = readAndPutCachesFromListAndWriteOut(
+		_, _, _, v6Ips, v4Ips, validDomains = readAndPutCachesFromListAndWriteOut(
 			v6Ips,
 			v4Ips,
-			nat64Ips,
 			validDomains,
 			list,
 		)
 	}
 
-	return v6Ips, v4Ips, nat64Ips, validDomains
+	return v6Ips, v4Ips, validDomains
 }
 
 func checkDns(cfg Config) {
@@ -755,14 +753,13 @@ func checkDns(cfg Config) {
 		go func() {
 			defer wg.Done()
 
-			v6Ips, v4Ips, nat64Ips, validDomains := checkList(list)
+			v6Ips, v4Ips, validDomains := checkList(list)
 			if (len(v6Ips) <= 0) && (len(v4Ips) <= 0) {
 				log.Fatalln("no ips found")
 			}
 
 			v6Out := sliceutil.Dedupe(v6Ips)
 			v4Out := sliceutil.Dedupe(v4Ips)
-			nat64Out := sliceutil.Dedupe(nat64Ips)
 			domainsOut := sliceutil.Dedupe(validDomains)
 			if *dryRun {
 				fmt.Println(strings.Join(LinesToStrings(v6Out), "\n"))
@@ -771,7 +768,6 @@ func checkDns(cfg Config) {
 
 			slices.SortFunc(v6Out, sortLine)
 			slices.SortFunc(v4Out, sortLine)
-			slices.SortFunc(nat64Out, sortLine)
 			slices.SortFunc(domainsOut, sortLine)
 
 
@@ -801,7 +797,7 @@ func checkDns(cfg Config) {
 					list.OutputDir,
 					list.OutputFilePrefix,
 				),
-				[]byte(strings.Join(LinesToStrings(nat64Out), "\n")),
+				[]byte(strings.Join(LinesToStrings(toNat64(v4Out)), "\n")),
 				0755,
 				)
 
