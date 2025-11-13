@@ -154,14 +154,43 @@ type InputFile struct {
 	CdnCheck bool   `yaml:"cdncheck"`
 }
 
+type Line struct {
+	Host string     `yaml:"host"`
+	Addr netip.Addr `yaml:"addr"`
+}
+func (l *Line) String() (str string) {
+	defer func() {
+		if r := recover(); r != nil {
+			str = ""
+		}
+	}()
+
+	str = ""
+
+	if l == nil {
+		return str
+	}
+
+	if l.Addr.IsUnspecified() {
+		return l.Host
+	}
+
+	if !l.Addr.Is4() {
+		return fmt.Sprintf("%-40s%s", l.Addr, "# "+l.Host)
+	} else {
+		return fmt.Sprintf("%-20s%s", l.Addr, "# "+l.Host)
+	}
+
+}
+
 type Cache struct {
-	Line string `yaml:"line"`
+	Line Line `yaml:"line"`
 	Time time.Time `yaml:"time"`
 }
 
 type CacheLoop struct {
 	name string
-	lines *[]string
+	lines *[]Line
 	caches *[]Cache
 }
 
@@ -179,7 +208,25 @@ func cacheFilterExpired(caches []Cache, expire time.Duration) ([]Cache) {
 }
 
 func sortCache(a, b Cache) int {
-	return strings.Compare(a.Line, b.Line)
+	return sortLine(a.Line, b.Line)
+}
+func sortLine(a, b Line) int {
+	if (!a.Addr.IsUnspecified()) && (!b.Addr.IsUnspecified()) {
+		return a.Addr.Compare(b.Addr)
+	}
+
+	if (a.Addr.IsUnspecified()) && (b.Addr.IsUnspecified()) {
+		return strings.Compare(a.Host, b.Host)
+	}
+
+	return strings.Compare(a.String(), b.String())
+}
+
+func LinesToStrings(lines []Line) (strs []string) {
+	for _, l := range lines {
+		strs = append(strs, l.String())
+	}
+	return strs
 }
 
 func writeCache(path string, caches []Cache, expire time.Duration) (error) {
@@ -215,19 +262,19 @@ func readCache(path string, expire time.Duration) ([]Cache, error) {
 	return caches, nil
 }
 
-func makeNewCaches(strs []string) (caches []Cache) {
-	for _, str := range strs {
+func makeNewCaches(lines []Line) (caches []Cache) {
+	for _, line := range lines {
 		caches = append(
 			caches,
-			Cache{Line: str, Time: time.Now()},
+			Cache{Line: line, Time: time.Now()},
 		)
 	}
 	return
 }
 
 
-func appendCacheToStrs(strs []string, caches []Cache) (output []string) {
-	output = append(output, strs...)
+func appendCacheToLines(lines []Line, caches []Cache) (output []Line) {
+	output = append(output, lines...)
 	for _, cache := range caches {
 		output = append(output, cache.Line)
 	}
@@ -237,7 +284,7 @@ func appendCacheToStrs(strs []string, caches []Cache) (output []string) {
 func putCacheToCache(caches []Cache, newCaches []Cache) (output []Cache) {
 	output = append(output, caches...)
 
-	cMap := make(map[string]int, len(output))
+	cMap := make(map[Line]int, len(output))
 	for i, cache := range output {
 		cMap[cache.Line] = i
 	}
@@ -255,9 +302,9 @@ func putCacheToCache(caches []Cache, newCaches []Cache) (output []Cache) {
 }
 
 func readAndPutCachesFromListAndWriteOut(
-	v6Ips, v4Ips, validDomains []string,
+	v6Ips, v4Ips, validDomains []Line,
 	list List,
-) ([]Cache, []Cache, []Cache, []string, []string, []string) {
+) ([]Cache, []Cache, []Cache, []Line, []Line, []Line) {
 	var cachesV6, cachesV4, cachesDomain []Cache
 	var err error
 
@@ -310,7 +357,7 @@ func readAndPutCachesFromListAndWriteOut(
 				log.Println("error writing cache:", err)
 			}
 
-			*loop.lines = appendCacheToStrs(*loop.lines, *loop.caches)
+			*loop.lines = appendCacheToLines(*loop.lines, *loop.caches)
 
 		} else {
 			if os.IsNotExist(err) {
@@ -472,7 +519,14 @@ func preCheck() {
 }
 
 
-func checkHost(host string, useCdnCheck bool) (outputV6 []string, outputV4 []string, err error) {
+func checkHost(
+	host string,
+	useCdnCheck bool,
+) (
+	outputV6 []Line,
+	outputV4 []Line,
+	err error,
+) {
 
 	// start := time.Now()
 	domainOk := false
@@ -511,9 +565,16 @@ func checkHost(host string, useCdnCheck bool) (outputV6 []string, outputV4 []str
 
 		domainOk = true
 		if uaddr.Is6() {
-			outputV6 = append(outputV6, fmt.Sprintf("%-40s%s", addr, "# "+host))
+			outputV6 = append(
+				outputV6,
+				Line{Addr: uaddr, Host: host},
+			)
+
 		} else if uaddr.Is4() {
-			outputV4 = append(outputV4, fmt.Sprintf("%-20s%s", addr, "# "+host))
+			outputV4 = append(
+				outputV4,
+				Line{Addr: uaddr, Host: host},
+			)
 		}
 
 	}
@@ -527,11 +588,11 @@ func checkHost(host string, useCdnCheck bool) (outputV6 []string, outputV4 []str
 
 }
 
-func checkList(list List) ([]string, []string, []string) {
+func checkList(list List) ([]Line, []Line, []Line) {
 
-	var v6Ips []string
-	var v4Ips []string
-	var validDomains []string
+	var v6Ips []Line
+	var v4Ips []Line
+	var validDomains []Line
 
 	var wg sync.WaitGroup
 	var mu sync.Mutex
@@ -582,7 +643,7 @@ func checkList(list List) ([]string, []string, []string) {
 			curReqs += 1
 			curReqsMu.Unlock()
 			wg.Add(1)
-			go func(){
+			go func(host string){
 				defer func(){
 					wg.Done()
 					curReqsMu.Lock()
@@ -598,10 +659,13 @@ func checkList(list List) ([]string, []string, []string) {
 				mu.Lock()
 				v6Ips = append(v6Ips, hostIpsV6...)
 				v4Ips = append(v4Ips, hostIpsV4...)
-				validDomains = append(validDomains, host)
+				validDomains = append(validDomains, Line{
+					Host: host,
+					Addr: netip.IPv6Unspecified(),
+				})
 				mu.Unlock()
 
-			}()
+			}(host)
 
 
 		}
@@ -648,13 +712,13 @@ func checkDns(cfg Config) {
 			v4Out := sliceutil.Dedupe(v4Ips)
 			domainsOut := sliceutil.Dedupe(validDomains)
 			if *dryRun {
-				fmt.Println(strings.Join(v6Out, "\n"))
+				fmt.Println(strings.Join(LinesToStrings(v6Out), "\n"))
 				return
 			}
 
-			slices.Sort(v6Out)
-			slices.Sort(v4Out)
-			slices.Sort(domainsOut)
+			slices.SortFunc(v6Out, sortLine)
+			slices.SortFunc(v4Out, sortLine)
+			slices.SortFunc(domainsOut, sortLine)
 
 
 			os.WriteFile(
@@ -663,7 +727,7 @@ func checkDns(cfg Config) {
 					list.OutputDir,
 					list.OutputFilePrefix,
 				),
-				[]byte(strings.Join(v6Out, "\n")),
+				[]byte(strings.Join(LinesToStrings(v6Out), "\n")),
 				0755,
 				)
 
@@ -673,7 +737,7 @@ func checkDns(cfg Config) {
 					list.OutputDir,
 					list.OutputFilePrefix,
 				),
-				[]byte(strings.Join(v4Out, "\n")),
+				[]byte(strings.Join(LinesToStrings(v4Out), "\n")),
 				0755,
 				)
 
@@ -683,7 +747,7 @@ func checkDns(cfg Config) {
 					list.OutputDir,
 					list.OutputFilePrefix,
 				),
-				[]byte(strings.Join(domainsOut, "\n")),
+				[]byte(strings.Join(LinesToStrings(domainsOut), "\n")),
 				0755,
 				)
 		}()
