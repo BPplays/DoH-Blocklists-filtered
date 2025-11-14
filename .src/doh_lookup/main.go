@@ -503,13 +503,13 @@ func lineDedupeIps(ips []Line) (out []Line) {
 			tmp.ExtraHosts = append(tmp.ExtraHosts, ip.Host)
 			out[len(out)-1] = tmp
 		} else {
+			prevIp = ip.Addr
 			out = append(out, ip)
-
 		}
 
 	}
 
-	return
+	return out
 }
 
 func lineDedupeHost(host Line) any {
