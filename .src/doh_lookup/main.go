@@ -478,9 +478,13 @@ func toNat64(ipv4s []Line) (nat64 []Line) {
 			continue
 		}
 		for _, pref := range nat64Prefixs {
-			addr := mixPrefixIP(&pref, &line.Addr)
+			// always use 96 or else mapped ipv4 get ::ffff infront
+			nat64Pref := netip.PrefixFrom(pref.Addr(), 96)
+			addr := mixPrefixIP(&nat64Pref, &line.Addr)
+
 			tmpLine := line
 			tmpLine.Addr = (*addr).Addr()
+
 			nat64 = append(nat64, tmpLine)
 		}
 	}
