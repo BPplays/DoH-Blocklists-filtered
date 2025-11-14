@@ -261,6 +261,18 @@ func sortLine(a, b Line) int {
 	return strings.Compare(a.String(), b.String())
 }
 
+func validateIps(lines []Line) (out []Line) {
+	for _, l := range lines {
+		if !l.Addr.IsValid() { continue }
+		if l.Addr.IsUnspecified() { continue }
+		if l.Addr.IsLoopback() { continue }
+
+		out = append(out, l)
+	}
+
+	return out
+}
+
 func LinesToStrings(lines []Line) (strs []string) {
 	for _, l := range lines {
 		strs = append(strs, l.String())
@@ -375,6 +387,9 @@ func readAndPutCachesFromListAndWriteOut(
 
 	v6Ips = lineDedupeIps(v6Ips)
 	v4Ips = lineDedupeIps(v4Ips)
+
+	v6Ips = validateIps(v6Ips)
+	v4Ips = validateIps(v4Ips)
 
 	fmt.Println("reading caches from list")
 
@@ -788,6 +803,9 @@ func checkDns(cfg Config) {
 
 			v6Out := lineDedupeIps(v6Ips)
 			v4Out := lineDedupeIps(v4Ips)
+			v6Out = validateIps(v6Out)
+			v4Out = validateIps(v4Out)
+
 			domainsOut := sliceutil.DedupeFunc(
 				validDomains,
 				lineDedupeHost,
