@@ -15,6 +15,10 @@ import (
 	"strings"
 	"sync"
 	"time"
+	"bufio"
+	"bytes"
+	"io"
+	"net/http"
 
 	"golang.org/x/crypto/sha3"
 
@@ -863,6 +867,52 @@ func checkDns(cfg Config) {
 	wg.Wait()
 }
 
+func fetchAndSaveIfValid(url, outputPath string, minLines int) error {
+	// Fetch the file
+	resp, err := http.Get(url)
+	if err != nil {
+		return fmt.Errorf("failed to fetch URL: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("bad status: %s", resp.Status)
+	}
+
+	// Read the entire response into memory
+	data, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return fmt.Errorf("failed to read response: %w", err)
+	}
+
+	// Count lines
+	lineCount := countLines(data)
+	fmt.Printf("File has %d lines\n", lineCount)
+
+	// Check if file meets minimum line requirement
+	if lineCount < minLines {
+		fmt.Printf("File has fewer than %d lines, not saving\n", minLines)
+		return nil
+	}
+
+	// Save the file
+	if err := os.WriteFile(outputPath, data, 0644); err != nil {
+		return fmt.Errorf("failed to save file: %w", err)
+	}
+
+	fmt.Printf("File saved to %s\n", outputPath)
+	return nil
+}
+
+func countLines(data []byte) int {
+	scanner := bufio.NewScanner(bytes.NewReader(data))
+	count := 0
+	for scanner.Scan() {
+		count++
+	}
+	return count
+}
+
 func init() {
 
 	hasV6, hasV4 := availableIpVersions()
@@ -906,7 +956,18 @@ func init() {
 func main() {
 	configPath := flag.String("c", "", "")
 	dryRun = flag.Bool("d", false, "")
+	webgetFileUrl := flag.String("curl_url", "", "")
+	webgetFileLoc := flag.String("curl_loc", "", "")
 	flag.Parse()
+
+	if *webgetFileUrl != "" {
+		for range 10 {
+			err := fetchAndSaveIfValid(*webgetFileUrl, *webgetFileLoc, 50)
+			if err == nil { break }
+			time.Sleep(110 * time.Millisecond)
+		}
+		os.Exit(0)
+	}
 
 	cfg := readConfig(*configPath)
 	makeDirs(cfg)

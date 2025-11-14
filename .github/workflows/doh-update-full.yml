@@ -6,9 +6,9 @@ name: doh-update-full
 on:
   # push:
   #   branches:
-  #    - 'master'
+  #    - 'main'
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '48 5 * * *'
     # - cron: '0 */2 * * *'
     # - cron: '0 */1 * * *'
   workflow_dispatch:
@@ -26,11 +26,11 @@ jobs:
       - uses: actions/checkout@v3
 
 
-      - name: chmod
-        run: sudo chmod 755 ./.src/nu
-
-      - name: chmod
-        run: sudo chmod 755 ./.scripts/doh-lookup.sh
+      # - name: chmod
+      #   run: sudo chmod 755 ./.src/nu
+      #
+      # - name: chmod
+      #   run: sudo chmod 755 ./.scripts/doh-lookup.sh
 
       - name: chmod
         run: sudo chmod -R 755 ./.scripts/
