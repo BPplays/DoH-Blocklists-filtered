@@ -495,7 +495,23 @@ func lineDedupeIps(ips []Line) (out []Line) {
 			out[len(out)-1] = tmp
 		} else {
 			tmp := out[len(out)-1]
-			tmp.ExtraHosts = sliceutil.Dedupe(tmp.ExtraHosts)
+
+			hosts := []string{tmp.Host}
+			hosts = append(hosts, tmp.ExtraHosts...)
+			hosts = sliceutil.Dedupe(hosts)
+			slices.Sort(hosts)
+
+
+			if len(hosts) >= 1 {
+				tmp.Host = hosts[0]
+			}
+
+			if len(hosts) >= 2 {
+				tmp.ExtraHosts = hosts[1:]
+			} else {
+				tmp.ExtraHosts = []string{}
+			}
+
 			out[len(out)-1] = tmp
 
 			prevIp = ip.Addr
