@@ -115,24 +115,6 @@ func availableIpVersions() (hasV6 bool, hasV4 bool) {
 	return hasV6, hasV4
 }
 
-// init checks for IPv6 and IPv4 connectivity and adds either group of resolvers if available, falls back to both if it can't detect any
-func init() {
-	hasV6, hasV4 := availableIpVersions()
-
-	if hasV6 {
-		DefaultResolvers = append(DefaultResolvers, IPv6Resolvers...)
-	}
-
-	if hasV4 {
-		DefaultResolvers = append(DefaultResolvers, IPv4Resolvers...)
-	}
-
-	if len(DefaultResolvers) <= 0 {
-		DefaultResolvers = append(DefaultResolvers, IPv6Resolvers...)
-		DefaultResolvers = append(DefaultResolvers, IPv4Resolvers...)
-	}
-}
-
 var typeMap map[string]string = map[string]string{
 	"ipv6":    "-doh-ipv6",
 	"ipv4":    "-doh-ipv4",
@@ -185,7 +167,7 @@ func (l *Line) String() (str string) {
 
 	hosts := []string{l.Host}
 	hosts = append(hosts, l.ExtraHosts...)
-	sliceutil.Dedupe(hosts)
+	hosts = sliceutil.Dedupe(hosts)
 	slices.Sort(hosts)
 
 	// always a 2 space gap at least
@@ -843,6 +825,22 @@ func checkDns(cfg Config) {
 }
 
 func init() {
+
+	hasV6, hasV4 := availableIpVersions()
+
+	if hasV6 {
+		DefaultResolvers = append(DefaultResolvers, IPv6Resolvers...)
+	}
+
+	if hasV4 {
+		DefaultResolvers = append(DefaultResolvers, IPv4Resolvers...)
+	}
+
+	if len(DefaultResolvers) <= 0 {
+		DefaultResolvers = append(DefaultResolvers, IPv6Resolvers...)
+		DefaultResolvers = append(DefaultResolvers, IPv4Resolvers...)
+	}
+
 	nat64Prefixs = append(
 		nat64Prefixs,
 		netip.MustParsePrefix("64:ff9b:1::/96"),
