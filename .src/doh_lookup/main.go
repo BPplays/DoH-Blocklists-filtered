@@ -185,6 +185,7 @@ func (l *Line) String() (str string) {
 
 	hosts := []string{l.Host}
 	hosts = append(hosts, l.ExtraHosts...)
+	sliceutil.Dedupe(hosts)
 	slices.Sort(hosts)
 
 	// always a 2 space gap at least
