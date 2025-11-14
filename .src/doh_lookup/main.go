@@ -1,6 +1,8 @@
 package main
 
 import (
+	"crypto/rand"
+	"encoding/hex"
 	"errors"
 	"flag"
 	"fmt"
@@ -14,6 +16,8 @@ import (
 	"sync"
 	"time"
 
+	"golang.org/x/crypto/sha3"
+
 	"github.com/miekg/dns"
 	"github.com/projectdiscovery/retryabledns"
 	sliceutil "github.com/projectdiscovery/utils/slice"
@@ -23,15 +27,14 @@ import (
 )
 
 var (
-	curReqs int = 0
-	maxReqs int = 256
+	curReqs   int = 0
+	maxReqs   int = 256
 	curReqsMu sync.Mutex
 
 	cacheFormat string = "%v/.cache/%v%v.yml"
 
 	nat64Prefixs []netip.Prefix
 )
-
 
 var errDomainNotOk error = errors.New("domain not ok")
 
@@ -66,7 +69,7 @@ func checkConnectivity(IPs []string, proto string) bool {
 
 	for _, IP := range IPs {
 		wg.Add(1)
-		go func(){
+		go func() {
 			defer wg.Done()
 
 			conn, err := net.DialTimeout(proto, IP, 3*time.Second)
@@ -81,7 +84,9 @@ func checkConnectivity(IPs []string, proto string) bool {
 	close(results)
 
 	for result := range results {
-		if result { return true }
+		if result {
+			return true
+		}
 	}
 	return false
 }
@@ -90,7 +95,7 @@ func availableIpVersions() (hasV6 bool, hasV4 bool) {
 	var wg sync.WaitGroup
 
 	wg.Add(1)
-	go func(){
+	go func() {
 		defer wg.Done()
 		if checkConnectivity([]string{"[2001:4860:4860::8888]:53"}, "udp") {
 			hasV6 = true
@@ -98,7 +103,7 @@ func availableIpVersions() (hasV6 bool, hasV4 bool) {
 	}()
 
 	wg.Add(1)
-	go func(){
+	go func() {
 		defer wg.Done()
 		if checkConnectivity([]string{"8.8.8.8:53"}, "udp") {
 			hasV4 = true
@@ -109,7 +114,6 @@ func availableIpVersions() (hasV6 bool, hasV4 bool) {
 
 	return hasV6, hasV4
 }
-
 
 // init checks for IPv6 and IPv4 connectivity and adds either group of resolvers if available, falls back to both if it can't detect any
 func init() {
@@ -129,28 +133,26 @@ func init() {
 	}
 }
 
-
 var typeMap map[string]string = map[string]string{
-  "ipv6": "-doh-ipv6",
-  "ipv4":   "-doh-ipv4",
-  "nat64": "-doh-ipv4-nat64",
-  "domains":   "-doh-domains",
-  "domain":   "-doh-domains",
+	"ipv6":    "-doh-ipv6",
+	"ipv4":    "-doh-ipv4",
+	"nat64":   "-doh-ipv4-nat64",
+	"domains": "-doh-domains",
+	"domain":  "-doh-domains",
 }
-
 
 type Config struct {
 	Resolvers []string `yaml:"resolvers"`
-	Lists []List `yaml:"lists"`
+	Lists     []List   `yaml:"lists"`
 }
 
 type List struct {
-	Name             string      `yaml:"name"`
-	Cache bool      `yaml:"cache"`
-	CacheTime time.Duration      `yaml:"cache_time"`
-	InputFiles       []InputFile `yaml:"input_files"`
-	OutputDir string      `yaml:"output_dir"`
-	OutputFilePrefix string      `yaml:"output_file_prefix"`
+	Name             string        `yaml:"name"`
+	Cache            bool          `yaml:"cache"`
+	CacheTime        time.Duration `yaml:"cache_time"`
+	InputFiles       []InputFile   `yaml:"input_files"`
+	OutputDir        string        `yaml:"output_dir"`
+	OutputFilePrefix string        `yaml:"output_file_prefix"`
 }
 
 type InputFile struct {
@@ -159,9 +161,11 @@ type InputFile struct {
 }
 
 type Line struct {
-	Host string     `yaml:"host"`
-	Addr netip.Addr `yaml:"addr"`
+	Host       string     `yaml:"host"`
+	Addr       netip.Addr `yaml:"addr"`
+	ExtraHosts []string   `yaml:"extra_hosts"`
 }
+
 func (l *Line) String() (str string) {
 	defer func() {
 		if r := recover(); r != nil {
@@ -179,26 +183,69 @@ func (l *Line) String() (str string) {
 		return l.Host
 	}
 
+	hosts := []string{l.Host}
+	hosts = append(hosts, l.ExtraHosts...)
+	slices.Sort(hosts)
+
+	// always a 2 space gap at least
 	if !l.Addr.Is4() {
-		return fmt.Sprintf("%-40s%s", l.Addr, "# "+l.Host)
+		return fmt.Sprintf("%-41s%s", l.Addr, "# "+strings.Join(hosts, ", "))
 	} else {
-		return fmt.Sprintf("%-20s%s", l.Addr, "# "+l.Host)
+		return fmt.Sprintf("%-17s%s", l.Addr, "# "+strings.Join(hosts, ", "))
 	}
 
 }
 
+func (l *Line) mapKey() (str string) {
+	defer func() {
+		if r := recover(); r != nil {
+			randomBytes := make([]byte, 128)
+			_, err := rand.Read(randomBytes)
+			if err != nil {
+				str = rand.Text()
+				return
+			}
+			hash := sha3.Sum512(randomBytes)
+			str = hex.EncodeToString(hash[:])
+		}
+	}()
+
+	str = ""
+
+	if l == nil {
+		randomBytes := make([]byte, 128)
+		_, err := rand.Read(randomBytes)
+		if err != nil {
+			str = rand.Text()
+			return
+		}
+		hash := sha3.Sum512(randomBytes)
+		str = hex.EncodeToString(hash[:])
+		return str
+	}
+
+
+	var sb strings.Builder
+	sb.WriteString(fmt.Sprint(l.Addr))
+	sb.WriteString(l.Host)
+	sb.WriteString(strings.Join(l.ExtraHosts, ""))
+
+	return sb.String()
+
+}
+
 type Cache struct {
-	Line Line `yaml:"line"`
+	Line Line      `yaml:"line"`
 	Time time.Time `yaml:"time"`
 }
 
 type CacheLoop struct {
-	name string
-	lines *[]Line
+	name   string
+	lines  *[]Line
 	caches *[]Cache
 }
 
-func cacheFilterExpired(caches []Cache, expire time.Duration) ([]Cache) {
+func cacheFilterExpired(caches []Cache, expire time.Duration) []Cache {
 	var output []Cache
 	for _, cache := range caches {
 		oldness := time.Since(cache.Time)
@@ -234,33 +281,33 @@ func LinesToStrings(lines []Line) (strs []string) {
 }
 
 func mixPrefixIP(prefix *netip.Prefix, suffix *netip.Addr) *netip.Prefix {
-    prefixBits := prefix.Bits()
-    if prefixBits >= 128 {
-        return prefix
-    }
+	prefixBits := prefix.Bits()
+	if prefixBits >= 128 {
+		return prefix
+	}
 
-    prefixBytes := (*prefix).Addr().As16()
-    suffixBytes := (*suffix).As16()
+	prefixBytes := (*prefix).Addr().As16()
+	suffixBytes := (*suffix).As16()
 
-    fullBytes := prefixBits / 8     // how many full bytes the prefix occupies
-    rem := prefixBits % 8           // leftover bits in the partial byte (0..7)
+	fullBytes := prefixBits / 8 // how many full bytes the prefix occupies
+	rem := prefixBits % 8       // leftover bits in the partial byte (0..7)
 
-    if rem == 0 {
-        copy(prefixBytes[fullBytes:], suffixBytes[fullBytes:])
-    } else {
-        mask := byte(0xFF) << uint(8-rem) // mask has top `rem` bits set
-        prefixBytes[fullBytes] = (prefixBytes[fullBytes] & mask) | (suffixBytes[fullBytes] & ^mask)
-        if fullBytes+1 <= 15 {
-            copy(prefixBytes[fullBytes+1:], suffixBytes[fullBytes+1:])
-        }
-    }
+	if rem == 0 {
+		copy(prefixBytes[fullBytes:], suffixBytes[fullBytes:])
+	} else {
+		mask := byte(0xFF) << uint(8-rem) // mask has top `rem` bits set
+		prefixBytes[fullBytes] = (prefixBytes[fullBytes] & mask) | (suffixBytes[fullBytes] & ^mask)
+		if fullBytes+1 <= 15 {
+			copy(prefixBytes[fullBytes+1:], suffixBytes[fullBytes+1:])
+		}
+	}
 
-    out := netip.AddrFrom16(prefixBytes)
+	out := netip.AddrFrom16(prefixBytes)
 	outPrefix := netip.PrefixFrom(out, prefixBits)
-    return &outPrefix
+	return &outPrefix
 }
 
-func writeCache(path string, caches []Cache, expire time.Duration) (error) {
+func writeCache(path string, caches []Cache, expire time.Duration) error {
 	caches = cacheFilterExpired(caches, expire)
 	slices.SortFunc(caches, sortCache)
 
@@ -303,7 +350,6 @@ func makeNewCaches(lines []Line) (caches []Cache) {
 	return
 }
 
-
 func appendCacheToLines(lines []Line, caches []Cache) (output []Line) {
 	output = append(output, lines...)
 	for _, cache := range caches {
@@ -315,13 +361,13 @@ func appendCacheToLines(lines []Line, caches []Cache) (output []Line) {
 func putCacheToCache(caches []Cache, newCaches []Cache) (output []Cache) {
 	output = append(output, caches...)
 
-	cMap := make(map[Line]int, len(output))
+	cMap := make(map[string]int, len(output))
 	for i, cache := range output {
-		cMap[cache.Line] = i
+		cMap[cache.Line.mapKey()] = i
 	}
 
 	for _, newCache := range newCaches {
-		if index, ok := cMap[newCache.Line]; ok {
+		if index, ok := cMap[newCache.Line.mapKey()]; ok {
 			if newCache.Time.Compare(output[index].Time) > 0 {
 				output[index] = newCache
 			}
@@ -341,25 +387,22 @@ func readAndPutCachesFromListAndWriteOut(
 
 	fmt.Println("reading caches from list")
 
-
-
-
 	loops := []CacheLoop{
 		{
-			name: typeMap["ipv6"],
-			lines: &v6Ips,
+			name:   typeMap["ipv6"],
+			lines:  &v6Ips,
 			caches: &cachesV6,
 		},
 
 		{
-			name: typeMap["ipv4"],
-			lines: &v4Ips,
+			name:   typeMap["ipv4"],
+			lines:  &v4Ips,
 			caches: &cachesV4,
 		},
 
 		{
-			name: typeMap["domains"],
-			lines: &validDomains,
+			name:   typeMap["domains"],
+			lines:  &validDomains,
 			caches: &cachesDomain,
 		},
 	}
@@ -371,12 +414,12 @@ func readAndPutCachesFromListAndWriteOut(
 			list.OutputDir,
 			list.OutputFilePrefix,
 			loop.name,
-			)
+		)
 
 		*loop.caches, err = readCache(
 			name,
 			list.CacheTime,
-			)
+		)
 		if err == nil {
 			writeCaches := putCacheToCache(
 				*loop.caches,
@@ -408,58 +451,6 @@ func readAndPutCachesFromListAndWriteOut(
 	return cachesV6, cachesV4, cachesDomain, v6Ips, v4Ips, validDomains
 }
 
-// func dontUseThisOne_writeCachesFromList(
-// 	v6Ips, v4Ips, validDomains []string,
-// 	list List,
-// ) () {
-// 	fmt.Println("writing caches from list")
-//
-// 	var caches []Cache
-//
-// 	caches = makeNewCaches(v6Ips)
-// 	err := writeCache(
-// 		fmt.Sprintf(
-// 			"%v/.cache/%v-ipv6.yml",
-// 			list.OutputDir,
-// 			list.OutputFilePrefix,
-// 			),
-// 		caches,
-// 		list.CacheTime,
-// 	)
-// 	if err != nil {
-// 		log.Println("failed to save cache file:", err)
-// 	}
-//
-//
-// 	caches = makeNewCaches(v4Ips)
-// 	err = writeCache(
-// 		fmt.Sprintf(
-// 			"%v/.cache/%v-ipv4.yml",
-// 			list.OutputDir,
-// 			list.OutputFilePrefix,
-// 			),
-// 		caches,
-// 		list.CacheTime,
-// 	)
-// 	if err != nil {
-// 		log.Println("failed to save cache file:", err)
-// 	}
-//
-//
-// 	caches = makeNewCaches(validDomains)
-// 	err = writeCache(
-// 		fmt.Sprintf(
-// 			"%v/.cache/%v-valid_domains.yml",
-// 			list.OutputDir,
-// 			list.OutputFilePrefix,
-// 			),
-// 		caches,
-// 		list.CacheTime,
-// 	)
-// 	if err != nil {
-// 		log.Println("failed to save cache file:", err)
-// 	}
-// }
 
 func makeDirs(cfg Config) {
 	for _, list := range cfg.Lists {
@@ -472,7 +463,7 @@ func makeDirs(cfg Config) {
 	}
 }
 
-func toNat64(ipv4s []Line) (nat64 []Line) {
+func toNat64(ipv4s []Line) (nat64s []Line) {
 	for _, line := range ipv4s {
 		if (!line.Addr.Is4In6()) && (!line.Addr.Is4()) {
 			continue
@@ -485,17 +476,47 @@ func toNat64(ipv4s []Line) (nat64 []Line) {
 			tmpLine := line
 			tmpLine.Addr = (*addr).Addr()
 
-			nat64 = append(nat64, tmpLine)
+			nat64s = append(nat64s, tmpLine)
 		}
 	}
 
-	nat64 = sliceutil.Dedupe(nat64)
-	slices.SortFunc(nat64, sortLine)
+	slices.SortFunc(nat64s, sortLine)
 
-	return nat64
+	return nat64s
 }
 
-func readConfig(file string) (Config) {
+func lineDedupeIps(ips []Line) (out []Line) {
+
+	prevIp := netip.IPv6Unspecified()
+
+	slices.SortFunc(ips, sortLine)
+
+	for i, ip := range ips {
+		if i == 0 {
+			prevIp = ip.Addr
+			out = append(out, ip)
+			continue
+		}
+
+		if ip.Addr == prevIp {
+			tmp := out[len(out)-1]
+			tmp.ExtraHosts = append(tmp.ExtraHosts, ip.Host)
+			out[len(out)-1] = tmp
+		} else {
+			out = append(out, ip)
+
+		}
+
+	}
+
+	return
+}
+
+func lineDedupeHost(host Line) any {
+	return host.Host
+}
+
+func readConfig(file string) Config {
 	var cfg Config
 
 	for range 4 {
@@ -517,7 +538,6 @@ func readConfig(file string) (Config) {
 	return cfg
 }
 
-
 func queryWithResolvers(
 	Host string,
 	MaxRetries int,
@@ -531,8 +551,8 @@ func queryWithResolvers(
 
 	retryabledns, err := retryabledns.NewWithOptions(retryabledns.Options{
 		BaseResolvers: resolvers,
-		MaxRetries: MaxRetries,
-		Timeout: timeout,
+		MaxRetries:    MaxRetries,
+		Timeout:       timeout,
 	})
 	if err != nil {
 		return nil, err
@@ -549,7 +569,6 @@ func queryWithResolvers(
 	return data, nil
 
 }
-
 
 func preCheck() {
 	checkDomains := []string{"google.com", "heise.de", "openwrt.org", "facebook.com"}
@@ -572,7 +591,6 @@ func preCheck() {
 
 }
 
-
 func checkHost(
 	host string,
 	useCdnCheck bool,
@@ -584,13 +602,12 @@ func checkHost(
 
 	// start := time.Now()
 	domainOk := false
-	data, err := queryWithResolvers(host, 5, 5 * time.Second, DefaultResolvers)
+	data, err := queryWithResolvers(host, 5, 5*time.Second, DefaultResolvers)
 	if err != nil {
 		return outputV6, outputV4, err
 	}
 
 	// fmt.Printf("qeury time %v\n", time.Since(start))
-
 
 	// start = time.Now()
 	for _, addrStr := range append(data.AAAA, data.A...) {
@@ -609,13 +626,13 @@ func checkHost(
 		if err != nil {
 			continue
 		}
-		if matched {fmt.Printf("cdncheck:\n    %v\n\n", fmt.Sprintf("%-40s%s", addr, "# "+host))}
+		if matched {
+			fmt.Printf("cdncheck:\n    %v\n\n", fmt.Sprintf("%-40s%s", addr, "# "+host))
+		}
 
 		if useCdnCheck && matched {
 			continue
 		}
-
-
 
 		domainOk = true
 		if uaddr.Is6() {
@@ -651,12 +668,8 @@ func checkList(list List) ([]Line, []Line, []Line) {
 	var wg sync.WaitGroup
 	var mu sync.Mutex
 
-
-
-
 	start := time.Now()
 	for _, ifile := range list.InputFiles {
-
 
 		var hosts []string
 		file, err := os.ReadFile(ifile.Path)
@@ -692,13 +705,12 @@ func checkList(list List) ([]Line, []Line, []Line) {
 
 			}
 
-
 			curReqsMu.Lock()
 			curReqs += 1
 			curReqsMu.Unlock()
 			wg.Add(1)
-			go func(host string){
-				defer func(){
+			go func(host string) {
+				defer func() {
 					wg.Done()
 					curReqsMu.Lock()
 					curReqs -= 1
@@ -721,16 +733,17 @@ func checkList(list List) ([]Line, []Line, []Line) {
 
 			}(host)
 
-
 		}
 	}
 	wg.Wait()
 	fmt.Printf("time since hostcheck: %v\n", time.Since(start))
 
-
-	v6Ips = sliceutil.Dedupe(v6Ips)
-	v4Ips = sliceutil.Dedupe(v4Ips)
-	validDomains = sliceutil.Dedupe(validDomains)
+	v6Ips = lineDedupeIps(v6Ips)
+	v4Ips = lineDedupeIps(v4Ips)
+	validDomains = sliceutil.DedupeFunc(
+		validDomains,
+		lineDedupeHost,
+	)
 
 	fmt.Println(list)
 	// var cachesV6, cachesV4, cachesDomain []Cache
@@ -762,9 +775,12 @@ func checkDns(cfg Config) {
 				log.Fatalln("no ips found")
 			}
 
-			v6Out := sliceutil.Dedupe(v6Ips)
-			v4Out := sliceutil.Dedupe(v4Ips)
-			domainsOut := sliceutil.Dedupe(validDomains)
+			v6Out := lineDedupeIps(v6Ips)
+			v4Out := lineDedupeIps(v4Ips)
+			domainsOut := sliceutil.DedupeFunc(
+				validDomains,
+				lineDedupeHost,
+			)
 			if *dryRun {
 				fmt.Println(strings.Join(LinesToStrings(v6Out), "\n"))
 				return
@@ -774,7 +790,6 @@ func checkDns(cfg Config) {
 			slices.SortFunc(v4Out, sortLine)
 			slices.SortFunc(domainsOut, sortLine)
 
-
 			os.WriteFile(
 				fmt.Sprintf(
 					"%v/%v-doh-ipv6.txt",
@@ -783,7 +798,7 @@ func checkDns(cfg Config) {
 				),
 				[]byte(strings.Join(LinesToStrings(v6Out), "\n")),
 				0755,
-				)
+			)
 
 			os.WriteFile(
 				fmt.Sprintf(
@@ -793,7 +808,7 @@ func checkDns(cfg Config) {
 				),
 				[]byte(strings.Join(LinesToStrings(v4Out), "\n")),
 				0755,
-				)
+			)
 
 			os.WriteFile(
 				fmt.Sprintf(
@@ -803,7 +818,7 @@ func checkDns(cfg Config) {
 				),
 				[]byte(strings.Join(LinesToStrings(toNat64(v4Out)), "\n")),
 				0755,
-				)
+			)
 
 			os.WriteFile(
 				fmt.Sprintf(
@@ -813,7 +828,7 @@ func checkDns(cfg Config) {
 				),
 				[]byte(strings.Join(LinesToStrings(domainsOut), "\n")),
 				0755,
-				)
+			)
 		}()
 	}
 	wg.Wait()
