@@ -193,8 +193,6 @@ func (l *Line) mapKey() (str string) {
 		}
 	}()
 
-	str = ""
-
 	if l == nil {
 		randomBytes := make([]byte, 128)
 		_, err := rand.Read(randomBytes)
@@ -211,7 +209,14 @@ func (l *Line) mapKey() (str string) {
 	var sb strings.Builder
 	sb.WriteString(fmt.Sprint(l.Addr))
 	sb.WriteString(l.Host)
-	sb.WriteString(strings.Join(l.ExtraHosts, ""))
+
+	sb.WriteString("ah")
+
+	hosts := []string{l.Host}
+	hosts = append(hosts, l.ExtraHosts...)
+	slices.Sort(hosts)
+
+	sb.WriteString(strings.Join(hosts, ""))
 
 	return sb.String()
 
