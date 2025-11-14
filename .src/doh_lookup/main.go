@@ -386,6 +386,9 @@ func readAndPutCachesFromListAndWriteOut(
 	var cachesV6, cachesV4, cachesDomain []Cache
 	var err error
 
+	v6Ips = lineDedupeIps(v6Ips)
+	v4Ips = lineDedupeIps(v4Ips)
+
 	fmt.Println("reading caches from list")
 
 	loops := []CacheLoop{
@@ -504,6 +507,10 @@ func lineDedupeIps(ips []Line) (out []Line) {
 			tmp.ExtraHosts = append(tmp.ExtraHosts, ip.Host)
 			out[len(out)-1] = tmp
 		} else {
+			tmp := out[len(out)-1]
+			tmp.ExtraHosts = sliceutil.Dedupe(tmp.ExtraHosts)
+			out[len(out)-1] = tmp
+
 			prevIp = ip.Addr
 			out = append(out, ip)
 		}
