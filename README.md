@@ -6,4 +6,4 @@ the folders used:
   * `./full`: (updated every day) list of domains from the full dibdot list and the known good part of the mini list  
   * `./mini`: (updated every hour) list main by me, from some common ones and all DoH servers chromium will use  
 
-it uses [cdncheck](https://github.com/projectdiscovery/cdncheck) to filter for known CDN IP ranges for both IPv6 and IPv4 exept for `./.src/doh-domains_mini_good.txt` this is google and cloudflare it doesn't use cdncheck and is part of both `mini` and `full` this is because cloudflare uses part of it's published cdn range for it's DNS on IPv6
+it uses [cdncheck](https://github.com/projectdiscovery/cdncheck) to filter for known CDN IP ranges for both IPv6 and IPv4 exept for `./.src/doh-domains_mini_good.txt` this is google and cloudflare it doesn't use cdncheck and is part of both `mini` and `full` this is because cloudflare uses part of it's published CDN range for it's DNS on IPv6
