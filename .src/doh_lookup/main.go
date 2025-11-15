@@ -144,6 +144,7 @@ type List struct {
 type InputFile struct {
 	Path     string `yaml:"path"`
 	CdnCheck bool   `yaml:"cdncheck"`
+	PublicIpsOnly bool   `yaml:"public_ips_only"`
 }
 
 type Line struct {
@@ -267,14 +268,30 @@ func sortLine(a, b Line) int {
 
 func validateIps(lines []Line) (out []Line) {
 	for _, l := range lines {
-		if !l.Addr.IsValid() { continue }
-		if l.Addr.IsUnspecified() { continue }
-		if l.Addr.IsLoopback() { continue }
+		if !validateIp(l.Addr, false) { continue }
 
 		out = append(out, l)
 	}
 
 	return out
+}
+
+func validateIp(ip netip.Addr, publicOnly bool) bool {
+	if ip.Is4In6() { ip = netip.AddrFrom4(ip.As4()) }
+
+	if !ip.IsValid() { return false }
+	if ip.IsUnspecified() { return false }
+	if ip.IsLoopback() { return false }
+
+	if publicOnly {
+		if ip.IsLinkLocalUnicast() { return false }
+		if ip.IsPrivate() { return false }
+		if ip.IsLinkLocalMulticast() { return false }
+		if ip.IsInterfaceLocalMulticast() { return false }
+	}
+
+
+	return true
 }
 
 func LinesToStrings(lines []Line) (strs []string) {
@@ -623,7 +640,7 @@ func preCheck() {
 
 func checkHost(
 	host string,
-	useCdnCheck bool,
+	inputFile InputFile,
 ) (
 	outputV6 []Line,
 	outputV4 []Line,
@@ -645,9 +662,8 @@ func checkHost(
 		if err != nil {
 			continue
 		}
-		if addr.IsPrivate() || addr.IsLinkLocalUnicast() {
-			continue
-		}
+
+		if !validateIp(addr, inputFile.PublicIpsOnly) { continue }
 
 		uaddr := addr.Unmap()
 		client := cdncheck.New()
@@ -660,9 +676,10 @@ func checkHost(
 			fmt.Printf("cdncheck:\n    %v\n\n", fmt.Sprintf("%-40s%s", addr, "# "+host))
 		}
 
-		if useCdnCheck && matched {
+		if inputFile.CdnCheck && matched {
 			continue
 		}
+
 
 		domainOk = true
 		if uaddr.Is6() {

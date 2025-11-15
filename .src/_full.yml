@@ -5,9 +5,11 @@ lists:
     input_files:
     - path: "./.src/doh-domains_full.txt"
       cdncheck: true
+      public_ips_only: true
 
     - path: "./.src/doh-domains_mini_good.txt"
       cdncheck: false
+      public_ips_only: true
 
 
     output_dir: "./full"

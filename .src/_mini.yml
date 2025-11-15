@@ -5,6 +5,7 @@ lists:
     input_files:
     - path: "./.src/doh-domains_mini.txt"
       cdncheck: true
+      public_ips_only: true
       # ip_whitelist:
       #     #cloudflare
       # - "2606:4700:4700::1001"
@@ -34,6 +35,7 @@ lists:
 
     - path: "./.src/doh-domains_mini_good.txt"
       cdncheck: false
+      public_ips_only: true
 
 
     output_dir: "./mini"
