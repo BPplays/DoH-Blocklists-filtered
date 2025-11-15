@@ -764,7 +764,7 @@ func checkList(list List) ([]Line, []Line, []Line) {
 					curReqsMu.Unlock()
 				}()
 
-				hostIpsV6, hostIpsV4, err := checkHost(host, ifile.CdnCheck)
+				hostIpsV6, hostIpsV4, err := checkHost(host, ifile)
 				if err != nil {
 					return
 				}
