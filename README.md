@@ -1,7 +1,7 @@
 # DoH-IP-blocklists
 
 This repo contains the filtered domain names and the IP addresses of public DoH servers.  
-It's forked from [dibdot DoH-IP-blocklists](https://github.com/dibdot/DoH-IP-blocklists) and pulls from that for `full` every day so it should stay up to date  
+It's forked from [dibdot DoH-IP-blocklists](https://github.com/dibdot/DoH-IP-blocklists) and pulls from that for `full` every day so it should stay up to date.  
 the folders used:  
   * `./full`: (updated every day) list of domains from the full dibdot list and the known good part of the mini list  
   * `./mini`: (updated every hour) list made by me, from some common ones and all DoH servers chromium will use  
