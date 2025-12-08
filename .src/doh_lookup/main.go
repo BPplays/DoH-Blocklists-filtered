@@ -294,6 +294,15 @@ func validateIp(ip netip.Addr, publicOnly bool) bool {
 	return true
 }
 
+func validateIpLines(ips []Line, publicOnly bool) (out []Line) {
+	for _, ip := range ips {
+		if validateIp(ip.Addr, publicOnly) {
+			out = append(out, ip)
+		}
+	}
+	return out
+}
+
 func LinesToStrings(lines []Line) (strs []string) {
 	for _, l := range lines {
 		strs = append(strs, l.String())
@@ -453,6 +462,8 @@ func readAndPutCachesFromListAndWriteOut(
 				makeNewCaches(*loop.lines),
 			)
 
+			slices.SortFunc(writeCaches, sortCache)
+
 			err := writeCache(name, writeCaches, list.CacheTime)
 			if err != nil {
 				log.Println("error writing cache:", err)
@@ -513,10 +524,16 @@ func toNat64(ipv4s []Line) (nat64s []Line) {
 }
 
 func lineDedupeIps(ips []Line) (out []Line) {
+	if len(ips) <= 0 { return ips }
 
 	prevIp := netip.IPv6Unspecified()
 
 	slices.SortFunc(ips, sortLine)
+
+	ips = validateIpLines(ips, false)
+
+	// needed or else doesn't finish last line, TODO: fix later (probably never)
+	ips = append(ips, Line{Addr: netip.IPv6Unspecified()})
 
 	for i, ip := range ips {
 		if i == 0 {
@@ -555,6 +572,8 @@ func lineDedupeIps(ips []Line) (out []Line) {
 		}
 
 	}
+
+	out = validateIpLines(out, false)
 
 	return out
 }
