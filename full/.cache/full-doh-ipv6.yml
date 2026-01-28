@@ -2,7 +2,7 @@
     host: dns.cmrg.net
     addr: 2001:470:1c:76d::53
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557753051Z
+  time: 2026-01-28T06:02:00.564020131Z
 - line:
     host: ordns.he.net
     addr: 2001:470:20::2
@@ -13,6 +13,16 @@
     addr: 2001:470:1f15:b80::53
     extra_hosts: []
   time: 2026-01-25T06:00:30.932545651Z
+- line:
+    host: doh1.b-cdn.net
+    addr: 2001:550:2:38::28:2
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564020381Z
+- line:
+    host: doh2.gslb2.xfinity.com
+    addr: 2001:558:fd00:ca::a
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564020542Z
 - line:
     host: dot.cox.net
     addr: 2001:578:3f::30
@@ -34,6 +44,11 @@
     extra_hosts: []
   time: 2026-01-25T06:00:30.932545842Z
 - line:
+    host: doh.nic.lv
+    addr: '2001:678:84::'
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564020752Z
+- line:
     host: kiv01.dnscry.pt
     addr: 2001:678:6d4:5080::3dea:109
     extra_hosts: []
@@ -52,17 +67,17 @@
     host: cph01.dnscry.pt
     addr: 2001:67c:bec:b:43a:1aff:feb1:eb5d
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557753723Z
+  time: 2026-01-28T06:02:00.564020842Z
 - line:
     host: dns.artikel10.org
     addr: 2001:67c:1401:2120::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557753913Z
+  time: 2026-01-28T06:02:00.564021012Z
 - line:
     host: dns.njal.la
     addr: 2001:67c:2354:2::53
     extra_hosts: []
-  time: 2026-01-26T06:02:53.068409784Z
+  time: 2026-01-28T06:02:00.564021083Z
 - line:
     host: privacydns.go6lab.si
     addr: 2001:67c:27e4::35
@@ -73,17 +88,17 @@
     addr: '2001:67c:28a4::'
     extra_hosts:
         - anycast.uncensoreddns.org
-  time: 2026-01-27T06:01:29.557754043Z
+  time: 2026-01-28T06:02:00.564021153Z
 - line:
     host: dns.belnet.be
     addr: 2001:6a8:3c80::16
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557754113Z
+  time: 2026-01-28T06:02:00.564021213Z
 - line:
     host: dns.belnet.be
     addr: 2001:6a8:3c80:c000::53
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557754354Z
+  time: 2026-01-28T06:02:00.564021393Z
 - line:
     host: resolver.sunet.se
     addr: 2001:6b0:89::32:32:32
@@ -93,49 +108,39 @@
     host: dns.lars-lehmann.net
     addr: 2001:780:250:100::beaf
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557754504Z
+  time: 2026-01-28T06:02:00.564021464Z
 - line:
     host: deic-lgb.anycast.censurfridns.dk
     addr: 2001:878:0:e000:82:e1:f4:a6
     extra_hosts:
         - deic-lgb.anycast.uncensoreddns.org
-  time: 2026-01-27T06:01:29.557754584Z
+  time: 2026-01-28T06:02:00.564021524Z
 - line:
     host: deic-ore.anycast.censurfridns.dk
     addr: 2001:878:0:e000:82:e2:a1:22
     extra_hosts:
         - deic-ore.anycast.uncensoreddns.org
-  time: 2026-01-27T06:01:29.557754644Z
-- line:
-    host: dns.qrtz.club
-    addr: 2001:8a0:dfeb:8100::2
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823877961Z
+  time: 2026-01-28T06:02:00.564021604Z
 - line:
     host: dns.aa.net.uk
     addr: 2001:8b0::2022
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557754715Z
+  time: 2026-01-28T06:02:00.564021664Z
 - line:
     host: dns.aa.net.uk
     addr: 2001:8b0::2023
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557754775Z
+  time: 2026-01-28T06:02:00.564021734Z
 - line:
     host: dns-tls.bitwiseshift.net
     addr: 2001:8b0:24:24::24
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557754845Z
+  time: 2026-01-28T06:02:00.564021794Z
 - line:
     host: dns.neilzone.co.uk
     addr: 2001:8b0:836:900:978f:88ff:f46c:bd67
     extra_hosts: []
   time: 2026-01-27T06:01:29.557754905Z
-- line:
-    host: ns0.fdn.fr
-    addr: 2001:910:800::12
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823878231Z
 - line:
     host: ns1.fdn.fr
     addr: 2001:910:800::40
@@ -158,29 +163,29 @@
   time: 2026-01-27T06:01:29.557755175Z
 - line:
     host: area51.mywire.org
-    addr: 2001:9e8:4003:eb42:6b4:feff:fe9b:eb1d
+    addr: 2001:9e8:4003:43ef:6b4:feff:fe9b:eb1d
     extra_hosts: []
-  time: 2026-01-24T05:57:06.823878291Z
+  time: 2026-01-28T06:02:00.564021864Z
 - line:
     host: adguard.bitteeinbyte.de
     addr: 2001:9e8:4039:7761:21a:8cff:fe43:9654
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557755245Z
+  time: 2026-01-28T06:02:00.564021924Z
 - line:
     host: dns.mnet-online.de
     addr: 2001:a60::53:1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557755305Z
+  time: 2026-01-28T06:02:00.564022265Z
 - line:
     host: dns.mnet-online.de
     addr: 2001:a60::53:2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557755376Z
+  time: 2026-01-28T06:02:00.564022335Z
 - line:
     host: dns.mateo.ovh
     addr: 2001:ba0:27f:2e00::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557755446Z
+  time: 2026-01-28T06:02:00.564022405Z
 - line:
     host: dns.novg.net
     addr: 2001:bc8:255e:100::1
@@ -192,15 +197,10 @@
     extra_hosts: []
   time: 2026-01-26T06:02:53.068411187Z
 - line:
-    host: jhb01.dnscry.pt
-    addr: 2001:df4:1840:9f::a
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823878682Z
-- line:
     host: dns.hakim.one
     addr: 2001:df4:adc1:31::a
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557755506Z
+  time: 2026-01-28T06:02:00.564022465Z
 - line:
     host: dnsotls.lab.nic.cl
     addr: 2001:1398:1:0:200:1:123:46
@@ -225,12 +225,17 @@
     host: adguard1.jsanagustin.net
     addr: 2001:19f0:5:6d5c:5400:2ff:feed:db51
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557755576Z
+  time: 2026-01-28T06:02:00.564022535Z
 - line:
     host: dns.fullaccesstointernet.jp.eu.org
     addr: 2001:19f0:7002:cf2:5400:4ff:fe4a:f0f0
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557755636Z
+  time: 2026-01-28T06:02:00.564022595Z
+- line:
+    host: chromium.dns.nextdns.io
+    addr: 2001:19f0:7400:137a:5400:4ff:fedf:6c6d
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564022666Z
 - line:
     host: resolver.dnsprivacy.org.uk
     addr: 2001:19f0:7400:13c7:5400:5ff:fe40:d1ad
@@ -240,13 +245,12 @@
     host: dns.flatuslifir.is
     addr: 2001:19f0:7401:86a8:5400:5ff:fe57:5911
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557755706Z
+  time: 2026-01-28T06:02:00.564022736Z
 - line:
-    host: chromium.dns.nextdns.io
-    addr: 2001:19f0:8001:1e9d:5400:2ff:fec8:70cf
-    extra_hosts:
-        - dns.nextdns.io
-  time: 2026-01-24T05:57:06.823879013Z
+    host: pluton.plan9-dns.com
+    addr: 2001:19f0:9002:de4:5400:4ff:fe08:7de3
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564022796Z
 - line:
     host: chromium.dns.nextdns.io
     addr: 2001:19f0:ac01:170:5400:2ff:fec8:72c8
@@ -262,12 +266,27 @@
     host: ca-yyc.doh.sb
     addr: 2001:19f0:b001:8fa:5400:3ff:fe8b:d05c
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557755837Z
+  time: 2026-01-28T06:02:00.564022866Z
 - line:
     host: dns.kusoneko.moe
     addr: 2001:19f0:b002:537:5400:5ff:fe7b:226e
     extra_hosts: []
   time: 2026-01-27T06:01:29.557755907Z
+- line:
+    host: helios.plan9-dns.com
+    addr: 2001:19f0:b400:1d8c:5400:4ff:fe11:b15a
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564022926Z
+- line:
+    host: doh.quickline.ch
+    addr: 2001:1a88:10:ffff::1
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564022996Z
+- line:
+    host: doh.quickline.ch
+    addr: 2001:1a88:10:ffff::2
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564023056Z
 - line:
     host: timmes.nl
     addr: 2001:1af8:4300:a011:2::1
@@ -277,53 +296,70 @@
     host: dns.ginovs.nl
     addr: 2001:1af8:4700:a118:8976::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557756037Z
-- line:
-    host: yarp.lefolgoc.net
-    addr: 2001:41d0:8:9a14::1
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823879213Z
+  time: 2026-01-28T06:02:00.564023127Z
 - line:
     host: adguard.ender.fr
     addr: 2001:41d0:a:5e02::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557756097Z
+  time: 2026-01-28T06:02:00.564023197Z
 - line:
     host: dns.mh4ckt3mh4ckt1c4s.xyz
     addr: 2001:41d0:e:84c::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557756167Z
+  time: 2026-01-28T06:02:00.564023257Z
+- line:
+    host: doh.bortzmeyer.fr
+    addr: 2001:41d0:302:2200::180
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564023327Z
 - line:
     host: dns.christerwaren.fi
     addr: 2001:41d0:303:13b3:164:132:7:242
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557756227Z
+  time: 2026-01-28T06:02:00.564024379Z
+- line:
+    host: nsc.torgues.net
+    addr: 2001:41d0:304:200::bfa1
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564024449Z
 - line:
     host: dns.kawa.tf
     addr: 2001:41d0:404:200::976
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557756999Z
+  time: 2026-01-28T06:02:00.564024509Z
 - line:
     host: dns.crystalyx.net
     addr: 2001:41d0:404:200::22ac
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557757059Z
+  time: 2026-01-28T06:02:00.564024579Z
 - line:
     host: adguard.alu.dog
     addr: 2001:41d0:601:1100::247c
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557757129Z
+  time: 2026-01-28T06:02:00.564024639Z
 - line:
     host: dns.dns-53.uk
     addr: 2001:41d0:801:2000::6543
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557757189Z
+  time: 2026-01-28T06:02:00.56402471Z
 - line:
     host: 8888.google
     addr: 2001:4860:4860::8844
     extra_hosts:
         - dns.google.com
   time: 2026-01-26T06:02:53.068413261Z
+- line:
+    host: dns.google
+    addr: 2001:4860:4860::8844
+    extra_hosts:
+        - google-public-dns-b.google.com
+  time: 2026-01-28T06:02:00.56402478Z
+- line:
+    host: dns.google
+    addr: 2001:4860:4860::8888
+    extra_hosts:
+        - google-public-dns-a.google.com
+  time: 2026-01-28T06:02:00.56402484Z
 - line:
     host: 8888.google
     addr: 2001:4860:4860::8888
@@ -335,17 +371,17 @@
     host: dns.hostux.net
     addr: 2001:4b98:dc2:41:216:3eff:fe16:1080
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557757259Z
+  time: 2026-01-28T06:02:00.56402491Z
 - line:
     host: dns.hostux.net
     addr: 2001:4b98:dc2:41:216:3eff:fe25:d0f0
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557757329Z
+  time: 2026-01-28T06:02:00.56402497Z
 - line:
     host: dns.hostux.net
     addr: 2001:4b98:dc2:41:216:3eff:fece:3e55
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557757389Z
+  time: 2026-01-28T06:02:00.56402504Z
 - line:
     host: ns2.opennameserver.org
     addr: 2001:4ba0:cafe:3d2::1
@@ -355,37 +391,87 @@
     host: dns.expert
     addr: 2001:4ba0:cafe:745::19
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55775746Z
+  time: 2026-01-28T06:02:00.5640251Z
 - line:
     host: dns.hinet.net
     addr: 2001:b000:168::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55775752Z
+  time: 2026-01-28T06:02:00.56402517Z
 - line:
     host: dns.hinet.net
     addr: 2001:b000:168::2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55775759Z
+  time: 2026-01-28T06:02:00.564025231Z
 - line:
     host: dns.ares-taiwan.com
     addr: 2001:b011:9805:42a1:c447:4754:c0ac:e40f
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55775765Z
+  time: 2026-01-28T06:02:00.564025301Z
 - line:
-    host: ihctw.synology.me
-    addr: 2001:b011:d000:1910:211:32ff:fe79:26cd
+    host: doh.kekew.info
+    addr: 2003:a:133:1500::4
     extra_hosts: []
-  time: 2026-01-24T05:57:06.823880996Z
+  time: 2026-01-28T06:02:00.564025371Z
 - line:
-    host: dns.t53.de
-    addr: 2003:4:e0b0:102:0:4:0:53
+    host: doh.kekew.info
+    addr: 2003:a:133:1500::6
     extra_hosts: []
-  time: 2026-01-24T05:57:06.823881056Z
+  time: 2026-01-28T06:02:00.564025431Z
+- line:
+    host: doh.kekew.info
+    addr: 2003:a:133:1501::4
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564025501Z
+- line:
+    host: doh.kekew.info
+    addr: 2003:a:133:1501::6
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564025561Z
 - line:
     host: dns.faked.org
     addr: 2003:a:36f:4f00::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55775772Z
+  time: 2026-01-28T06:02:00.564025631Z
+- line:
+    host: doh.kekew.info
+    addr: 2003:a:64b:3b00::4
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564025701Z
+- line:
+    host: doh.kekew.info
+    addr: 2003:a:64b:3b00::6
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564025761Z
+- line:
+    host: doh.kekew.info
+    addr: 2003:a:64b:3b01::4
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564025832Z
+- line:
+    host: doh.kekew.info
+    addr: 2003:a:64b:3b01::6
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564025892Z
+- line:
+    host: doh.kekew.info
+    addr: 2003:a:812:5700::4
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564025962Z
+- line:
+    host: doh.kekew.info
+    addr: 2003:a:812:5700::6
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564026022Z
+- line:
+    host: doh.kekew.info
+    addr: 2003:a:812:5701::4
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564026092Z
+- line:
+    host: doh.kekew.info
+    addr: 2003:a:812:5701::6
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564026162Z
 - line:
     host: dns.telekom.de
     addr: 2003:180:2::4:0:53
@@ -400,12 +486,12 @@
     host: dns.alidns.com
     addr: 2400:3200::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55775779Z
+  time: 2026-01-28T06:02:00.564026222Z
 - line:
     host: dns.alidns.com
     addr: 2400:3200:baba::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55775785Z
+  time: 2026-01-28T06:02:00.564026293Z
 - line:
     host: sg-dns1.bancuh.com
     addr: 2400:6180:0:d0::f7:1001
@@ -427,10 +513,15 @@
     extra_hosts: []
   time: 2026-01-25T06:00:30.93255026Z
 - line:
+    host: jp-dns1.bancuh.com
+    addr: 2400:8902::f03c:92ff:fe3e:46cd
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564026353Z
+- line:
     host: dns.kuuhaku.moe
     addr: 2400:8902::f03c:92ff:fe80:38b7
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557757981Z
+  time: 2026-01-28T06:02:00.564026423Z
 - line:
     host: dns.nodoa.me
     addr: 2400:8902::f03c:95ff:fe59:27bc
@@ -440,12 +531,12 @@
     host: adl.adfilter.net
     addr: 2400:c401::5054:ff:fe1b:b036
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557758111Z
+  time: 2026-01-28T06:02:00.564026493Z
 - line:
     host: dns.albony.xyz
     addr: 2400:d321:2191:8363::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557758181Z
+  time: 2026-01-28T06:02:00.564026553Z
 - line:
     host: jp-kix.doh.sb
     addr: 2400:ddc0:b000::2
@@ -460,12 +551,12 @@
     host: adblock.krctech.dev
     addr: 2402:1f00:8000:800::794
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557758371Z
+  time: 2026-01-28T06:02:00.564026623Z
 - line:
     host: dns.beardic.cn
     addr: 2402:4e00:c050:2800:e4e:cf0e:740c:1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557758442Z
+  time: 2026-01-28T06:02:00.564028286Z
 - line:
     host: hk-hkg.doh.sb
     addr: 2403:2c80::26
@@ -478,8 +569,7 @@
         - alleesph.online
         - dns.futuredns.me
         - dns.lightmaster.pw
-        - doh.cnetwork.cloud
-  time: 2026-01-26T06:02:53.068414724Z
+  time: 2026-01-28T06:02:00.564028366Z
 - line:
     host: adfiltro.fun
     addr: 2403:3a00:107:29:133:167:212:21
@@ -487,14 +577,18 @@
         - alleesph.online
         - dns.futuredns.me
         - dns.lightmaster.pw
-  time: 2026-01-27T06:01:29.557758572Z
+        - doh.cnetwork.cloud
+  time: 2026-01-26T06:02:53.068414724Z
 - line:
     host: 3jjxxl.tech
     addr: 2403:3a00:107:29:133:167:212:22
     extra_hosts:
+        - callies-online.site
         - cloudbenders.fun
         - d2.shabi.icu
-  time: 2026-01-24T05:57:06.823881788Z
+        - najiakeji.top
+        - nanopi.cybergroove.net
+  time: 2026-01-28T06:02:00.564028437Z
 - line:
     host: 3jjxxl.tech
     addr: 2403:3a00:107:29:133:167:212:22
@@ -519,8 +613,20 @@
         - affcdn.net
         - bestwon203.com
         - dns.guardmydns.com
-        - edgy-dns.com
-  time: 2026-01-24T05:57:06.823881848Z
+        - drs.rustsword.com
+        - xorbiadns.com
+  time: 2026-01-25T06:00:30.932550851Z
+- line:
+    host: 3dcosas.xyz
+    addr: 2403:3a00:107:29:133:167:212:25
+    extra_hosts:
+        - affcdn.net
+        - bestwon203.com
+        - dns.guardmydns.com
+        - dnsnl.alekberg.net
+        - hkname.freecdn.one
+        - lukscasino-479-tr.xyz
+  time: 2026-01-28T06:02:00.564028497Z
 - line:
     host: 3dcosas.xyz
     addr: 2403:3a00:107:29:133:167:212:25
@@ -530,16 +636,6 @@
         - dns.guardmydns.com
         - vtcuong.site
   time: 2026-01-26T06:02:53.068414854Z
-- line:
-    host: 3dcosas.xyz
-    addr: 2403:3a00:107:29:133:167:212:25
-    extra_hosts:
-        - affcdn.net
-        - bestwon203.com
-        - dns.guardmydns.com
-        - drs.rustsword.com
-        - xorbiadns.com
-  time: 2026-01-25T06:00:30.932550851Z
 - line:
     host: 3dcosas.xyz
     addr: 2403:3a00:107:29:133:167:212:25
@@ -561,15 +657,15 @@
     extra_hosts:
         - axaxa.fun
         - dns.kugoapps.com
-  time: 2026-01-26T06:02:53.068414984Z
+        - securedns.vendorvista.xyz
+  time: 2026-01-27T06:01:29.557758772Z
 - line:
     host: adguard.kantinyoyok.xyz
     addr: 2403:3a00:201:1c:49:212:198:36
     extra_hosts:
         - axaxa.fun
         - dns.kugoapps.com
-        - securedns.vendorvista.xyz
-  time: 2026-01-27T06:01:29.557758772Z
+  time: 2026-01-28T06:02:00.564028567Z
 - line:
     host: catchen121299.top
     addr: 2403:3a00:201:1c:49:212:198:51
@@ -582,8 +678,9 @@
     addr: 2403:3a00:201:1c:49:212:198:51
     extra_hosts:
         - dns.daarrk.tech
-        - maqgie.xyz
-  time: 2026-01-24T05:57:06.823881978Z
+        - las-vegas.privacy-dns.pw
+        - united-arab-emirates.privacy-dns.pw
+  time: 2026-01-28T06:02:00.564028637Z
 - line:
     host: catchen121299.top
     addr: 2403:3a00:201:1c:49:212:198:51
@@ -606,16 +703,6 @@
         - cynntex.fun
         - deep-henchman-excuse.cfd
         - dns.cybertonic.tech
-        - xholgm.top
-  time: 2026-01-26T06:02:53.068415114Z
-- line:
-    host: adguard.londonwebnerd.cloud
-    addr: 2403:3a00:201:1c:49:212:198:52
-    extra_hosts:
-        - atris.cyou
-        - cynntex.fun
-        - deep-henchman-excuse.cfd
-        - dns.cybertonic.tech
         - myatris.sbs
   time: 2026-01-25T06:00:30.932551122Z
 - line:
@@ -626,7 +713,17 @@
         - cynntex.fun
         - deep-henchman-excuse.cfd
         - dns.cybertonic.tech
-  time: 2026-01-27T06:01:29.557758902Z
+  time: 2026-01-28T06:02:00.564028697Z
+- line:
+    host: adguard.londonwebnerd.cloud
+    addr: 2403:3a00:201:1c:49:212:198:52
+    extra_hosts:
+        - atris.cyou
+        - cynntex.fun
+        - deep-henchman-excuse.cfd
+        - dns.cybertonic.tech
+        - xholgm.top
+  time: 2026-01-26T06:02:53.068415114Z
 - line:
     host: dns.aaytorr.com
     addr: 2403:3a00:201:1c:49:212:198:89
@@ -639,7 +736,17 @@
     addr: 2403:3a00:201:1c:49:212:198:89
     extra_hosts:
         - dns.comeonjames.club
-  time: 2026-01-27T06:01:29.557758972Z
+  time: 2026-01-28T06:02:00.564028767Z
+- line:
+    host: adg.yybyy.wiki
+    addr: 2403:3a00:201:1e:49:212:207:51
+    extra_hosts:
+        - ads.hunga1k47.com
+        - ag.brianlee.fun
+        - dns-free.link
+        - dns.mathewakhil.online
+        - dns.milkpie.one
+  time: 2026-01-28T06:02:00.564028837Z
 - line:
     host: adg.yybyy.wiki
     addr: 2403:3a00:201:1e:49:212:207:51
@@ -652,20 +759,10 @@
         - sdns22.gkonuralp.com
   time: 2026-01-25T06:00:30.932551252Z
 - line:
-    host: adg.yybyy.wiki
-    addr: 2403:3a00:201:1e:49:212:207:51
-    extra_hosts:
-        - ads.hunga1k47.com
-        - ag.brianlee.fun
-        - dns-free.link
-        - dns.mathewakhil.online
-        - dns.milkpie.one
-  time: 2026-01-27T06:01:29.557759032Z
-- line:
     host: bne01.dnscry.pt
     addr: 2404:9400:1:0:216:3eff:fef6:7194
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557759103Z
+  time: 2026-01-28T06:02:00.564028897Z
 - line:
     host: syd.adfilter.net
     addr: 2404:9400:214e:ea00::1
@@ -680,7 +777,7 @@
     host: dns.gi.co.id
     addr: 2407:24c0:2::154:3
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557759163Z
+  time: 2026-01-28T06:02:00.564028967Z
 - line:
     host: dot-sg.blahdns.com
     addr: 2407:3640:2205:1668::1
@@ -690,47 +787,53 @@
     host: asia.tri-dns.net
     addr: 2407:3640:2238:5447::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557760265Z
+  time: 2026-01-28T06:02:00.564029048Z
 - line:
     host: dns.caliph.dev
     addr: 2407:6ac0:7:5::3
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557760345Z
+  time: 2026-01-28T06:02:00.564029108Z
 - line:
     host: dns.ikataruto.com
     addr: 2408:4003:10b8:9ae9:5ef8:7292:9141:6f67
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557760415Z
+  time: 2026-01-28T06:02:00.564029198Z
 - line:
     host: cloud.198.games
     addr: 240d:c000:f000:9300:ad0:a594:4272:0
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557760485Z
+  time: 2026-01-28T06:02:00.564029258Z
 - line:
     host: dns.flymc.cc
     addr: 240d:c000:f000:ea00:70d8:5996:f8e4:0
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557760555Z
+  time: 2026-01-28T06:02:00.564029328Z
 - line:
     host: blog.kimiblock.top
     addr: 240d:c000:f05f:7900:8234:d91e:8082:0
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557760615Z
+  time: 2026-01-28T06:02:00.564029388Z
 - line:
     host: blog.kimiblock.top
     addr: 240d:c000:f05f:7900:8234:d91e:8082:1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557760686Z
+  time: 2026-01-28T06:02:00.564029459Z
 - line:
     host: dns.imaicool.com
     addr: 240d:c000:f07f:9500:58dc:b774:bc9e:0
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557760746Z
+  time: 2026-01-28T06:02:00.564029528Z
 - line:
     host: doh.totoro.pub
     addr: 240d:c010:74:2::171
     extra_hosts: []
   time: 2026-01-25T06:00:30.932552825Z
+- line:
+    host: dns.233py.com
+    addr: 240d:c010:75:1::119
+    extra_hosts:
+        - i.233py.com
+  time: 2026-01-28T06:02:00.564029589Z
 - line:
     host: dns.233py.com
     addr: 240d:c010:75:1::119
@@ -788,12 +891,12 @@
     host: dns.mzjtechnology.com
     addr: 2600:3c00:e000:37a::8:0
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761006Z
+  time: 2026-01-28T06:02:00.564029659Z
 - line:
     host: dns.elemental.software
     addr: 2600:3c01:e000:130::8:0
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761076Z
+  time: 2026-01-28T06:02:00.564029729Z
 - line:
     host: dns.startupstack.tech
     addr: 2600:3c01:e000:341::8:0
@@ -803,12 +906,12 @@
     host: dns.falkenthal.org
     addr: 2600:3c01:e000:3e2::8:0
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761147Z
+  time: 2026-01-28T06:02:00.564029799Z
 - line:
     host: dns.efficientdocuments.com
     addr: 2600:3c01:e000:446::8:0
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761207Z
+  time: 2026-01-28T06:02:00.564029879Z
 - line:
     host: dns.stirringphoto.com
     addr: 2600:3c01:e000:449::8:0
@@ -818,7 +921,7 @@
     host: dns.csswg.org
     addr: 2600:3c01:e000:7e5::8:0
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761337Z
+  time: 2026-01-28T06:02:00.564029939Z
 - line:
     host: dns.thebuckners.org
     addr: 2600:3c02::f03c:93ff:fec9:e0ff
@@ -828,12 +931,17 @@
     host: dns.fizz.studio
     addr: 2600:3c03:e000:2b5::8:0
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761407Z
+  time: 2026-01-28T06:02:00.564030009Z
 - line:
     host: dns.w3ctag.org
     addr: 2600:3c07:e001:b5::8:0
     extra_hosts: []
-  time: 2026-01-26T06:02:53.068417739Z
+  time: 2026-01-28T06:02:00.56403008Z
+- line:
+    host: dns1.server.my.id
+    addr: 2600:3c0c::2000:b9ff:fedb:b312
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.56403014Z
 - line:
     host: dns.pccoach.nl
     addr: 2600:3c0e::f03c:94ff:fe7b:c719
@@ -843,47 +951,42 @@
     host: dns.ningkelle.id
     addr: '2600:3c15:e002:3514::'
     extra_hosts: []
-  time: 2026-01-26T06:02:53.06841787Z
+  time: 2026-01-28T06:02:00.56403021Z
 - line:
     host: atl01.dnscry.pt
     addr: 2600:4c00:80:8::a
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761467Z
+  time: 2026-01-28T06:02:00.56403027Z
 - line:
-    host: nyc01.dnscry.pt
-    addr: 2602:f7f8:2:c::a
+    host: doh-02.spectrum.com
+    addr: 2600:6c7f:f000:202::8
     extra_hosts: []
-  time: 2026-01-24T05:57:06.823885134Z
+  time: 2026-01-28T06:02:00.56403034Z
 - line:
     host: dns.marbledfennec.net
     addr: 2602:f992:e0:c0::2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761537Z
+  time: 2026-01-28T06:02:00.5640304Z
 - line:
     host: dns.marbledfennec.net
     addr: 2602:f992:ec:1::2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761597Z
+  time: 2026-01-28T06:02:00.56403047Z
 - line:
     host: dfw02.dnscry.pt
     addr: 2602:fb94:1:39::a
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761668Z
+  time: 2026-01-28T06:02:00.564030541Z
 - line:
     host: abe01.dnscry.pt
     addr: 2602:fc24:19:74b0:5285::12
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761738Z
+  time: 2026-01-28T06:02:00.564030601Z
 - line:
     host: coe01.dnscry.pt
     addr: 2602:fe54:22:57::5bd:134
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761798Z
-- line:
-    host: lax02.dnscry.pt
-    addr: 2602:ff75:7:b79::b4b4
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823885535Z
+  time: 2026-01-28T06:02:00.564030671Z
 - line:
     host: dns.ofdoom.net
     addr: 2603:c020:5:3566:beef:beef:beef:beef
@@ -898,17 +1001,17 @@
     host: ad.tzockt.beer
     addr: 2603:c020:800f:c5af:9fd:880f:6224:4cd4
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557761998Z
+  time: 2026-01-28T06:02:00.564030731Z
 - line:
     host: adg.tshost.no
     addr: 2603:c020:8010:fc33::26
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557762058Z
+  time: 2026-01-28T06:02:00.564030801Z
 - line:
     host: adg.tshost.no
     addr: 2603:c020:8010:fc33::35
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557762128Z
+  time: 2026-01-28T06:02:00.564030861Z
 - line:
     host: newd.rezyro.com
     addr: 2603:c020:c00d:6401:575a:1ed9:5ce9:7cb1
@@ -918,7 +1021,12 @@
     host: adblock.indianets.net
     addr: 2603:c021:4004:5500::10
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557762258Z
+  time: 2026-01-28T06:02:00.564030931Z
+- line:
+    host: jp1.f7b6h9.tk
+    addr: 2603:c021:8005:4100:0:6762:42b7:67a3
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564030991Z
 - line:
     host: dns.renardyre.com
     addr: 2603:c021:c005:5d7e:1ab:22b8:9164:cf53
@@ -943,42 +1051,42 @@
     host: dns.haka.se
     addr: '2603:c022:800e:b67e:1011::'
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557762329Z
+  time: 2026-01-28T06:02:00.564031062Z
 - line:
     host: dns.chromeina.top
     addr: 2603:c023:1:8763:80d6:891:ed34:7b18
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557762389Z
+  time: 2026-01-28T06:02:00.564031131Z
 - line:
     host: dns.meeo.win
     addr: 2603:c023:c003:3d4c:0:3106:acb8:2787
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557762459Z
+  time: 2026-01-28T06:02:00.564031192Z
 - line:
     host: dns.moonssif.com
     addr: 2603:c024:9:35af:19c7:3532:ac18:f4b9
     extra_hosts: []
-  time: 2026-01-26T06:02:53.068418861Z
+  time: 2026-01-28T06:02:00.564031262Z
 - line:
     host: dns.0ooo.icu
     addr: 2603:c024:4509:b8aa:420a:4988:30a:5acd
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557762519Z
+  time: 2026-01-28T06:02:00.564031322Z
 - line:
     host: dns.freyja.pw
     addr: 2604:2dc0:101:200::217f
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557762589Z
+  time: 2026-01-28T06:02:00.564031392Z
 - line:
     host: dns.dns-53.us
     addr: 2604:2dc0:101:200::28d4
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557762649Z
+  time: 2026-01-28T06:02:00.564031452Z
 - line:
     host: dns.dns-53.com
     addr: 2604:2dc0:101:200::438a
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557762719Z
+  time: 2026-01-28T06:02:00.564031522Z
 - line:
     host: adguard1.leadmon.net
     addr: 2604:5e40:102:15::87
@@ -988,12 +1096,7 @@
     host: clientdns3.softcom.net
     addr: 2604:8d80:100::adf3:4066
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776285Z
-- line:
-    host: doh.qis.io
-    addr: 2604:a880:400:d0::923:7001
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823886627Z
+  time: 2026-01-28T06:02:00.564031583Z
 - line:
     host: doh-primary-pool.detoxifypornblocker.com
     addr: 2604:a880:400:d1::b7a:c001
@@ -1008,17 +1111,37 @@
     host: ag.ff0x.ca
     addr: '2605:80:8:8::'
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776298Z
+  time: 2026-01-28T06:02:00.564031652Z
 - line:
     host: dns.stevenz.net
     addr: 2605:6400:20:dfa:2092:882b:8023:46cf
     extra_hosts: []
   time: 2026-01-27T06:01:29.55776305Z
 - line:
+    host: doh.sz-dns.com
+    addr: 2605:6400:20:dfa:2092:882b:8023:46cf
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564031723Z
+- line:
     host: phx01.dnscry.pt
     addr: 2605:8340:3:7::a
     extra_hosts: []
   time: 2026-01-25T06:00:30.9325554Z
+- line:
+    host: renardbleu.dev
+    addr: 2605:c000:4030:1::2d2:f210
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564031783Z
+- line:
+    host: renardbleu.dev
+    addr: 2605:c000:4030:1::26b8:7a18
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564031853Z
+- line:
+    host: renardbleu.dev
+    addr: 2605:c000:4030:1::83c2:ee46
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564031913Z
 - line:
     host: family.freedns.controld.com
     addr: 2606:1a40::11
@@ -1026,25 +1149,30 @@
         - p2.freedns.controld.com
   time: 2026-01-25T06:00:30.93255546Z
 - line:
+    host: p0.freedns.controld.com
+    addr: 2606:1a40::11
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564031983Z
+- line:
     host: dns.controld.com
     addr: 2606:1a40::22
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776311Z
+  time: 2026-01-28T06:02:00.564032053Z
 - line:
     host: ada.openbld.net
     addr: 2606:2040:140:131::2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776318Z
+  time: 2026-01-28T06:02:00.564032113Z
 - line:
     host: ada.openbld.net
     addr: 2606:2040:1800:bb::2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776324Z
+  time: 2026-01-28T06:02:00.564032184Z
 - line:
     host: 1dot1dot1dot1.cloudflare-dns.com
     addr: 2606:4700:4700::1001
     extra_hosts: []
-  time: 2026-01-25T06:00:30.932555721Z
+  time: 2026-01-28T06:02:00.564032244Z
 - line:
     host: family.cloudflare-dns.com
     addr: 2606:4700:4700::1003
@@ -1054,12 +1182,17 @@
     host: 1dot1dot1dot1.cloudflare-dns.com
     addr: 2606:4700:4700::1111
     extra_hosts: []
-  time: 2026-01-25T06:00:30.93255579Z
+  time: 2026-01-28T06:02:00.564032314Z
 - line:
     host: family.cloudflare-dns.com
     addr: 2606:4700:4700::1113
     extra_hosts: []
   time: 2026-01-26T06:02:53.068419713Z
+- line:
+    host: las01.dnscry.pt
+    addr: 2606:65c0:10:15d:92e0:c7e5:b57:5b00
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564032374Z
 - line:
     host: chromium.dns.nextdns.io
     addr: 2606:6680:27:1::2fa1:9182
@@ -1079,22 +1212,22 @@
     host: sin03.dnscry.pt
     addr: 2606:fc40:4003:f::a
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557763381Z
+  time: 2026-01-28T06:02:00.564032444Z
 - line:
     host: dns.asysec.com
     addr: 2607:5300:205:200::4b24
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557763441Z
+  time: 2026-01-28T06:02:00.564032514Z
 - line:
     host: den01.dnscry.pt
     addr: 2607:a680:6:f016::3a25
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557763511Z
+  time: 2026-01-28T06:02:00.564032574Z
 - line:
     host: sea01.dnscry.pt
     addr: 2607:a680:9:f005::86e7
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557763571Z
+  time: 2026-01-28T06:02:00.564032645Z
 - line:
     host: doh.ersei.net
     addr: 2607:ac80:303:102:638a:ba7f:2013:b0c
@@ -1104,12 +1237,12 @@
     host: agh.fltn.us
     addr: 2607:b500:418:1600::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557763641Z
+  time: 2026-01-28T06:02:00.564032705Z
 - line:
     host: dns.keviland.com
     addr: 2607:f1c0:f00d:2800::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557763701Z
+  time: 2026-01-28T06:02:00.564032775Z
 - line:
     host: sandbox.opendns.com
     addr: 2620:0:ccc::2
@@ -1124,37 +1257,27 @@
     host: cluster-0.gac.edu
     addr: 2620:46:8000:128::100
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557763902Z
+  time: 2026-01-28T06:02:00.564032835Z
 - line:
     host: cluster-1.gac.edu
     addr: 2620:46:8000:128::101
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557763972Z
+  time: 2026-01-28T06:02:00.564032905Z
 - line:
     host: blocker.thethorsens.org
     addr: 2620:87:a000::39
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557764032Z
+  time: 2026-01-28T06:02:00.564035229Z
 - line:
     host: dns-nosec.quad9.net
     addr: 2620:fe::10
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557764102Z
-- line:
-    host: dns11.quad9.net
-    addr: 2620:fe::11
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823887488Z
+  time: 2026-01-28T06:02:00.56403531Z
 - line:
     host: dns13.quad9.net
     addr: 2620:fe::13
     extra_hosts: []
   time: 2026-01-25T06:00:30.932556582Z
-- line:
-    host: dns11.quad9.net
-    addr: 2620:fe::fe:11
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823887559Z
 - line:
     host: dns13.quad9.net
     addr: 2620:fe::fe:13
@@ -1186,6 +1309,11 @@
     extra_hosts: []
   time: 2026-01-25T06:00:30.932556913Z
 - line:
+    host: resolver2.opendns.com
+    addr: 2620:119:53::53
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564035379Z
+- line:
     host: doh.opendns.com
     addr: 2620:119:fc::2
     extra_hosts: []
@@ -1194,7 +1322,32 @@
     host: doh.familyshield.opendns.com
     addr: 2620:119:fc::3
     extra_hosts: []
-  time: 2026-01-26T06:02:53.068420444Z
+  time: 2026-01-28T06:02:00.56403545Z
+- line:
+    host: doh.sandbox.opendns.com
+    addr: 2620:119:fc::4
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.56403551Z
+- line:
+    host: doh.dns.apple.com
+    addr: 2620:149:9cc::11
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.56403558Z
+- line:
+    host: doh.dns.apple.com
+    addr: 2620:149:9cc::13
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.56403565Z
+- line:
+    host: doh.dns.apple.com
+    addr: 2620:149:9cc::15
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.56403571Z
+- line:
+    host: doh.dns.apple.com
+    addr: 2620:149:9cc::16
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.56403578Z
 - line:
     host: mask.icloud.com
     addr: 2620:149:a42:a03::8
@@ -1236,15 +1389,25 @@
     extra_hosts: []
   time: 2026-01-26T06:02:53.068420975Z
 - line:
+    host: doh.dns.apple.com
+    addr: 2620:171:80c::1
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.56403584Z
+- line:
+    host: doh.dns.apple.com
+    addr: 2620:171:80d::1
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564035911Z
+- line:
     host: dns.listo.click
     addr: 2800:e2:2500:186a:82aa:32e2:c405:9a63
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557764232Z
+  time: 2026-01-28T06:02:00.564035971Z
 - line:
     host: mozilla.cloudflare-dns.com
     addr: 2803:f800:53::4
     extra_hosts: []
-  time: 2026-01-24T05:57:06.823887689Z
+  time: 2026-01-28T06:02:00.564036041Z
 - line:
     host: opera.cloudflare-dns.com
     addr: 2803:f800:53::5
@@ -1254,97 +1417,97 @@
     host: dns.dynx.pro
     addr: 2a00:c98:2050:a04d:1::400
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557764362Z
+  time: 2026-01-28T06:02:00.564036101Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:1:6::42
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557764433Z
+  time: 2026-01-28T06:02:00.564036171Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:1:6::44
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557764493Z
+  time: 2026-01-28T06:02:00.564036241Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:1:7::51
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557764563Z
+  time: 2026-01-28T06:02:00.564036301Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:1:7::53
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557764623Z
+  time: 2026-01-28T06:02:00.564036371Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:1:8::11
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557764693Z
+  time: 2026-01-28T06:02:00.564036441Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:1:8::12
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557764753Z
+  time: 2026-01-28T06:02:00.564036502Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:1:9::57
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557764823Z
+  time: 2026-01-28T06:02:00.564036572Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:1:9::59
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557766597Z
+  time: 2026-01-28T06:02:00.564036632Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:1:a::17
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557766667Z
+  time: 2026-01-28T06:02:00.564036702Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:1:a::20
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557766737Z
+  time: 2026-01-28T06:02:00.564036762Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:2:4::69
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557766797Z
+  time: 2026-01-28T06:02:00.564036832Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:2:4::73
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557766867Z
+  time: 2026-01-28T06:02:00.564036892Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:2:c::115
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557766937Z
+  time: 2026-01-28T06:02:00.564036962Z
 - line:
     host: dns.keweon.center
     addr: 2a00:c98:4002:2:c::117
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557766998Z
+  time: 2026-01-28T06:02:00.564037033Z
 - line:
-    host: doh.sidnlabs.nl
-    addr: 2a00:d78:0:712:94:198:159:3
+    host: chromium.dns.nextdns.io
+    addr: 2a00:11c0:8:4::9
     extra_hosts: []
-  time: 2026-01-24T05:57:06.823888741Z
+  time: 2026-01-28T06:02:00.564037093Z
 - line:
     host: dns.circl.lu
     addr: 2a00:5980:94::71
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767067Z
+  time: 2026-01-28T06:02:00.564037163Z
 - line:
     host: dns.cert.ee
     addr: 2a00:6a00:ad1:806::83
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767128Z
+  time: 2026-01-28T06:02:00.564037223Z
 - line:
     host: dns.cert.ee
     addr: 2a00:6a00:ad1:806::86
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767198Z
+  time: 2026-01-28T06:02:00.564037313Z
 - line:
     host: naw01.dnscry.pt
     addr: 2a00:7c83:0:12:14d0:f5b6:4ec:a
@@ -1354,12 +1517,12 @@
     host: dns.kuuhaku.moe
     addr: 2a00:da00:1800:8302::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767258Z
+  time: 2026-01-28T06:02:00.564037393Z
 - line:
     host: dns.dremaxx.de
     addr: 2a00:da00:f425:5800::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767328Z
+  time: 2026-01-28T06:02:00.564037454Z
 - line:
     host: ahoj.email
     addr: 2a00:da00:f42d:b400::1
@@ -1370,7 +1533,20 @@
     addr: 2a00:da00:f42d:b400::1
     extra_hosts:
         - princez.uk
-  time: 2026-01-26T06:02:53.068424562Z
+  time: 2026-01-28T06:02:00.564037543Z
+- line:
+    host: ahoj.email
+    addr: 2a00:da00:f42d:b400:0:2:2:2
+    extra_hosts:
+        - princez.uk
+  time: 2026-01-26T06:02:53.068424622Z
+- line:
+    host: ahoj.email
+    addr: 2a00:da00:f42d:b400:0:2:2:2
+    extra_hosts:
+        - princez.uk
+        - zakaria.website
+  time: 2026-01-28T06:02:00.564037624Z
 - line:
     host: ahoj.email
     addr: 2a00:da00:f42d:b400:0:2:2:2
@@ -1383,41 +1559,40 @@
     extra_hosts: []
   time: 2026-01-27T06:01:29.557767458Z
 - line:
-    host: ahoj.email
-    addr: 2a00:da00:f42d:b400:0:2:2:2
-    extra_hosts:
-        - princez.uk
-  time: 2026-01-26T06:02:53.068424622Z
+    host: kracon.anycast.uncensoreddns.org
+    addr: 2a00:fbe0:1:3802::3
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564037694Z
 - line:
     host: project-evoex.de
     addr: '2a01:238:20a:202:1160::'
     extra_hosts: []
-  time: 2026-01-26T06:02:53.068424692Z
+  time: 2026-01-28T06:02:00.564037754Z
 - line:
     host: dns.dremaxx.de
     addr: 2a01:239:251:a800::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767528Z
+  time: 2026-01-28T06:02:00.564037824Z
+- line:
+    host: doh.niyawe.de
+    addr: 2a01:4f8:a0:6396:1::3
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564037884Z
 - line:
     host: dns.glf.wtf
     addr: 2a01:4f8:10a:1d8f::2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767588Z
+  time: 2026-01-28T06:02:00.564037954Z
 - line:
     host: dns.luma-medien.com
     addr: 2a01:4f8:10a:269e::2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767659Z
+  time: 2026-01-28T06:02:00.564038015Z
 - line:
     host: dns.sindominio.net
     addr: 2a01:4f8:10b:1e2f::6
     extra_hosts: []
   time: 2026-01-25T06:00:30.932565228Z
-- line:
-    host: doh.42l.fr
-    addr: 2a01:4f8:10b:1ed6::2
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823891596Z
 - line:
     host: doh.lacontrevoie.fr
     addr: 2a01:4f8:10b:1ed6::2
@@ -1427,67 +1602,82 @@
     host: dns.decloudus.com
     addr: 2a01:4f8:13a:250b::187
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767719Z
+  time: 2026-01-28T06:02:00.564038085Z
 - line:
     host: dns.digitalsize.net
     addr: 2a01:4f8:13b:3407::face
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767789Z
+  time: 2026-01-28T06:02:00.564038155Z
+- line:
+    host: doh.niyawe.de
+    addr: 2a01:4f8:141:1063:1::3
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564038215Z
 - line:
     host: de.dns.privex.io
     addr: 2a01:4f8:150:74d5::333
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767859Z
+  time: 2026-01-28T06:02:00.564038285Z
 - line:
     host: dns.coderoria.com
     addr: 2a01:4f8:171:1f15::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767919Z
+  time: 2026-01-28T06:02:00.564038345Z
 - line:
     host: dns.comff.net
     addr: 2a01:4f8:200:80ee::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557767989Z
+  time: 2026-01-28T06:02:00.564038415Z
 - line:
     host: dns.ihaveacloud.com
     addr: 2a01:4f8:241:4d06::2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557768049Z
+  time: 2026-01-28T06:02:00.564038475Z
+- line:
+    host: doh.niyawe.de
+    addr: 2a01:4f8:272:3d5f:1::3
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564038545Z
 - line:
     host: dns.is0mino.com
     addr: 2a01:4f8:c0c:e8ab::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776812Z
+  time: 2026-01-28T06:02:00.564038616Z
 - line:
     host: dns.daw.dev
     addr: 2a01:4f8:c0c:f97f::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776818Z
+  time: 2026-01-28T06:02:00.564038676Z
+- line:
+    host: root.hagezi.org
+    addr: 2a01:4f8:c17:1c66::1
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564038746Z
 - line:
     host: ns.data.haus
     addr: 2a01:4f8:c17:2cbd::2
     extra_hosts: []
-  time: 2026-01-26T06:02:53.068425554Z
+  time: 2026-01-28T06:02:00.564038806Z
 - line:
     host: clean.dnsforge.de
     addr: 2a01:4f8:c17:4fbc::2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776825Z
+  time: 2026-01-28T06:02:00.564038876Z
 - line:
     host: dns.deadsec.net
     addr: 2a01:4f8:c17:de8b::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776832Z
+  time: 2026-01-28T06:02:00.564038946Z
 - line:
     host: dns.nick-slowinski.de
     addr: 2a01:4f8:c17:f85c::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776838Z
+  time: 2026-01-28T06:02:00.564039006Z
 - line:
     host: dns.caspervk.net
     addr: 2a01:4f8:1c0c:70d1::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776845Z
+  time: 2026-01-28T06:02:00.564039077Z
 - line:
     host: dns.shareworx.net
     addr: 2a01:4f8:1c0c:8269::2:853
@@ -1502,7 +1692,12 @@
     host: adfree.usableprivacy.net
     addr: '2a01:4f8:1c0c:832d::'
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776851Z
+  time: 2026-01-28T06:02:00.564039137Z
+- line:
+    host: mail.data.haus
+    addr: 2a01:4f8:1c17:74e4::2
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564039207Z
 - line:
     host: dns.shareworx.net
     addr: 2a01:4f8:1c17:8090::1:853
@@ -1512,17 +1707,12 @@
     host: dns.gutwe.in
     addr: 2a01:4f8:1c1c:8193::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55776858Z
-- line:
-    host: wurzn.hagezi.org
-    addr: 2a01:4f8:1c1c:d363::1
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823892518Z
+  time: 2026-01-28T06:02:00.564039267Z
 - line:
     host: dns.brahma.world
     addr: 2a01:4f8:1c1c:f5e1::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557768641Z
+  time: 2026-01-28T06:02:00.564039337Z
 - line:
     host: dns.ourvau.lt
     addr: 2a01:4f8:2200:44a1::baad:c0de
@@ -1537,7 +1727,7 @@
     host: dns.busold.ws
     addr: 2a01:4f8:c010:8396::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557768771Z
+  time: 2026-01-28T06:02:00.564039397Z
 - line:
     host: dnsforge.de
     addr: 2a01:4f8:c010:8c35::175
@@ -1547,22 +1737,22 @@
     host: dns.kapite.in
     addr: 2a01:4f8:c010:af93::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557768841Z
+  time: 2026-01-28T06:02:00.564039467Z
 - line:
     host: dns.alvosec.com
     addr: 2a01:4f8:c012:6d76::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557768911Z
+  time: 2026-01-28T06:02:00.564039527Z
 - line:
     host: dns.alvosec.com
     addr: 2a01:4f8:c012:6d9c::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557768971Z
+  time: 2026-01-28T06:02:00.564039598Z
 - line:
     host: clean.dnsforge.de
     addr: 2a01:4f8:c012:ed89::208
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769041Z
+  time: 2026-01-28T06:02:00.564039667Z
 - line:
     host: dnsforge.de
     addr: 2a01:4f8:c013:29d::122
@@ -1572,7 +1762,7 @@
     host: dns.brono.cloud
     addr: 2a01:4f8:c014:b791::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769101Z
+  time: 2026-01-28T06:02:00.564039728Z
 - line:
     host: doh.technochat.in
     addr: 2a01:4f8:c014:ba35::1
@@ -1582,32 +1772,27 @@
     host: dns.froth.zone
     addr: 2a01:4f9:2b:1305::2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769171Z
+  time: 2026-01-28T06:02:00.564039798Z
 - line:
     host: dns.anon.no
     addr: 2a01:4f9:c010:d7f4::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769231Z
+  time: 2026-01-28T06:02:00.564039858Z
 - line:
     host: dns.braene.com
     addr: 2a01:4f9:c011:addc::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769302Z
+  time: 2026-01-28T06:02:00.564039928Z
+- line:
+    host: ns.nwps.fi
+    addr: 2a01:4f9:c012:25a0::1
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564039988Z
 - line:
     host: juuri.hagezi.org
     addr: 2a01:4f9:c013:dc4e::1
     extra_hosts: []
   time: 2026-01-26T06:02:53.068426866Z
-- line:
-    host: eu1.dns.lavate.ch
-    addr: 2a01:4f9:c01f:74::1
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823893239Z
-- line:
-    host: resolver2.absolight.net
-    addr: 2a01:678:3:8::2
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823893309Z
 - line:
     host: resolver1.absolight.net
     addr: 2a01:678:3:9::2
@@ -1617,47 +1802,42 @@
     host: cloud.tezoi.com
     addr: 2a01:e0a:10f:ed30:baac:6fff:feaa:6e7d
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769432Z
+  time: 2026-01-28T06:02:00.564040058Z
 - line:
     host: dns.freopc.fr
     addr: 2a01:e0a:bc2:47c0:215:5dff:fe01:8705
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769502Z
+  time: 2026-01-28T06:02:00.564040119Z
 - line:
     host: dns.maitrekuc.fr
     addr: 2a01:e0a:bf3:a440::ba89:636
     extra_hosts: []
-  time: 2026-01-26T06:02:53.068427067Z
+  time: 2026-01-28T06:02:00.564040188Z
 - line:
     host: dns.kebree.fr
     addr: 2a01:e0a:f30:9100:6e2b:59ff:fee8:7a13
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769562Z
+  time: 2026-01-28T06:02:00.564040259Z
 - line:
     host: dns.cert.ee
     addr: 2a02:88:1:e:807::99
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769632Z
+  time: 2026-01-28T06:02:00.564040319Z
 - line:
     host: dns.cert.ee
     addr: 2a02:88:1:e:807::101
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769703Z
+  time: 2026-01-28T06:02:00.564040389Z
 - line:
     host: dns.momou.ch
     addr: 2a02:168:a002:0:216:3eff:fed4:dc1a
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769763Z
+  time: 2026-01-28T06:02:00.564040449Z
 - line:
     host: dns.momou.ch
     addr: 2a02:168:a003:0:216:3eff:fe63:c975
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769833Z
-- line:
-    host: doh.applied-privacy.net
-    addr: 2a02:1b8:10:234::2
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.8238939Z
+  time: 2026-01-28T06:02:00.564040519Z
 - line:
     host: dot1.applied-privacy.net
     addr: 2a02:1b8:10:234::2
@@ -1667,17 +1847,12 @@
     host: common.dot.dns.yandex.net
     addr: 2a02:6b8::feed:ff
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557769963Z
+  time: 2026-01-28T06:02:00.564040579Z
 - line:
     host: common.dot.dns.yandex.net
     addr: 2a02:6b8:0:1::feed:ff
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557770023Z
-- line:
-    host: secondary.family.dns.yandex.ru
-    addr: 2a02:6b8:0:1::feed:a11
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823894101Z
+  time: 2026-01-28T06:02:00.564040649Z
 - line:
     host: ns1.recursive.dnsbycomodo.com
     addr: 2a02:1788:8ff::1
@@ -1692,12 +1867,12 @@
     host: adguard.bonis.de
     addr: 2a02:24d8:71:f194::9
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557770163Z
+  time: 2026-01-28T06:02:00.564040709Z
 - line:
     host: adguard.bonis.de
     addr: 2a02:24d8:71:f213::86:9
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557770224Z
+  time: 2026-01-28T06:02:00.56404078Z
 - line:
     host: mil01.dnscry.pt
     addr: 2a02:27ae:8000::2a1
@@ -1707,12 +1882,12 @@
     host: dns.levonet.sk
     addr: 2a02:6ca3:0:1::2
     extra_hosts: []
-  time: 2026-01-26T06:02:53.068427798Z
+  time: 2026-01-28T06:02:00.56404084Z
 - line:
     host: dns.levonet.sk
     addr: 2a02:6ca3:0:2::2
     extra_hosts: []
-  time: 2026-01-26T06:02:53.068427858Z
+  time: 2026-01-28T06:02:00.56404091Z
 - line:
     host: doh2.b-cdn.net
     addr: 2a02:6ea0:e605:1::915:1
@@ -1723,32 +1898,32 @@
     addr: 2a02:c206:3007:388::1
     extra_hosts:
         - dns.imchristian.de
-  time: 2026-01-27T06:01:29.557770424Z
+  time: 2026-01-28T06:02:00.56404098Z
 - line:
     host: dns.kastner-online.de
     addr: 2a02:c207:3005:3352::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557770484Z
+  time: 2026-01-28T06:02:00.56404104Z
 - line:
     host: bru01.dnscry.pt
     addr: 2a03:f80:32:52d9::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557770554Z
+  time: 2026-01-28T06:02:00.56404111Z
 - line:
     host: bog01.dnscry.pt
     addr: 2a03:f80:57:98b1::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557770624Z
+  time: 2026-01-28T06:02:00.56404117Z
 - line:
     host: adguard.onlyfriends.info
     addr: 2a03:1ac0:5857:455d::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557770684Z
+  time: 2026-01-28T06:02:00.564041241Z
 - line:
     host: dns.murgi.de
     addr: 2a03:4000:2:d8::1
     extra_hosts: []
-  time: 2026-01-25T06:00:30.932568454Z
+  time: 2026-01-28T06:02:00.564041301Z
 - line:
     host: doh.defaultroutes.de
     addr: 2a03:4000:6:12af::1
@@ -1758,27 +1933,27 @@
     host: dns.karl.one
     addr: '2a03:4000:10:2a::'
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557770754Z
+  time: 2026-01-28T06:02:00.564041371Z
 - line:
     host: dns.grqu.de
     addr: 2a03:4000:17:7e5::b00b
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557770814Z
+  time: 2026-01-28T06:02:00.564041431Z
 - line:
     host: abel.waringer-atg.de
     addr: 2a03:4000:1d:36d::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557770885Z
+  time: 2026-01-28T06:02:00.564041501Z
 - line:
     host: dns.hahnjo.de
     addr: 2a03:4000:2a:2c1::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557770945Z
+  time: 2026-01-28T06:02:00.564041571Z
 - line:
     host: dns.clanless.ovh
     addr: '2a03:4000:31:81::'
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771015Z
+  time: 2026-01-28T06:02:00.564041631Z
 - line:
     host: vorlif.org
     addr: 2a03:4000:32:16a::1
@@ -1788,82 +1963,82 @@
     host: dns.kernel-error.de
     addr: 2a03:4000:38:20e::853
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771145Z
+  time: 2026-01-28T06:02:00.564041701Z
 - line:
     host: dns.bermeitinger.eu
     addr: 2a03:4000:42:6c5::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771215Z
+  time: 2026-01-28T06:02:00.564041762Z
 - line:
     host: dns.kescher.at
     addr: 2a03:4000:47:8b::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771275Z
+  time: 2026-01-28T06:02:00.564041832Z
 - line:
     host: www.morbitzer.de
     addr: 2a03:4000:4d:c92:88c0:96ff:fec6:b9d
     extra_hosts: []
-  time: 2026-01-25T06:00:30.932569045Z
+  time: 2026-01-28T06:02:00.564041892Z
 - line:
     host: dns.immanuelschaffer.de
     addr: 2a03:4000:51:be:c458:19ff:fe28:b481
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771346Z
+  time: 2026-01-28T06:02:00.564041962Z
 - line:
     host: adguard.pangerl.it
     addr: 2a03:4000:52:be:38fd:75ff:fef8:852a
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771406Z
+  time: 2026-01-28T06:02:00.564042032Z
 - line:
     host: dns.neeb.it
     addr: 2a03:4000:59:de9:202:61:199:183
     extra_hosts: []
   time: 2026-01-27T06:01:29.557771476Z
 - line:
+    host: nue01.dnscry.pt
+    addr: 2a03:4000:5c:51:24b9:51ff:fe80:f3a7
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564042092Z
+- line:
     host: adfreedns.top
     addr: 2a03:4000:5d:64:1446:62ff:fe9c:f7a4
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771546Z
+  time: 2026-01-28T06:02:00.564042162Z
 - line:
     host: de.teradns.org
     addr: 2a03:4000:63:b7d:2::100
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771606Z
-- line:
-    host: jabber-germany.de
-    addr: 2a03:4000:6b:191:9825:1cff:fe34:bbe
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823895804Z
+  time: 2026-01-28T06:02:00.564042222Z
 - line:
     host: adguard.wirimij.nl
     addr: 2a03:5180:7:2:84ba:82f4:da86:1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771676Z
-- line:
-    host: trf01.dnscry.pt
-    addr: 2a03:94e0:271f::5b1
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823895934Z
+  time: 2026-01-28T06:02:00.564042292Z
 - line:
     host: dns.anon.no
     addr: 2a03:94e0:ffff:194:32:107:0:93
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771736Z
+  time: 2026-01-28T06:02:00.564042353Z
 - line:
     host: ams01.dnscry.pt
     addr: 2a03:94e3:222b::1032
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771807Z
+  time: 2026-01-28T06:02:00.564042423Z
+- line:
+    host: doh.dnscrypt.uk
+    addr: 2a03:b0c0:1:d0::ebe:d001
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564042493Z
 - line:
     host: c.cicitt.ch
     addr: 2a03:b0c0:3:d0::2b46:d001
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771867Z
+  time: 2026-01-28T06:02:00.564042553Z
 - line:
     host: dns.almir1904.eu
     addr: 2a03:b0c0:3:d0::46a6:4001
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557771937Z
+  time: 2026-01-28T06:02:00.564042623Z
 - line:
     host: tll01.dnscry.pt
     addr: 2a04:6f00:4::17a
@@ -1875,10 +2050,15 @@
     extra_hosts: []
   time: 2026-01-27T06:01:29.557772007Z
 - line:
+    host: rdd01.dnscry.pt
+    addr: 2a05:4140:19:53::a
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564042683Z
+- line:
     host: bts01.dnscry.pt
     addr: 2a05:5502::5906:97f8:2d0e:1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557772067Z
+  time: 2026-01-28T06:02:00.564042753Z
 - line:
     host: zdn.ro
     addr: 2a05:91c0:503:7314::1
@@ -1898,27 +2078,33 @@
     host: adguardhome.atakorah.com
     addr: 2a05:f480:1400:aff:5400:2ff:fed2:1f84
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557772197Z
+  time: 2026-01-28T06:02:00.564042813Z
 - line:
     host: adguardhome.atakorah.com
     addr: 2a05:f480:1400:aff:590a:34ce:66f:5188
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557772267Z
+  time: 2026-01-28T06:02:00.564042884Z
 - line:
     host: dns.flatuslifir.is
     addr: 2a05:f480:1400:3363:5400:5ff:fe69:cd6f
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557772327Z
+  time: 2026-01-28T06:02:00.564042954Z
 - line:
     host: dns.flatuslifir.is
     addr: 2a05:f480:1400:3c56:5400:5ff:fe56:d8ff
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557772397Z
+  time: 2026-01-28T06:02:00.564043014Z
 - line:
     host: dns.netvpn.net
     addr: 2a05:f480:2400:1ee8::acac
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557772458Z
+  time: 2026-01-28T06:02:00.564043084Z
+- line:
+    host: dns.digitale-gesellschaft.ch
+    addr: 2a05:fc84::42
+    extra_hosts:
+        - dns1.digitale-gesellschaft.ch
+  time: 2026-01-28T06:02:00.564043144Z
 - line:
     host: dns.digitale-gesellschaft.ch
     addr: 2a05:fc84::42
@@ -1927,13 +2113,24 @@
 - line:
     host: dns.digitale-gesellschaft.ch
     addr: 2a05:fc84::43
+    extra_hosts:
+        - dns2.digitale-gesellschaft.ch
+  time: 2026-01-28T06:02:00.564043214Z
+- line:
+    host: dns.digitale-gesellschaft.ch
+    addr: 2a05:fc84::43
     extra_hosts: []
   time: 2026-01-27T06:01:29.557772598Z
+- line:
+    host: hel01.dnscry.pt
+    addr: 2a06:1700:1:3a::cba
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564043274Z
 - line:
     host: mozilla.cloudflare-dns.com
     addr: 2a06:98c1:52::4
     extra_hosts: []
-  time: 2026-01-24T05:57:06.823896726Z
+  time: 2026-01-28T06:02:00.564043345Z
 - line:
     host: opera.cloudflare-dns.com
     addr: 2a06:98c1:52::5
@@ -1943,7 +2140,7 @@
     host: antivirus.bebasid.com
     addr: 2a06:9f44:f3e0:1::b3b4:51d
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557772728Z
+  time: 2026-01-28T06:02:00.564043415Z
 - line:
     host: fjr01.dnscry.pt
     addr: 2a06:f902:4001:100:9000:9000:f90b:3ea
@@ -1953,7 +2150,7 @@
     host: bom01.dnscry.pt
     addr: 2a06:f902:8001:100::1757:e617
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557772788Z
+  time: 2026-01-28T06:02:00.564043475Z
 - line:
     host: nl.dns.privex.io
     addr: 2a07:e03::333
@@ -1968,59 +2165,58 @@
     host: anycast.dns.nextdns.io
     addr: '2a07:a8c0::'
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557772918Z
+  time: 2026-01-28T06:02:00.564043545Z
 - line:
     host: anycast.dns.nextdns.io
     addr: '2a07:a8c1::'
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557772989Z
+  time: 2026-01-28T06:02:00.564043605Z
 - line:
     host: dns.mullvad.net
     addr: 2a07:e340::2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557773049Z
+  time: 2026-01-28T06:02:00.564043675Z
 - line:
     host: adblock.dns.mullvad.net
     addr: 2a07:e340::3
     extra_hosts:
         - adblock.doh.mullvad.net
-  time: 2026-01-27T06:01:29.557773119Z
+  time: 2026-01-28T06:02:00.564043735Z
 - line:
     host: base.dns.mullvad.net
     addr: 2a07:e340::4
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557773189Z
+  time: 2026-01-28T06:02:00.564043805Z
 - line:
     host: all.dns.mullvad.net
     addr: 2a07:e340::9
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557773249Z
+  time: 2026-01-28T06:02:00.564043875Z
 - line:
     host: ams02.dnscry.pt
     addr: 2a07:efc0:1001:a5ce::b4b4
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557773319Z
-- line:
-    host: dns.sb
-    addr: '2a09::'
-    extra_hosts:
-        - public-dns-a.dns.sb
-  time: 2026-01-24T05:57:06.823897447Z
+  time: 2026-01-28T06:02:00.564043935Z
 - line:
     host: de-fra.doh.sb
     addr: 2a09:0:1:a::a
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557773379Z
+  time: 2026-01-28T06:02:00.564044006Z
+- line:
+    host: nl-ams2.doh.sb
+    addr: 2a09:0:7:4::2
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564044066Z
 - line:
     host: de-dus.doh.sb
     addr: 2a09:0:8::15
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777345Z
+  time: 2026-01-28T06:02:00.564044136Z
 - line:
     host: dns.dnswarden.com
     addr: 2a09:8280:1::1:da1b
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777351Z
+  time: 2026-01-28T06:02:00.564044196Z
 - line:
     host: fly.io
     addr: 2a09:8280:1::a:791
@@ -2030,42 +2226,47 @@
     host: ath01.dnscry.pt
     addr: 2a09:cd43:f:42a1::5
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777358Z
-- line:
-    host: dub01.dnscry.pt
-    addr: 2a09:cd46:f:429e::5
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823897778Z
+  time: 2026-01-28T06:02:00.564044266Z
 - line:
     host: dns.lars-lehmann.net
     addr: 2a0a:51c0::7fe
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777365Z
+  time: 2026-01-28T06:02:00.564044336Z
 - line:
     host: abn01.dnscry.pt
     addr: 2a0a:8dc0:a067::a
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777371Z
+  time: 2026-01-28T06:02:00.564044396Z
 - line:
     host: cubedns.com
     addr: 2a0a:be80::cbe:4444
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777378Z
+  time: 2026-01-28T06:02:00.564044467Z
 - line:
     host: cubedns.com
     addr: 2a0a:be80::cbe:4445
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777384Z
+  time: 2026-01-28T06:02:00.564047723Z
+- line:
+    host: nsc.torgues.net
+    addr: 2a0c:3d00:11:37::1
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564047803Z
 - line:
     host: dns.anon.no
     addr: 2a0c:5700:3133:650:ba68:95ff:fe53:3d16
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777391Z
+  time: 2026-01-28T06:02:00.564047873Z
 - line:
     host: nl-ams.doh.sb
     addr: 2a0c:59c0:19::3
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777398Z
+  time: 2026-01-28T06:02:00.564047943Z
+- line:
+    host: doh.suche.org
+    addr: 2a0c:82c0::1
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564048003Z
 - line:
     host: dns.dnshome.de
     addr: 2a0c:8901::53
@@ -2075,7 +2276,7 @@
     host: dns.dnshome.de
     addr: 2a0c:8902::53
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777404Z
+  time: 2026-01-28T06:02:00.564048073Z
 - line:
     host: muc01.dnscry.pt
     addr: 2a0c:8fc0:1749:66:18::16
@@ -2085,58 +2286,52 @@
     host: dns.flatuslifir.is
     addr: 2a0c:9a40:2201:10::1912
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774111Z
+  time: 2026-01-28T06:02:00.564048134Z
 - line:
     host: dns.aquilenet.fr
     addr: 2a0c:e300::1337
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774171Z
+  time: 2026-01-28T06:02:00.564048203Z
 - line:
     host: a.safe.ns.dnslify.com
     addr: 2a0d:4d00:81::3
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774241Z
+  time: 2026-01-28T06:02:00.564048274Z
 - line:
     host: b.safe.ns.dnslify.com
     addr: 2a0d:4d00:81::4
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774311Z
+  time: 2026-01-28T06:02:00.564048334Z
 - line:
     host: a.family.ns.dnslify.com
     addr: 2a0d:4d00:81::5
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774371Z
+  time: 2026-01-28T06:02:00.564048404Z
 - line:
     host: b.family.ns.dnslify.com
     addr: 2a0d:4d00:81::6
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774441Z
+  time: 2026-01-28T06:02:00.564048464Z
 - line:
     host: a.ns.dnslify.com
     addr: 2a0d:4d00:81::81
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774501Z
+  time: 2026-01-28T06:02:00.564048534Z
 - line:
     host: b.ns.dnslify.com
     addr: 2a0d:4d00:83::83
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774572Z
+  time: 2026-01-28T06:02:00.564048594Z
 - line:
     host: cvt01.dnscry.pt
     addr: 2a0d:d8c0:0:f043::6927
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774632Z
+  time: 2026-01-28T06:02:00.564048664Z
 - line:
     host: vie01.dnscry.pt
     addr: 2a0d:f302:110:6517::1
     extra_hosts: []
-  time: 2026-01-24T05:57:06.823898829Z
-- line:
-    host: chromium.dns.nextdns.io
-    addr: 2a0e:6901:201:6:5054:ff:fe21:a3b5
-    extra_hosts:
-        - dns.nextdns.io
-  time: 2026-01-24T05:57:06.8238989Z
+  time: 2026-01-28T06:02:00.564048735Z
 - line:
     host: chromium.dns.nextdns.io
     addr: 2a0e:6901:301:a:5054:ff:fe14:4256
@@ -2152,12 +2347,12 @@
     host: dns.home.daniil.it
     addr: 2a0e:97c0:38f::2
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774762Z
+  time: 2026-01-28T06:02:00.564048795Z
 - line:
     host: dns.internal.hosmatic.com
     addr: 2a0f:5707:aae1:8421::1
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774832Z
+  time: 2026-01-28T06:02:00.564048865Z
 - line:
     host: dus01.dnscry.pt
     addr: 2a0f:6284:4300:101::12a5
@@ -2167,7 +2362,7 @@
     host: dns.ffnw.de
     addr: 2a0f:b505::53
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774902Z
+  time: 2026-01-28T06:02:00.564048925Z
 - line:
     host: lis01.dnscry.pt
     addr: 2a0f:c442:8000::32
@@ -2182,12 +2377,12 @@
     host: dns.lermer.nl
     addr: 2a10:3781:5578:b::111
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557774962Z
+  time: 2026-01-28T06:02:00.564048995Z
 - line:
     host: dns-unfiltered.adguard.com
     addr: 2a10:50c0::1:ff
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557775033Z
+  time: 2026-01-28T06:02:00.564049055Z
 - line:
     host: dns-unfiltered.adguard.com
     addr: 2a10:50c0::1:ff
@@ -2197,31 +2392,37 @@
 - line:
     host: dns-unfiltered.adguard.com
     addr: 2a10:50c0::2:ff
-    extra_hosts: []
-  time: 2026-01-27T06:01:29.557775093Z
-- line:
-    host: dns-unfiltered.adguard.com
-    addr: 2a10:50c0::2:ff
     extra_hosts:
         - unfiltered.adguard-dns.com
   time: 2026-01-26T06:02:53.068436754Z
+- line:
+    host: dns-unfiltered.adguard.com
+    addr: 2a10:50c0::2:ff
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564049125Z
 - line:
     host: dns.adguard-dns.com
     addr: 2a10:50c0::ad1:ff
     extra_hosts:
         - dns.adguard.com
-  time: 2026-01-27T06:01:29.557775163Z
+  time: 2026-01-28T06:02:00.564049185Z
 - line:
     host: dns.adguard-dns.com
     addr: 2a10:50c0::ad2:ff
     extra_hosts:
         - dns.adguard.com
-  time: 2026-01-27T06:01:29.557775223Z
+  time: 2026-01-28T06:02:00.564049256Z
 - line:
     host: d.adguard-dns.com
     addr: 2a10:50c0::ded:ff
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557775293Z
+  time: 2026-01-28T06:02:00.564049316Z
+- line:
+    host: dns-family.adguard.com
+    addr: 2a10:50c0::bad1:ff
+    extra_hosts:
+        - family.adguard-dns.com
+  time: 2026-01-28T06:02:00.564049386Z
 - line:
     host: dns-family.adguard.com
     addr: 2a10:50c0::bad1:ff
@@ -2233,45 +2434,41 @@
     extra_hosts: []
   time: 2026-01-27T06:01:29.557775423Z
 - line:
-    host: dns.sb
-    addr: '2a11::'
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823899701Z
+    host: dns-family.adguard.com
+    addr: 2a10:50c0::bad2:ff
+    extra_hosts:
+        - family.adguard-dns.com
+  time: 2026-01-28T06:02:00.564049456Z
 - line:
     host: au-syd.doh.sb
     addr: 2a11:3::66
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557775493Z
-- line:
-    host: doh.immerda.ch
-    addr: 2a11:7980:2:110::2
-    extra_hosts: []
-  time: 2026-01-24T05:57:06.823899831Z
+  time: 2026-01-28T06:02:00.564049516Z
 - line:
     host: dns.cctld.kg
     addr: 2a11:a380::195:38:160:7
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557775554Z
+  time: 2026-01-28T06:02:00.564049586Z
 - line:
     host: blackhole.myon.lu
     addr: 2a12:9080:1:5b::a
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557775623Z
+  time: 2026-01-28T06:02:00.564049646Z
 - line:
     host: adg.tshost.no
     addr: 2a12:9080:6:7::a
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557775694Z
+  time: 2026-01-28T06:02:00.564049717Z
 - line:
     host: child-noads.joindns4.eu
     addr: 2a13:1001::86:54:11:11
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557775754Z
+  time: 2026-01-28T06:02:00.564049777Z
 - line:
     host: child.joindns4.eu
     addr: 2a13:1001::86:54:11:12
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777919Z
+  time: 2026-01-28T06:02:00.564049847Z
 - line:
     host: noads.joindns4.eu
     addr: 2a13:1001::86:54:11:13
@@ -2281,12 +2478,12 @@
     host: child-noads.joindns4.eu
     addr: 2a13:1001::86:54:11:211
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777926Z
+  time: 2026-01-28T06:02:00.564049917Z
 - line:
     host: child.joindns4.eu
     addr: 2a13:1001::86:54:11:212
     extra_hosts: []
-  time: 2026-01-27T06:01:29.557779321Z
+  time: 2026-01-28T06:02:00.564049977Z
 - line:
     host: noads.joindns4.eu
     addr: 2a13:1001::86:54:11:213
@@ -2296,9 +2493,14 @@
     host: dns.bebasid.com
     addr: 2a14:7581:4940::12
     extra_hosts: []
-  time: 2026-01-27T06:01:29.55777939Z
+  time: 2026-01-28T06:02:00.564050047Z
 - line:
     host: mru01.dnscry.pt
     addr: 2c0f:e8f8:2000:233::4254:c5b2
     extra_hosts: []
   time: 2026-01-25T06:00:30.93257698Z
+- line:
+    host: jnb01.dnscry.pt
+    addr: 2c0f:f530::d00:188
+    extra_hosts: []
+  time: 2026-01-28T06:02:00.564050107Z
