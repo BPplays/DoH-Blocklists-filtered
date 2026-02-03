@@ -651,12 +651,15 @@ func writeList(name string, lines []Line, list List) {
 	)
 
 
-	err := os.WriteFile(
-		fmt.Sprintf(
+
+	txtPath := fmt.Sprintf(
 			"%v/%v.txt",
 			list.OutputDir,
 			nameBase,
-			),
+			)
+	fmt.Printf("writing to [%v]\n", txtPath)
+	err := os.WriteFile(
+		txtPath,
 		[]byte(strings.Join(strLines, "\n")),
 		0644,
 		)
@@ -664,8 +667,10 @@ func writeList(name string, lines []Line, list List) {
 		fmt.Printf("[%v] error wring file %v\n", name, err)
 	}
 
+
+
 	jsonPath := fmt.Sprintf(
-			"%v/json/%v.txt",
+			"%v/json/%v.json",
 			list.OutputDir,
 			nameBase,
 			)
