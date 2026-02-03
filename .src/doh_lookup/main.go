@@ -1,13 +1,19 @@
 package main
 
 import (
+	"bufio"
+	"bytes"
+	"context"
 	"crypto/rand"
 	"encoding/hex"
+	"encoding/json"
 	"errors"
 	"flag"
 	"fmt"
+	"io"
 	"log"
 	"net"
+	"net/http"
 	"net/netip"
 	"os"
 	"path/filepath"
@@ -15,12 +21,9 @@ import (
 	"strings"
 	"sync"
 	"time"
-	"bufio"
-	"bytes"
-	"io"
-	"net/http"
 
 	"golang.org/x/crypto/sha3"
+	"golang.org/x/sync/semaphore"
 
 	"github.com/miekg/dns"
 	"github.com/projectdiscovery/retryabledns"
@@ -31,10 +34,6 @@ import (
 )
 
 var (
-	curReqs   int = 0
-	maxReqs   int = 256
-	curReqsMu sync.Mutex
-
 	cacheFormat string = "%v/.cache/%v%v.yml"
 
 	nat64Prefixs []netip.Prefix
@@ -532,7 +531,7 @@ func lineDedupeIps(ips []Line) (out []Line) {
 
 	ips = validateIpLines(ips, false)
 
-	// needed or else doesn't finish last line, TODO: fix later (probably never)
+	// Needed or else doesn't finish last line, TODO: fix later (probably never)
 	ips = append(ips, Line{Addr: netip.IPv6Unspecified()})
 
 	for i, ip := range ips {
@@ -636,6 +635,50 @@ func queryWithResolvers(
 
 }
 
+func writeList(name string, lines []Line, list List) {
+	strLines := LinesToStrings(lines)
+
+	fileNameBase := fmt.Sprintf(
+		"%v/%v%v",
+		list.OutputDir,
+		list.OutputFilePrefix,
+		name,
+	)
+
+
+	err := os.WriteFile(
+		fmt.Sprintf(
+			"%v.txt",
+			fileNameBase,
+			),
+		[]byte(strings.Join(strLines, "\n")),
+		0755,
+		)
+	if err != nil {
+		fmt.Printf("[%v] error wring file %v\n", name, err)
+	}
+
+
+	file, err := os.OpenFile(
+		fmt.Sprintf("%v.json", fileNameBase),
+		os.O_CREATE|os.O_WRONLY|os.O_TRUNC,
+		0644,
+	)
+	if err != nil {
+		fmt.Printf("failed to write json: %v", err)
+		return
+	}
+	defer file.Close()
+
+	encoder := json.NewEncoder(file)
+	// encoder.SetIndent("", "  ")
+	err = encoder.Encode(strLines)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+}
+
 func preCheck() {
 	checkDomains := []string{"google.com", "heise.de", "openwrt.org", "facebook.com"}
 	timeout := 5 * time.Second
@@ -676,6 +719,8 @@ func checkHost(
 	// fmt.Printf("qeury time %v\n", time.Since(start))
 
 	// start = time.Now()
+
+	client := cdncheck.New()
 	for _, addrStr := range append(data.AAAA, data.A...) {
 		addr, err := netip.ParseAddr(addrStr)
 		if err != nil {
@@ -685,7 +730,6 @@ func checkHost(
 		if !validateIp(addr, inputFile.PublicIpsOnly) { continue }
 
 		uaddr := addr.Unmap()
-		client := cdncheck.New()
 
 		matched, _, _, err := client.Check(net.ParseIP(uaddr.String()))
 		if err != nil {
@@ -725,7 +769,11 @@ func checkHost(
 
 }
 
-func checkList(list List) ([]Line, []Line, []Line) {
+func checkList(
+	ctx context.Context,
+	sem *semaphore.Weighted,
+	list List,
+) ([]Line, []Line, []Line, error) {
 
 	var v6Ips []Line
 	var v4Ips []Line
@@ -736,6 +784,7 @@ func checkList(list List) ([]Line, []Line, []Line) {
 
 	start := time.Now()
 	for _, ifile := range list.InputFiles {
+		if ctx.Err() != nil { break }
 
 		var hosts []string
 		file, err := os.ReadFile(ifile.Path)
@@ -752,35 +801,19 @@ func checkList(list List) ([]Line, []Line, []Line) {
 
 		start = time.Now()
 		for _, host := range hosts {
-			for {
-
-				curReqsMu.Lock()
-				if curReqs < maxReqs {
-					if curReqs < 0 {
-						log.Fatalln("curReqs is negative")
-					}
-					// fmt.Println("req now avail", curReqs)
-					curReqsMu.Unlock()
-
-					break
-				}
-				curReqsMu.Unlock()
-				// fmt.Println("waiting util avail")
-
-				time.Sleep(200 * time.Millisecond)
-
+			err = sem.Acquire(ctx, 1)
+			if err != nil {
+				fmt.Printf("sem Acquire failed: %v\n", err)
+				return v6Ips, v4Ips, validDomains, err
 			}
 
-			curReqsMu.Lock()
-			curReqs += 1
-			curReqsMu.Unlock()
+			if ctx.Err() != nil { break }
+
 			wg.Add(1)
 			go func(host string) {
 				defer func() {
 					wg.Done()
-					curReqsMu.Lock()
-					curReqs -= 1
-					curReqsMu.Unlock()
+					sem.Release(1)
 				}()
 
 				hostIpsV6, hostIpsV4, err := checkHost(host, ifile)
@@ -823,7 +856,7 @@ func checkList(list List) ([]Line, []Line, []Line) {
 		)
 	}
 
-	return v6Ips, v4Ips, validDomains
+	return v6Ips, v4Ips, validDomains, nil
 }
 
 func checkDns(cfg Config) {
@@ -831,12 +864,20 @@ func checkDns(cfg Config) {
 
 	fmt.Println(len(cfg.Lists))
 	fmt.Println(cfg.Lists)
+
+	ctx := context.Background()
+	sem := semaphore.NewWeighted(256)
+
 	for _, list := range cfg.Lists {
 		wg.Add(1)
 		go func() {
 			defer wg.Done()
 
-			v6Ips, v4Ips, validDomains := checkList(list)
+			v6Ips, v4Ips, validDomains, err := checkList(ctx, sem, list)
+			if err != nil {
+				log.Fatalf("checkList error: %v\n", err)
+			}
+
 			if (len(v6Ips) <= 0) && (len(v4Ips) <= 0) {
 				log.Fatalln("no ips found")
 			}
@@ -859,45 +900,13 @@ func checkDns(cfg Config) {
 			slices.SortFunc(v4Out, sortLine)
 			slices.SortFunc(domainsOut, sortLine)
 
-			os.WriteFile(
-				fmt.Sprintf(
-					"%v/%v-doh-ipv6.txt",
-					list.OutputDir,
-					list.OutputFilePrefix,
-				),
-				[]byte(strings.Join(LinesToStrings(v6Out), "\n")),
-				0755,
-			)
+			writeList("-doh-ipv6", v6Out, list)
+			writeList("-doh-ipv4", v4Out, list)
 
-			os.WriteFile(
-				fmt.Sprintf(
-					"%v/%v-doh-ipv4.txt",
-					list.OutputDir,
-					list.OutputFilePrefix,
-				),
-				[]byte(strings.Join(LinesToStrings(v4Out), "\n")),
-				0755,
-			)
+			writeList("-doh-ipv4-nat64", toNat64(v4Out), list)
 
-			os.WriteFile(
-				fmt.Sprintf(
-					"%v/%v-doh-ipv4-nat64.txt",
-					list.OutputDir,
-					list.OutputFilePrefix,
-				),
-				[]byte(strings.Join(LinesToStrings(toNat64(v4Out)), "\n")),
-				0755,
-			)
+			writeList("-doh-domains", domainsOut, list)
 
-			os.WriteFile(
-				fmt.Sprintf(
-					"%v/%v-doh-domains.txt",
-					list.OutputDir,
-					list.OutputFilePrefix,
-				),
-				[]byte(strings.Join(LinesToStrings(domainsOut), "\n")),
-				0755,
-			)
 		}()
 	}
 	wg.Wait()
