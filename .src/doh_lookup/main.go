@@ -638,6 +638,9 @@ func queryWithResolvers(
 func writeList(name string, lines []Line, list List) {
 	strLines := LinesToStrings(lines)
 
+	fmt.Printf("making dir: %v\n", list.OutputDir)
+	os.MkdirAll(list.OutputDir, 0755)
+
 	fileNameBase := fmt.Sprintf(
 		"%v/%v%v",
 		list.OutputDir,
@@ -652,7 +655,7 @@ func writeList(name string, lines []Line, list List) {
 			fileNameBase,
 			),
 		[]byte(strings.Join(strLines, "\n")),
-		0755,
+		0644,
 		)
 	if err != nil {
 		fmt.Printf("[%v] error wring file %v\n", name, err)
