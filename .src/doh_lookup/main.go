@@ -638,12 +638,14 @@ func queryWithResolvers(
 func writeList(name string, lines []Line, list List) {
 	strLines := LinesToStrings(lines)
 
-	fmt.Printf("making dir: %v\n", list.OutputDir)
-	os.MkdirAll(list.OutputDir, 0755)
+	dirs := []string{filepath.Join(list.OutputDir, "json")}
+	for _, dir := range dirs {
+		fmt.Printf("making dir: %v\n", dir)
+		os.MkdirAll(dir, 0755)
+	}
 
-	fileNameBase := fmt.Sprintf(
-		"%v/%v%v",
-		list.OutputDir,
+	nameBase := fmt.Sprintf(
+		"%v%v",
 		list.OutputFilePrefix,
 		name,
 	)
@@ -651,8 +653,9 @@ func writeList(name string, lines []Line, list List) {
 
 	err := os.WriteFile(
 		fmt.Sprintf(
-			"%v.txt",
-			fileNameBase,
+			"%v/%v.txt",
+			list.OutputDir,
+			nameBase,
 			),
 		[]byte(strings.Join(strLines, "\n")),
 		0644,
@@ -661,9 +664,12 @@ func writeList(name string, lines []Line, list List) {
 		fmt.Printf("[%v] error wring file %v\n", name, err)
 	}
 
-
 	file, err := os.OpenFile(
-		fmt.Sprintf("%v.json", fileNameBase),
+		fmt.Sprintf(
+			"%v/json/%v.txt",
+			list.OutputDir,
+			nameBase,
+			),
 		os.O_CREATE|os.O_WRONLY|os.O_TRUNC,
 		0644,
 	)
