@@ -665,7 +665,7 @@ func writeList(name string, lines []Line, list List) {
 		0644,
 	)
 	if err != nil {
-		fmt.Printf("failed to write json: %v", err)
+		fmt.Printf("failed to write json: %v\n", err)
 		return
 	}
 	defer file.Close()
@@ -674,7 +674,7 @@ func writeList(name string, lines []Line, list List) {
 	// encoder.SetIndent("", "  ")
 	err = encoder.Encode(strLines)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Printf("failed to encode json: %v\n", err)
 	}
 
 }
