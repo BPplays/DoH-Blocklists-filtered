@@ -183,6 +183,27 @@ func (l *Line) String() (str string) {
 
 }
 
+func (l *Line) SingleString() (str string) {
+	defer func() {
+		if r := recover(); r != nil {
+			str = ""
+		}
+	}()
+
+	str = ""
+
+	if l == nil {
+		return str
+	}
+
+	if l.Addr.IsUnspecified() {
+		return l.Host
+	}
+
+	return l.Addr.String()
+
+}
+
 func (l *Line) mapKey() (str string) {
 	defer func() {
 		if r := recover(); r != nil {
@@ -305,6 +326,13 @@ func validateIpLines(ips []Line, publicOnly bool) (out []Line) {
 func LinesToStrings(lines []Line) (strs []string) {
 	for _, l := range lines {
 		strs = append(strs, l.String())
+	}
+	return strs
+}
+
+func LinesToSingleStrings(lines []Line) (strs []string) {
+	for _, l := range lines {
+		strs = append(strs, l.SingleString())
 	}
 	return strs
 }
@@ -636,7 +664,6 @@ func queryWithResolvers(
 }
 
 func writeList(name string, lines []Line, list List) {
-	strLines := LinesToStrings(lines)
 
 	dirs := []string{filepath.Join(list.OutputDir, "json")}
 	for _, dir := range dirs {
@@ -660,7 +687,7 @@ func writeList(name string, lines []Line, list List) {
 	fmt.Printf("writing to [%v]\n", txtPath)
 	err := os.WriteFile(
 		txtPath,
-		[]byte(strings.Join(strLines, "\n")),
+		[]byte(strings.Join(LinesToStrings(lines), "\n")),
 		0644,
 		)
 	if err != nil {
@@ -688,7 +715,7 @@ func writeList(name string, lines []Line, list List) {
 
 	encoder := json.NewEncoder(file)
 	// encoder.SetIndent("", "  ")
-	err = encoder.Encode(strLines)
+	err = encoder.Encode(LinesToSingleStrings(lines))
 	if err != nil {
 		fmt.Printf("failed to encode json: %v\n", err)
 	}
