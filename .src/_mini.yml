@@ -3,7 +3,7 @@ lists:
     cache: true
     cache_time: 24.5h
     input_files:
-    - path: "../../.src/doh-domains_mini.txt"
+    - path: "./.src/doh-domains_mini.txt"
       cdncheck: true
       public_ips_only: true
       # ip_whitelist:
@@ -33,7 +33,7 @@ lists:
       # - "2606:4700::6812:103"
       # - "2606:4700::6812:3"
 
-    - path: "../../.src/doh-domains_mini_good.txt"
+    - path: "./.src/doh-domains_mini_good.txt"
       cdncheck: false
       public_ips_only: true
 
