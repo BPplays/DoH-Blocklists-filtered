@@ -38,6 +38,7 @@ import (
 
 var (
 	cacheFormat string = "%v/.cache/%v%v.yml"
+	cacheDir *string
 
 	nat64Prefixs []netip.Prefix
 )
@@ -485,6 +486,11 @@ func readAndPutCachesFromListAndWriteOut(
 			list.OutputFilePrefix,
 			loop.name,
 		)
+		if *cacheDir != "" {
+			name = filepath.Clean(name)
+			name = filepath.Join(*cacheDir, name)
+			os.Mkdir(filepath.Dir(name), 0755)
+		}
 
 		*loop.caches, err = readCache(
 			name,
@@ -1112,6 +1118,7 @@ func main() {
 	webgetFileUrl := flag.String("curl_url", "", "")
 	webgetFileLoc := flag.String("curl_loc", "", "")
 	newCwd := flag.String("chdir", "", "")
+	cacheDir = flag.String("chdir_cache", "", "")
 	flag.Parse()
 	os.Chdir(*newCwd)
 
