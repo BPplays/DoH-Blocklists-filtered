@@ -16,10 +16,12 @@ import (
 	"net/http"
 	"net/netip"
 	"os"
+	"path"
 	"path/filepath"
 	"slices"
 	"strings"
 	"sync"
+	"sync/atomic"
 	"time"
 
 	"golang.org/x/crypto/sha3"
@@ -27,6 +29,7 @@ import (
 
 	"github.com/miekg/dns"
 	"github.com/projectdiscovery/retryabledns"
+	mapsutil "github.com/projectdiscovery/utils/maps"
 	sliceutil "github.com/projectdiscovery/utils/slice"
 
 	"github.com/projectdiscovery/cdncheck"
@@ -38,6 +41,10 @@ var (
 
 	nat64Prefixs []netip.Prefix
 )
+
+type snapshot struct {
+	m map[string][]byte
+}
 
 var errDomainNotOk error = errors.New("domain not ok")
 
@@ -663,6 +670,59 @@ func queryWithResolvers(
 
 }
 
+func normalizeToURLPath(p string) string {
+    // Turn OS separators into forward slashes
+    s := filepath.ToSlash(p)
+    // Use path.Clean because it works with forward-slash paths (URL-style)
+    // Prepend "/" if you want an absolute-looking path
+    s = path.Clean("/" + s)
+    if s == "." {
+        return "/"
+    }
+    return s
+}
+
+
+func updateList(name string, lines []Line, list List) (m map[string][]byte) {
+	m = make(map[string][]byte)
+
+	nameBase := fmt.Sprintf(
+		"%v%v",
+		list.OutputFilePrefix,
+		name,
+	)
+
+
+
+	txtPath := fmt.Sprintf(
+			"%v/%v.txt",
+			list.OutputDir,
+			nameBase,
+			)
+	fmt.Printf("saving to map [%v]\n", txtPath)
+	m[normalizeToURLPath(txtPath)] = []byte(strings.Join(LinesToStrings(lines), "\n"))
+
+
+
+	jsonPath := fmt.Sprintf(
+			"%v/json/%v.json",
+			list.OutputDir,
+			nameBase,
+			)
+	fmt.Printf("saving to map [%v]\n", jsonPath)
+
+	var buf bytes.Buffer
+	encoder := json.NewEncoder(&buf)
+	// encoder.SetIndent("", "  ")
+	err := encoder.Encode(LinesToSingleStrings(lines))
+	if err != nil {
+		fmt.Printf("failed to encode json: %v\n", err)
+	}
+	m[normalizeToURLPath(jsonPath)] = buf.Bytes()
+
+	return m
+}
+
 func writeList(name string, lines []Line, list List) {
 
 	dirs := []string{filepath.Join(list.OutputDir, "json")}
@@ -849,6 +909,7 @@ func checkList(
 				fmt.Printf("sem Acquire failed: %v\n", err)
 				return v6Ips, v4Ips, validDomains, err
 			}
+			// fmt.Println("sem acquired")
 
 			if ctx.Err() != nil { break }
 
@@ -857,6 +918,7 @@ func checkList(
 				defer func() {
 					wg.Done()
 					sem.Release(1)
+					// fmt.Println("sem released")
 				}()
 
 				hostIpsV6, hostIpsV4, err := checkHost(host, ifile)
@@ -902,7 +964,7 @@ func checkList(
 	return v6Ips, v4Ips, validDomains, nil
 }
 
-func checkDns(cfg Config) {
+func checkDns(cfg Config, updateList func(string, []Line, List)) {
 	var wg sync.WaitGroup
 
 	fmt.Println(len(cfg.Lists))
@@ -917,6 +979,7 @@ func checkDns(cfg Config) {
 			defer wg.Done()
 
 			v6Ips, v4Ips, validDomains, err := checkList(ctx, sem, list)
+
 			if err != nil {
 				log.Fatalf("checkList error: %v\n", err)
 			}
@@ -943,12 +1006,12 @@ func checkDns(cfg Config) {
 			slices.SortFunc(v4Out, sortLine)
 			slices.SortFunc(domainsOut, sortLine)
 
-			writeList("-doh-ipv6", v6Out, list)
-			writeList("-doh-ipv4", v4Out, list)
+			updateList("-doh-ipv6", v6Out, list)
+			updateList("-doh-ipv4", v4Out, list)
 
-			writeList("-doh-ipv4-nat64", toNat64(v4Out), list)
+			updateList("-doh-ipv4-nat64", toNat64(v4Out), list)
 
-			writeList("-doh-domains", domainsOut, list)
+			updateList("-doh-domains", domainsOut, list)
 
 		}()
 	}
@@ -1002,6 +1065,8 @@ func countLines(data []byte) int {
 }
 
 func init() {
+	t := false
+	dryRun = &t
 
 	hasV6, hasV4 := availableIpVersions()
 
@@ -1043,28 +1108,84 @@ func init() {
 
 func main() {
 	configPath := flag.String("c", "", "")
-	dryRun = flag.Bool("d", false, "")
+	daemon := flag.Bool("d", false, "")
 	webgetFileUrl := flag.String("curl_url", "", "")
 	webgetFileLoc := flag.String("curl_loc", "", "")
+	newCwd := flag.String("chdir", "", "")
 	flag.Parse()
+	os.Chdir(*newCwd)
 
-	if *webgetFileUrl != "" {
-		for range 10 {
-			err := fetchAndSaveIfValid(*webgetFileUrl, *webgetFileLoc, 50)
-			if err == nil { break }
-			time.Sleep(110 * time.Millisecond)
-		}
-		os.Exit(0)
-	}
 
 	cfg := readConfig(*configPath)
-	makeDirs(cfg)
 	preCheck()
 
-	start := time.Now()
 
-	checkDns(cfg)
+	var snap atomic.Value
+	snap.Store(snapshot{m: map[string][]byte{}})
 
-	fmt.Printf("total resolve time: %v\n", time.Since(start))
+	if *daemon {
+		sleepTime := 100 * time.Second
+		sleepTimeFetch := 500 * time.Second
+		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+			s := snap.Load().(snapshot)
+			if data, ok := s.m[r.URL.Path]; ok {
+				w.Write(data)
+				return
+			}
+			fmt.Printf("snap is %v\npath is %v\n", s, r.URL.Path)
+			http.NotFound(w, r)
+		})
+		srv := &http.Server{Addr: "[::]:58182"}
+
+		if *webgetFileUrl != "" {
+			go func() {
+				startTime := time.Now()
+				for range 10 {
+					err := fetchAndSaveIfValid(*webgetFileUrl, *webgetFileLoc, 50)
+					if err == nil { break }
+					time.Sleep(110 * time.Millisecond)
+				}
+				time.Sleep(sleepTimeFetch - time.Since(startTime))
+			}()
+		}
+
+		go func() {
+			log.Printf("listening on %s\n", srv.Addr)
+			if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+				log.Fatalf("server error: %v", err)
+			}
+		}()
+
+		for {
+			startTime := time.Now()
+			snapMap := make(map[string][]byte)
+			checkDns(
+				cfg,
+				func(s string, l1 []Line, l2 List) {
+					newMap := updateList(s, l1, l2)
+					snapMap = mapsutil.Merge(snapMap, newMap)
+				},
+			)
+			snap.Store(snapshot{m: snapMap})
+			time.Sleep(sleepTime - time.Since(startTime))
+		}
+
+	} else {
+		if *webgetFileUrl != "" {
+			for range 10 {
+				err := fetchAndSaveIfValid(*webgetFileUrl, *webgetFileLoc, 50)
+				if err == nil { break }
+				time.Sleep(110 * time.Millisecond)
+			}
+			os.Exit(0)
+		}
+
+		makeDirs(cfg)
+		start := time.Now()
+		checkDns(cfg, writeList)
+
+		fmt.Printf("total resolve time: %v\n", time.Since(start))
+
+	}
 
 }
