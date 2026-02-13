@@ -1,0 +1,33 @@
+lists:
+  - name: mini
+    cache: true
+    cache_time: 20.5m
+    input_files:
+    - path: "./.src/doh-domains_mini.txt"
+      cdncheck: true
+      public_ips_only: true
+
+    - path: "./.src/doh-domains_mini_good.txt"
+      cdncheck: false
+      public_ips_only: true
+
+
+    output_dir: "./mini"
+    output_file_prefix: "mini"
+
+  - name: full
+    cache: true
+    cache_time: 20.5m
+    input_files:
+    - path: "./.src/doh-domains_full.txt"
+      cdncheck: true
+      public_ips_only: true
+
+    - path: "./.src/doh-domains_mini_good.txt"
+      cdncheck: false
+      public_ips_only: true
+
+
+    output_dir: "./full"
+    output_file_prefix: "full"
+
