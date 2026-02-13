@@ -489,7 +489,10 @@ func readAndPutCachesFromListAndWriteOut(
 		if *cacheDir != "" {
 			name = filepath.Clean(name)
 			name = filepath.Join(*cacheDir, name)
-			os.Mkdir(filepath.Dir(name), 0755)
+			err := os.MkdirAll(filepath.Dir(name), 0755)
+			if err != nil {
+				log.Printf("can't mkdirAll: %v", err)
+			}
 		}
 
 		*loop.caches, err = readCache(
