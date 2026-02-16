@@ -62,7 +62,7 @@ jobs:
       #   run: sudo sh ./.scripts/doh-lookup.sh ./.src/doh-domains_overall.txt full/full
 
       - name: Run DoH lookup to get new overall
-        run: sudo ./.scripts/doh_lookup -curl_url "https://raw.githubusercontent.com/dibdot/DoH-IP-blocklists/refs/heads/master/doh-domains_overall.txt" -curl_loc "./.src/doh-domains_full.txt"
+        run: sudo ./.scripts/doh_lookup -curl_only -curl_url "https://raw.githubusercontent.com/dibdot/DoH-IP-blocklists/refs/heads/master/doh-domains_overall.txt" -curl_loc "./.src/doh-domains_full.txt"
 
       # Commit changed files to your repo
       - name: Git Auto Commit

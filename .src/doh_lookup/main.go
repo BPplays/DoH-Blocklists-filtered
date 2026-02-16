@@ -1118,6 +1118,7 @@ func init() {
 func main() {
 	configPath := flag.String("c", "", "")
 	daemon := flag.Bool("d", false, "")
+	webgetOnly := flag.Bool("curl_only", false, "")
 	webgetFileUrl := flag.String("curl_url", "", "")
 	webgetFileLoc := flag.String("curl_loc", "", "")
 	newCwd := flag.String("chdir", "", "")
@@ -1126,14 +1127,22 @@ func main() {
 	os.Chdir(*newCwd)
 
 
-	cfg := readConfig(*configPath)
-	preCheck()
+	var cfg Config
+
+	if !*webgetOnly {
+		cfg = readConfig(*configPath)
+		preCheck()
+	}
 
 
 	var snap atomic.Value
 	snap.Store(snapshot{m: map[string][]byte{}})
 
 	if *daemon {
+		if *webgetOnly {
+			log.Println("can't have daemon and curl_only")
+		}
+
 		sleepTime := 100 * time.Second
 		sleepTimeFetch := 500 * time.Second
 		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
@@ -1182,12 +1191,20 @@ func main() {
 
 	} else {
 		if *webgetFileUrl != "" {
+			var err error
 			for range 10 {
-				err := fetchAndSaveIfValid(*webgetFileUrl, *webgetFileLoc, 50)
+				err = fetchAndSaveIfValid(*webgetFileUrl, *webgetFileLoc, 50)
 				if err == nil { break }
 				time.Sleep(110 * time.Millisecond)
 			}
-			os.Exit(0)
+
+			if *webgetOnly {
+				if err == nil {
+					os.Exit(0)
+				} else {
+					os.Exit(1)
+				}
+			}
 		}
 
 		makeDirs(cfg)
