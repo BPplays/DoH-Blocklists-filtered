@@ -12,6 +12,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net"
 	"net/http"
 	"net/netip"
@@ -1118,6 +1119,7 @@ func init() {
 func main() {
 	configPath := flag.String("c", "", "")
 	daemon := flag.Bool("d", false, "")
+	port := flag.Int("port", 58182, "")
 	webgetOnly := flag.Bool("curl_only", false, "")
 	webgetFileUrl := flag.String("curl_url", "", "")
 	webgetFileLoc := flag.String("curl_loc", "", "")
@@ -1125,6 +1127,16 @@ func main() {
 	cacheDir = flag.String("chdir_cache", "", "")
 	flag.Parse()
 	os.Chdir(*newCwd)
+
+	if *port > math.MaxUint16 {
+		log.Println("port too big")
+		os.Exit(1)
+	}
+
+	if *port < 0 {
+		log.Println("port < 0")
+		os.Exit(1)
+	}
 
 
 	var cfg Config
@@ -1154,7 +1166,9 @@ func main() {
 			fmt.Printf("snap is %v\npath is %v\n", s, r.URL.Path)
 			http.NotFound(w, r)
 		})
-		srv := &http.Server{Addr: "[::]:58182"}
+		srv := &http.Server{
+			Addr: fmt.Sprintf("[::]:%d", *port),
+		}
 
 		if *webgetFileUrl != "" {
 			go func() {
