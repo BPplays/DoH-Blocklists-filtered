@@ -48,7 +48,20 @@ type snapshot struct {
 	m map[string][]byte
 }
 
+type stringSliceFlag []string
+
+func (s *stringSliceFlag) String() string {
+	return strings.Join(*s, ",")
+}
+
+func (s *stringSliceFlag) Set(value string) error {
+	*s = append(*s, value)
+	return nil
+}
+
 var errDomainNotOk error = errors.New("domain not ok")
+var errNotEnoughLines error = errors.New("file doesn't have enough lines")
+var errInputListTooShort error = errors.New("input list too short")
 
 var dryRun *bool
 
@@ -1028,7 +1041,12 @@ func checkDns(cfg Config, updateList func(string, []Line, List)) {
 	wg.Wait()
 }
 
-func fetchAndSaveIfValid(url, outputPath string, minLines int) error {
+func fetchAndSaveIfValid(urls []string, outputPath string, minLines int) error {
+	if len(urls) < 1 {
+		return errInputListTooShort
+	}
+	url := urls[0]
+
 	// Fetch the file
 	resp, err := http.Get(url)
 	if err != nil {
@@ -1053,7 +1071,11 @@ func fetchAndSaveIfValid(url, outputPath string, minLines int) error {
 	// Check if file meets minimum line requirement
 	if lineCount < minLines {
 		fmt.Printf("File has fewer than %d lines, not saving\n", minLines)
-		return nil
+		if len(urls) < 2 {
+			return errNotEnoughLines
+		} else {
+			return fetchAndSaveIfValid(urls[1:], outputPath, minLines)
+		}
 	}
 
 	// Save the file
@@ -1117,16 +1139,21 @@ func init() {
 }
 
 func main() {
+	var webgetFileUrls stringSliceFlag
+
 	configPath := flag.String("c", "", "")
 	daemon := flag.Bool("d", false, "")
 	port := flag.Int("port", 58182, "")
 	webgetOnly := flag.Bool("curl_only", false, "")
 	webgetFileUrl := flag.String("curl_url", "", "")
+	flag.Var(&webgetFileUrls, "u", "URL (can be specified multiple times)")
 	webgetFileLoc := flag.String("curl_loc", "", "")
 	newCwd := flag.String("chdir", "", "")
 	cacheDir = flag.String("chdir_cache", "", "")
 	flag.Parse()
 	os.Chdir(*newCwd)
+
+	webgetFileUrls = append(webgetFileUrls, *webgetFileUrl)
 
 	if *port > math.MaxUint16 {
 		log.Println("port too big")
@@ -1170,11 +1197,11 @@ func main() {
 			Addr: fmt.Sprintf("[::]:%d", *port),
 		}
 
-		if *webgetFileUrl != "" {
+		if len(webgetFileUrls) > 0 {
 			go func() {
 				startTime := time.Now()
 				for range 10 {
-					err := fetchAndSaveIfValid(*webgetFileUrl, *webgetFileLoc, 50)
+					err := fetchAndSaveIfValid(webgetFileUrls, *webgetFileLoc, 50)
 					if err == nil { break }
 					time.Sleep(110 * time.Millisecond)
 				}
@@ -1204,10 +1231,10 @@ func main() {
 		}
 
 	} else {
-		if *webgetFileUrl != "" {
+		if len(webgetFileUrls) > 0 {
 			var err error
 			for range 10 {
-				err = fetchAndSaveIfValid(*webgetFileUrl, *webgetFileLoc, 50)
+				err = fetchAndSaveIfValid(webgetFileUrls, *webgetFileLoc, 50)
 				if err == nil { break }
 				time.Sleep(110 * time.Millisecond)
 			}
