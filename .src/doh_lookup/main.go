@@ -59,6 +59,20 @@ func (s *stringSliceFlag) Set(value string) error {
 	return nil
 }
 
+type CDNcheckClientWrapper struct {
+	client *cdncheck.Client
+}
+
+var (
+	cdnCheckInstance *CDNcheckClientWrapper = &CDNcheckClientWrapper{}
+)
+
+
+// Expose methods through wrapper if you want
+func (c *CDNcheckClientWrapper) Client() *cdncheck.Client {
+	return c.client
+}
+
 var errDomainNotOk error = errors.New("domain not ok")
 var errNotEnoughLines error = errors.New("file doesn't have enough lines")
 var errInputListTooShort error = errors.New("input list too short")
@@ -846,7 +860,7 @@ func checkHost(
 
 	// start = time.Now()
 
-	client := cdncheck.New()
+	client := cdnCheckInstance.client
 	for _, addrStr := range append(data.AAAA, data.A...) {
 		addr, err := netip.ParseAddr(addrStr)
 		if err != nil {
@@ -1135,6 +1149,10 @@ func init() {
 		nat64Prefixs,
 		netip.MustParsePrefix("64:ff9b:1:abcd:0:5431::/96"),
 	)
+
+	cdnCheckInstance = &CDNcheckClientWrapper{
+		client: cdncheck.New(),
+	}
 
 }
 
