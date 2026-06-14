@@ -1199,7 +1199,7 @@ func main() {
 	flag.Parse()
 
 	if len(customNat64) <= 0 {
-		fmt.Println()
+		fmt.Println(customNat64)
 		Nat64Prefixs = append(
 			Nat64Prefixs,
 			WellKnownNat64Prefixs...,
