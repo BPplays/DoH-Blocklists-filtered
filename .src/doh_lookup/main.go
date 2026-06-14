@@ -1205,7 +1205,6 @@ func main() {
 			WellKnownNat64Prefixs...,
 		)
 	} else {
-		customNat64 := []netip.Prefix(customNat64)
 		Nat64Prefixs = append(Nat64Prefixs, customNat64...)
 		fmt.Printf("using custom NAT64 prefixes: %v\n", Nat64Prefixs)
 	}
