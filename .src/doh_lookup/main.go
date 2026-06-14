@@ -1198,16 +1198,6 @@ func main() {
 	)
 	flag.Parse()
 
-	if len(customNat64) <= 0 {
-		fmt.Println(customNat64)
-		Nat64Prefixs = append(
-			Nat64Prefixs,
-			WellKnownNat64Prefixs...,
-		)
-	} else {
-		Nat64Prefixs = append(Nat64Prefixs, customNat64...)
-		fmt.Printf("using custom NAT64 prefixes: %v\n", Nat64Prefixs)
-	}
 	os.Chdir(*newCwd)
 
 	webgetFileUrls = append(webgetFileUrls, *webgetFileUrl)
@@ -1231,6 +1221,16 @@ func main() {
 	}
 
 
+	if len(customNat64) <= 0 {
+		fmt.Println(customNat64)
+		Nat64Prefixs = append(
+			Nat64Prefixs,
+			WellKnownNat64Prefixs...,
+		)
+	} else {
+		Nat64Prefixs = append(Nat64Prefixs, customNat64...)
+		fmt.Printf("using custom NAT64 prefixes: %v\n", Nat64Prefixs)
+	}
 
 
 	var snap atomic.Value
