@@ -10,3 +10,7 @@ it uses [cdncheck](https://github.com/projectdiscovery/cdncheck) to filter for k
 
 here are special definitions:
   * `-ipv4-nat64` contains the IPv4 addresses of DoH servers coverted to nat64 with the following prefixes `64:ff9b:1::/96`, `64:ff9b:1:fffe::/96`, `64:ff9b:1:fffd:1::/96`, `64:ff9b:1:fffc:2::/96`, `64:ff9b:1:abcd:0:5431::/96` from [RFC 6052 section 2.1](https://datatracker.ietf.org/doc/html/rfc6052#section-2.1) and [RFC 8215 section 6](https://datatracker.ietf.org/doc/html/rfc8215#section-6)  
+
+
+# daemon mode
+

@@ -41,7 +41,8 @@ var (
 	cacheFormat string = "%v/.cache/%v%v.yml"
 	cacheDir *string
 
-	nat64Prefixs []netip.Prefix
+	Nat64Prefixs []netip.Prefix
+	WellKnownNat64Prefixs []netip.Prefix
 )
 
 type snapshot struct {
@@ -572,12 +573,12 @@ func makeDirs(cfg Config) {
 	}
 }
 
-func toNat64(ipv4s []Line) (nat64s []Line) {
+func toNat64(nat64_prefixs []netip.Prefix, ipv4s []Line) (nat64s []Line) {
 	for _, line := range ipv4s {
 		if (!line.Addr.Is4In6()) && (!line.Addr.Is4()) {
 			continue
 		}
-		for _, pref := range nat64Prefixs {
+		for _, pref := range nat64_prefixs {
 			// always use 96 or else mapped ipv4 get ::ffff infront
 			nat64Pref := netip.PrefixFrom(pref.Addr(), 96)
 			addr := mixPrefixIP(&nat64Pref, &line.Addr)
@@ -603,7 +604,7 @@ func lineDedupeIps(ips []Line) (out []Line) {
 
 	ips = validateIpLines(ips, false)
 
-	// Needed or else doesn't finish last line, TODO: fix later (probably never)
+	// Needed or else might not finish last line, TODO: fix later (probably never)
 	ips = append(ips, Line{Addr: netip.IPv6Unspecified()})
 
 	for i, ip := range ips {
@@ -1046,7 +1047,7 @@ func checkDns(cfg Config, updateList func(string, []Line, List)) {
 			updateList("-doh-ipv6", v6Out, list)
 			updateList("-doh-ipv4", v4Out, list)
 
-			updateList("-doh-ipv4-nat64", toNat64(v4Out), list)
+			updateList("-doh-ipv4-nat64", toNat64(Nat64Prefixs, v4Out), list)
 
 			updateList("-doh-domains", domainsOut, list)
 
@@ -1129,26 +1130,28 @@ func init() {
 		DefaultResolvers = append(DefaultResolvers, IPv4Resolvers...)
 	}
 
-	nat64Prefixs = append(
-		nat64Prefixs,
+
+	WellKnownNat64Prefixs = append(
+		WellKnownNat64Prefixs,
 		netip.MustParsePrefix("64:ff9b:1::/96"),
 	)
-	nat64Prefixs = append(
-		nat64Prefixs,
+	WellKnownNat64Prefixs = append(
+		WellKnownNat64Prefixs,
 		netip.MustParsePrefix("64:ff9b:1:fffe::/96"),
 	)
-	nat64Prefixs = append(
-		nat64Prefixs,
+	WellKnownNat64Prefixs = append(
+		WellKnownNat64Prefixs,
 		netip.MustParsePrefix("64:ff9b:1:fffd:1::/96"),
 	)
-	nat64Prefixs = append(
-		nat64Prefixs,
+	WellKnownNat64Prefixs = append(
+		WellKnownNat64Prefixs,
 		netip.MustParsePrefix("64:ff9b:1:fffc:2::/96"),
 	)
-	nat64Prefixs = append(
-		nat64Prefixs,
+	WellKnownNat64Prefixs = append(
+		WellKnownNat64Prefixs,
 		netip.MustParsePrefix("64:ff9b:1:abcd:0:5431::/96"),
 	)
+
 
 	cdnCheckInstance = &CDNcheckClientWrapper{
 		client: cdncheck.New(),
@@ -1189,6 +1192,15 @@ func main() {
 	if !*webgetOnly {
 		cfg = readConfig(*configPath)
 		preCheck()
+	}
+
+
+	//if customNAT64 {
+	if true {
+		Nat64Prefixs = append(
+			Nat64Prefixs,
+			WellKnownNat64Prefixs...,
+		)
 	}
 
 
