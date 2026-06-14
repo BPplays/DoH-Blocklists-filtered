@@ -1182,9 +1182,9 @@ func main() {
 	var webgetFileUrls stringSliceFlag
 	var customNat64 prefixList
 
-	configPath := flag.String("c", "", "")
-	daemon := flag.Bool("d", false, "")
-	port := flag.Int("port", 58182, "")
+	configPath := flag.String("c", "", "config path")
+	daemon := flag.Bool("d", false, "daemon mode")
+	port := flag.Int("port", 58182, "[daemon mode] port to listen on")
 	webgetOnly := flag.Bool("curl_only", false, "")
 	webgetFileUrl := flag.String("curl_url", "", "")
 	flag.Var(&webgetFileUrls, "u", "URL (can be specified multiple times)")
@@ -1194,9 +1194,15 @@ func main() {
 	flag.Var(
 		&customNat64,
 		"n",
-		"NAT64 prefixes; may be repeated; overrides the defaults",
+		"NAT64 prefixes; may be repeated",
+	)
+	noDefaultNat64 := flag.Bool(
+		"no_default_nat64",
+		false,
+		"disables default nat64 prefixes\nmostly to be used with `-n` to use only custom prefixes",
 	)
 	flag.Parse()
+
 
 	os.Chdir(*newCwd)
 
@@ -1221,16 +1227,17 @@ func main() {
 	}
 
 
-	if len(customNat64) <= 0 {
-		fmt.Println(customNat64)
+	if !(*noDefaultNat64) {
 		Nat64Prefixs = append(
 			Nat64Prefixs,
 			WellKnownNat64Prefixs...,
 		)
-	} else {
+	}
+	if len(customNat64) > 0 {
 		Nat64Prefixs = append(Nat64Prefixs, customNat64...)
 		fmt.Printf("using custom NAT64 prefixes: %v\n", Nat64Prefixs)
 	}
+
 
 
 	var snap atomic.Value
