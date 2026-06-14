@@ -74,6 +74,25 @@ func (c *CDNcheckClientWrapper) Client() *cdncheck.Client {
 	return c.client
 }
 
+type prefixList []netip.Prefix
+
+func (p *prefixList) String() string {
+	parts := make([]string, len(*p))
+	for i, v := range *p {
+		parts[i] = v.String()
+	}
+	return strings.Join(parts, ",")
+}
+
+func (p *prefixList) Set(s string) error {
+	pfx, err := netip.ParsePrefix(s)
+	if err != nil {
+		return err
+	}
+	*p = append(*p, pfx)
+	return nil
+}
+
 var errDomainNotOk error = errors.New("domain not ok")
 var errNotEnoughLines error = errors.New("file doesn't have enough lines")
 var errInputListTooShort error = errors.New("input list too short")
@@ -1161,6 +1180,7 @@ func init() {
 
 func main() {
 	var webgetFileUrls stringSliceFlag
+	var customNat64 prefixList
 
 	configPath := flag.String("c", "", "")
 	daemon := flag.Bool("d", false, "")
@@ -1171,7 +1191,24 @@ func main() {
 	webgetFileLoc := flag.String("curl_loc", "", "")
 	newCwd := flag.String("chdir", "", "")
 	cacheDir = flag.String("chdir_cache", "", "")
+	flag.Var(
+		&customNat64,
+		"n",
+		"NAT64 prefixes; may be repeated; overrides the defaults",
+	)
 	flag.Parse()
+
+	if len(customNat64) <= 0 {
+		fmt.Println()
+		Nat64Prefixs = append(
+			Nat64Prefixs,
+			WellKnownNat64Prefixs...,
+		)
+	} else {
+		customNat64 := []netip.Prefix(customNat64)
+		Nat64Prefixs = append(Nat64Prefixs, customNat64...)
+		fmt.Printf("using custom NAT64 prefixes: %v\n", Nat64Prefixs)
+	}
 	os.Chdir(*newCwd)
 
 	webgetFileUrls = append(webgetFileUrls, *webgetFileUrl)
@@ -1195,13 +1232,6 @@ func main() {
 	}
 
 
-	//if customNAT64 {
-	if true {
-		Nat64Prefixs = append(
-			Nat64Prefixs,
-			WellKnownNat64Prefixs...,
-		)
-	}
 
 
 	var snap atomic.Value
