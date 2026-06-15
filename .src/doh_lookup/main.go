@@ -1194,7 +1194,7 @@ func main() {
 	flag.Var(
 		&customNat64,
 		"n",
-		"NAT64 prefixes; may be repeated",
+		"add NAT64 prefixes; may be repeated",
 	)
 	noDefaultNat64 := flag.Bool(
 		"no_default_nat64",

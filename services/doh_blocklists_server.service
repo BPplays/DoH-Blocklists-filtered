@@ -1,0 +1,26 @@
+[Unit]
+Description=DoH Blocklists Server
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=doh_blocklist_server
+Group=doh_blocklist_server
+WorkingDirectory=/opt/DoH-Blocklists-filtered
+Nice=19
+CacheDirectory=doh_blocklist
+Restart=always
+RestartSec=5
+
+ExecStart=/usr/local/bin/doh_blocklists_server \
+	-d \
+	-c ./.src/_mini.yml \
+	-chdir /opt/DoH-Blocklists-filtered \
+	-chdir_cache /var/cache/doh_blocklist \
+	-u https://raw.githubusercontent.com/dibdot/DoH-IP-blocklists/refs/heads/master/doh-domains_overall.txt \
+	-u https://raw.githubusercontent.com/BPplays/DoH-Blocklists-filtered/refs/heads/main/.src/doh-domains_full.txt \
+	-curl_loc ./.src/doh-domains_full.txt
+
+[Install]
+WantedBy=multi-user.target
