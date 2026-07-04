@@ -1,4 +1,4 @@
-# .\make_host_series.ps1 -Hosts 'doh-$.spectrum.com','dns-$.spectrum.com' -Start 1 -End 64 -Formats D1,D2,D3,alpha
+# .\.scripts\make_host_series.ps1 -Hosts 'doh-$.spectrum.com','dns-$.spectrum.com' -Start 1 -End 64 -Formats d1,d2,d3,alpha
 param(
     [Parameter(Mandatory)]
     [string[]]$Hosts,

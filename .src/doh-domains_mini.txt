@@ -111,7 +111,7 @@ vip32.alidns.com
 dns-nosec.quad9.net
 dns.quad9.net
 
-# 1..32 | ForEach-Object { "dns$_.quad9.net" }
+# .\.scripts\make_host_series.ps1 -Hosts 'dns$.quad9.net'
 dns1.quad9.net
 dns2.quad9.net
 dns3.quad9.net
