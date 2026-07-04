@@ -960,7 +960,23 @@ func checkList(
 		fmt.Printf("time reading ifiles: %v\n", time.Since(start))
 
 		start = time.Now()
+
+		hosts = sliceutil.Dedupe(hosts)
 		for _, host := range hosts {
+			host = strings.TrimSpace(host)
+
+			if host == "" || strings.HasPrefix(host, "#") {
+				continue
+			}
+
+			if before, _, found := strings.Cut(host, "#"); found {
+				host = strings.TrimSpace(before)
+			}
+
+			if host == "" {
+				continue
+			}
+
 			err = sem.Acquire(ctx, 1)
 			if err != nil {
 				fmt.Printf("sem Acquire failed: %v\n", err)
