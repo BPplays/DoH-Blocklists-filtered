@@ -7,8 +7,8 @@
 2001:67c:930::1                          # wikimedia-dns.org
 2001:148f:fffe::1                        # odvr.nic.cz
 2001:148f:ffff::1                        # odvr.nic.cz
+2001:19f0:5001:1faf:5400:2ff:fec8:7d49   # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2001:19f0:7001:5e19:5400:2ff:fec8:7b5a   # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-2001:19f0:ac01:170:5400:2ff:fec8:72c8    # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2001:1a88:10:ffff::1                     # doh.quickline.ch
 2001:1a88:10:ffff::2                     # doh.quickline.ch
 2001:4860:4860::64                       # dns64.dns.google
@@ -16,10 +16,27 @@
 2001:4860:4860::8844                     # 8888.google, dns.google, dns.google.com, google-public-dns-b.google.com
 2001:4860:4860::8888                     # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
 2400:3200::1                             # dns.alidns.com
+2400:3200:2000:10::1                     # vip21.alidns.com
+2400:3200:2000:11::1                     # vip22.alidns.com
 2400:3200:baba::1                        # dns.alidns.com
 2406:7540:1600:0:103:155:191:184         # dns.bebasid.com, unfiltered.dns.bebasid.com
+2408:4009:500::1                         # vip1.alidns.com
+2408:4009:500::2                         # vip2.alidns.com
+2408:4009:500::3                         # vip23.alidns.com, vip3.alidns.com
+2408:4009:500::4                         # vip24.alidns.com, vip4.alidns.com
+2408:4009:500::5                         # vip25.alidns.com, vip5.alidns.com
+2408:4009:500::6                         # vip26.alidns.com, vip6.alidns.com
+2408:4009:500::7                         # vip27.alidns.com, vip7.alidns.com
+2408:4009:500::8                         # vip28.alidns.com, vip8.alidns.com
+2408:4009:501::1                         # ns1.alidns.com
+2408:4009:501::2                         # ns2.alidns.com
+2408:4009:501::3                         # ns7.alidns.com
+2408:4009:501::4                         # ns8.alidns.com
+240b:4006::9                             # vip9.alidns.com
+240b:4006::10                            # vip10.alidns.com
 2600:6c7f:f000:202::7                    # doh-01.spectrum.com
 2600:6c7f:f000:202::8                    # doh-02.spectrum.com
+2600:6c7f:f000:202::9                    # doh-03.spectrum.com
 2602:ffbb:100:4::2                       # doh.dns.sb
 2606:4700::6810:f8f9                     # cloudflare-dns.com
 2606:4700::6810:f9f9                     # cloudflare-dns.com
@@ -35,6 +52,7 @@
 2606:4700:4700::6400                     # dns64.cloudflare-dns.com
 2606:6680:6:1::852a:cba4                 # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2606:6680:27:1::2fa1:9182                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
+2620:0:871:9000::58                      # dns30.quad9.net
 2620:fe::9                               # dns.quad9.net, dns9.quad9.net
 2620:fe::10                              # dns-nosec.quad9.net, dns10.quad9.net
 2620:fe::11                              # dns11.quad9.net
@@ -59,15 +77,15 @@
 2620:149:9c9::122                        # doh.dns.apple.com
 2620:149:9c9::123                        # doh.dns.apple.com
 2620:149:9cb:0:17:132:89:11              # doh.dns.apple.com
-2620:149:9cb:0:17:132:89:12              # doh.dns.apple.com
-2620:149:9cb:0:17:132:89:13              # doh.dns.apple.com
 2620:149:9cb:0:17:132:89:14              # doh.dns.apple.com
 2620:149:9cb:0:17:132:89:15              # doh.dns.apple.com
 2620:149:9cb:0:17:132:89:16              # doh.dns.apple.com
 2620:149:9cc::11                         # doh.dns.apple.com
+2620:149:9cc::12                         # doh.dns.apple.com
 2620:149:9cc::13                         # doh.dns.apple.com
 2620:149:9cc::14                         # doh.dns.apple.com
 2620:149:9cc::15                         # doh.dns.apple.com
+2620:149:9cc::16                         # doh.dns.apple.com
 2620:149:a08:3000::42                    # doh.dns.apple.com
 2620:149:a08:4000::42                    # doh.dns.apple.com
 2620:149:a0c:3000::1c2                   # doh.dns.apple.com
@@ -109,8 +127,8 @@
 2a09:8280:1::1:7432                      # max.rethinkdns.com
 2a0b:4341:b02:166:5054:ff:fe53:ab1       # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2a0c:59c0:19::3                          # doh.dns.sb
+2a0d:5641:1a30:195:5054:ff:fee0:652d     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2a0e:6901:301:a:5054:ff:fe14:4256        # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-2a0e:6901:410:25:5054:ff:fe1c:7c81       # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2a0e:6902:2002:12b:5054:ff:fed7:6b78     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2a0f:3b03:100:2:5054:ff:fe90:4a77        # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2a10:50c0::ad1:ff                        # dns.adguard.com
