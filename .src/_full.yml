@@ -7,6 +7,10 @@ lists:
       cdncheck: true
       public_ips_only: true
 
+    - path: "./.src/doh-domains_mini.txt"
+      cdncheck: true
+      public_ips_only: true
+
     - path: "./.src/doh-domains_mini_good.txt"
       cdncheck: false
       public_ips_only: true
