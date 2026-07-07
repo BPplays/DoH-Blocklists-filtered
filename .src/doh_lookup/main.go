@@ -184,6 +184,7 @@ var typeMap map[string]string = map[string]string{
 
 type Config struct {
 	Resolvers []string `yaml:"resolvers"`
+	MaxConnections            int64          `yaml:"max_connections"`
 	Lists     []List   `yaml:"lists"`
 }
 
@@ -194,6 +195,8 @@ type List struct {
 	InputFiles       []InputFile   `yaml:"input_files"`
 	OutputDir        string        `yaml:"output_dir"`
 	OutputFilePrefix string        `yaml:"output_file_prefix"`
+
+	MaxConnections            int64          `yaml:"max_connections"`
 }
 
 type InputFile struct {
@@ -781,12 +784,19 @@ func updateList(name string, lines []Line, list List) (m map[string][]byte) {
 }
 
 func writeList(name string, lines []Line, list List) {
+	var wg sync.WaitGroup
 
 	dirs := []string{filepath.Join(list.OutputDir, "json")}
 	for _, dir := range dirs {
-		fmt.Printf("making dir: %v\n", dir)
-		os.MkdirAll(dir, 0755)
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+
+			fmt.Printf("making dir: %v\n", dir)
+			os.MkdirAll(dir, 0755)
+		}()
 	}
+	wg.Wait()
 
 	nameBase := fmt.Sprintf(
 		"%v%v",
@@ -1044,9 +1054,17 @@ func checkDns(cfg Config, updateList func(string, []Line, List)) {
 	fmt.Println(cfg.Lists)
 
 	ctx := context.Background()
-	sem := semaphore.NewWeighted(256)
 
 	for _, list := range cfg.Lists {
+		var sem *semaphore.Weighted
+		if list.MaxConnections > 0 {
+			sem = semaphore.NewWeighted(list.MaxConnections)
+		} else if cfg.MaxConnections > 0 {
+			sem = semaphore.NewWeighted(cfg.MaxConnections)
+		} else {
+			sem = semaphore.NewWeighted(256)
+		}
+
 		wg.Add(1)
 		go func() {
 			defer wg.Done()
@@ -1061,30 +1079,98 @@ func checkDns(cfg Config, updateList func(string, []Line, List)) {
 				log.Fatalln("no ips found")
 			}
 
-			v6Out := lineDedupeIps(v6Ips)
-			v4Out := lineDedupeIps(v4Ips)
-			v6Out = validateIps(v6Out)
-			v4Out = validateIps(v4Out)
+			var wg2 sync.WaitGroup
 
-			domainsOut := sliceutil.DedupeFunc(
-				validDomains,
-				lineDedupeHost,
-			)
+			wg2.Add(2)
+
+
+			var v6Out []Line
+			go func() {
+				defer wg2.Done()
+				v6Out = lineDedupeIps(v6Ips)
+			}()
+
+			var v4Out []Line
+			go func() {
+				defer wg2.Done()
+				v4Out = lineDedupeIps(v4Ips)
+			}()
+			wg2.Wait()
+
+			wg2.Add(3)
+
+			go func() {
+				defer wg2.Done()
+				v6Out = validateIps(v6Out)
+			}()
+
+			go func() {
+				defer wg2.Done()
+				v4Out = validateIps(v4Out)
+			}()
+
+			var domainsOut []Line
+			go func() {
+				defer wg2.Done()
+				domainsOut = sliceutil.DedupeFunc(
+					validDomains,
+					lineDedupeHost,
+				)
+			}()
+
+			wg2.Wait()
+
+
+
 			if *dryRun {
 				fmt.Println(strings.Join(LinesToStrings(v6Out), "\n"))
 				return
 			}
 
-			slices.SortFunc(v6Out, sortLine)
-			slices.SortFunc(v4Out, sortLine)
-			slices.SortFunc(domainsOut, sortLine)
 
-			updateList("-doh-ipv6", v6Out, list)
-			updateList("-doh-ipv4", v4Out, list)
+			wg2.Add(3)
 
-			updateList("-doh-ipv4-nat64", toNat64(Nat64Prefixs, v4Out), list)
+			go func() {
+				defer wg2.Done()
+				slices.SortFunc(v6Out, sortLine)
+			}()
 
-			updateList("-doh-domains", domainsOut, list)
+			go func() {
+				defer wg2.Done()
+				slices.SortFunc(v4Out, sortLine)
+			}()
+
+			go func() {
+				defer wg2.Done()
+				slices.SortFunc(domainsOut, sortLine)
+			}()
+			wg2.Wait()
+
+
+			wg2.Add(4)
+
+			go func() {
+				defer wg2.Done()
+				updateList("-doh-ipv6", v6Out, list)
+			}()
+
+			go func() {
+				defer wg2.Done()
+				updateList("-doh-ipv4", v4Out, list)
+			}()
+
+
+			go func() {
+				defer wg2.Done()
+				updateList("-doh-ipv4-nat64", toNat64(Nat64Prefixs, v4Out), list)
+			}()
+
+
+			go func() {
+				defer wg2.Done()
+				updateList("-doh-domains", domainsOut, list)
+			}()
+			wg2.Wait()
 
 		}()
 	}
