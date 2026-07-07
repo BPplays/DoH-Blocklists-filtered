@@ -857,6 +857,7 @@ func preCheck() {
 	for _, host := range checkDomains {
 		data, err := queryWithResolvers(host, tries, timeout, DefaultResolvers)
 		if err != nil {
+			fmt.Println("dns error:", err)
 			continue
 		}
 		if (len(data.AAAA) <= 0) || (len(data.A) <= 0) {
