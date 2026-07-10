@@ -2,8 +2,8 @@
 64:ff9b:1::100:3                         # family.cloudflare-dns.com
 64:ff9b:1::101:101                       # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1::101:103                       # family.cloudflare-dns.com
-64:ff9b:1::808:404                       # dns.google, dns.google.com
-64:ff9b:1::808:808                       # dns.google, dns.google.com
+64:ff9b:1::808:404                       # 8888.google, dns.google, dns.google.com
+64:ff9b:1::808:808                       # 8888.google, dns.google, dns.google.com
 64:ff9b:1::8d4:5d01                      # vip1.alidns.com
 64:ff9b:1::8d4:5d02                      # vip2.alidns.com
 64:ff9b:1::8d4:5d03                      # vip3.alidns.com
@@ -69,6 +69,7 @@
 64:ff9b:1::33a1:732c                     # cleanbrowsing.org
 64:ff9b:1::4469:1c0b                     # doh.cox.net
 64:ff9b:1::4469:1c0c                     # doh.cox.net
+64:ff9b:1::4a52:2a2a                     # ordns.he.net
 64:ff9b:1::5e8c:e0e                      # dns.adguard.com
 64:ff9b:1::5e8c:f0f                      # dns.adguard.com
 64:ff9b:1::606a:7e8                      # doh.xfinity.com
@@ -170,6 +171,7 @@
 64:ff9b:1::c111:2f01                     # odvr.nic.cz
 64:ff9b:1::c2f2:202                      # dns.mullvad.net
 64:ff9b:1::c2f2:205                      # extended.dns.mullvad.net
+64:ff9b:1::c2f2:209                      # all.dns.mullvad.net
 64:ff9b:1::c777:415e                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::cb77:a905                     # alidns.com
 64:ff9b:1::cb77:a94c                     # alidns.com
@@ -188,8 +190,8 @@
 64:ff9b:1:abcd:0:5431:100:3              # family.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:101:101            # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:101:103            # family.cloudflare-dns.com
-64:ff9b:1:abcd:0:5431:808:404            # dns.google, dns.google.com
-64:ff9b:1:abcd:0:5431:808:808            # dns.google, dns.google.com
+64:ff9b:1:abcd:0:5431:808:404            # 8888.google, dns.google, dns.google.com
+64:ff9b:1:abcd:0:5431:808:808            # 8888.google, dns.google, dns.google.com
 64:ff9b:1:abcd:0:5431:8d4:5d01           # vip1.alidns.com
 64:ff9b:1:abcd:0:5431:8d4:5d02           # vip2.alidns.com
 64:ff9b:1:abcd:0:5431:8d4:5d03           # vip3.alidns.com
@@ -255,6 +257,7 @@
 64:ff9b:1:abcd:0:5431:33a1:732c          # cleanbrowsing.org
 64:ff9b:1:abcd:0:5431:4469:1c0b          # doh.cox.net
 64:ff9b:1:abcd:0:5431:4469:1c0c          # doh.cox.net
+64:ff9b:1:abcd:0:5431:4a52:2a2a          # ordns.he.net
 64:ff9b:1:abcd:0:5431:5e8c:e0e           # dns.adguard.com
 64:ff9b:1:abcd:0:5431:5e8c:f0f           # dns.adguard.com
 64:ff9b:1:abcd:0:5431:606a:7e8           # doh.xfinity.com
@@ -356,6 +359,7 @@
 64:ff9b:1:abcd:0:5431:c111:2f01          # odvr.nic.cz
 64:ff9b:1:abcd:0:5431:c2f2:202           # dns.mullvad.net
 64:ff9b:1:abcd:0:5431:c2f2:205           # extended.dns.mullvad.net
+64:ff9b:1:abcd:0:5431:c2f2:209           # all.dns.mullvad.net
 64:ff9b:1:abcd:0:5431:c777:415e          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:cb77:a905          # alidns.com
 64:ff9b:1:abcd:0:5431:cb77:a94c          # alidns.com
@@ -374,8 +378,8 @@
 64:ff9b:1:fffc:2:0:100:3                 # family.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:101:101               # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:101:103               # family.cloudflare-dns.com
-64:ff9b:1:fffc:2:0:808:404               # dns.google, dns.google.com
-64:ff9b:1:fffc:2:0:808:808               # dns.google, dns.google.com
+64:ff9b:1:fffc:2:0:808:404               # 8888.google, dns.google, dns.google.com
+64:ff9b:1:fffc:2:0:808:808               # 8888.google, dns.google, dns.google.com
 64:ff9b:1:fffc:2:0:8d4:5d01              # vip1.alidns.com
 64:ff9b:1:fffc:2:0:8d4:5d02              # vip2.alidns.com
 64:ff9b:1:fffc:2:0:8d4:5d03              # vip3.alidns.com
@@ -441,6 +445,7 @@
 64:ff9b:1:fffc:2:0:33a1:732c             # cleanbrowsing.org
 64:ff9b:1:fffc:2:0:4469:1c0b             # doh.cox.net
 64:ff9b:1:fffc:2:0:4469:1c0c             # doh.cox.net
+64:ff9b:1:fffc:2:0:4a52:2a2a             # ordns.he.net
 64:ff9b:1:fffc:2:0:5e8c:e0e              # dns.adguard.com
 64:ff9b:1:fffc:2:0:5e8c:f0f              # dns.adguard.com
 64:ff9b:1:fffc:2:0:606a:7e8              # doh.xfinity.com
@@ -542,6 +547,7 @@
 64:ff9b:1:fffc:2:0:c111:2f01             # odvr.nic.cz
 64:ff9b:1:fffc:2:0:c2f2:202              # dns.mullvad.net
 64:ff9b:1:fffc:2:0:c2f2:205              # extended.dns.mullvad.net
+64:ff9b:1:fffc:2:0:c2f2:209              # all.dns.mullvad.net
 64:ff9b:1:fffc:2:0:c777:415e             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:cb77:a905             # alidns.com
 64:ff9b:1:fffc:2:0:cb77:a94c             # alidns.com
@@ -560,8 +566,8 @@
 64:ff9b:1:fffd:1:0:100:3                 # family.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:101:101               # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:101:103               # family.cloudflare-dns.com
-64:ff9b:1:fffd:1:0:808:404               # dns.google, dns.google.com
-64:ff9b:1:fffd:1:0:808:808               # dns.google, dns.google.com
+64:ff9b:1:fffd:1:0:808:404               # 8888.google, dns.google, dns.google.com
+64:ff9b:1:fffd:1:0:808:808               # 8888.google, dns.google, dns.google.com
 64:ff9b:1:fffd:1:0:8d4:5d01              # vip1.alidns.com
 64:ff9b:1:fffd:1:0:8d4:5d02              # vip2.alidns.com
 64:ff9b:1:fffd:1:0:8d4:5d03              # vip3.alidns.com
@@ -627,6 +633,7 @@
 64:ff9b:1:fffd:1:0:33a1:732c             # cleanbrowsing.org
 64:ff9b:1:fffd:1:0:4469:1c0b             # doh.cox.net
 64:ff9b:1:fffd:1:0:4469:1c0c             # doh.cox.net
+64:ff9b:1:fffd:1:0:4a52:2a2a             # ordns.he.net
 64:ff9b:1:fffd:1:0:5e8c:e0e              # dns.adguard.com
 64:ff9b:1:fffd:1:0:5e8c:f0f              # dns.adguard.com
 64:ff9b:1:fffd:1:0:606a:7e8              # doh.xfinity.com
@@ -728,6 +735,7 @@
 64:ff9b:1:fffd:1:0:c111:2f01             # odvr.nic.cz
 64:ff9b:1:fffd:1:0:c2f2:202              # dns.mullvad.net
 64:ff9b:1:fffd:1:0:c2f2:205              # extended.dns.mullvad.net
+64:ff9b:1:fffd:1:0:c2f2:209              # all.dns.mullvad.net
 64:ff9b:1:fffd:1:0:c777:415e             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:cb77:a905             # alidns.com
 64:ff9b:1:fffd:1:0:cb77:a94c             # alidns.com
@@ -746,8 +754,8 @@
 64:ff9b:1:fffe::100:3                    # family.cloudflare-dns.com
 64:ff9b:1:fffe::101:101                  # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1:fffe::101:103                  # family.cloudflare-dns.com
-64:ff9b:1:fffe::808:404                  # dns.google, dns.google.com
-64:ff9b:1:fffe::808:808                  # dns.google, dns.google.com
+64:ff9b:1:fffe::808:404                  # 8888.google, dns.google, dns.google.com
+64:ff9b:1:fffe::808:808                  # 8888.google, dns.google, dns.google.com
 64:ff9b:1:fffe::8d4:5d01                 # vip1.alidns.com
 64:ff9b:1:fffe::8d4:5d02                 # vip2.alidns.com
 64:ff9b:1:fffe::8d4:5d03                 # vip3.alidns.com
@@ -813,6 +821,7 @@
 64:ff9b:1:fffe::33a1:732c                # cleanbrowsing.org
 64:ff9b:1:fffe::4469:1c0b                # doh.cox.net
 64:ff9b:1:fffe::4469:1c0c                # doh.cox.net
+64:ff9b:1:fffe::4a52:2a2a                # ordns.he.net
 64:ff9b:1:fffe::5e8c:e0e                 # dns.adguard.com
 64:ff9b:1:fffe::5e8c:f0f                 # dns.adguard.com
 64:ff9b:1:fffe::606a:7e8                 # doh.xfinity.com
@@ -914,6 +923,7 @@
 64:ff9b:1:fffe::c111:2f01                # odvr.nic.cz
 64:ff9b:1:fffe::c2f2:202                 # dns.mullvad.net
 64:ff9b:1:fffe::c2f2:205                 # extended.dns.mullvad.net
+64:ff9b:1:fffe::c2f2:209                 # all.dns.mullvad.net
 64:ff9b:1:fffe::c777:415e                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::cb77:a905                # alidns.com
 64:ff9b:1:fffe::cb77:a94c                # alidns.com
