@@ -23,6 +23,10 @@
 64:ff9b:1::e01:7016                      # vip24.alidns.com
 64:ff9b:1::e01:7019                      # vip27.alidns.com
 64:ff9b:1::e01:701a                      # vip28.alidns.com
+64:ff9b:1::11fd:b67                      # doh.dns.apple.com
+64:ff9b:1::11fd:b87                      # doh.dns.apple.com
+64:ff9b:1::11fd:1869                     # doh.dns.apple.com
+64:ff9b:1::11fd:1889                     # doh.dns.apple.com
 64:ff9b:1::18f0:9207                     # doh-01.spectrum.com
 64:ff9b:1::18f0:9208                     # doh-02.spectrum.com
 64:ff9b:1::18f0:9209                     # doh-03.spectrum.com
@@ -65,20 +69,19 @@
 64:ff9b:1::2ffe:a0b0                     # vip7.alidns.com
 64:ff9b:1::2ffe:a0b1                     # vip8.alidns.com
 64:ff9b:1::33a1:732c                     # cleanbrowsing.org
+64:ff9b:1::404e:c801                     # doh.dns.apple.com
+64:ff9b:1::404e:c901                     # doh.dns.apple.com
 64:ff9b:1::4469:1c0b                     # doh.cox.net
 64:ff9b:1::4469:1c0c                     # doh.cox.net
-64:ff9b:1::4a52:2a2a                     # ordns.he.net
-64:ff9b:1::5e8c:e0e                      # dns.adguard.com
-64:ff9b:1::5e8c:f0f                      # dns.adguard.com
 64:ff9b:1::606a:7e8                      # doh.xfinity.com
 64:ff9b:1::606a:7ea                      # doh.xfinity.com
 64:ff9b:1::6702:3905                     # public.dns.iij.jp
 64:ff9b:1::6702:3906                     # public.dns.iij.jp
+64:ff9b:1::6757:44c4                     # family-adblock.bebasid.com
 64:ff9b:1::679b:bfe1                     # dns.caliph.dev
 64:ff9b:1::6812:1cbe                     # tor.cloudflare-dns.com
 64:ff9b:1::6812:1dbe                     # tor.cloudflare-dns.com
 64:ff9b:1::6880:3ead                     # doh.dns.sb
-64:ff9b:1::68ee:b51c                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::6a0b:1e71                     # vip21.alidns.com
 64:ff9b:1::6a0b:1e72                     # vip22.alidns.com
 64:ff9b:1::6a0b:2997                     # vip21.alidns.com
@@ -130,8 +133,6 @@
 64:ff9b:1::9570:700c                     # dns12.quad9.net
 64:ff9b:1::9570:700d                     # dns13.quad9.net
 64:ff9b:1::9570:7070                     # dns.quad9.net
-64:ff9b:1::a29f:3d03                     # chrome.cloudflare-dns.com
-64:ff9b:1::a29f:3d04                     # mozilla.cloudflare-dns.com
 64:ff9b:1::a29f:3d08                     # dns.cloudflare.com
 64:ff9b:1::a29f:3e01                     # odoh.cloudflare-dns.com
 64:ff9b:1::a2fa:6a3                      # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -164,8 +165,6 @@
 64:ff9b:1::aa21:500e                     # vip27.alidns.com, vip7.alidns.com
 64:ff9b:1::aa21:500f                     # vip28.alidns.com, vip8.alidns.com
 64:ff9b:1::aa27:e086                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-64:ff9b:1::ac40:2903                     # chrome.cloudflare-dns.com
-64:ff9b:1::ac40:2904                     # mozilla.cloudflare-dns.com
 64:ff9b:1::ac40:2908                     # dns.cloudflare.com
 64:ff9b:1::ac40:2a01                     # odoh.cloudflare-dns.com
 64:ff9b:1::ac56:4104                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -176,6 +175,7 @@
 64:ff9b:1::b9e4:a80a                     # adult-filter-dns.cleanbrowsing.org, doh.cleanbrowsing.org
 64:ff9b:1::b9e4:a8a8                     # doh.cleanbrowsing.org, family-filter-dns.cleanbrowsing.org
 64:ff9b:1::c111:2f01                     # odvr.nic.cz
+64:ff9b:1::c2f2:204                      # base.dns.mullvad.net
 64:ff9b:1::c777:415e                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::cb77:9014                     # alidns.com
 64:ff9b:1::cb77:a926                     # alidns.com
@@ -185,7 +185,6 @@
 64:ff9b:1::cb77:afe2                     # alidns.com
 64:ff9b:1::cbb4:8c4d                     # iij.jp
 64:ff9b:1::d0a7:f879                     # cleanbrowsing.org
-64:ff9b:1::d1d1:39a5                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::d43c:3df6                     # doh.quickline.ch
 64:ff9b:1::d43c:3ff6                     # doh.quickline.ch
 64:ff9b:1::d5e3:adeb                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -217,6 +216,10 @@
 64:ff9b:1:abcd:0:5431:e01:7016           # vip24.alidns.com
 64:ff9b:1:abcd:0:5431:e01:7019           # vip27.alidns.com
 64:ff9b:1:abcd:0:5431:e01:701a           # vip28.alidns.com
+64:ff9b:1:abcd:0:5431:11fd:b67           # doh.dns.apple.com
+64:ff9b:1:abcd:0:5431:11fd:b87           # doh.dns.apple.com
+64:ff9b:1:abcd:0:5431:11fd:1869          # doh.dns.apple.com
+64:ff9b:1:abcd:0:5431:11fd:1889          # doh.dns.apple.com
 64:ff9b:1:abcd:0:5431:18f0:9207          # doh-01.spectrum.com
 64:ff9b:1:abcd:0:5431:18f0:9208          # doh-02.spectrum.com
 64:ff9b:1:abcd:0:5431:18f0:9209          # doh-03.spectrum.com
@@ -259,20 +262,19 @@
 64:ff9b:1:abcd:0:5431:2ffe:a0b0          # vip7.alidns.com
 64:ff9b:1:abcd:0:5431:2ffe:a0b1          # vip8.alidns.com
 64:ff9b:1:abcd:0:5431:33a1:732c          # cleanbrowsing.org
+64:ff9b:1:abcd:0:5431:404e:c801          # doh.dns.apple.com
+64:ff9b:1:abcd:0:5431:404e:c901          # doh.dns.apple.com
 64:ff9b:1:abcd:0:5431:4469:1c0b          # doh.cox.net
 64:ff9b:1:abcd:0:5431:4469:1c0c          # doh.cox.net
-64:ff9b:1:abcd:0:5431:4a52:2a2a          # ordns.he.net
-64:ff9b:1:abcd:0:5431:5e8c:e0e           # dns.adguard.com
-64:ff9b:1:abcd:0:5431:5e8c:f0f           # dns.adguard.com
 64:ff9b:1:abcd:0:5431:606a:7e8           # doh.xfinity.com
 64:ff9b:1:abcd:0:5431:606a:7ea           # doh.xfinity.com
 64:ff9b:1:abcd:0:5431:6702:3905          # public.dns.iij.jp
 64:ff9b:1:abcd:0:5431:6702:3906          # public.dns.iij.jp
+64:ff9b:1:abcd:0:5431:6757:44c4          # family-adblock.bebasid.com
 64:ff9b:1:abcd:0:5431:679b:bfe1          # dns.caliph.dev
 64:ff9b:1:abcd:0:5431:6812:1cbe          # tor.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:6812:1dbe          # tor.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:6880:3ead          # doh.dns.sb
-64:ff9b:1:abcd:0:5431:68ee:b51c          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:6a0b:1e71          # vip21.alidns.com
 64:ff9b:1:abcd:0:5431:6a0b:1e72          # vip22.alidns.com
 64:ff9b:1:abcd:0:5431:6a0b:2997          # vip21.alidns.com
@@ -324,8 +326,6 @@
 64:ff9b:1:abcd:0:5431:9570:700c          # dns12.quad9.net
 64:ff9b:1:abcd:0:5431:9570:700d          # dns13.quad9.net
 64:ff9b:1:abcd:0:5431:9570:7070          # dns.quad9.net
-64:ff9b:1:abcd:0:5431:a29f:3d03          # chrome.cloudflare-dns.com
-64:ff9b:1:abcd:0:5431:a29f:3d04          # mozilla.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:a29f:3d08          # dns.cloudflare.com
 64:ff9b:1:abcd:0:5431:a29f:3e01          # odoh.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:a2fa:6a3           # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -358,8 +358,6 @@
 64:ff9b:1:abcd:0:5431:aa21:500e          # vip27.alidns.com, vip7.alidns.com
 64:ff9b:1:abcd:0:5431:aa21:500f          # vip28.alidns.com, vip8.alidns.com
 64:ff9b:1:abcd:0:5431:aa27:e086          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-64:ff9b:1:abcd:0:5431:ac40:2903          # chrome.cloudflare-dns.com
-64:ff9b:1:abcd:0:5431:ac40:2904          # mozilla.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:ac40:2908          # dns.cloudflare.com
 64:ff9b:1:abcd:0:5431:ac40:2a01          # odoh.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:ac56:4104          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -370,6 +368,7 @@
 64:ff9b:1:abcd:0:5431:b9e4:a80a          # adult-filter-dns.cleanbrowsing.org, doh.cleanbrowsing.org
 64:ff9b:1:abcd:0:5431:b9e4:a8a8          # doh.cleanbrowsing.org, family-filter-dns.cleanbrowsing.org
 64:ff9b:1:abcd:0:5431:c111:2f01          # odvr.nic.cz
+64:ff9b:1:abcd:0:5431:c2f2:204           # base.dns.mullvad.net
 64:ff9b:1:abcd:0:5431:c777:415e          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:cb77:9014          # alidns.com
 64:ff9b:1:abcd:0:5431:cb77:a926          # alidns.com
@@ -379,7 +378,6 @@
 64:ff9b:1:abcd:0:5431:cb77:afe2          # alidns.com
 64:ff9b:1:abcd:0:5431:cbb4:8c4d          # iij.jp
 64:ff9b:1:abcd:0:5431:d0a7:f879          # cleanbrowsing.org
-64:ff9b:1:abcd:0:5431:d1d1:39a5          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:d43c:3df6          # doh.quickline.ch
 64:ff9b:1:abcd:0:5431:d43c:3ff6          # doh.quickline.ch
 64:ff9b:1:abcd:0:5431:d5e3:adeb          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -411,6 +409,10 @@
 64:ff9b:1:fffc:2:0:e01:7016              # vip24.alidns.com
 64:ff9b:1:fffc:2:0:e01:7019              # vip27.alidns.com
 64:ff9b:1:fffc:2:0:e01:701a              # vip28.alidns.com
+64:ff9b:1:fffc:2:0:11fd:b67              # doh.dns.apple.com
+64:ff9b:1:fffc:2:0:11fd:b87              # doh.dns.apple.com
+64:ff9b:1:fffc:2:0:11fd:1869             # doh.dns.apple.com
+64:ff9b:1:fffc:2:0:11fd:1889             # doh.dns.apple.com
 64:ff9b:1:fffc:2:0:18f0:9207             # doh-01.spectrum.com
 64:ff9b:1:fffc:2:0:18f0:9208             # doh-02.spectrum.com
 64:ff9b:1:fffc:2:0:18f0:9209             # doh-03.spectrum.com
@@ -453,20 +455,19 @@
 64:ff9b:1:fffc:2:0:2ffe:a0b0             # vip7.alidns.com
 64:ff9b:1:fffc:2:0:2ffe:a0b1             # vip8.alidns.com
 64:ff9b:1:fffc:2:0:33a1:732c             # cleanbrowsing.org
+64:ff9b:1:fffc:2:0:404e:c801             # doh.dns.apple.com
+64:ff9b:1:fffc:2:0:404e:c901             # doh.dns.apple.com
 64:ff9b:1:fffc:2:0:4469:1c0b             # doh.cox.net
 64:ff9b:1:fffc:2:0:4469:1c0c             # doh.cox.net
-64:ff9b:1:fffc:2:0:4a52:2a2a             # ordns.he.net
-64:ff9b:1:fffc:2:0:5e8c:e0e              # dns.adguard.com
-64:ff9b:1:fffc:2:0:5e8c:f0f              # dns.adguard.com
 64:ff9b:1:fffc:2:0:606a:7e8              # doh.xfinity.com
 64:ff9b:1:fffc:2:0:606a:7ea              # doh.xfinity.com
 64:ff9b:1:fffc:2:0:6702:3905             # public.dns.iij.jp
 64:ff9b:1:fffc:2:0:6702:3906             # public.dns.iij.jp
+64:ff9b:1:fffc:2:0:6757:44c4             # family-adblock.bebasid.com
 64:ff9b:1:fffc:2:0:679b:bfe1             # dns.caliph.dev
 64:ff9b:1:fffc:2:0:6812:1cbe             # tor.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:6812:1dbe             # tor.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:6880:3ead             # doh.dns.sb
-64:ff9b:1:fffc:2:0:68ee:b51c             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:6a0b:1e71             # vip21.alidns.com
 64:ff9b:1:fffc:2:0:6a0b:1e72             # vip22.alidns.com
 64:ff9b:1:fffc:2:0:6a0b:2997             # vip21.alidns.com
@@ -518,8 +519,6 @@
 64:ff9b:1:fffc:2:0:9570:700c             # dns12.quad9.net
 64:ff9b:1:fffc:2:0:9570:700d             # dns13.quad9.net
 64:ff9b:1:fffc:2:0:9570:7070             # dns.quad9.net
-64:ff9b:1:fffc:2:0:a29f:3d03             # chrome.cloudflare-dns.com
-64:ff9b:1:fffc:2:0:a29f:3d04             # mozilla.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:a29f:3d08             # dns.cloudflare.com
 64:ff9b:1:fffc:2:0:a29f:3e01             # odoh.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:a2fa:6a3              # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -552,8 +551,6 @@
 64:ff9b:1:fffc:2:0:aa21:500e             # vip27.alidns.com, vip7.alidns.com
 64:ff9b:1:fffc:2:0:aa21:500f             # vip28.alidns.com, vip8.alidns.com
 64:ff9b:1:fffc:2:0:aa27:e086             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-64:ff9b:1:fffc:2:0:ac40:2903             # chrome.cloudflare-dns.com
-64:ff9b:1:fffc:2:0:ac40:2904             # mozilla.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:ac40:2908             # dns.cloudflare.com
 64:ff9b:1:fffc:2:0:ac40:2a01             # odoh.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:ac56:4104             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -564,6 +561,7 @@
 64:ff9b:1:fffc:2:0:b9e4:a80a             # adult-filter-dns.cleanbrowsing.org, doh.cleanbrowsing.org
 64:ff9b:1:fffc:2:0:b9e4:a8a8             # doh.cleanbrowsing.org, family-filter-dns.cleanbrowsing.org
 64:ff9b:1:fffc:2:0:c111:2f01             # odvr.nic.cz
+64:ff9b:1:fffc:2:0:c2f2:204              # base.dns.mullvad.net
 64:ff9b:1:fffc:2:0:c777:415e             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:cb77:9014             # alidns.com
 64:ff9b:1:fffc:2:0:cb77:a926             # alidns.com
@@ -573,7 +571,6 @@
 64:ff9b:1:fffc:2:0:cb77:afe2             # alidns.com
 64:ff9b:1:fffc:2:0:cbb4:8c4d             # iij.jp
 64:ff9b:1:fffc:2:0:d0a7:f879             # cleanbrowsing.org
-64:ff9b:1:fffc:2:0:d1d1:39a5             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:d43c:3df6             # doh.quickline.ch
 64:ff9b:1:fffc:2:0:d43c:3ff6             # doh.quickline.ch
 64:ff9b:1:fffc:2:0:d5e3:adeb             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -605,6 +602,10 @@
 64:ff9b:1:fffd:1:0:e01:7016              # vip24.alidns.com
 64:ff9b:1:fffd:1:0:e01:7019              # vip27.alidns.com
 64:ff9b:1:fffd:1:0:e01:701a              # vip28.alidns.com
+64:ff9b:1:fffd:1:0:11fd:b67              # doh.dns.apple.com
+64:ff9b:1:fffd:1:0:11fd:b87              # doh.dns.apple.com
+64:ff9b:1:fffd:1:0:11fd:1869             # doh.dns.apple.com
+64:ff9b:1:fffd:1:0:11fd:1889             # doh.dns.apple.com
 64:ff9b:1:fffd:1:0:18f0:9207             # doh-01.spectrum.com
 64:ff9b:1:fffd:1:0:18f0:9208             # doh-02.spectrum.com
 64:ff9b:1:fffd:1:0:18f0:9209             # doh-03.spectrum.com
@@ -647,20 +648,19 @@
 64:ff9b:1:fffd:1:0:2ffe:a0b0             # vip7.alidns.com
 64:ff9b:1:fffd:1:0:2ffe:a0b1             # vip8.alidns.com
 64:ff9b:1:fffd:1:0:33a1:732c             # cleanbrowsing.org
+64:ff9b:1:fffd:1:0:404e:c801             # doh.dns.apple.com
+64:ff9b:1:fffd:1:0:404e:c901             # doh.dns.apple.com
 64:ff9b:1:fffd:1:0:4469:1c0b             # doh.cox.net
 64:ff9b:1:fffd:1:0:4469:1c0c             # doh.cox.net
-64:ff9b:1:fffd:1:0:4a52:2a2a             # ordns.he.net
-64:ff9b:1:fffd:1:0:5e8c:e0e              # dns.adguard.com
-64:ff9b:1:fffd:1:0:5e8c:f0f              # dns.adguard.com
 64:ff9b:1:fffd:1:0:606a:7e8              # doh.xfinity.com
 64:ff9b:1:fffd:1:0:606a:7ea              # doh.xfinity.com
 64:ff9b:1:fffd:1:0:6702:3905             # public.dns.iij.jp
 64:ff9b:1:fffd:1:0:6702:3906             # public.dns.iij.jp
+64:ff9b:1:fffd:1:0:6757:44c4             # family-adblock.bebasid.com
 64:ff9b:1:fffd:1:0:679b:bfe1             # dns.caliph.dev
 64:ff9b:1:fffd:1:0:6812:1cbe             # tor.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:6812:1dbe             # tor.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:6880:3ead             # doh.dns.sb
-64:ff9b:1:fffd:1:0:68ee:b51c             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:6a0b:1e71             # vip21.alidns.com
 64:ff9b:1:fffd:1:0:6a0b:1e72             # vip22.alidns.com
 64:ff9b:1:fffd:1:0:6a0b:2997             # vip21.alidns.com
@@ -712,8 +712,6 @@
 64:ff9b:1:fffd:1:0:9570:700c             # dns12.quad9.net
 64:ff9b:1:fffd:1:0:9570:700d             # dns13.quad9.net
 64:ff9b:1:fffd:1:0:9570:7070             # dns.quad9.net
-64:ff9b:1:fffd:1:0:a29f:3d03             # chrome.cloudflare-dns.com
-64:ff9b:1:fffd:1:0:a29f:3d04             # mozilla.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:a29f:3d08             # dns.cloudflare.com
 64:ff9b:1:fffd:1:0:a29f:3e01             # odoh.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:a2fa:6a3              # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -746,8 +744,6 @@
 64:ff9b:1:fffd:1:0:aa21:500e             # vip27.alidns.com, vip7.alidns.com
 64:ff9b:1:fffd:1:0:aa21:500f             # vip28.alidns.com, vip8.alidns.com
 64:ff9b:1:fffd:1:0:aa27:e086             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-64:ff9b:1:fffd:1:0:ac40:2903             # chrome.cloudflare-dns.com
-64:ff9b:1:fffd:1:0:ac40:2904             # mozilla.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:ac40:2908             # dns.cloudflare.com
 64:ff9b:1:fffd:1:0:ac40:2a01             # odoh.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:ac56:4104             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -758,6 +754,7 @@
 64:ff9b:1:fffd:1:0:b9e4:a80a             # adult-filter-dns.cleanbrowsing.org, doh.cleanbrowsing.org
 64:ff9b:1:fffd:1:0:b9e4:a8a8             # doh.cleanbrowsing.org, family-filter-dns.cleanbrowsing.org
 64:ff9b:1:fffd:1:0:c111:2f01             # odvr.nic.cz
+64:ff9b:1:fffd:1:0:c2f2:204              # base.dns.mullvad.net
 64:ff9b:1:fffd:1:0:c777:415e             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:cb77:9014             # alidns.com
 64:ff9b:1:fffd:1:0:cb77:a926             # alidns.com
@@ -767,7 +764,6 @@
 64:ff9b:1:fffd:1:0:cb77:afe2             # alidns.com
 64:ff9b:1:fffd:1:0:cbb4:8c4d             # iij.jp
 64:ff9b:1:fffd:1:0:d0a7:f879             # cleanbrowsing.org
-64:ff9b:1:fffd:1:0:d1d1:39a5             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:d43c:3df6             # doh.quickline.ch
 64:ff9b:1:fffd:1:0:d43c:3ff6             # doh.quickline.ch
 64:ff9b:1:fffd:1:0:d5e3:adeb             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -799,6 +795,10 @@
 64:ff9b:1:fffe::e01:7016                 # vip24.alidns.com
 64:ff9b:1:fffe::e01:7019                 # vip27.alidns.com
 64:ff9b:1:fffe::e01:701a                 # vip28.alidns.com
+64:ff9b:1:fffe::11fd:b67                 # doh.dns.apple.com
+64:ff9b:1:fffe::11fd:b87                 # doh.dns.apple.com
+64:ff9b:1:fffe::11fd:1869                # doh.dns.apple.com
+64:ff9b:1:fffe::11fd:1889                # doh.dns.apple.com
 64:ff9b:1:fffe::18f0:9207                # doh-01.spectrum.com
 64:ff9b:1:fffe::18f0:9208                # doh-02.spectrum.com
 64:ff9b:1:fffe::18f0:9209                # doh-03.spectrum.com
@@ -841,20 +841,19 @@
 64:ff9b:1:fffe::2ffe:a0b0                # vip7.alidns.com
 64:ff9b:1:fffe::2ffe:a0b1                # vip8.alidns.com
 64:ff9b:1:fffe::33a1:732c                # cleanbrowsing.org
+64:ff9b:1:fffe::404e:c801                # doh.dns.apple.com
+64:ff9b:1:fffe::404e:c901                # doh.dns.apple.com
 64:ff9b:1:fffe::4469:1c0b                # doh.cox.net
 64:ff9b:1:fffe::4469:1c0c                # doh.cox.net
-64:ff9b:1:fffe::4a52:2a2a                # ordns.he.net
-64:ff9b:1:fffe::5e8c:e0e                 # dns.adguard.com
-64:ff9b:1:fffe::5e8c:f0f                 # dns.adguard.com
 64:ff9b:1:fffe::606a:7e8                 # doh.xfinity.com
 64:ff9b:1:fffe::606a:7ea                 # doh.xfinity.com
 64:ff9b:1:fffe::6702:3905                # public.dns.iij.jp
 64:ff9b:1:fffe::6702:3906                # public.dns.iij.jp
+64:ff9b:1:fffe::6757:44c4                # family-adblock.bebasid.com
 64:ff9b:1:fffe::679b:bfe1                # dns.caliph.dev
 64:ff9b:1:fffe::6812:1cbe                # tor.cloudflare-dns.com
 64:ff9b:1:fffe::6812:1dbe                # tor.cloudflare-dns.com
 64:ff9b:1:fffe::6880:3ead                # doh.dns.sb
-64:ff9b:1:fffe::68ee:b51c                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::6a0b:1e71                # vip21.alidns.com
 64:ff9b:1:fffe::6a0b:1e72                # vip22.alidns.com
 64:ff9b:1:fffe::6a0b:2997                # vip21.alidns.com
@@ -906,8 +905,6 @@
 64:ff9b:1:fffe::9570:700c                # dns12.quad9.net
 64:ff9b:1:fffe::9570:700d                # dns13.quad9.net
 64:ff9b:1:fffe::9570:7070                # dns.quad9.net
-64:ff9b:1:fffe::a29f:3d03                # chrome.cloudflare-dns.com
-64:ff9b:1:fffe::a29f:3d04                # mozilla.cloudflare-dns.com
 64:ff9b:1:fffe::a29f:3d08                # dns.cloudflare.com
 64:ff9b:1:fffe::a29f:3e01                # odoh.cloudflare-dns.com
 64:ff9b:1:fffe::a2fa:6a3                 # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -940,8 +937,6 @@
 64:ff9b:1:fffe::aa21:500e                # vip27.alidns.com, vip7.alidns.com
 64:ff9b:1:fffe::aa21:500f                # vip28.alidns.com, vip8.alidns.com
 64:ff9b:1:fffe::aa27:e086                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-64:ff9b:1:fffe::ac40:2903                # chrome.cloudflare-dns.com
-64:ff9b:1:fffe::ac40:2904                # mozilla.cloudflare-dns.com
 64:ff9b:1:fffe::ac40:2908                # dns.cloudflare.com
 64:ff9b:1:fffe::ac40:2a01                # odoh.cloudflare-dns.com
 64:ff9b:1:fffe::ac56:4104                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -952,6 +947,7 @@
 64:ff9b:1:fffe::b9e4:a80a                # adult-filter-dns.cleanbrowsing.org, doh.cleanbrowsing.org
 64:ff9b:1:fffe::b9e4:a8a8                # doh.cleanbrowsing.org, family-filter-dns.cleanbrowsing.org
 64:ff9b:1:fffe::c111:2f01                # odvr.nic.cz
+64:ff9b:1:fffe::c2f2:204                 # base.dns.mullvad.net
 64:ff9b:1:fffe::c777:415e                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::cb77:9014                # alidns.com
 64:ff9b:1:fffe::cb77:a926                # alidns.com
@@ -961,7 +957,6 @@
 64:ff9b:1:fffe::cb77:afe2                # alidns.com
 64:ff9b:1:fffe::cbb4:8c4d                # iij.jp
 64:ff9b:1:fffe::d0a7:f879                # cleanbrowsing.org
-64:ff9b:1:fffe::d1d1:39a5                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::d43c:3df6                # doh.quickline.ch
 64:ff9b:1:fffe::d43c:3ff6                # doh.quickline.ch
 64:ff9b:1:fffe::d5e3:adeb                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
