@@ -5,8 +5,8 @@
 64:ff9b:1::101:102                       # security.cloudflare-dns.com
 64:ff9b:1::101:103                       # family.cloudflare-dns.com
 64:ff9b:1::5a1:2bc5                      # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-64:ff9b:1::808:404                       # 8888.google, dns.google.com
-64:ff9b:1::808:808                       # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
+64:ff9b:1::808:404                       # 8888.google, dns.google.com, google-public-dns-b.google.com
+64:ff9b:1::808:808                       # 8888.google, dns.google.com
 64:ff9b:1::8d4:5d01                      # vip1.alidns.com
 64:ff9b:1::8d4:5d02                      # vip2.alidns.com
 64:ff9b:1::8d4:5d03                      # vip3.alidns.com
@@ -28,10 +28,6 @@
 64:ff9b:1::e01:7016                      # vip24.alidns.com
 64:ff9b:1::e01:7019                      # vip27.alidns.com
 64:ff9b:1::e01:701a                      # vip28.alidns.com
-64:ff9b:1::1184:5872                     # doh.dns.apple.com
-64:ff9b:1::1184:5874                     # doh.dns.apple.com
-64:ff9b:1::1184:5875                     # doh.dns.apple.com
-64:ff9b:1::1184:5878                     # doh.dns.apple.com
 64:ff9b:1::11fd:b67                      # doh.dns.apple.com
 64:ff9b:1::11fd:b87                      # doh.dns.apple.com
 64:ff9b:1::11fd:1869                     # doh.dns.apple.com
@@ -190,6 +186,7 @@
 64:ff9b:1::aa21:500d                     # vip26.alidns.com, vip6.alidns.com
 64:ff9b:1::aa21:500e                     # vip27.alidns.com, vip7.alidns.com
 64:ff9b:1::aa21:500f                     # vip28.alidns.com, vip8.alidns.com
+64:ff9b:1::aa27:e086                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::ac40:2903                     # chrome.cloudflare-dns.com
 64:ff9b:1::ac40:2904                     # mozilla.cloudflare-dns.com
 64:ff9b:1::ac40:2905                     # opera.cloudflare-dns.com
@@ -217,7 +214,6 @@
 64:ff9b:1::cb77:a94c                     # alidns.com
 64:ff9b:1::cb77:a958                     # alidns.com
 64:ff9b:1::cb77:a9a8                     # alidns.com
-64:ff9b:1::cb77:a9e3                     # alidns.com
 64:ff9b:1::cb77:afd5                     # alidns.com
 64:ff9b:1::cb77:afe2                     # alidns.com
 64:ff9b:1::cbb4:8c4d                     # iij.jp
@@ -238,8 +234,8 @@
 64:ff9b:1:abcd:0:5431:101:102            # security.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:101:103            # family.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:5a1:2bc5           # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-64:ff9b:1:abcd:0:5431:808:404            # 8888.google, dns.google.com
-64:ff9b:1:abcd:0:5431:808:808            # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
+64:ff9b:1:abcd:0:5431:808:404            # 8888.google, dns.google.com, google-public-dns-b.google.com
+64:ff9b:1:abcd:0:5431:808:808            # 8888.google, dns.google.com
 64:ff9b:1:abcd:0:5431:8d4:5d01           # vip1.alidns.com
 64:ff9b:1:abcd:0:5431:8d4:5d02           # vip2.alidns.com
 64:ff9b:1:abcd:0:5431:8d4:5d03           # vip3.alidns.com
@@ -261,10 +257,6 @@
 64:ff9b:1:abcd:0:5431:e01:7016           # vip24.alidns.com
 64:ff9b:1:abcd:0:5431:e01:7019           # vip27.alidns.com
 64:ff9b:1:abcd:0:5431:e01:701a           # vip28.alidns.com
-64:ff9b:1:abcd:0:5431:1184:5872          # doh.dns.apple.com
-64:ff9b:1:abcd:0:5431:1184:5874          # doh.dns.apple.com
-64:ff9b:1:abcd:0:5431:1184:5875          # doh.dns.apple.com
-64:ff9b:1:abcd:0:5431:1184:5878          # doh.dns.apple.com
 64:ff9b:1:abcd:0:5431:11fd:b67           # doh.dns.apple.com
 64:ff9b:1:abcd:0:5431:11fd:b87           # doh.dns.apple.com
 64:ff9b:1:abcd:0:5431:11fd:1869          # doh.dns.apple.com
@@ -423,6 +415,7 @@
 64:ff9b:1:abcd:0:5431:aa21:500d          # vip26.alidns.com, vip6.alidns.com
 64:ff9b:1:abcd:0:5431:aa21:500e          # vip27.alidns.com, vip7.alidns.com
 64:ff9b:1:abcd:0:5431:aa21:500f          # vip28.alidns.com, vip8.alidns.com
+64:ff9b:1:abcd:0:5431:aa27:e086          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:ac40:2903          # chrome.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:ac40:2904          # mozilla.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:ac40:2905          # opera.cloudflare-dns.com
@@ -450,7 +443,6 @@
 64:ff9b:1:abcd:0:5431:cb77:a94c          # alidns.com
 64:ff9b:1:abcd:0:5431:cb77:a958          # alidns.com
 64:ff9b:1:abcd:0:5431:cb77:a9a8          # alidns.com
-64:ff9b:1:abcd:0:5431:cb77:a9e3          # alidns.com
 64:ff9b:1:abcd:0:5431:cb77:afd5          # alidns.com
 64:ff9b:1:abcd:0:5431:cb77:afe2          # alidns.com
 64:ff9b:1:abcd:0:5431:cbb4:8c4d          # iij.jp
@@ -471,8 +463,8 @@
 64:ff9b:1:fffc:2:0:101:102               # security.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:101:103               # family.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:5a1:2bc5              # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-64:ff9b:1:fffc:2:0:808:404               # 8888.google, dns.google.com
-64:ff9b:1:fffc:2:0:808:808               # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
+64:ff9b:1:fffc:2:0:808:404               # 8888.google, dns.google.com, google-public-dns-b.google.com
+64:ff9b:1:fffc:2:0:808:808               # 8888.google, dns.google.com
 64:ff9b:1:fffc:2:0:8d4:5d01              # vip1.alidns.com
 64:ff9b:1:fffc:2:0:8d4:5d02              # vip2.alidns.com
 64:ff9b:1:fffc:2:0:8d4:5d03              # vip3.alidns.com
@@ -494,10 +486,6 @@
 64:ff9b:1:fffc:2:0:e01:7016              # vip24.alidns.com
 64:ff9b:1:fffc:2:0:e01:7019              # vip27.alidns.com
 64:ff9b:1:fffc:2:0:e01:701a              # vip28.alidns.com
-64:ff9b:1:fffc:2:0:1184:5872             # doh.dns.apple.com
-64:ff9b:1:fffc:2:0:1184:5874             # doh.dns.apple.com
-64:ff9b:1:fffc:2:0:1184:5875             # doh.dns.apple.com
-64:ff9b:1:fffc:2:0:1184:5878             # doh.dns.apple.com
 64:ff9b:1:fffc:2:0:11fd:b67              # doh.dns.apple.com
 64:ff9b:1:fffc:2:0:11fd:b87              # doh.dns.apple.com
 64:ff9b:1:fffc:2:0:11fd:1869             # doh.dns.apple.com
@@ -656,6 +644,7 @@
 64:ff9b:1:fffc:2:0:aa21:500d             # vip26.alidns.com, vip6.alidns.com
 64:ff9b:1:fffc:2:0:aa21:500e             # vip27.alidns.com, vip7.alidns.com
 64:ff9b:1:fffc:2:0:aa21:500f             # vip28.alidns.com, vip8.alidns.com
+64:ff9b:1:fffc:2:0:aa27:e086             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:ac40:2903             # chrome.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:ac40:2904             # mozilla.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:ac40:2905             # opera.cloudflare-dns.com
@@ -683,7 +672,6 @@
 64:ff9b:1:fffc:2:0:cb77:a94c             # alidns.com
 64:ff9b:1:fffc:2:0:cb77:a958             # alidns.com
 64:ff9b:1:fffc:2:0:cb77:a9a8             # alidns.com
-64:ff9b:1:fffc:2:0:cb77:a9e3             # alidns.com
 64:ff9b:1:fffc:2:0:cb77:afd5             # alidns.com
 64:ff9b:1:fffc:2:0:cb77:afe2             # alidns.com
 64:ff9b:1:fffc:2:0:cbb4:8c4d             # iij.jp
@@ -704,8 +692,8 @@
 64:ff9b:1:fffd:1:0:101:102               # security.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:101:103               # family.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:5a1:2bc5              # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-64:ff9b:1:fffd:1:0:808:404               # 8888.google, dns.google.com
-64:ff9b:1:fffd:1:0:808:808               # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
+64:ff9b:1:fffd:1:0:808:404               # 8888.google, dns.google.com, google-public-dns-b.google.com
+64:ff9b:1:fffd:1:0:808:808               # 8888.google, dns.google.com
 64:ff9b:1:fffd:1:0:8d4:5d01              # vip1.alidns.com
 64:ff9b:1:fffd:1:0:8d4:5d02              # vip2.alidns.com
 64:ff9b:1:fffd:1:0:8d4:5d03              # vip3.alidns.com
@@ -727,10 +715,6 @@
 64:ff9b:1:fffd:1:0:e01:7016              # vip24.alidns.com
 64:ff9b:1:fffd:1:0:e01:7019              # vip27.alidns.com
 64:ff9b:1:fffd:1:0:e01:701a              # vip28.alidns.com
-64:ff9b:1:fffd:1:0:1184:5872             # doh.dns.apple.com
-64:ff9b:1:fffd:1:0:1184:5874             # doh.dns.apple.com
-64:ff9b:1:fffd:1:0:1184:5875             # doh.dns.apple.com
-64:ff9b:1:fffd:1:0:1184:5878             # doh.dns.apple.com
 64:ff9b:1:fffd:1:0:11fd:b67              # doh.dns.apple.com
 64:ff9b:1:fffd:1:0:11fd:b87              # doh.dns.apple.com
 64:ff9b:1:fffd:1:0:11fd:1869             # doh.dns.apple.com
@@ -889,6 +873,7 @@
 64:ff9b:1:fffd:1:0:aa21:500d             # vip26.alidns.com, vip6.alidns.com
 64:ff9b:1:fffd:1:0:aa21:500e             # vip27.alidns.com, vip7.alidns.com
 64:ff9b:1:fffd:1:0:aa21:500f             # vip28.alidns.com, vip8.alidns.com
+64:ff9b:1:fffd:1:0:aa27:e086             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:ac40:2903             # chrome.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:ac40:2904             # mozilla.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:ac40:2905             # opera.cloudflare-dns.com
@@ -916,7 +901,6 @@
 64:ff9b:1:fffd:1:0:cb77:a94c             # alidns.com
 64:ff9b:1:fffd:1:0:cb77:a958             # alidns.com
 64:ff9b:1:fffd:1:0:cb77:a9a8             # alidns.com
-64:ff9b:1:fffd:1:0:cb77:a9e3             # alidns.com
 64:ff9b:1:fffd:1:0:cb77:afd5             # alidns.com
 64:ff9b:1:fffd:1:0:cb77:afe2             # alidns.com
 64:ff9b:1:fffd:1:0:cbb4:8c4d             # iij.jp
@@ -937,8 +921,8 @@
 64:ff9b:1:fffe::101:102                  # security.cloudflare-dns.com
 64:ff9b:1:fffe::101:103                  # family.cloudflare-dns.com
 64:ff9b:1:fffe::5a1:2bc5                 # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-64:ff9b:1:fffe::808:404                  # 8888.google, dns.google.com
-64:ff9b:1:fffe::808:808                  # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
+64:ff9b:1:fffe::808:404                  # 8888.google, dns.google.com, google-public-dns-b.google.com
+64:ff9b:1:fffe::808:808                  # 8888.google, dns.google.com
 64:ff9b:1:fffe::8d4:5d01                 # vip1.alidns.com
 64:ff9b:1:fffe::8d4:5d02                 # vip2.alidns.com
 64:ff9b:1:fffe::8d4:5d03                 # vip3.alidns.com
@@ -960,10 +944,6 @@
 64:ff9b:1:fffe::e01:7016                 # vip24.alidns.com
 64:ff9b:1:fffe::e01:7019                 # vip27.alidns.com
 64:ff9b:1:fffe::e01:701a                 # vip28.alidns.com
-64:ff9b:1:fffe::1184:5872                # doh.dns.apple.com
-64:ff9b:1:fffe::1184:5874                # doh.dns.apple.com
-64:ff9b:1:fffe::1184:5875                # doh.dns.apple.com
-64:ff9b:1:fffe::1184:5878                # doh.dns.apple.com
 64:ff9b:1:fffe::11fd:b67                 # doh.dns.apple.com
 64:ff9b:1:fffe::11fd:b87                 # doh.dns.apple.com
 64:ff9b:1:fffe::11fd:1869                # doh.dns.apple.com
@@ -1122,6 +1102,7 @@
 64:ff9b:1:fffe::aa21:500d                # vip26.alidns.com, vip6.alidns.com
 64:ff9b:1:fffe::aa21:500e                # vip27.alidns.com, vip7.alidns.com
 64:ff9b:1:fffe::aa21:500f                # vip28.alidns.com, vip8.alidns.com
+64:ff9b:1:fffe::aa27:e086                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::ac40:2903                # chrome.cloudflare-dns.com
 64:ff9b:1:fffe::ac40:2904                # mozilla.cloudflare-dns.com
 64:ff9b:1:fffe::ac40:2905                # opera.cloudflare-dns.com
@@ -1149,7 +1130,6 @@
 64:ff9b:1:fffe::cb77:a94c                # alidns.com
 64:ff9b:1:fffe::cb77:a958                # alidns.com
 64:ff9b:1:fffe::cb77:a9a8                # alidns.com
-64:ff9b:1:fffe::cb77:a9e3                # alidns.com
 64:ff9b:1:fffe::cb77:afd5                # alidns.com
 64:ff9b:1:fffe::cb77:afe2                # alidns.com
 64:ff9b:1:fffe::cbb4:8c4d                # iij.jp
