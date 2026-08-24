@@ -5,7 +5,7 @@
 1.1.1.2          # security.cloudflare-dns.com
 1.1.1.3          # family.cloudflare-dns.com
 1.10.10.10       # dns.nic.in
-1.12.12.12       # dns.pub
+1.12.12.12       # dns.pub, doh.pub, dot.pub
 1.34.46.92       # doh.killtw.im
 1.230.209.26     # agh.kyusang.win
 2.45.195.237     # block.abstergo.it
@@ -17,7 +17,6 @@
 5.11.11.5        # africadns1.liquidtelecom.net
 5.11.11.11       # africadns2.liquidtelecom.net
 5.15.64.234      # noads.imbuffering.com
-5.15.65.233      # noads.imbuffering.com
 5.75.228.192     # ns.data.haus
 5.78.98.38       # us-hil-w-p-1.nashkan.net
 5.78.102.99      # us-hil-w-f-1.nashkan.net
@@ -47,7 +46,7 @@
 8.212.93.7       # vip7.alidns.com
 8.212.93.8       # vip8.alidns.com
 9.9.9.9          # dns.quad9.net, dns9.quad9.net
-9.9.9.10         # dns-nosec.quad9.net
+9.9.9.10         # dns-nosec.quad9.net, dns10.quad9.net
 9.9.9.11         # dns11.quad9.net
 9.9.9.12         # dns12.quad9.net
 9.9.9.13         # dns13.quad9.net
@@ -66,46 +65,33 @@
 17.132.91.12     # doh.dns.apple.com.v.aaplimg.com
 17.132.91.13     # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 17.132.91.14     # doh.dns.apple.com
-17.132.91.15     # doh.dns.apple.com.v.aaplimg.com
+17.132.91.15     # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 17.132.91.16     # doh.dns.apple.com
-17.248.168.101   # mask-h2.icloud.com
-17.248.168.102   # mask-h2.icloud.com
-17.248.168.103   # mask.icloud.com
-17.248.168.107   # mask.icloud.com
-17.248.168.133   # mask.icloud.com
-17.248.168.134   # mask-h2.icloud.com
-17.248.168.137   # mask.icloud.com
-17.248.168.168   # mask.icloud.com
-17.248.168.197   # mask-h2.icloud.com
-17.248.168.199   # mask.icloud.com
-17.248.168.201   # mask-h2.icloud.com
-17.248.168.205   # mask.icloud.com
-17.248.168.211   # mask-h2.icloud.com
-17.248.168.215   # mask-h2.icloud.com
-17.248.168.218   # mask-h2.icloud.com, mask.icloud.com
 17.248.171.4     # mask.icloud.com
 17.248.171.6     # mask.icloud.com
 17.248.171.7     # mask-h2.icloud.com, mask.icloud.com
-17.248.171.9     # mask.icloud.com
+17.248.171.8     # mask-h2.icloud.com
+17.248.171.9     # mask-h2.icloud.com, mask.icloud.com
+17.248.171.10    # mask-h2.icloud.com, mask.icloud.com
+17.248.171.11    # mask-h2.icloud.com
 17.248.171.34    # mask-h2.icloud.com
-17.248.171.35    # mask-h2.icloud.com
-17.248.171.37    # mask.icloud.com
-17.248.171.38    # mask-h2.icloud.com
+17.248.171.35    # mask-h2.icloud.com, mask.icloud.com
+17.248.171.37    # mask-h2.icloud.com, mask.icloud.com
+17.248.171.38    # mask-h2.icloud.com, mask.icloud.com
 17.248.171.39    # mask-h2.icloud.com
-17.248.171.52    # mask-h2.icloud.com
+17.248.171.52    # mask-h2.icloud.com, mask.icloud.com
+17.248.171.53    # mask.icloud.com
 17.248.171.55    # mask.icloud.com
-17.248.174.44    # mask.icloud.com
-17.248.174.76    # mask.icloud.com
+17.248.174.44    # mask-h2.icloud.com, mask.icloud.com
+17.248.174.76    # mask-h2.icloud.com, mask.icloud.com
 17.248.188.114   # mask-h2.icloud.com
 17.248.188.115   # mask-h2.icloud.com
+17.248.193.18    # mask-api.icloud.com
+17.248.193.20    # mask-api.icloud.com
 17.248.193.31    # mask-api.icloud.com
 17.248.193.49    # mask-api.icloud.com
 17.248.193.65    # mask-api.icloud.com
 17.248.193.73    # mask-api.icloud.com
-17.248.207.9     # mask-api.icloud.com
-17.248.207.17    # mask-api.icloud.com
-17.248.207.25    # mask-api.icloud.com
-17.248.210.64    # mask-api.icloud.com
 17.248.242.19    # mask-h2.icloud.com
 17.248.242.50    # mask-h2.icloud.com
 17.248.242.51    # mask-h2.icloud.com
@@ -114,10 +100,7 @@
 17.248.242.71    # mask-h2.icloud.com
 17.248.242.104   # mask-h2.icloud.com
 17.250.48.45     # mask-h2.icloud.com
-17.253.11.103    # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
-17.253.11.135    # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
-17.253.24.105    # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
-17.253.24.137    # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+23.82.16.57      # dns.propheci.xyz
 23.94.211.166    # dns.novali.date
 23.95.11.50      # dns.cryptomize.com
 23.128.248.2     # dns.stormycloud.org
@@ -186,9 +169,9 @@
 43.154.154.162   # dns.flymc.cc
 43.161.224.5     # blog.kimiblock.top
 43.161.254.162   # blog.kimiblock.top
-43.169.13.124    # ndns.233py.com, wdns.233py.com
-43.169.14.124    # ndns.233py.com, wdns.233py.com
-43.169.15.124    # dns.233py.com, doh.233py.com, edns.233py.com, i.233py.com, ndns.233py.com, sdns.233py.com, wdns.233py.com
+43.169.13.124    # i.233py.com, ndns.233py.com
+43.169.14.124    # i.233py.com, ndns.233py.com
+43.169.15.124    # dns.233py.com, doh.233py.com, edns.233py.com, sdns.233py.com, wdns.233py.com
 43.174.246.33    # doh.totoro.pub
 43.174.247.33    # doh.totoro.pub
 43.224.180.137   # bne01.dnscry.pt
@@ -241,6 +224,7 @@
 45.142.17.72     # dns.odinpl.com
 45.142.233.169   # dns.lermer.nl
 45.147.51.123    # fra02.dnscry.pt
+45.151.30.16     # dns.petqa.ru
 45.154.109.53    # dns.ffnw.de
 45.155.37.165    # cvt01.dnscry.pt
 45.249.91.150    # jhb01.dnscry.pt
@@ -305,12 +289,12 @@
 49.12.230.234    # chaos-system.de
 49.13.60.236     # adguard.kiboko.it
 49.13.95.125     # de-fsn-w-p-1.nashkan.net
-49.212.198.36    # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com, vpn.technicule.info
-49.212.198.51    # catchen121299.top, dns.daarrk.tech
-49.212.198.52    # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech, do-39574-tr.xyz
-49.212.207.51    # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link
-49.212.235.34    # dns.auapi.fun, paradise-human.shop, v2.xx3210766.live
-49.212.235.44    # dns.butterfly87.sbs, dns.f97.xyz
+49.212.198.36    # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com, dns.wibenson.cloud, externalmobiel.lekdijk.online, securedns.vendorvista.xyz, vpn.technicule.info
+49.212.198.51    # catchen121299.top, dns.daarrk.tech, kx-97795-tr.xyz
+49.212.198.52    # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech
+49.212.207.51    # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link, dns.mathewakhil.online, quic.lol
+49.212.235.34    # dns.auapi.fun, moamao.shop, paradise-human.shop, v2.xx3210766.live
+49.212.235.44    # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top
 49.235.74.116    # dns.zzuhacker.cn
 50.116.59.251    # adguard.shoupperuser.com
 51.77.106.89     # dns-privacy.puregeni.us
@@ -325,7 +309,6 @@
 51.158.147.92    # dns.novg.net
 51.159.67.129    # dns.novg.net
 51.159.138.172   # dns.wargan.io
-51.161.115.44    # cleanbrowsing.org
 51.178.29.75     # dns.alloxr.info
 51.178.82.98     # dns.crystalyx.net
 51.178.136.114   # dns.hellozhao.com
@@ -384,18 +367,18 @@
 75.119.137.239   # dns.christian.moe, dns.imchristian.de
 76.76.2.11       # family.freedns.controld.com, freedns.controld.com, p0.freedns.controld.com, p1.freedns.controld.com, p2.freedns.controld.com, p3.freedns.controld.com, uncensored.freedns.controld.com
 76.76.2.22       # dns.controld.com
+76.76.21.22      # arashi.net.eu.org
 76.76.21.61      # arashi.net.eu.org
 76.76.21.98      # arashi.net.eu.org
 76.76.21.123     # arashi.net.eu.org
 76.76.21.142     # arashi.net.eu.org
-76.76.21.164     # arashi.net.eu.org
 77.68.29.63      # ahoj.email
 77.68.50.239     # dns.connect.fail
 77.68.88.220     # dns.kuuhaku.moe
-77.88.8.1        # common.dot.dns.yandex.net
+77.88.8.1        # common.dot.dns.yandex.net, secondary.dns.yandex.ru
 77.88.8.2        # safe.dot.dns.yandex.net, secondary.safe.dns.yandex.ru
 77.88.8.3        # family.dot.dns.yandex.net, secondary.family.dns.yandex.ru
-77.88.8.7        # family.dns.yandex.ru
+77.88.8.7        # family.dns.yandex.ru, family.dot.dns.yandex.net
 77.88.8.8        # common.dot.dns.yandex.net
 77.88.8.88       # safe.dns.yandex.ru, safe.dot.dns.yandex.net
 77.247.127.107   # abn01.dnscry.pt
@@ -426,7 +409,6 @@
 80.152.203.134   # doh.kekew.info
 80.153.146.105   # doh.kekew.info
 80.156.145.201   # dns.t53.de
-80.211.196.177   # dns.vinokurov.tk
 80.249.144.245   # dns.mihanentalpo.me
 80.249.149.178   # muxyuji.ru, www.muxyuji.ru
 80.254.79.157    # zrh1-ns01.monzoon.net
@@ -501,7 +483,7 @@
 88.198.103.91    # dns.scarx.net
 88.198.115.22    # ns.ral9005.org
 88.198.122.154   # hard.dnsforge.de
-88.208.224.60    # ahoj.email
+88.208.224.60    # ahoj.email, zakaria.website
 89.32.32.32      # resolver.sunet.se
 89.43.174.10     # zdn.ro
 89.57.45.206     # dns.farshidhakimy.de
@@ -532,6 +514,7 @@
 91.239.27.199    # testaghome.meshkov.info
 91.239.100.100   # anycast.censurfridns.dk, anycast.uncensoreddns.org
 92.63.169.45     # ns3.bit-trail.nl
+92.116.94.42     # area51.mywire.org
 92.118.188.53    # sg-sin.doh.sb
 92.118.190.116   # de-fra-w-p-1.nashkan.net
 92.205.21.178    # dns.3wv.de
@@ -541,14 +524,14 @@
 93.95.115.21     # eyg01.dnscry.pt
 93.189.61.195    # dns.nextdns.io
 93.190.126.69    # doh.immerda.ch
+93.200.28.107    # ueni.dyndns.org
 93.221.50.114    # dnsblock.grisumedia.de
-93.231.27.112    # dns.reitmeier.me
 94.16.111.86     # dns.immanuelschaffer.de
 94.16.117.107    # ns2.4netguides.org
-94.23.71.64      # dns.clanto.cloud
+94.23.71.64      # dns.clanto.cloud, dns.scuola.org
 94.130.135.203   # dns.digitalsize.net
 94.140.14.14     # dns.adguard-dns.com, dns.adguard.com
-94.140.14.15     # dns-family.adguard.com
+94.140.14.15     # dns-family.adguard.com, family.adguard-dns.com
 94.140.14.49     # d.adguard-dns.com
 94.140.14.140    # dns-unfiltered.adguard.com, unfiltered.adguard-dns.com
 94.140.14.141    # dns-unfiltered.adguard.com, unfiltered.adguard-dns.com
@@ -589,10 +572,10 @@
 101.34.229.193   # sukidayo.eu.org
 101.101.101.101  # dns.twnic.tw
 101.198.192.33   # doh.360.cn, dot.360.cn
-101.198.193.29   # doh.360.cn
+101.198.193.29   # doh.360.cn, dot.360.cn
 101.236.69.43    # httpdns.meituan.com
-102.113.80.157   # dns.yameenassotally.com
 102.113.85.82    # dns.yameenassotally.com
+102.113.91.170   # dns.yameenassotally.com
 102.202.192.108  # dns.oliviertv.co.za
 103.1.223.110    # agh-yz.russel053.com
 103.2.57.5       # public.dns.iij.jp
@@ -629,7 +612,7 @@
 103.150.191.84   # dns.diarbagus.id
 103.151.140.139  # dns.repinger.com
 103.154.55.162   # dns.iamanuragh.in
-103.155.191.184  # dns.bebasid.com
+103.155.191.184  # dns.bebasid.com, unfiltered.dns.bebasid.com
 103.155.191.225  # dns.caliph.dev
 103.160.63.242   # dns.engineer.web.id
 103.161.196.196  # dns.spil.co.id
@@ -659,7 +642,7 @@
 104.192.102.132  # coe01.dnscry.pt
 104.200.18.74    # dns.bobstrecansky.com
 104.200.67.194   # lax02.dnscry.pt
-104.219.250.37   # easyhandshake.com
+104.219.250.37   # easyhandshake.com, ko-18948-tr.xyz
 104.234.167.66   # sg-w-p-1.nashkan.net
 104.236.116.148  # ns.00dani.me
 104.238.165.18   # dns.f4a.fun
@@ -689,9 +672,9 @@
 109.234.165.186  # dns4eu.online
 109.236.119.2    # dns.levonet.sk
 109.236.120.2    # dns.levonet.sk
-109.250.196.119  # adguard.bitteeinbyte.de
 109.250.196.215  # adguard.bitteeinbyte.de
 109.250.197.24   # adguard.bitteeinbyte.de
+109.250.197.34   # adguard.bitteeinbyte.de
 109.250.197.78   # adguard.bitteeinbyte.de
 109.250.204.169  # area51.mywire.org
 111.20.254.35    # opencdn.jomodns.com
@@ -720,11 +703,11 @@
 116.203.84.65    # ric.openbld.net
 116.203.112.223  # dns.sheggi.ch
 116.203.135.71   # dns.roedel.cloud
-116.204.197.27   # dns.4-the.win
-118.27.125.235   # dns.maolaohei.xyz, dns.xwdmw.xyz, pashagame456.com
+116.204.197.27   # dns.4-the.win, dns.strassmair.org
+118.27.125.235   # dns.maolaohei.xyz, dns.warma.me, dns.xwdmw.xyz, draco.plan9-ns2.com, hkname.freecdn.one, jcdns.fun, lion.yazilimatolye.com, pashagame456.com, tlz.asia, vtcuong.site
 118.163.170.2    # dns.tipsy.coffee
 119.45.115.228   # doh.18bit.cn
-120.53.53.53     # dns.pub
+120.53.53.53     # dns.pub, doh.pub, dot.pub
 120.76.107.45    # ns1.alidns.com
 120.76.107.46    # ns2.alidns.com
 120.76.107.47    # ns7.alidns.com
@@ -795,7 +778,7 @@
 140.36.3.131     # tienpham.id.vn
 140.112.29.207   # doh.ntu.ssooss.win
 140.205.1.1      # vip1.alidns.com, vip21.alidns.com
-140.205.1.2      # vip2.alidns.com
+140.205.1.2      # vip2.alidns.com, vip22.alidns.com
 140.205.1.5      # vip23.alidns.com, vip3.alidns.com
 140.205.1.6      # vip24.alidns.com
 140.205.1.9      # vip25.alidns.com, vip5.alidns.com
@@ -813,7 +796,6 @@
 142.132.230.65   # dns.alvosec.com
 143.20.12.32     # lis01.dnscry.pt
 143.198.172.202  # goose.buckyfan.net
-143.244.60.193   # doh2.b-cdn.net
 143.244.128.32   # in-blr.doh.sb
 144.76.135.223   # doh.wewitro.net
 144.76.199.177   # dns.comff.net
@@ -858,7 +840,7 @@
 149.112.122.30   # family.canadianshield.cira.ca
 149.112.149.112  # alpha-dns.quad9.net
 149.248.36.234   # chromium.dns.nextdns.io
-149.248.217.117  # dns.dnswarden.com
+149.248.217.117  # dns.dnswarden.com, doh.asia.dnswarden.com, doh.eu.dnswarden.com, doh.us.dnswarden.com, fr1.dnswarden.com, sg1.dnswarden.com
 150.107.200.31   # aqua.is.my.waifu.cz, darkness.is.my.waifu.cz, megumin.is.my.waifu.cz, yunyun.is.my.waifu.cz
 151.80.145.143   # dns.sstomp.nl
 151.145.200.30   # dns.momou.ch
@@ -897,7 +879,7 @@
 159.195.62.166   # dns.brembeck.cloud
 160.119.253.209  # sa01.dns4me.net
 160.250.95.28    # dns.hakim.one
-160.250.227.196  # dns.bebasid.com
+160.250.227.196  # dns.bebasid.com, unfiltered.dns.bebasid.com
 160.251.64.80    # adg.rueiliu.space, dns.aaytorr.com
 161.35.136.3     # doh-primary-pool.goodbyegambling.com
 161.129.34.134   # 5g.o0o.re
@@ -922,14 +904,6 @@
 163.181.60.206   # iterator.lazada.com
 163.181.60.207   # iterator.lazada.com
 163.181.60.208   # iterator.lazada.com
-163.181.246.188  # iterator.lazada.com
-163.181.246.189  # iterator.lazada.com
-163.181.246.190  # iterator.lazada.com
-163.181.246.191  # iterator.lazada.com
-163.181.246.192  # iterator.lazada.com
-163.181.246.193  # iterator.lazada.com
-163.181.246.194  # iterator.lazada.com
-163.181.246.195  # iterator.lazada.com
 164.90.207.7     # adblockersite.com
 164.132.7.242    # dns.christerwaren.fi
 165.99.131.95    # sgn01.dnscry.pt
@@ -960,8 +934,6 @@
 170.33.32.213    # vip6.alidns.com
 170.33.32.214    # vip7.alidns.com
 170.33.32.215    # vip8.alidns.com
-170.33.40.136    # vip3.alidns.com
-170.33.40.137    # vip4.alidns.com
 170.33.73.24     # vip1.alidns.com
 170.33.73.25     # vip2.alidns.com
 170.33.73.26     # vip3.alidns.com
@@ -971,7 +943,7 @@
 170.33.80.8      # vip1.alidns.com, vip21.alidns.com
 170.33.80.9      # vip2.alidns.com, vip22.alidns.com
 170.33.80.10     # vip23.alidns.com, vip3.alidns.com
-170.33.80.11     # vip24.alidns.com
+170.33.80.11     # vip24.alidns.com, vip4.alidns.com
 170.33.80.12     # vip25.alidns.com, vip5.alidns.com
 170.33.80.13     # vip26.alidns.com, vip6.alidns.com
 170.33.80.14     # vip27.alidns.com, vip7.alidns.com
@@ -984,7 +956,7 @@
 172.64.41.8      # dns.cloudflare.com
 172.64.42.1      # odoh.cloudflare-dns.com
 172.64.42.2      # dooh.cloudflare-dns.com
-172.86.65.4      # chromium.dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+172.86.65.4      # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 172.93.167.214   # yyz01.dnscry.pt
 172.104.92.233   # dns.kuuhaku.moe
 172.104.93.80    # jp.tiar.app
@@ -996,12 +968,12 @@
 172.233.59.98    # dns.pccoach.nl
 172.233.147.42   # adguard.hartley.cloud
 172.233.221.243  # doh.archuser.org
-172.234.27.233   # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, odoh-target-noads.alekberg.net
-172.238.172.228  # alleesph.online
-172.238.176.31   # alleesph.online
-172.239.49.232   # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, odoh-target-noads.alekberg.net
+172.234.27.233   # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, dnsnl-noads.alekberg.net, dnsnl.alekberg.net, dnsse-noads.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, gclouddns.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, sdns22.gkonuralp.com, tk31z.com
+172.238.172.228  # alleesph.online, wantaquddin.com, xorbiadns.com
+172.238.176.31   # alleesph.online, gclouddns.com
+172.239.49.232   # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net
 172.239.57.230   # alleesph.online, gclouddns.com
-172.239.193.67   # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, odoh-target-noads.alekberg.net
+172.239.193.67   # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, dnsnl-noads.alekberg.net, dnsnl.alekberg.net, dnsse-noads.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, gclouddns.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, sdns22.gkonuralp.com, tk31z.com
 173.20.169.71    # dns.cahlen.com
 173.73.159.164   # dns.chilimac.net
 173.208.212.205  # dns.furrix.zone, dns.marbledfennec.net, multi.dns.marbledfennec.net
@@ -1013,11 +985,10 @@
 174.68.248.77    # dohdot.coxlab.net
 174.138.29.175   # doh.tiar.app, dot.tiar.app
 175.24.154.66    # dns.rubyfish.cn
-175.143.226.190  # dns.surobe.com
 175.143.237.16   # dns.surobe.com
 176.9.25.158     # dns.svoi.dev
 176.9.54.219     # de.dns.privex.io
-176.9.242.147    # dns.ourvau.lt, dns.redvau.lt, dns.vault81.de
+176.9.242.147    # dns.ourvau.lt, dns.vault81.de
 176.10.125.47    # nsec.arnor.org
 176.99.152.241   # dns.ronc.ru
 176.111.223.167  # sjc01.dnscry.pt
@@ -1025,9 +996,9 @@
 176.123.163.193  # dns.petqa.ru
 176.147.243.164  # blockerads.multimediaconcept.fr
 176.164.129.241  # dns.chadeyron.fr
+176.164.166.245  # dns.chadeyron.fr
 176.164.177.15   # dns.chadeyron.fr
 176.164.177.199  # dns.chadeyron.fr
-176.164.185.151  # dns.chadeyron.fr
 178.20.42.213    # vd.i81.ru
 178.22.122.100   # dns.shecan.ir
 178.33.118.153   # dns-1.wil.cloud, dns-2.wil.cloud
@@ -1052,7 +1023,7 @@
 178.209.51.242   # nsec.arnor.org
 178.248.239.174  # comss.ru
 182.8.195.17     # dns.velyn.my.id
-182.8.195.142    # dns.velyn.my.id
+182.8.212.78     # dns.velyn.my.id
 183.171.200.162  # punono.duckdns.org
 184.192.42.170   # httpdns-push.heytapmobile.com
 185.16.60.194    # doh.webnmail.de
@@ -1067,13 +1038,12 @@
 185.49.141.38    # getdnsapi.net
 185.51.200.1     # pro.shecan.ir
 185.51.200.2     # dns.shecan.ir, free.shecan.ir
-185.64.79.5      # uk-lon.doh.sb
+185.64.79.5      # doh.dns.sb, uk-lon.doh.sb
 185.69.161.122   # dns.fancyorg.at
 185.70.9.10      # dns.kuuhaku.moe
 185.71.138.138   # wikimedia-dns.org
-185.93.1.245     # doh1.b-cdn.net
-185.95.218.42    # dns.digitale-gesellschaft.ch
-185.95.218.43    # dns.digitale-gesellschaft.ch
+185.95.218.42    # dns.digitale-gesellschaft.ch, dns1.digitale-gesellschaft.ch
+185.95.218.43    # dns.digitale-gesellschaft.ch, dns2.digitale-gesellschaft.ch
 185.95.219.170   # resolv1.trash.net
 185.95.219.171   # resolv2.trash.net
 185.95.219.173   # resolv3.trash.net
@@ -1096,7 +1066,6 @@
 185.183.159.34   # abel.waringer-atg.de
 185.184.223.150  # dns.foxyfy.net
 185.187.152.2    # adguard.ihatemy.live
-185.191.229.13   # dns.stevenz.net, doh.sz-dns.com
 185.194.53.22    # tll01.dnscry.pt
 185.194.94.71    # dns.circl.lu
 185.195.69.126   # dns.l337.site
@@ -1106,7 +1075,7 @@
 185.226.181.19   # opennic2.i2pd.xyz
 185.228.136.191  # dns1.techniverse.net
 185.228.168.9    # security-filter-dns.cleanbrowsing.org
-185.228.168.10   # adult-filter-dns.cleanbrowsing.org
+185.228.168.10   # adult-filter-dns.cleanbrowsing.org, doh.cleanbrowsing.org
 185.228.168.168  # doh.cleanbrowsing.org, family-filter-dns.cleanbrowsing.org
 185.231.100.57   # adg.tshost.no
 185.231.100.108  # dns.anon.no
@@ -1147,7 +1116,7 @@
 193.108.130.22   # adg.tshost.no
 193.112.16.45    # dns.b612.me
 193.112.107.80   # dns.b612.me
-193.142.58.115   # dns.foxyfy.net
+193.142.58.115   # dns.foxyfy.net, ro-bu.foxyfy.net
 193.142.58.137   # ro-buc-w-f-1.nashkan.net
 193.142.58.179   # ro-buc-w-p-1.nashkan.net
 193.180.80.1     # dns.blokada.org
@@ -1160,7 +1129,7 @@
 194.36.144.87    # morbitzer.de, www.morbitzer.de
 194.39.205.10    # muc01.dnscry.pt
 194.50.33.11     # doh.suche.org
-194.53.137.2     # dns.foxyfy.net
+194.53.137.2     # dns.foxyfy.net, es-ma.foxyfy.net
 194.55.13.76     # dns.clanless.ovh
 194.59.156.9     # adguard.bonis.de
 194.67.71.103    # adguard.oms-ctr.ru
@@ -1182,7 +1151,7 @@
 195.80.119.99    # dns.cert.ee
 195.80.119.101   # dns.cert.ee
 195.114.14.74    # syd02.dnscry.pt
-195.133.25.16    # dns.comss.one
+195.133.25.16    # dns.comss.one, router.comss.one
 195.201.21.251   # doh.zknt.org
 195.201.39.149   # dns.kerekes.xyz
 195.201.131.183  # dns.a47.me
@@ -1195,7 +1164,7 @@
 198.54.117.11    # safeservedns.com
 198.58.111.139   # us.doh.cloudveil.org
 198.140.141.46   # ams01.dnscry.pt
-198.180.150.12   # rgnet-iad.anycast.censurfridns.dk
+198.180.150.12   # rgnet-iad.anycast.censurfridns.dk, rgnet-iad.anycast.uncensoreddns.org
 198.199.103.49   # kiri.nonexiste.net
 198.251.67.7     # agh.fltn.us
 199.58.83.33     # dns.cmrg.net
@@ -1205,17 +1174,17 @@
 202.61.236.67    # nue01.dnscry.pt
 202.61.240.61    # adguard.pangerl.it
 202.70.133.124   # dns.gnb09.id
-202.172.26.36    # adguard.johanliebert.top, dns.edgeburnmedia.com
+202.172.26.36    # adguard.johanliebert.top, dns.edgeburnmedia.com, doh.armadillodns.net, hydra.plan9-ns1.com
 203.29.240.52    # dns.slinkyman.net
 203.29.241.76    # per.adfilter.net
 203.107.1.97     # httpdns-sc.aliyuncs.com
 203.107.1.100    # httpdns-sc.aliyuncs.com
 203.119.144.20   # alidns.com
-203.119.169.5    # alidns.com
+203.119.169.168  # alidns.com
 203.180.140.77   # iij.jp
 204.9.92.87      # adguard1.leadmon.net
 204.10.79.38     # doh.sunoaki.net
-204.12.237.197   # dns.furrix.zone, dns.marbledfennec.net
+204.12.237.197   # dns.furrix.zone, dns.marbledfennec.net, multi.dns.marbledfennec.net
 206.189.240.157  # dns.unx.io
 207.154.211.203  # adb.aadityakushwaha.com
 207.154.238.154  # dns.cloudtrust.solutions
@@ -1236,8 +1205,7 @@
 210.165.245.188  # dns.soldier.terumi.club
 212.18.0.5       # dns.mnet-online.de
 212.18.3.5       # dns.mnet-online.de
-212.32.255.111   # dns.propheci.xyz
-212.60.61.246    # doh.quickline.ch
+212.60.61.246    # doh.quickline.ch, dot.quickline.ch
 212.60.63.246    # doh.quickline.ch
 212.109.195.93   # dns.comss.one
 212.132.117.52   # dns.peb-schmidt.de
@@ -1264,7 +1232,9 @@
 216.238.80.219   # helios.plan9-dns.com
 216.245.140.20   # man01.dnscry.pt
 216.250.97.148   # hkg02.dnscry.pt
+217.0.43.50      # dns.telekom.de
 217.0.43.114     # dns.telekom.de
+217.0.43.146     # dns.telekom.de
 217.0.43.162     # dns.telekom.de
 217.69.4.29      # nsec.arnor.org
 217.70.184.38    # dns0.eu
@@ -1280,12 +1250,14 @@
 217.169.20.23    # dns.aa.net.uk
 217.197.91.153   # dns.artikel10.org
 217.255.211.79   # dns.reitmeier.me
+217.255.223.105  # dns.reitmeier.me
 218.75.4.130     # hshh.org
 220.77.190.196   # 1.dns.noridev.moe
 220.132.163.223  # dns.ares-taiwan.com
 220.135.223.18   # dns.david888.com
+220.143.4.252    # ihctw.synology.me
 220.143.30.159   # ihctw.synology.me
 221.131.165.165  # pdns.itxe.net
 222.99.114.172   # agh.printk.info
-223.5.5.5        # dns.alidns.com, dns006.alidns.com, dns016.alidns.com, dns023.alidns.com, dns039.alidns.com, dns041.alidns.com, dns042.alidns.com, dns044.alidns.com, dns08.alidns.com, dns27.alidns.com, dns4.alidns.com, dns40.alidns.com, dns42.alidns.com, dns44.alidns.com, dns57.alidns.com, dns7.alidns.com, dns8.alidns.com, dnsa.alidns.com, dnsaa.alidns.com, dnsag.alidns.com, dnsi.alidns.com, dnsk.alidns.com, dnsv.alidns.com, dnsz.alidns.com, ns004.alidns.com, ns007.alidns.com, ns010.alidns.com, ns011.alidns.com, ns019.alidns.com, ns022.alidns.com, ns023.alidns.com, ns026.alidns.com, ns034.alidns.com, ns048.alidns.com, ns060.alidns.com, ns10.alidns.com, ns3.alidns.com, ns32.alidns.com, ns33.alidns.com, ns64.alidns.com, nsao.alidns.com, vip006.alidns.com, vip009.alidns.com, vip014.alidns.com, vip029.alidns.com, vip032.alidns.com, vip042.alidns.com, vip062.alidns.com, vip08.alidns.com, vip15.alidns.com, vip41.alidns.com, vip49.alidns.com, vip53.alidns.com, vip57.alidns.com, vip61.alidns.com, vipab.alidns.com, vipak.alidns.com, vipar.alidns.com, vipau.alidns.com, vipq.alidns.com
-223.6.6.6        # dns.alidns.com, dns006.alidns.com, dns016.alidns.com, dns023.alidns.com, dns039.alidns.com, dns041.alidns.com, dns042.alidns.com, dns044.alidns.com, dns08.alidns.com, dns27.alidns.com, dns4.alidns.com, dns40.alidns.com, dns42.alidns.com, dns44.alidns.com, dns57.alidns.com, dns7.alidns.com, dns8.alidns.com, dnsa.alidns.com, dnsaa.alidns.com, dnsag.alidns.com, dnsi.alidns.com, dnsk.alidns.com, dnsv.alidns.com, dnsz.alidns.com, ns004.alidns.com, ns007.alidns.com, ns010.alidns.com, ns011.alidns.com, ns019.alidns.com, ns022.alidns.com, ns023.alidns.com, ns026.alidns.com, ns034.alidns.com, ns048.alidns.com, ns060.alidns.com, ns10.alidns.com, ns3.alidns.com, ns32.alidns.com, ns33.alidns.com, ns64.alidns.com, nsao.alidns.com, vip006.alidns.com, vip009.alidns.com, vip014.alidns.com, vip029.alidns.com, vip032.alidns.com, vip042.alidns.com, vip062.alidns.com, vip08.alidns.com, vip15.alidns.com, vip41.alidns.com, vip49.alidns.com, vip53.alidns.com, vip57.alidns.com, vip61.alidns.com, vipab.alidns.com, vipak.alidns.com, vipar.alidns.com, vipau.alidns.com, vipq.alidns.com
+223.5.5.5        # dns.alidns.com, dns001.alidns.com, dns002.alidns.com, dns003.alidns.com, dns004.alidns.com, dns005.alidns.com, dns006.alidns.com, dns007.alidns.com, dns008.alidns.com, dns009.alidns.com, dns01.alidns.com, dns010.alidns.com, dns011.alidns.com, dns012.alidns.com, dns013.alidns.com, dns014.alidns.com, dns015.alidns.com, dns016.alidns.com, dns017.alidns.com, dns018.alidns.com, dns019.alidns.com, dns02.alidns.com, dns020.alidns.com, dns021.alidns.com, dns022.alidns.com, dns023.alidns.com, dns024.alidns.com, dns025.alidns.com, dns026.alidns.com, dns027.alidns.com, dns028.alidns.com, dns029.alidns.com, dns03.alidns.com, dns030.alidns.com, dns031.alidns.com, dns032.alidns.com, dns033.alidns.com, dns034.alidns.com, dns035.alidns.com, dns036.alidns.com, dns037.alidns.com, dns038.alidns.com, dns039.alidns.com, dns04.alidns.com, dns040.alidns.com, dns041.alidns.com, dns042.alidns.com, dns043.alidns.com, dns044.alidns.com, dns045.alidns.com, dns046.alidns.com, dns047.alidns.com, dns048.alidns.com, dns049.alidns.com, dns05.alidns.com, dns050.alidns.com, dns051.alidns.com, dns052.alidns.com, dns053.alidns.com, dns054.alidns.com, dns055.alidns.com, dns056.alidns.com, dns057.alidns.com, dns058.alidns.com, dns059.alidns.com, dns06.alidns.com, dns060.alidns.com, dns061.alidns.com, dns062.alidns.com, dns063.alidns.com, dns064.alidns.com, dns07.alidns.com, dns08.alidns.com, dns09.alidns.com, dns1.alidns.com, dns10.alidns.com, dns11.alidns.com, dns12.alidns.com, dns13.alidns.com, dns14.alidns.com, dns15.alidns.com, dns16.alidns.com, dns17.alidns.com, dns18.alidns.com, dns19.alidns.com, dns2.alidns.com, dns20.alidns.com, dns21.alidns.com, dns22.alidns.com, dns23.alidns.com, dns24.alidns.com, dns25.alidns.com, dns26.alidns.com, dns27.alidns.com, dns28.alidns.com, dns29.alidns.com, dns3.alidns.com, dns30.alidns.com, dns31.alidns.com, dns32.alidns.com, dns33.alidns.com, dns34.alidns.com, dns35.alidns.com, dns36.alidns.com, dns37.alidns.com, dns38.alidns.com, dns39.alidns.com, dns4.alidns.com, dns40.alidns.com, dns41.alidns.com, dns42.alidns.com, dns43.alidns.com, dns44.alidns.com, dns45.alidns.com, dns46.alidns.com, dns47.alidns.com, dns48.alidns.com, dns49.alidns.com, dns5.alidns.com, dns50.alidns.com, dns51.alidns.com, dns52.alidns.com, dns53.alidns.com, dns54.alidns.com, dns55.alidns.com, dns56.alidns.com, dns57.alidns.com, dns58.alidns.com, dns59.alidns.com, dns6.alidns.com, dns60.alidns.com, dns61.alidns.com, dns62.alidns.com, dns63.alidns.com, dns64.alidns.com, dns7.alidns.com, dns8.alidns.com, dns9.alidns.com, dnsa.alidns.com, dnsaa.alidns.com, dnsab.alidns.com, dnsac.alidns.com, dnsad.alidns.com, dnsae.alidns.com, dnsaf.alidns.com, dnsag.alidns.com, dnsah.alidns.com, dnsai.alidns.com, dnsaj.alidns.com, dnsak.alidns.com, dnsal.alidns.com, dnsam.alidns.com, dnsan.alidns.com, dnsao.alidns.com, dnsap.alidns.com, dnsaq.alidns.com, dnsar.alidns.com, dnsas.alidns.com, dnsat.alidns.com, dnsau.alidns.com, dnsav.alidns.com, dnsaw.alidns.com, dnsax.alidns.com, dnsay.alidns.com, dnsb.alidns.com, dnsc.alidns.com, dnsd.alidns.com, dnse.alidns.com, dnsf.alidns.com, dnsg.alidns.com, dnsh.alidns.com, dnsi.alidns.com, dnsj.alidns.com, dnsk.alidns.com, dnsl.alidns.com, dnsm.alidns.com, dnsn.alidns.com, dnso.alidns.com, dnsp.alidns.com, dnsq.alidns.com, dnsr.alidns.com, dnss.alidns.com, dnst.alidns.com, dnsu.alidns.com, dnsv.alidns.com, dnsw.alidns.com, dnsx.alidns.com, dnsy.alidns.com, dnsz.alidns.com, ns.alidns.com, ns001.alidns.com, ns002.alidns.com, ns003.alidns.com, ns004.alidns.com, ns005.alidns.com, ns006.alidns.com, ns007.alidns.com, ns008.alidns.com, ns009.alidns.com, ns01.alidns.com, ns010.alidns.com, ns011.alidns.com, ns012.alidns.com, ns013.alidns.com, ns014.alidns.com, ns015.alidns.com, ns016.alidns.com, ns017.alidns.com, ns018.alidns.com, ns019.alidns.com, ns02.alidns.com, ns020.alidns.com, ns021.alidns.com, ns022.alidns.com, ns023.alidns.com, ns024.alidns.com, ns025.alidns.com, ns026.alidns.com, ns027.alidns.com, ns028.alidns.com, ns029.alidns.com, ns03.alidns.com, ns030.alidns.com, ns031.alidns.com, ns032.alidns.com, ns033.alidns.com, ns034.alidns.com, ns035.alidns.com, ns036.alidns.com, ns037.alidns.com, ns038.alidns.com, ns039.alidns.com, ns04.alidns.com, ns040.alidns.com, ns041.alidns.com, ns042.alidns.com, ns043.alidns.com, ns044.alidns.com, ns045.alidns.com, ns046.alidns.com, ns047.alidns.com, ns048.alidns.com, ns049.alidns.com, ns05.alidns.com, ns050.alidns.com, ns051.alidns.com, ns052.alidns.com, ns053.alidns.com, ns054.alidns.com, ns055.alidns.com, ns056.alidns.com, ns057.alidns.com, ns058.alidns.com, ns059.alidns.com, ns06.alidns.com, ns060.alidns.com, ns061.alidns.com, ns062.alidns.com, ns063.alidns.com, ns064.alidns.com, ns07.alidns.com, ns08.alidns.com, ns09.alidns.com, ns10.alidns.com, ns11.alidns.com, ns12.alidns.com, ns13.alidns.com, ns14.alidns.com, ns15.alidns.com, ns16.alidns.com, ns17.alidns.com, ns18.alidns.com, ns19.alidns.com, ns20.alidns.com, ns21.alidns.com, ns22.alidns.com, ns23.alidns.com, ns24.alidns.com, ns25.alidns.com, ns26.alidns.com, ns27.alidns.com, ns28.alidns.com, ns29.alidns.com, ns3.alidns.com, ns30.alidns.com, ns31.alidns.com, ns32.alidns.com, ns33.alidns.com, ns34.alidns.com, ns35.alidns.com, ns36.alidns.com, ns37.alidns.com, ns38.alidns.com, ns39.alidns.com, ns4.alidns.com, ns40.alidns.com, ns41.alidns.com, ns42.alidns.com, ns43.alidns.com, ns44.alidns.com, ns45.alidns.com, ns46.alidns.com, ns47.alidns.com, ns48.alidns.com, ns49.alidns.com, ns5.alidns.com, ns50.alidns.com, ns51.alidns.com, ns52.alidns.com, ns53.alidns.com, ns54.alidns.com, ns55.alidns.com, ns56.alidns.com, ns57.alidns.com, ns58.alidns.com, ns59.alidns.com, ns6.alidns.com, ns60.alidns.com, ns61.alidns.com, ns62.alidns.com, ns63.alidns.com, ns64.alidns.com, ns9.alidns.com, nsa.alidns.com, nsaa.alidns.com, nsab.alidns.com, nsac.alidns.com, nsad.alidns.com, nsae.alidns.com, nsaf.alidns.com, nsag.alidns.com, nsah.alidns.com, nsai.alidns.com, nsaj.alidns.com, nsak.alidns.com, nsal.alidns.com, nsam.alidns.com, nsan.alidns.com, nsao.alidns.com, nsap.alidns.com, nsaq.alidns.com, nsar.alidns.com, nsas.alidns.com, nsat.alidns.com, nsau.alidns.com, nsav.alidns.com, nsaw.alidns.com, nsax.alidns.com, nsay.alidns.com, nsb.alidns.com, nsc.alidns.com, nsd.alidns.com, nse.alidns.com, nsf.alidns.com, nsg.alidns.com, nsh.alidns.com, nsi.alidns.com, nsj.alidns.com, nsk.alidns.com, nsl.alidns.com, nsm.alidns.com, nsn.alidns.com, nso.alidns.com, nsp.alidns.com, nsq.alidns.com, nsr.alidns.com, nss.alidns.com, nst.alidns.com, nsu.alidns.com, nsv.alidns.com, nsw.alidns.com, nsx.alidns.com, nsy.alidns.com, nsz.alidns.com, vip.alidns.com, vip001.alidns.com, vip002.alidns.com, vip003.alidns.com, vip004.alidns.com, vip005.alidns.com, vip006.alidns.com, vip007.alidns.com, vip008.alidns.com, vip009.alidns.com, vip01.alidns.com, vip010.alidns.com, vip011.alidns.com, vip012.alidns.com, vip013.alidns.com, vip014.alidns.com, vip015.alidns.com, vip016.alidns.com, vip017.alidns.com, vip018.alidns.com, vip019.alidns.com, vip02.alidns.com, vip020.alidns.com, vip021.alidns.com, vip022.alidns.com, vip023.alidns.com, vip024.alidns.com, vip025.alidns.com, vip026.alidns.com, vip027.alidns.com, vip028.alidns.com, vip029.alidns.com, vip03.alidns.com, vip030.alidns.com, vip031.alidns.com, vip032.alidns.com, vip033.alidns.com, vip034.alidns.com, vip035.alidns.com, vip036.alidns.com, vip037.alidns.com, vip038.alidns.com, vip039.alidns.com, vip04.alidns.com, vip040.alidns.com, vip041.alidns.com, vip042.alidns.com, vip043.alidns.com, vip044.alidns.com, vip045.alidns.com, vip046.alidns.com, vip047.alidns.com, vip048.alidns.com, vip049.alidns.com, vip05.alidns.com, vip050.alidns.com, vip051.alidns.com, vip052.alidns.com, vip053.alidns.com, vip054.alidns.com, vip055.alidns.com, vip056.alidns.com, vip057.alidns.com, vip058.alidns.com, vip059.alidns.com, vip06.alidns.com, vip060.alidns.com, vip061.alidns.com, vip062.alidns.com, vip063.alidns.com, vip064.alidns.com, vip07.alidns.com, vip08.alidns.com, vip09.alidns.com, vip11.alidns.com, vip12.alidns.com, vip13.alidns.com, vip14.alidns.com, vip15.alidns.com, vip16.alidns.com, vip17.alidns.com, vip18.alidns.com, vip19.alidns.com, vip20.alidns.com, vip29.alidns.com, vip30.alidns.com, vip31.alidns.com, vip32.alidns.com, vip33.alidns.com, vip34.alidns.com, vip35.alidns.com, vip36.alidns.com, vip37.alidns.com, vip38.alidns.com, vip39.alidns.com, vip40.alidns.com, vip41.alidns.com, vip42.alidns.com, vip43.alidns.com, vip44.alidns.com, vip45.alidns.com, vip46.alidns.com, vip47.alidns.com, vip48.alidns.com, vip49.alidns.com, vip50.alidns.com, vip51.alidns.com, vip52.alidns.com, vip53.alidns.com, vip54.alidns.com, vip55.alidns.com, vip56.alidns.com, vip57.alidns.com, vip58.alidns.com, vip59.alidns.com, vip60.alidns.com, vip61.alidns.com, vip62.alidns.com, vip63.alidns.com, vip64.alidns.com, vipa.alidns.com, vipaa.alidns.com, vipab.alidns.com, vipac.alidns.com, vipad.alidns.com, vipae.alidns.com, vipaf.alidns.com, vipag.alidns.com, vipah.alidns.com, vipai.alidns.com, vipaj.alidns.com, vipak.alidns.com, vipal.alidns.com, vipam.alidns.com, vipan.alidns.com, vipao.alidns.com, vipap.alidns.com, vipaq.alidns.com, vipar.alidns.com, vipas.alidns.com, vipat.alidns.com, vipau.alidns.com, vipav.alidns.com, vipaw.alidns.com, vipax.alidns.com, vipay.alidns.com, vipb.alidns.com, vipc.alidns.com, vipd.alidns.com, vipe.alidns.com, vipf.alidns.com, vipg.alidns.com, viph.alidns.com, vipi.alidns.com, vipj.alidns.com, vipk.alidns.com, vipl.alidns.com, vipm.alidns.com, vipn.alidns.com, vipo.alidns.com, vipp.alidns.com, vipq.alidns.com, vipr.alidns.com, vips.alidns.com, vipt.alidns.com, vipu.alidns.com, vipv.alidns.com, vipw.alidns.com, vipx.alidns.com, vipy.alidns.com, vipz.alidns.com
+223.6.6.6        # dns.alidns.com, dns001.alidns.com, dns002.alidns.com, dns003.alidns.com, dns004.alidns.com, dns005.alidns.com, dns006.alidns.com, dns007.alidns.com, dns008.alidns.com, dns009.alidns.com, dns01.alidns.com, dns010.alidns.com, dns011.alidns.com, dns012.alidns.com, dns013.alidns.com, dns014.alidns.com, dns015.alidns.com, dns016.alidns.com, dns017.alidns.com, dns018.alidns.com, dns019.alidns.com, dns02.alidns.com, dns020.alidns.com, dns021.alidns.com, dns022.alidns.com, dns023.alidns.com, dns024.alidns.com, dns025.alidns.com, dns026.alidns.com, dns027.alidns.com, dns028.alidns.com, dns029.alidns.com, dns03.alidns.com, dns030.alidns.com, dns031.alidns.com, dns032.alidns.com, dns033.alidns.com, dns034.alidns.com, dns035.alidns.com, dns036.alidns.com, dns037.alidns.com, dns038.alidns.com, dns039.alidns.com, dns04.alidns.com, dns040.alidns.com, dns041.alidns.com, dns042.alidns.com, dns043.alidns.com, dns044.alidns.com, dns045.alidns.com, dns046.alidns.com, dns047.alidns.com, dns048.alidns.com, dns049.alidns.com, dns05.alidns.com, dns050.alidns.com, dns051.alidns.com, dns052.alidns.com, dns053.alidns.com, dns054.alidns.com, dns055.alidns.com, dns056.alidns.com, dns057.alidns.com, dns058.alidns.com, dns059.alidns.com, dns06.alidns.com, dns060.alidns.com, dns061.alidns.com, dns062.alidns.com, dns063.alidns.com, dns064.alidns.com, dns07.alidns.com, dns08.alidns.com, dns09.alidns.com, dns1.alidns.com, dns10.alidns.com, dns11.alidns.com, dns12.alidns.com, dns13.alidns.com, dns14.alidns.com, dns15.alidns.com, dns16.alidns.com, dns17.alidns.com, dns18.alidns.com, dns19.alidns.com, dns2.alidns.com, dns20.alidns.com, dns21.alidns.com, dns22.alidns.com, dns23.alidns.com, dns24.alidns.com, dns25.alidns.com, dns26.alidns.com, dns27.alidns.com, dns28.alidns.com, dns29.alidns.com, dns3.alidns.com, dns30.alidns.com, dns31.alidns.com, dns32.alidns.com, dns33.alidns.com, dns34.alidns.com, dns35.alidns.com, dns36.alidns.com, dns37.alidns.com, dns38.alidns.com, dns39.alidns.com, dns4.alidns.com, dns40.alidns.com, dns41.alidns.com, dns42.alidns.com, dns43.alidns.com, dns44.alidns.com, dns45.alidns.com, dns46.alidns.com, dns47.alidns.com, dns48.alidns.com, dns49.alidns.com, dns5.alidns.com, dns50.alidns.com, dns51.alidns.com, dns52.alidns.com, dns53.alidns.com, dns54.alidns.com, dns55.alidns.com, dns56.alidns.com, dns57.alidns.com, dns58.alidns.com, dns59.alidns.com, dns6.alidns.com, dns60.alidns.com, dns61.alidns.com, dns62.alidns.com, dns63.alidns.com, dns64.alidns.com, dns7.alidns.com, dns8.alidns.com, dns9.alidns.com, dnsa.alidns.com, dnsaa.alidns.com, dnsab.alidns.com, dnsac.alidns.com, dnsad.alidns.com, dnsae.alidns.com, dnsaf.alidns.com, dnsag.alidns.com, dnsah.alidns.com, dnsai.alidns.com, dnsaj.alidns.com, dnsak.alidns.com, dnsal.alidns.com, dnsam.alidns.com, dnsan.alidns.com, dnsao.alidns.com, dnsap.alidns.com, dnsaq.alidns.com, dnsar.alidns.com, dnsas.alidns.com, dnsat.alidns.com, dnsau.alidns.com, dnsav.alidns.com, dnsaw.alidns.com, dnsax.alidns.com, dnsay.alidns.com, dnsb.alidns.com, dnsc.alidns.com, dnsd.alidns.com, dnse.alidns.com, dnsf.alidns.com, dnsg.alidns.com, dnsh.alidns.com, dnsi.alidns.com, dnsj.alidns.com, dnsk.alidns.com, dnsl.alidns.com, dnsm.alidns.com, dnsn.alidns.com, dnso.alidns.com, dnsp.alidns.com, dnsq.alidns.com, dnsr.alidns.com, dnss.alidns.com, dnst.alidns.com, dnsu.alidns.com, dnsv.alidns.com, dnsw.alidns.com, dnsx.alidns.com, dnsy.alidns.com, dnsz.alidns.com, ns.alidns.com, ns001.alidns.com, ns002.alidns.com, ns003.alidns.com, ns004.alidns.com, ns005.alidns.com, ns006.alidns.com, ns007.alidns.com, ns008.alidns.com, ns009.alidns.com, ns01.alidns.com, ns010.alidns.com, ns011.alidns.com, ns012.alidns.com, ns013.alidns.com, ns014.alidns.com, ns015.alidns.com, ns016.alidns.com, ns017.alidns.com, ns018.alidns.com, ns019.alidns.com, ns02.alidns.com, ns020.alidns.com, ns021.alidns.com, ns022.alidns.com, ns023.alidns.com, ns024.alidns.com, ns025.alidns.com, ns026.alidns.com, ns027.alidns.com, ns028.alidns.com, ns029.alidns.com, ns03.alidns.com, ns030.alidns.com, ns031.alidns.com, ns032.alidns.com, ns033.alidns.com, ns034.alidns.com, ns035.alidns.com, ns036.alidns.com, ns037.alidns.com, ns038.alidns.com, ns039.alidns.com, ns04.alidns.com, ns040.alidns.com, ns041.alidns.com, ns042.alidns.com, ns043.alidns.com, ns044.alidns.com, ns045.alidns.com, ns046.alidns.com, ns047.alidns.com, ns048.alidns.com, ns049.alidns.com, ns05.alidns.com, ns050.alidns.com, ns051.alidns.com, ns052.alidns.com, ns053.alidns.com, ns054.alidns.com, ns055.alidns.com, ns056.alidns.com, ns057.alidns.com, ns058.alidns.com, ns059.alidns.com, ns06.alidns.com, ns060.alidns.com, ns061.alidns.com, ns062.alidns.com, ns063.alidns.com, ns064.alidns.com, ns07.alidns.com, ns08.alidns.com, ns09.alidns.com, ns10.alidns.com, ns11.alidns.com, ns12.alidns.com, ns13.alidns.com, ns14.alidns.com, ns15.alidns.com, ns16.alidns.com, ns17.alidns.com, ns18.alidns.com, ns19.alidns.com, ns20.alidns.com, ns21.alidns.com, ns22.alidns.com, ns23.alidns.com, ns24.alidns.com, ns25.alidns.com, ns26.alidns.com, ns27.alidns.com, ns28.alidns.com, ns29.alidns.com, ns3.alidns.com, ns30.alidns.com, ns31.alidns.com, ns32.alidns.com, ns33.alidns.com, ns34.alidns.com, ns35.alidns.com, ns36.alidns.com, ns37.alidns.com, ns38.alidns.com, ns39.alidns.com, ns4.alidns.com, ns40.alidns.com, ns41.alidns.com, ns42.alidns.com, ns43.alidns.com, ns44.alidns.com, ns45.alidns.com, ns46.alidns.com, ns47.alidns.com, ns48.alidns.com, ns49.alidns.com, ns5.alidns.com, ns50.alidns.com, ns51.alidns.com, ns52.alidns.com, ns53.alidns.com, ns54.alidns.com, ns55.alidns.com, ns56.alidns.com, ns57.alidns.com, ns58.alidns.com, ns59.alidns.com, ns6.alidns.com, ns60.alidns.com, ns61.alidns.com, ns62.alidns.com, ns63.alidns.com, ns64.alidns.com, ns9.alidns.com, nsa.alidns.com, nsaa.alidns.com, nsab.alidns.com, nsac.alidns.com, nsad.alidns.com, nsae.alidns.com, nsaf.alidns.com, nsag.alidns.com, nsah.alidns.com, nsai.alidns.com, nsaj.alidns.com, nsak.alidns.com, nsal.alidns.com, nsam.alidns.com, nsan.alidns.com, nsao.alidns.com, nsap.alidns.com, nsaq.alidns.com, nsar.alidns.com, nsas.alidns.com, nsat.alidns.com, nsau.alidns.com, nsav.alidns.com, nsaw.alidns.com, nsax.alidns.com, nsay.alidns.com, nsb.alidns.com, nsc.alidns.com, nsd.alidns.com, nse.alidns.com, nsf.alidns.com, nsg.alidns.com, nsh.alidns.com, nsi.alidns.com, nsj.alidns.com, nsk.alidns.com, nsl.alidns.com, nsm.alidns.com, nsn.alidns.com, nso.alidns.com, nsp.alidns.com, nsq.alidns.com, nsr.alidns.com, nss.alidns.com, nst.alidns.com, nsu.alidns.com, nsv.alidns.com, nsw.alidns.com, nsx.alidns.com, nsy.alidns.com, nsz.alidns.com, vip.alidns.com, vip001.alidns.com, vip002.alidns.com, vip003.alidns.com, vip004.alidns.com, vip005.alidns.com, vip006.alidns.com, vip007.alidns.com, vip008.alidns.com, vip009.alidns.com, vip01.alidns.com, vip010.alidns.com, vip011.alidns.com, vip012.alidns.com, vip013.alidns.com, vip014.alidns.com, vip015.alidns.com, vip016.alidns.com, vip017.alidns.com, vip018.alidns.com, vip019.alidns.com, vip02.alidns.com, vip020.alidns.com, vip021.alidns.com, vip022.alidns.com, vip023.alidns.com, vip024.alidns.com, vip025.alidns.com, vip026.alidns.com, vip027.alidns.com, vip028.alidns.com, vip029.alidns.com, vip03.alidns.com, vip030.alidns.com, vip031.alidns.com, vip032.alidns.com, vip033.alidns.com, vip034.alidns.com, vip035.alidns.com, vip036.alidns.com, vip037.alidns.com, vip038.alidns.com, vip039.alidns.com, vip04.alidns.com, vip040.alidns.com, vip041.alidns.com, vip042.alidns.com, vip043.alidns.com, vip044.alidns.com, vip045.alidns.com, vip046.alidns.com, vip047.alidns.com, vip048.alidns.com, vip049.alidns.com, vip05.alidns.com, vip050.alidns.com, vip051.alidns.com, vip052.alidns.com, vip053.alidns.com, vip054.alidns.com, vip055.alidns.com, vip056.alidns.com, vip057.alidns.com, vip058.alidns.com, vip059.alidns.com, vip06.alidns.com, vip060.alidns.com, vip061.alidns.com, vip062.alidns.com, vip063.alidns.com, vip064.alidns.com, vip07.alidns.com, vip08.alidns.com, vip09.alidns.com, vip11.alidns.com, vip12.alidns.com, vip13.alidns.com, vip14.alidns.com, vip15.alidns.com, vip16.alidns.com, vip17.alidns.com, vip18.alidns.com, vip19.alidns.com, vip20.alidns.com, vip29.alidns.com, vip30.alidns.com, vip31.alidns.com, vip32.alidns.com, vip33.alidns.com, vip34.alidns.com, vip35.alidns.com, vip36.alidns.com, vip37.alidns.com, vip38.alidns.com, vip39.alidns.com, vip40.alidns.com, vip41.alidns.com, vip42.alidns.com, vip43.alidns.com, vip44.alidns.com, vip45.alidns.com, vip46.alidns.com, vip47.alidns.com, vip48.alidns.com, vip49.alidns.com, vip50.alidns.com, vip51.alidns.com, vip52.alidns.com, vip53.alidns.com, vip54.alidns.com, vip55.alidns.com, vip56.alidns.com, vip57.alidns.com, vip58.alidns.com, vip59.alidns.com, vip60.alidns.com, vip61.alidns.com, vip62.alidns.com, vip63.alidns.com, vip64.alidns.com, vipa.alidns.com, vipaa.alidns.com, vipab.alidns.com, vipac.alidns.com, vipad.alidns.com, vipae.alidns.com, vipaf.alidns.com, vipag.alidns.com, vipah.alidns.com, vipai.alidns.com, vipaj.alidns.com, vipak.alidns.com, vipal.alidns.com, vipam.alidns.com, vipan.alidns.com, vipao.alidns.com, vipap.alidns.com, vipaq.alidns.com, vipar.alidns.com, vipas.alidns.com, vipat.alidns.com, vipau.alidns.com, vipav.alidns.com, vipaw.alidns.com, vipax.alidns.com, vipay.alidns.com, vipb.alidns.com, vipc.alidns.com, vipd.alidns.com, vipe.alidns.com, vipf.alidns.com, vipg.alidns.com, viph.alidns.com, vipi.alidns.com, vipj.alidns.com, vipk.alidns.com, vipl.alidns.com, vipm.alidns.com, vipn.alidns.com, vipo.alidns.com, vipp.alidns.com, vipq.alidns.com, vipr.alidns.com, vips.alidns.com, vipt.alidns.com, vipu.alidns.com, vipv.alidns.com, vipw.alidns.com, vipx.alidns.com, vipy.alidns.com, vipz.alidns.com
