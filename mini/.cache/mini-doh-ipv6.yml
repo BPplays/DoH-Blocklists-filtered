@@ -2,12 +2,12 @@
     host: public.dns.iij.jp
     addr: 2001:300::5
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800244094Z
+  time: 2026-08-25T01:19:19.304832849Z
 - line:
     host: public.dns.iij.jp
     addr: 2001:300::6
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800244444Z
+  time: 2026-08-25T01:19:19.30483315Z
 - line:
     host: ordns.he.net
     addr: 2001:470:20::2
@@ -17,7 +17,7 @@
     host: doh.xfinity.com
     addr: 2001:558:fd00:ca::5
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800244975Z
+  time: 2026-08-25T01:19:19.30483333Z
 - line:
     host: doh.xfinity.com
     addr: 2001:558:fd00:ca::a
@@ -27,7 +27,7 @@
     host: doh.cox.net
     addr: 2001:578:3f::30
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800245065Z
+  time: 2026-08-25T01:19:19.30483355Z
 - line:
     host: wikimedia-dns.org
     addr: 2001:67c:930::1
@@ -37,12 +37,12 @@
     host: odvr.nic.cz
     addr: 2001:148f:fffe::1
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800245386Z
+  time: 2026-08-25T01:19:19.304833621Z
 - line:
     host: odvr.nic.cz
     addr: 2001:148f:ffff::1
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800245456Z
+  time: 2026-08-25T01:19:19.304833831Z
 - line:
     host: chromium.dns.nextdns.io
     addr: 2001:19f0:5001:1faf:5400:2ff:fec8:7d49
@@ -56,15 +56,21 @@
         - firefox.dns.nextdns.io
   time: 2026-08-24T03:55:37.955749174Z
 - line:
+    host: chromium.dns.nextdns.io
+    addr: 2001:19f0:ac01:170:5400:2ff:fec8:72c8
+    extra_hosts:
+        - firefox.dns.nextdns.io
+  time: 2026-08-25T01:19:19.304833901Z
+- line:
     host: doh.quickline.ch
     addr: 2001:1a88:10:ffff::1
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800245706Z
+  time: 2026-08-25T01:19:19.304833961Z
 - line:
     host: doh.quickline.ch
     addr: 2001:1a88:10:ffff::2
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800245776Z
+  time: 2026-08-25T01:19:19.304834031Z
 - line:
     host: dns64.dns.google
     addr: 2001:4860:4860::64
@@ -84,6 +90,11 @@
         - google-public-dns-b.google.com
   time: 2026-08-24T21:30:44.800246007Z
 - line:
+    host: dns.google
+    addr: 2001:4860:4860::8844
+    extra_hosts: []
+  time: 2026-08-25T01:19:19.304834202Z
+- line:
     host: 8888.google
     addr: 2001:4860:4860::8888
     extra_hosts:
@@ -91,6 +102,12 @@
         - dns.google.com
         - google-public-dns-a.google.com
   time: 2026-08-24T21:30:44.800246077Z
+- line:
+    host: dns.google
+    addr: 2001:4860:4860::8888
+    extra_hosts:
+        - google-public-dns-a.google.com
+  time: 2026-08-25T01:19:19.304834272Z
 - line:
     host: dns.alidns.com
     addr: 2400:3200::1
@@ -639,17 +656,17 @@
         - vipx.alidns.com
         - vipy.alidns.com
         - vipz.alidns.com
-  time: 2026-08-24T21:30:44.800246147Z
+  time: 2026-08-25T01:19:19.304834332Z
 - line:
     host: vip21.alidns.com
     addr: 2400:3200:2000:10::1
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800246217Z
+  time: 2026-08-25T01:19:19.304834412Z
 - line:
     host: vip22.alidns.com
     addr: 2400:3200:2000:11::1
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800246287Z
+  time: 2026-08-25T01:19:19.304834472Z
 - line:
     host: dns.alidns.com
     addr: 2400:3200:baba::1
@@ -1198,7 +1215,7 @@
         - vipx.alidns.com
         - vipy.alidns.com
         - vipz.alidns.com
-  time: 2026-08-24T21:30:44.800246437Z
+  time: 2026-08-25T01:19:19.304834542Z
 - line:
     host: dns.bebasid.com
     addr: 2406:7540:1600:0:103:155:191:184
@@ -1219,108 +1236,108 @@
     host: vip1.alidns.com
     addr: 2408:4009:500::1
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800246648Z
+  time: 2026-08-25T01:19:19.304834602Z
 - line:
     host: vip2.alidns.com
     addr: 2408:4009:500::2
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800246718Z
+  time: 2026-08-25T01:19:19.304834672Z
 - line:
     host: vip23.alidns.com
     addr: 2408:4009:500::3
     extra_hosts:
         - vip3.alidns.com
-  time: 2026-08-24T21:30:44.800246788Z
+  time: 2026-08-25T01:19:19.304834733Z
 - line:
     host: vip24.alidns.com
     addr: 2408:4009:500::4
     extra_hosts:
         - vip4.alidns.com
-  time: 2026-08-24T21:30:44.800246868Z
+  time: 2026-08-25T01:19:19.304835063Z
 - line:
     host: vip25.alidns.com
     addr: 2408:4009:500::5
     extra_hosts:
         - vip5.alidns.com
-  time: 2026-08-24T21:30:44.800246938Z
+  time: 2026-08-25T01:19:19.304835133Z
 - line:
     host: vip26.alidns.com
     addr: 2408:4009:500::6
     extra_hosts:
         - vip6.alidns.com
-  time: 2026-08-24T21:30:44.800247008Z
+  time: 2026-08-25T01:19:19.304835193Z
 - line:
     host: vip27.alidns.com
     addr: 2408:4009:500::7
     extra_hosts:
         - vip7.alidns.com
-  time: 2026-08-24T21:30:44.800247078Z
+  time: 2026-08-25T01:19:19.304835264Z
 - line:
     host: vip28.alidns.com
     addr: 2408:4009:500::8
     extra_hosts:
         - vip8.alidns.com
-  time: 2026-08-24T21:30:44.800247148Z
+  time: 2026-08-25T01:19:19.304835334Z
 - line:
     host: ns1.alidns.com
     addr: 2408:4009:501::1
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800247219Z
+  time: 2026-08-25T01:19:19.304835394Z
 - line:
     host: ns2.alidns.com
     addr: 2408:4009:501::2
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800247289Z
+  time: 2026-08-25T01:19:19.304835464Z
 - line:
     host: ns7.alidns.com
     addr: 2408:4009:501::3
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800247359Z
+  time: 2026-08-25T01:19:19.304835534Z
 - line:
     host: ns8.alidns.com
     addr: 2408:4009:501::4
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800247429Z
+  time: 2026-08-25T01:19:19.304835594Z
 - line:
     host: vip9.alidns.com
     addr: 240b:4006::9
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800247499Z
+  time: 2026-08-25T01:19:19.304835664Z
 - line:
     host: vip10.alidns.com
     addr: 240b:4006::10
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800247579Z
+  time: 2026-08-25T01:19:19.304835725Z
 - line:
     host: doh-01.spectrum.com
     addr: 2600:6c7f:f000:202::7
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800248761Z
+  time: 2026-08-25T01:19:19.304835795Z
 - line:
     host: doh-02.spectrum.com
     addr: 2600:6c7f:f000:202::8
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800248831Z
+  time: 2026-08-25T01:19:19.304835865Z
 - line:
     host: doh-03.spectrum.com
     addr: 2600:6c7f:f000:202::9
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800248901Z
+  time: 2026-08-25T01:19:19.304835925Z
 - line:
     host: doh.dns.sb
     addr: 2602:ffbb:100:4::2
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800248971Z
+  time: 2026-08-25T01:19:19.304835995Z
 - line:
     host: cloudflare-dns.com
     addr: 2606:4700::6810:f8f9
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800249041Z
+  time: 2026-08-25T01:19:19.304836055Z
 - line:
     host: cloudflare-dns.com
     addr: 2606:4700::6810:f9f9
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800249111Z
+  time: 2026-08-25T01:19:19.304836125Z
 - line:
     host: tor.cloudflare-dns.com
     addr: 2606:4700::6812:1cbe
@@ -1381,84 +1398,84 @@
     host: dns30.quad9.net
     addr: 2620:0:871:9000::58
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800249893Z
+  time: 2026-08-25T01:19:19.304836937Z
 - line:
     host: dns.quad9.net
     addr: 2620:fe::9
     extra_hosts:
         - dns9.quad9.net
-  time: 2026-08-24T21:30:44.800249963Z
+  time: 2026-08-25T01:19:19.304837007Z
 - line:
     host: dns-nosec.quad9.net
     addr: 2620:fe::10
     extra_hosts:
         - dns10.quad9.net
-  time: 2026-08-24T21:30:44.800250033Z
+  time: 2026-08-25T01:19:19.304837067Z
 - line:
     host: dns11.quad9.net
     addr: 2620:fe::11
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250113Z
+  time: 2026-08-25T01:19:19.304837137Z
 - line:
     host: dns12.quad9.net
     addr: 2620:fe::12
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250183Z
+  time: 2026-08-25T01:19:19.304837197Z
 - line:
     host: dns13.quad9.net
     addr: 2620:fe::13
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250253Z
+  time: 2026-08-25T01:19:19.304837267Z
 - line:
     host: dns.quad9.net
     addr: 2620:fe::fe
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250323Z
+  time: 2026-08-25T01:19:19.304837328Z
 - line:
     host: dns9.quad9.net
     addr: 2620:fe::fe:9
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250393Z
+  time: 2026-08-25T01:19:19.304837398Z
 - line:
     host: dns10.quad9.net
     addr: 2620:fe::fe:10
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250463Z
+  time: 2026-08-25T01:19:19.304837468Z
 - line:
     host: dns11.quad9.net
     addr: 2620:fe::fe:11
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250534Z
+  time: 2026-08-25T01:19:19.304837528Z
 - line:
     host: dns12.quad9.net
     addr: 2620:fe::fe:12
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250604Z
+  time: 2026-08-25T01:19:19.304837598Z
 - line:
     host: dns13.quad9.net
     addr: 2620:fe::fe:13
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250674Z
+  time: 2026-08-25T01:19:19.304837658Z
 - line:
     host: dns.opendns.com
     addr: 2620:119:35::35
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250744Z
+  time: 2026-08-25T01:19:19.304837728Z
 - line:
     host: dns.opendns.com
     addr: 2620:119:53::53
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250814Z
+  time: 2026-08-25T01:19:19.304837788Z
 - line:
     host: doh.opendns.com
     addr: 2620:119:fc::2
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250894Z
+  time: 2026-08-25T01:19:19.304837858Z
 - line:
     host: doh.familyshield.opendns.com
     addr: 2620:119:fc::3
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800250964Z
+  time: 2026-08-25T01:19:19.304837918Z
 - line:
     host: doh.dns.apple.com
     addr: 2620:149:9c9::111
@@ -1573,7 +1590,7 @@
     host: odoh.cloudflare-dns.com
     addr: 2803:f800:54::1
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800252446Z
+  time: 2026-08-25T01:19:19.304837989Z
 - line:
     host: dooh.cloudflare-dns.com
     addr: 2803:f800:54::2
@@ -1605,12 +1622,12 @@
     host: dns.levonet.sk
     addr: 2a02:6ca3:0:1::2
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800252727Z
+  time: 2026-08-25T01:19:19.304838059Z
 - line:
     host: dns.levonet.sk
     addr: 2a02:6ca3:0:2::2
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800252797Z
+  time: 2026-08-25T01:19:19.304838119Z
 - line:
     host: chrome.cloudflare-dns.com
     addr: 2a06:98c1:52::3
@@ -1635,7 +1652,7 @@
     host: odoh.cloudflare-dns.com
     addr: 2a06:98c1:53::1
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800253158Z
+  time: 2026-08-25T01:19:19.304838189Z
 - line:
     host: dooh.cloudflare-dns.com
     addr: 2a06:98c1:53::2
@@ -1661,12 +1678,12 @@
     host: base.dns.mullvad.net
     addr: 2a07:e340::4
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800253508Z
+  time: 2026-08-25T01:19:19.304838249Z
 - line:
     host: extended.dns.mullvad.net
     addr: 2a07:e340::5
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800253578Z
+  time: 2026-08-25T01:19:19.304838319Z
 - line:
     host: family.dns.mullvad.net
     addr: 2a07:e340::6
@@ -1676,12 +1693,12 @@
     host: all.dns.mullvad.net
     addr: 2a07:e340::9
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800253728Z
+  time: 2026-08-25T01:19:19.304838379Z
 - line:
     host: max.rethinkdns.com
     addr: 2a09:8280:1::1:7432
     extra_hosts: []
-  time: 2026-08-24T21:30:44.800253798Z
+  time: 2026-08-25T01:19:19.30483845Z
 - line:
     host: chromium.dns.nextdns.io
     addr: 2a0b:4341:b02:166:5054:ff:fe53:ab1
@@ -1706,6 +1723,12 @@
     extra_hosts:
         - firefox.dns.nextdns.io
   time: 2026-08-24T12:53:04.542254532Z
+- line:
+    host: chromium.dns.nextdns.io
+    addr: 2a0e:6901:410:25:5054:ff:fe1c:7c81
+    extra_hosts:
+        - firefox.dns.nextdns.io
+  time: 2026-08-25T01:19:19.30483851Z
 - line:
     host: chromium.dns.nextdns.io
     addr: 2a0f:3b03:100:2:5054:ff:fe90:4a77
