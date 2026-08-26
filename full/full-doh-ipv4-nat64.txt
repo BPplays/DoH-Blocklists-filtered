@@ -5,7 +5,7 @@
 64:ff9b:1::101:102                       # security.cloudflare-dns.com
 64:ff9b:1::101:103                       # family.cloudflare-dns.com
 64:ff9b:1::10a:a0a                       # dns.nic.in
-64:ff9b:1::10c:c0c                       # dns.pub
+64:ff9b:1::10c:c0c                       # dns.pub, doh.pub, dot.pub
 64:ff9b:1::122:2e5c                      # doh.killtw.im
 64:ff9b:1::1e6:d11a                      # agh.kyusang.win
 64:ff9b:1::22d:c3ed                      # block.abstergo.it
@@ -27,7 +27,6 @@
 64:ff9b:1::598:821b                      # dns.pesaventofilippo.com
 64:ff9b:1::5a0:7569                      # doh.abraservice.xyz
 64:ff9b:1::5a1:2bc5                      # chromium.dns.nextdns.io, dns.nextdns.io
-64:ff9b:1::5a1:c216                      # adguard.ihatemy.live
 64:ff9b:1::5af:b4ab                      # dus01.dnscry.pt
 64:ff9b:1::5b4:3b25                      # nsc.torgues.net
 64:ff9b:1::5c4:4a4c                      # dns.mh4ckt3mh4ckt1c4s.xyz
@@ -46,7 +45,7 @@
 64:ff9b:1::8d4:5d07                      # vip7.alidns.com
 64:ff9b:1::8d4:5d08                      # vip8.alidns.com
 64:ff9b:1::909:909                       # dns.quad9.net, dns9.quad9.net
-64:ff9b:1::909:90a                       # dns-nosec.quad9.net
+64:ff9b:1::909:90a                       # dns-nosec.quad9.net, dns10.quad9.net
 64:ff9b:1::909:90b                       # dns11.quad9.net
 64:ff9b:1::909:90c                       # dns12.quad9.net
 64:ff9b:1::909:90d                       # dns13.quad9.net
@@ -145,6 +144,7 @@
 64:ff9b:1::25dd:c25f                     # dns.neeb.it
 64:ff9b:1::25e4:81a0                     # hel01.dnscry.pt
 64:ff9b:1::25eb:315f                     # doh.azoris.ovh
+64:ff9b:1::25fc:e699                     # dns2.nextdns.io
 64:ff9b:1::2620:6e3a                     # doh1.b-cdn.net, doh2.b-cdn.net
 64:ff9b:1::262f:b473                     # dns.glorydns.com
 64:ff9b:1::266b:e873                     # ada.openbld.net
@@ -169,9 +169,9 @@
 64:ff9b:1::2b9a:9aa2                     # dns.flymc.cc
 64:ff9b:1::2ba1:e005                     # blog.kimiblock.top
 64:ff9b:1::2ba1:fea2                     # blog.kimiblock.top
-64:ff9b:1::2ba9:d7c                      # edns.233py.com, i.233py.com
+64:ff9b:1::2ba9:d7c                      # edns.233py.com, i.233py.com, ndns.233py.com
 64:ff9b:1::2ba9:e7c                      # edns.233py.com, i.233py.com
-64:ff9b:1::2ba9:f7c                      # dns.233py.com
+64:ff9b:1::2ba9:f7c                      # dns.233py.com, i.233py.com
 64:ff9b:1::2bae:f621                     # doh.totoro.pub
 64:ff9b:1::2bae:f721                     # doh.totoro.pub
 64:ff9b:1::2be0:b489                     # bne01.dnscry.pt
@@ -192,7 +192,7 @@
 64:ff9b:1::2d43:5484                     # lon01.dnscry.pt
 64:ff9b:1::2d43:55db                     # rdd01.dnscry.pt
 64:ff9b:1::2d43:dbd0                     # doh.la.ahadns.net, dot.la.ahadns.net
-64:ff9b:1::2d4c:1535                     # chromium.dns.nextdns.io
+64:ff9b:1::2d4c:1535                     # chromium.dns.nextdns.io, dns1.nextdns.io
 64:ff9b:1::2d4c:711f                     # doh-2.seby.io, doh.seby.io, dot.seby.io
 64:ff9b:1::2d4d:19fd                     # doh003.280blocker.net
 64:ff9b:1::2d4d:1f43                     # at.pzhg.me
@@ -289,12 +289,12 @@
 64:ff9b:1::310c:e6ea                     # chaos-system.de
 64:ff9b:1::310d:3cec                     # adguard.kiboko.it
 64:ff9b:1::310d:5f7d                     # de-fsn-w-p-1.nashkan.net
-64:ff9b:1::31d4:c624                     # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com
-64:ff9b:1::31d4:c633                     # catchen121299.top, dns.daarrk.tech, kx-97795-tr.xyz
-64:ff9b:1::31d4:c634                     # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech, do-39574-tr.xyz, hfgx.shop, myatris.sbs, xholgm.top
-64:ff9b:1::31d4:cf33                     # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link, dns.mathewakhil.online
-64:ff9b:1::31d4:eb22                     # dns.auapi.fun, paradise-human.shop, v2.xx3210766.live
-64:ff9b:1::31d4:eb2c                     # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top, dns.vod11.xyz, doh.sublime9.xyz, lifeisa.live, pepetio.xyz
+64:ff9b:1::31d4:c624                     # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com, dns.wibenson.cloud, externalmobiel.lekdijk.online, securedns.vendorvista.xyz, vpn.technicule.info
+64:ff9b:1::31d4:c633                     # catchen121299.top, dns.daarrk.tech, maqgie.xyz, tujenasnaszato.xyz
+64:ff9b:1::31d4:c634                     # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech, do-39574-tr.xyz
+64:ff9b:1::31d4:cf33                     # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link
+64:ff9b:1::31d4:eb22                     # dns.auapi.fun
+64:ff9b:1::31d4:eb2c                     # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top
 64:ff9b:1::31eb:4a74                     # dns.zzuhacker.cn
 64:ff9b:1::3274:3bfb                     # adguard.shoupperuser.com
 64:ff9b:1::334d:6a59                     # dns-privacy.puregeni.us
@@ -340,7 +340,6 @@
 64:ff9b:1::416c:3611                     # dns.anon.no
 64:ff9b:1::4221:3c22                     # arashi.net.eu.org
 64:ff9b:1::4221:3cc1                     # arashi.net.eu.org
-64:ff9b:1::4221:3cc2                     # arashi.net.eu.org
 64:ff9b:1::4237:9fba                     # dnswebvsn.com
 64:ff9b:1::423f:b17e                     # dns.stevenz.net, doh.sz-dns.com
 64:ff9b:1::429a:7667                     # renardbleu.dev
@@ -359,7 +358,7 @@
 64:ff9b:1::46fd:509e                     # dns.sarak.as, dns.sarakas.net
 64:ff9b:1::4713:f322                     # ag.ff0x.ca
 64:ff9b:1::4787:476                      # doh.aaaab3n.moe
-64:ff9b:1::4812:4d4d                     # dns.eddi.net, doh.eddi.net
+64:ff9b:1::4812:4d4d                     # dns.eddi.net
 64:ff9b:1::4812:d733                     # us-kan-w-p-1.nashkan.net
 64:ff9b:1::4a39:8053                     # adguard.jfchenier.ca
 64:ff9b:1::4a52:2a2a                     # ordns.he.net
@@ -371,11 +370,11 @@
 64:ff9b:1::4c4c:153d                     # arashi.net.eu.org
 64:ff9b:1::4c4c:155d                     # arashi.net.eu.org
 64:ff9b:1::4c4c:1562                     # arashi.net.eu.org
-64:ff9b:1::4c4c:157b                     # arashi.net.eu.org
+64:ff9b:1::4c4c:15a4                     # arashi.net.eu.org
 64:ff9b:1::4d44:1d3f                     # ahoj.email
 64:ff9b:1::4d44:32ef                     # dns.connect.fail
 64:ff9b:1::4d44:58dc                     # dns.kuuhaku.moe
-64:ff9b:1::4d58:801                      # common.dot.dns.yandex.net
+64:ff9b:1::4d58:801                      # common.dot.dns.yandex.net, secondary.dns.yandex.ru
 64:ff9b:1::4d58:802                      # safe.dot.dns.yandex.net, secondary.safe.dns.yandex.ru
 64:ff9b:1::4d58:803                      # family.dot.dns.yandex.net, secondary.family.dns.yandex.ru
 64:ff9b:1::4d58:807                      # family.dns.yandex.ru, family.dot.dns.yandex.net
@@ -409,7 +408,7 @@
 64:ff9b:1::5099:9269                     # doh.kekew.info
 64:ff9b:1::509c:91c9                     # dns.t53.de
 64:ff9b:1::50f9:90f5                     # dns.mihanentalpo.me
-64:ff9b:1::50f9:95b2                     # muxyuji.ru, www.muxyuji.ru
+64:ff9b:1::50f9:95b2                     # muxyuji.ru
 64:ff9b:1::50fe:4f9d                     # zrh1-ns01.monzoon.net
 64:ff9b:1::5182:6ffa                     # doh.bt.com
 64:ff9b:1::5182:6ffb                     # doh.bt.com
@@ -483,7 +482,7 @@
 64:ff9b:1::58c6:675b                     # dns.scarx.net
 64:ff9b:1::58c6:7316                     # ns.ral9005.org
 64:ff9b:1::58c6:7a9a                     # hard.dnsforge.de
-64:ff9b:1::58d0:e03c                     # ahoj.email, zakaria.website
+64:ff9b:1::58d0:e03c                     # ahoj.email
 64:ff9b:1::5920:2020                     # resolver.sunet.se
 64:ff9b:1::592b:ae0a                     # zdn.ro
 64:ff9b:1::5939:2dce                     # dns.farshidhakimy.de
@@ -530,9 +529,9 @@
 64:ff9b:1::5e17:4740                     # dns.clanto.cloud
 64:ff9b:1::5e82:87cb                     # dns.digitalsize.net
 64:ff9b:1::5e8c:e0e                      # dns.adguard-dns.com, dns.adguard.com
-64:ff9b:1::5e8c:e0f                      # dns-family.adguard.com, family.adguard-dns.com
+64:ff9b:1::5e8c:e0f                      # dns-family.adguard.com
 64:ff9b:1::5e8c:e31                      # d.adguard-dns.com
-64:ff9b:1::5e8c:e8c                      # dns-unfiltered.adguard.com
+64:ff9b:1::5e8c:e8c                      # dns-unfiltered.adguard.com, unfiltered.adguard-dns.com
 64:ff9b:1::5e8c:e8d                      # dns-unfiltered.adguard.com
 64:ff9b:1::5e8c:f0f                      # dns.adguard-dns.com, dns.adguard.com
 64:ff9b:1::5e8c:f10                      # dns-family.adguard.com
@@ -569,7 +568,7 @@
 64:ff9b:1::6506:606                      # dns.tuna.tsinghua.edu.cn
 64:ff9b:1::6522:e5c1                     # sukidayo.eu.org
 64:ff9b:1::6565:6565                     # dns.twnic.tw
-64:ff9b:1::65c6:c021                     # doh.360.cn, dot.360.cn
+64:ff9b:1::65c6:c021                     # doh.360.cn
 64:ff9b:1::65c6:c11d                     # doh.360.cn, dot.360.cn
 64:ff9b:1::65ec:452b                     # httpdns.meituan.com
 64:ff9b:1::6671:5baa                     # dns.yameenassotally.com
@@ -605,11 +604,11 @@
 64:ff9b:1::678d:9a03                     # dns.gi.co.id
 64:ff9b:1::6791:55f8                     # dns.mtoo.vip
 64:ff9b:1::6795:1c81                     # www.chungocoai.name.vn
-64:ff9b:1::6796:7464                     # dns.ningkelle.id, family.dns.ningkelle.id
+64:ff9b:1::6796:7464                     # dns.ningkelle.id
 64:ff9b:1::6796:bf54                     # dns.diarbagus.id
 64:ff9b:1::6797:8c8b                     # dns.repinger.com
 64:ff9b:1::679a:37a2                     # dns.iamanuragh.in
-64:ff9b:1::679b:bfb8                     # dns.bebasid.com, unfiltered.dns.bebasid.com
+64:ff9b:1::679b:bfb8                     # dns.bebasid.com
 64:ff9b:1::679b:bfe1                     # dns.caliph.dev
 64:ff9b:1::67a0:3ff2                     # dns.engineer.web.id
 64:ff9b:1::67a1:c4c4                     # dns.spil.co.id
@@ -632,7 +631,6 @@
 64:ff9b:1::6812:1cbe                     # tor.cloudflare-dns.com
 64:ff9b:1::6812:1dbe                     # tor.cloudflare-dns.com
 64:ff9b:1::6824:56b5                     # geg01.dnscry.pt
-64:ff9b:1::6880:3ead                     # doh.dns.sb
 64:ff9b:1::689c:9a0b                     # lax01.dnscry.pt
 64:ff9b:1::68a7:c787                     # ada.openbld.net
 64:ff9b:1::68ab:fc6f                     # adguard.easez.net
@@ -670,15 +668,14 @@
 64:ff9b:1::6dec:7702                     # dns.levonet.sk
 64:ff9b:1::6dec:7802                     # dns.levonet.sk
 64:ff9b:1::6dfa:c446                     # adguard.bitteeinbyte.de
+64:ff9b:1::6dfa:c448                     # adguard.bitteeinbyte.de
 64:ff9b:1::6dfa:c4d7                     # adguard.bitteeinbyte.de
 64:ff9b:1::6dfa:c522                     # adguard.bitteeinbyte.de
-64:ff9b:1::6dfa:c54e                     # adguard.bitteeinbyte.de
 64:ff9b:1::6dfa:cca9                     # area51.mywire.org
 64:ff9b:1::6dfa:cdbc                     # area51.mywire.org
 64:ff9b:1::6f14:fe23                     # opencdn.jomodns.com
 64:ff9b:1::6faa:6be                      # doh.18bit.cn
 64:ff9b:1::6faa:13b8                     # doh.18bit.cn
-64:ff9b:1::6feb:de64                     # dns.cwlys.com
 64:ff9b:1::704e:7ddd                     # himedns.com, sg.yepdns.com
 64:ff9b:1::7076:4f9a                     # dns.853852.xyz
 64:ff9b:1::70a3:ea3d                     # 2.dns.noridev.moe
@@ -702,10 +699,10 @@
 64:ff9b:1::74cb:70df                     # dns.sheggi.ch
 64:ff9b:1::74cb:8747                     # dns.roedel.cloud
 64:ff9b:1::74cc:c51b                     # dns.4-the.win
-64:ff9b:1::761b:7deb                     # dns.maolaohei.xyz, dns.warma.me, dns.xwdmw.xyz, draco.plan9-ns2.com, hkname.freecdn.one, jcdns.fun, lion.yazilimatolye.com, pashagame456.com, tlz.asia, vtcuong.site
+64:ff9b:1::761b:7deb                     # dns.maolaohei.xyz, dns.xwdmw.xyz, hkname.freecdn.one, tlz.asia
 64:ff9b:1::76a3:aa02                     # dns.tipsy.coffee
 64:ff9b:1::772d:73e4                     # doh.18bit.cn
-64:ff9b:1::7835:3535                     # dns.pub
+64:ff9b:1::7835:3535                     # dns.pub, doh.pub, dot.pub
 64:ff9b:1::784c:6b2d                     # ns1.alidns.com
 64:ff9b:1::784c:6b2e                     # ns2.alidns.com
 64:ff9b:1::784c:6b2f                     # ns7.alidns.com
@@ -734,7 +731,7 @@
 64:ff9b:1::82e1:f4a6                     # deic-lgb.anycast.censurfridns.dk, deic-lgb.anycast.uncensoreddns.org
 64:ff9b:1::82e2:a122                     # deic-ore.anycast.censurfridns.dk, deic-ore.anycast.uncensoreddns.org
 64:ff9b:1::85a7:d416                     # 3jjxxl.tech, callies-online.site, cloudbenders.fun, d2.shabi.icu, polisitogel.beauty
-64:ff9b:1::85a7:d419                     # 3dcosas.xyz, bestwon203.com, mendozasdelivery.com
+64:ff9b:1::85a7:d419                     # 3dcosas.xyz, bestwon203.com, dns.pernika.net, edgy-dns.com, family.dns.doubleangels.com, lukscasino-479-tr.xyz, lukscasino-929-tr.xyz, mendozasdelivery.com, tecdrive.site, tuskythehusky.tech
 64:ff9b:1::8666:1414                     # ines.zfn.uni-bremen.de
 64:ff9b:1::86a9:2239                     # doh.ibr.cs.tu-bs.de
 64:ff9b:1::86c3:580d                     # us-chi-w-p-1.nashkan.net
@@ -776,8 +773,8 @@
 64:ff9b:1::8c24:383                      # tienpham.id.vn
 64:ff9b:1::8c70:1dcf                     # doh.ntu.ssooss.win
 64:ff9b:1::8ccd:101                      # vip1.alidns.com, vip21.alidns.com
-64:ff9b:1::8ccd:102                      # vip2.alidns.com
-64:ff9b:1::8ccd:105                      # vip23.alidns.com, vip3.alidns.com
+64:ff9b:1::8ccd:102                      # vip2.alidns.com, vip22.alidns.com
+64:ff9b:1::8ccd:105                      # vip23.alidns.com
 64:ff9b:1::8ccd:106                      # vip24.alidns.com
 64:ff9b:1::8ccd:109                      # vip25.alidns.com, vip5.alidns.com
 64:ff9b:1::8ccd:10a                      # vip26.alidns.com, vip6.alidns.com
@@ -794,6 +791,7 @@
 64:ff9b:1::8e84:e641                     # dns.alvosec.com
 64:ff9b:1::8f14:c20                      # lis01.dnscry.pt
 64:ff9b:1::8fc6:acca                     # goose.buckyfan.net
+64:ff9b:1::8ff4:3cc1                     # doh1.b-cdn.net
 64:ff9b:1::8ff4:8020                     # in-blr.doh.sb
 64:ff9b:1::904c:87df                     # doh.wewitro.net
 64:ff9b:1::904c:c7b1                     # dns.comff.net
@@ -838,14 +836,14 @@
 64:ff9b:1::9570:7a1e                     # family.canadianshield.cira.ca
 64:ff9b:1::9570:9570                     # alpha-dns.quad9.net
 64:ff9b:1::95f8:24ea                     # chromium.dns.nextdns.io
-64:ff9b:1::95f8:d975                     # dns.dnswarden.com
-64:ff9b:1::966b:c81f                     # aqua.is.my.waifu.cz, darkness.is.my.waifu.cz, megumin.is.my.waifu.cz, yunyun.is.my.waifu.cz
+64:ff9b:1::95f8:d975                     # dns.dnswarden.com, doh.asia.dnswarden.com, doh.eu.dnswarden.com, doh.us.dnswarden.com, fr1.dnswarden.com, sg1.dnswarden.com
+64:ff9b:1::966b:c81f                     # aqua.is.my.waifu.cz, darkness.is.my.waifu.cz
 64:ff9b:1::9750:918f                     # dns.sstomp.nl
 64:ff9b:1::9791:c81e                     # dns.momou.ch
 64:ff9b:1::97f2:4ae7                     # jp-tyo-w-p-1.nashkan.net
 64:ff9b:1::97f3:de5e                     # jkt01.dnscry.pt
 64:ff9b:1::9835:f7f                      # jabber-germany.de, www.jabber-germany.de
-64:ff9b:1::9835:774c                     # masters-of-cloud.de
+64:ff9b:1::9835:774c                     # masters-of-cloud.de, www.masters-of-cloud.de
 64:ff9b:1::9835:8269                     # dns.datenquark.de
 64:ff9b:1::9835:82d2                     # dns.kapite.in
 64:ff9b:1::9835:ad24                     # dns.psociety.de
@@ -878,7 +876,7 @@
 64:ff9b:1::a077:fdd1                     # sa01.dns4me.net
 64:ff9b:1::a0fa:5f1c                     # dns.hakim.one
 64:ff9b:1::a0fa:e3c4                     # dns.bebasid.com
-64:ff9b:1::a0fb:4050                     # adg.rueiliu.space, dns.aaytorr.com, dns.guardmydns.com
+64:ff9b:1::a0fb:4050                     # dns.aaytorr.com, dns.guardmydns.com
 64:ff9b:1::a123:8803                     # doh-primary-pool.goodbyegambling.com
 64:ff9b:1::a181:2286                     # 5g.o0o.re
 64:ff9b:1::a213:e3fb                     # fezgate.ovh
@@ -966,15 +964,15 @@
 64:ff9b:1::ace9:3b62                     # dns.pccoach.nl
 64:ff9b:1::ace9:932a                     # adguard.hartley.cloud
 64:ff9b:1::ace9:ddf3                     # doh.archuser.org
-64:ff9b:1::acea:1be9                     # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
-64:ff9b:1::acee:ace4                     # alleesph.online
-64:ff9b:1::acee:b01f                     # alleesph.online
-64:ff9b:1::acef:31e8                     # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, gclouddns.com
-64:ff9b:1::acef:39e6                     # alleesph.online, wantaquddin.com, xorbiadns.com
-64:ff9b:1::acef:c143                     # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
+64:ff9b:1::acea:1be9                     # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, dnsnl-noads.alekberg.net, dnsnl.alekberg.net, dnsse-noads.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, gclouddns.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, sdns22.gkonuralp.com, tk31z.com
+64:ff9b:1::acee:ace4                     # alleesph.online, wantaquddin.com, xorbiadns.com
+64:ff9b:1::acee:b01f                     # alleesph.online, wantaquddin.com, xorbiadns.com
+64:ff9b:1::acef:31e8                     # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
+64:ff9b:1::acef:39e6                     # alleesph.online
+64:ff9b:1::acef:c143                     # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, dnsnl-noads.alekberg.net, dnsnl.alekberg.net, dnsse-noads.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, gclouddns.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, sdns22.gkonuralp.com, tk31z.com
 64:ff9b:1::ad14:a947                     # dns.cahlen.com
 64:ff9b:1::ad49:9fa4                     # dns.chilimac.net
-64:ff9b:1::add0:d4cd                     # dns.furrix.zone, dns.marbledfennec.net
+64:ff9b:1::add0:d4cd                     # dns.furrix.zone, dns.marbledfennec.net, multi.dns.marbledfennec.net
 64:ff9b:1::ade6:9571                     # dns.scott-smith.us
 64:ff9b:1::adf9:cdc6                     # phx01.dnscry.pt
 64:ff9b:1::adf9:d0f5                     # us-saj-w-p-1.nashkan.net
@@ -982,7 +980,7 @@
 64:ff9b:1::adff:c9fe                     # us1.blissdns.net
 64:ff9b:1::ae44:f84d                     # dohdot.coxlab.net
 64:ff9b:1::ae8a:1daf                     # doh.tiar.app, dot.tiar.app
-64:ff9b:1::af18:9a42                     # dns.rubyfish.cn, ea-dns.rubyfish.cn, uw-dns.rubyfish.cn
+64:ff9b:1::af18:9a42                     # dns.rubyfish.cn, ea-dns.rubyfish.cn
 64:ff9b:1::af8f:ed10                     # dns.surobe.com
 64:ff9b:1::b009:199e                     # dns.svoi.dev
 64:ff9b:1::b009:36db                     # de.dns.privex.io
@@ -992,15 +990,14 @@
 64:ff9b:1::b06f:dfa7                     # sjc01.dnscry.pt
 64:ff9b:1::b07b:a69                      # kiv01.dnscry.pt
 64:ff9b:1::b07b:a3c1                     # dns.petqa.ru
-64:ff9b:1::b093:f3a4                     # blockerads.multimediaconcept.fr
 64:ff9b:1::b0a4:9b83                     # dns.chadeyron.fr
 64:ff9b:1::b0a4:a6f5                     # dns.chadeyron.fr
-64:ff9b:1::b0a4:b10f                     # dns.chadeyron.fr
 64:ff9b:1::b0a4:b1c7                     # dns.chadeyron.fr
+64:ff9b:1::b0a4:b7bf                     # dns.chadeyron.fr
 64:ff9b:1::b214:2ad5                     # vd.i81.ru
 64:ff9b:1::b216:7a64                     # dns.shecan.ir
 64:ff9b:1::b221:7699                     # dns-1.wil.cloud, dns-2.wil.cloud
-64:ff9b:1::b269:1006                     # doh.42l.fr, doh.lacontrevoie.fr
+64:ff9b:1::b269:1006                     # doh.42l.fr
 64:ff9b:1::b280:e16d                     # tri-dns.net
 64:ff9b:1::b2a2:e40b                     # dns.keweon.center
 64:ff9b:1::b2a2:e40c                     # dns.keweon.center
@@ -1034,13 +1031,13 @@
 64:ff9b:1::b92f:ddc8                     # dns.kukal.cz
 64:ff9b:1::b931:8d26                     # getdnsapi.net
 64:ff9b:1::b933:c801                     # pro.shecan.ir
-64:ff9b:1::b933:c802                     # free.shecan.ir
+64:ff9b:1::b933:c802                     # dns.shecan.ir, free.shecan.ir
 64:ff9b:1::b940:4f05                     # doh.dns.sb, uk-lon.doh.sb
 64:ff9b:1::b945:a17a                     # dns.fancyorg.at
 64:ff9b:1::b946:90a                      # dns.kuuhaku.moe
 64:ff9b:1::b947:8a8a                     # wikimedia-dns.org
 64:ff9b:1::b95f:da2a                     # dns.digitale-gesellschaft.ch
-64:ff9b:1::b95f:da2b                     # dns.digitale-gesellschaft.ch, dns2.digitale-gesellschaft.ch
+64:ff9b:1::b95f:da2b                     # dns.digitale-gesellschaft.ch
 64:ff9b:1::b95f:dbaa                     # resolv1.trash.net
 64:ff9b:1::b95f:dbab                     # resolv2.trash.net
 64:ff9b:1::b95f:dbad                     # resolv3.trash.net
@@ -1068,11 +1065,11 @@
 64:ff9b:1::b9c3:457e                     # dns.l337.site
 64:ff9b:1::b9cf:7d64                     # omr01.dnscry.pt
 64:ff9b:1::b9de:9946                     # n5.lsasss.com
-64:ff9b:1::b9de:dede                     # dns.sb, doh.sb
+64:ff9b:1::b9de:dede                     # dns.sb, doh.sb, public-dns-a.dns.sb
 64:ff9b:1::b9e2:b513                     # opennic2.i2pd.xyz
 64:ff9b:1::b9e4:88bf                     # dns1.techniverse.net
 64:ff9b:1::b9e4:a809                     # security-filter-dns.cleanbrowsing.org
-64:ff9b:1::b9e4:a80a                     # adult-filter-dns.cleanbrowsing.org
+64:ff9b:1::b9e4:a80a                     # adult-filter-dns.cleanbrowsing.org, doh.cleanbrowsing.org
 64:ff9b:1::b9e4:a8a8                     # doh.cleanbrowsing.org, family-filter-dns.cleanbrowsing.org
 64:ff9b:1::b9e7:646c                     # dns.anon.no
 64:ff9b:1::b9ea:6227                     # timmes.nl
@@ -1125,7 +1122,7 @@
 64:ff9b:1::c224:9057                     # morbitzer.de, www.morbitzer.de
 64:ff9b:1::c227:cd0a                     # muc01.dnscry.pt
 64:ff9b:1::c232:210b                     # doh.suche.org
-64:ff9b:1::c235:8902                     # dns.foxyfy.net, es-ma.foxyfy.net
+64:ff9b:1::c235:8902                     # dns.foxyfy.net
 64:ff9b:1::c237:d4c                      # dns.clanless.ovh
 64:ff9b:1::c23b:9c09                     # adguard.bonis.de
 64:ff9b:1::c243:4767                     # adguard.oms-ctr.ru
@@ -1147,7 +1144,7 @@
 64:ff9b:1::c350:7763                     # dns.cert.ee
 64:ff9b:1::c350:7765                     # dns.cert.ee
 64:ff9b:1::c372:e4a                      # syd02.dnscry.pt
-64:ff9b:1::c385:1910                     # dns.comss.one, router.comss.one
+64:ff9b:1::c385:1910                     # dns.comss.one
 64:ff9b:1::c3c9:15fb                     # doh.zknt.org
 64:ff9b:1::c3c9:2795                     # dns.kerekes.xyz
 64:ff9b:1::c3c9:83b7                     # dns.a47.me
@@ -1171,7 +1168,7 @@
 64:ff9b:1::ca3d:ec43                     # nue01.dnscry.pt
 64:ff9b:1::ca3d:f03d                     # adguard.pangerl.it
 64:ff9b:1::ca46:857c                     # dns.gnb09.id
-64:ff9b:1::caac:1a24                     # adguard.johanliebert.top, dns.edgeburnmedia.com, doh.armadillodns.net, hydra.plan9-ns1.com
+64:ff9b:1::caac:1a24                     # adguard.johanliebert.top, dns.edgeburnmedia.com, hydra.plan9-ns1.com
 64:ff9b:1::cb1d:f034                     # dns.slinkyman.net
 64:ff9b:1::cb1d:f14c                     # per.adfilter.net
 64:ff9b:1::cb6b:161                      # httpdns-sc.aliyuncs.com
@@ -1190,7 +1187,7 @@
 64:ff9b:1::cff6:5760                     # kronos.plan9-dns.com
 64:ff9b:1::d043:dc02                     # sandbox.opendns.com
 64:ff9b:1::d043:dc7b                     # familyshield.opendns.com, resolver2-fs.opendns.com
-64:ff9b:1::d043:dcdc                     # dns.opendns.com, dns.umbrella.com, resolver2.opendns.com
+64:ff9b:1::d043:dcdc                     # dns.opendns.com
 64:ff9b:1::d043:de02                     # sandbox.opendns.com
 64:ff9b:1::d043:de7b                     # familyshield.opendns.com, resolver1-fs.opendns.com
 64:ff9b:1::d043:dede                     # dns.opendns.com
@@ -1202,7 +1199,7 @@
 64:ff9b:1::d412:5                        # dns.mnet-online.de
 64:ff9b:1::d412:305                      # dns.mnet-online.de
 64:ff9b:1::d43c:3df6                     # doh.quickline.ch, dot.quickline.ch
-64:ff9b:1::d43c:3ff6                     # doh.quickline.ch, dot.quickline.ch
+64:ff9b:1::d43c:3ff6                     # doh.quickline.ch
 64:ff9b:1::d46d:c35d                     # dns.comss.one
 64:ff9b:1::d484:7534                     # dns.peb-schmidt.de
 64:ff9b:1::d4b9:c819                     # dns1.conne.net
@@ -1249,11 +1246,10 @@
 64:ff9b:1::dc84:a3df                     # dns.ares-taiwan.com
 64:ff9b:1::dc87:df12                     # dns.david888.com
 64:ff9b:1::dc8f:4fc                      # ihctw.synology.me
-64:ff9b:1::dc8f:1e9f                     # ihctw.synology.me
 64:ff9b:1::dd83:a5a5                     # pdns.itxe.net
 64:ff9b:1::de63:72ac                     # agh.printk.info
-64:ff9b:1::df05:505                      # dns.alidns.com, dns002.alidns.com, dns008.alidns.com, dns031.alidns.com, dns038.alidns.com, dns040.alidns.com, dns051.alidns.com, dns32.alidns.com, dns49.alidns.com, dns50.alidns.com, dns51.alidns.com, dnsag.alidns.com, dnsax.alidns.com, dnsd.alidns.com, dnsl.alidns.com, ns.alidns.com, ns005.alidns.com, ns006.alidns.com, ns010.alidns.com, ns013.alidns.com, ns018.alidns.com, ns04.alidns.com, ns044.alidns.com, ns055.alidns.com, ns064.alidns.com, ns20.alidns.com, ns27.alidns.com, ns38.alidns.com, ns60.alidns.com, nsal.alidns.com, nsay.alidns.com, nsb.alidns.com, nsc.alidns.com, nsi.alidns.com, nsm.alidns.com, nsu.alidns.com, nsy.alidns.com, vip025.alidns.com, vip027.alidns.com, vip034.alidns.com, vip036.alidns.com, vip046.alidns.com, vip058.alidns.com, vip32.alidns.com, vip61.alidns.com, vipab.alidns.com, vipae.alidns.com, vipay.alidns.com, vipc.alidns.com, vipf.alidns.com, vipu.alidns.com
-64:ff9b:1::df06:606                      # dns.alidns.com, dns002.alidns.com, dns008.alidns.com, dns031.alidns.com, dns038.alidns.com, dns040.alidns.com, dns051.alidns.com, dns32.alidns.com, dns49.alidns.com, dns50.alidns.com, dns51.alidns.com, dnsag.alidns.com, dnsax.alidns.com, dnsd.alidns.com, dnsl.alidns.com, ns.alidns.com, ns005.alidns.com, ns006.alidns.com, ns010.alidns.com, ns013.alidns.com, ns018.alidns.com, ns04.alidns.com, ns044.alidns.com, ns055.alidns.com, ns064.alidns.com, ns20.alidns.com, ns27.alidns.com, ns38.alidns.com, ns60.alidns.com, nsal.alidns.com, nsay.alidns.com, nsb.alidns.com, nsc.alidns.com, nsi.alidns.com, nsm.alidns.com, nsu.alidns.com, nsy.alidns.com, vip025.alidns.com, vip027.alidns.com, vip034.alidns.com, vip036.alidns.com, vip046.alidns.com, vip058.alidns.com, vip32.alidns.com, vip61.alidns.com, vipab.alidns.com, vipae.alidns.com, vipay.alidns.com, vipc.alidns.com, vipf.alidns.com, vipu.alidns.com
+64:ff9b:1::df05:505                      # dns.alidns.com, dns004.alidns.com, dns025.alidns.com, dns04.alidns.com, dns051.alidns.com, dns056.alidns.com, dns07.alidns.com, dns1.alidns.com, dns19.alidns.com, dns39.alidns.com, dns50.alidns.com, dns58.alidns.com, dns9.alidns.com, dnsaf.alidns.com, dnsan.alidns.com, dnsh.alidns.com, dnsm.alidns.com, dnso.alidns.com, dnsw.alidns.com, ns02.alidns.com, ns029.alidns.com, ns032.alidns.com, ns035.alidns.com, ns046.alidns.com, ns23.alidns.com, ns30.alidns.com, ns31.alidns.com, ns43.alidns.com, ns53.alidns.com, ns54.alidns.com, nsk.alidns.com, nss.alidns.com, vip009.alidns.com, vip030.alidns.com, vip037.alidns.com, vip04.alidns.com, vip042.alidns.com, vip050.alidns.com, vip14.alidns.com, vip15.alidns.com, vip52.alidns.com, vip55.alidns.com, vipah.alidns.com, vipai.alidns.com, vipay.alidns.com, vipq.alidns.com
+64:ff9b:1::df06:606                      # dns.alidns.com, dns004.alidns.com, dns025.alidns.com, dns04.alidns.com, dns051.alidns.com, dns056.alidns.com, dns07.alidns.com, dns1.alidns.com, dns19.alidns.com, dns39.alidns.com, dns50.alidns.com, dns58.alidns.com, dns9.alidns.com, dnsaf.alidns.com, dnsan.alidns.com, dnsh.alidns.com, dnsm.alidns.com, dnso.alidns.com, dnsw.alidns.com, ns02.alidns.com, ns029.alidns.com, ns032.alidns.com, ns035.alidns.com, ns046.alidns.com, ns23.alidns.com, ns30.alidns.com, ns31.alidns.com, ns43.alidns.com, ns53.alidns.com, ns54.alidns.com, nsk.alidns.com, nss.alidns.com, vip009.alidns.com, vip030.alidns.com, vip037.alidns.com, vip04.alidns.com, vip042.alidns.com, vip050.alidns.com, vip14.alidns.com, vip15.alidns.com, vip52.alidns.com, vip55.alidns.com, vipah.alidns.com, vipai.alidns.com, vipay.alidns.com, vipq.alidns.com
 64:ff9b:1:abcd:0:5431:100:1              # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:100:2              # security.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:100:3              # family.cloudflare-dns.com
@@ -1261,7 +1257,7 @@
 64:ff9b:1:abcd:0:5431:101:102            # security.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:101:103            # family.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:10a:a0a            # dns.nic.in
-64:ff9b:1:abcd:0:5431:10c:c0c            # dns.pub
+64:ff9b:1:abcd:0:5431:10c:c0c            # dns.pub, doh.pub, dot.pub
 64:ff9b:1:abcd:0:5431:122:2e5c           # doh.killtw.im
 64:ff9b:1:abcd:0:5431:1e6:d11a           # agh.kyusang.win
 64:ff9b:1:abcd:0:5431:22d:c3ed           # block.abstergo.it
@@ -1283,7 +1279,6 @@
 64:ff9b:1:abcd:0:5431:598:821b           # dns.pesaventofilippo.com
 64:ff9b:1:abcd:0:5431:5a0:7569           # doh.abraservice.xyz
 64:ff9b:1:abcd:0:5431:5a1:2bc5           # chromium.dns.nextdns.io, dns.nextdns.io
-64:ff9b:1:abcd:0:5431:5a1:c216           # adguard.ihatemy.live
 64:ff9b:1:abcd:0:5431:5af:b4ab           # dus01.dnscry.pt
 64:ff9b:1:abcd:0:5431:5b4:3b25           # nsc.torgues.net
 64:ff9b:1:abcd:0:5431:5c4:4a4c           # dns.mh4ckt3mh4ckt1c4s.xyz
@@ -1302,7 +1297,7 @@
 64:ff9b:1:abcd:0:5431:8d4:5d07           # vip7.alidns.com
 64:ff9b:1:abcd:0:5431:8d4:5d08           # vip8.alidns.com
 64:ff9b:1:abcd:0:5431:909:909            # dns.quad9.net, dns9.quad9.net
-64:ff9b:1:abcd:0:5431:909:90a            # dns-nosec.quad9.net
+64:ff9b:1:abcd:0:5431:909:90a            # dns-nosec.quad9.net, dns10.quad9.net
 64:ff9b:1:abcd:0:5431:909:90b            # dns11.quad9.net
 64:ff9b:1:abcd:0:5431:909:90c            # dns12.quad9.net
 64:ff9b:1:abcd:0:5431:909:90d            # dns13.quad9.net
@@ -1401,6 +1396,7 @@
 64:ff9b:1:abcd:0:5431:25dd:c25f          # dns.neeb.it
 64:ff9b:1:abcd:0:5431:25e4:81a0          # hel01.dnscry.pt
 64:ff9b:1:abcd:0:5431:25eb:315f          # doh.azoris.ovh
+64:ff9b:1:abcd:0:5431:25fc:e699          # dns2.nextdns.io
 64:ff9b:1:abcd:0:5431:2620:6e3a          # doh1.b-cdn.net, doh2.b-cdn.net
 64:ff9b:1:abcd:0:5431:262f:b473          # dns.glorydns.com
 64:ff9b:1:abcd:0:5431:266b:e873          # ada.openbld.net
@@ -1425,9 +1421,9 @@
 64:ff9b:1:abcd:0:5431:2b9a:9aa2          # dns.flymc.cc
 64:ff9b:1:abcd:0:5431:2ba1:e005          # blog.kimiblock.top
 64:ff9b:1:abcd:0:5431:2ba1:fea2          # blog.kimiblock.top
-64:ff9b:1:abcd:0:5431:2ba9:d7c           # edns.233py.com, i.233py.com
+64:ff9b:1:abcd:0:5431:2ba9:d7c           # edns.233py.com, i.233py.com, ndns.233py.com
 64:ff9b:1:abcd:0:5431:2ba9:e7c           # edns.233py.com, i.233py.com
-64:ff9b:1:abcd:0:5431:2ba9:f7c           # dns.233py.com
+64:ff9b:1:abcd:0:5431:2ba9:f7c           # dns.233py.com, i.233py.com
 64:ff9b:1:abcd:0:5431:2bae:f621          # doh.totoro.pub
 64:ff9b:1:abcd:0:5431:2bae:f721          # doh.totoro.pub
 64:ff9b:1:abcd:0:5431:2be0:b489          # bne01.dnscry.pt
@@ -1448,7 +1444,7 @@
 64:ff9b:1:abcd:0:5431:2d43:5484          # lon01.dnscry.pt
 64:ff9b:1:abcd:0:5431:2d43:55db          # rdd01.dnscry.pt
 64:ff9b:1:abcd:0:5431:2d43:dbd0          # doh.la.ahadns.net, dot.la.ahadns.net
-64:ff9b:1:abcd:0:5431:2d4c:1535          # chromium.dns.nextdns.io
+64:ff9b:1:abcd:0:5431:2d4c:1535          # chromium.dns.nextdns.io, dns1.nextdns.io
 64:ff9b:1:abcd:0:5431:2d4c:711f          # doh-2.seby.io, doh.seby.io, dot.seby.io
 64:ff9b:1:abcd:0:5431:2d4d:19fd          # doh003.280blocker.net
 64:ff9b:1:abcd:0:5431:2d4d:1f43          # at.pzhg.me
@@ -1545,12 +1541,12 @@
 64:ff9b:1:abcd:0:5431:310c:e6ea          # chaos-system.de
 64:ff9b:1:abcd:0:5431:310d:3cec          # adguard.kiboko.it
 64:ff9b:1:abcd:0:5431:310d:5f7d          # de-fsn-w-p-1.nashkan.net
-64:ff9b:1:abcd:0:5431:31d4:c624          # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com
-64:ff9b:1:abcd:0:5431:31d4:c633          # catchen121299.top, dns.daarrk.tech, kx-97795-tr.xyz
-64:ff9b:1:abcd:0:5431:31d4:c634          # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech, do-39574-tr.xyz, hfgx.shop, myatris.sbs, xholgm.top
-64:ff9b:1:abcd:0:5431:31d4:cf33          # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link, dns.mathewakhil.online
-64:ff9b:1:abcd:0:5431:31d4:eb22          # dns.auapi.fun, paradise-human.shop, v2.xx3210766.live
-64:ff9b:1:abcd:0:5431:31d4:eb2c          # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top, dns.vod11.xyz, doh.sublime9.xyz, lifeisa.live, pepetio.xyz
+64:ff9b:1:abcd:0:5431:31d4:c624          # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com, dns.wibenson.cloud, externalmobiel.lekdijk.online, securedns.vendorvista.xyz, vpn.technicule.info
+64:ff9b:1:abcd:0:5431:31d4:c633          # catchen121299.top, dns.daarrk.tech, maqgie.xyz, tujenasnaszato.xyz
+64:ff9b:1:abcd:0:5431:31d4:c634          # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech, do-39574-tr.xyz
+64:ff9b:1:abcd:0:5431:31d4:cf33          # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link
+64:ff9b:1:abcd:0:5431:31d4:eb22          # dns.auapi.fun
+64:ff9b:1:abcd:0:5431:31d4:eb2c          # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top
 64:ff9b:1:abcd:0:5431:31eb:4a74          # dns.zzuhacker.cn
 64:ff9b:1:abcd:0:5431:3274:3bfb          # adguard.shoupperuser.com
 64:ff9b:1:abcd:0:5431:334d:6a59          # dns-privacy.puregeni.us
@@ -1596,7 +1592,6 @@
 64:ff9b:1:abcd:0:5431:416c:3611          # dns.anon.no
 64:ff9b:1:abcd:0:5431:4221:3c22          # arashi.net.eu.org
 64:ff9b:1:abcd:0:5431:4221:3cc1          # arashi.net.eu.org
-64:ff9b:1:abcd:0:5431:4221:3cc2          # arashi.net.eu.org
 64:ff9b:1:abcd:0:5431:4237:9fba          # dnswebvsn.com
 64:ff9b:1:abcd:0:5431:423f:b17e          # dns.stevenz.net, doh.sz-dns.com
 64:ff9b:1:abcd:0:5431:429a:7667          # renardbleu.dev
@@ -1615,7 +1610,7 @@
 64:ff9b:1:abcd:0:5431:46fd:509e          # dns.sarak.as, dns.sarakas.net
 64:ff9b:1:abcd:0:5431:4713:f322          # ag.ff0x.ca
 64:ff9b:1:abcd:0:5431:4787:476           # doh.aaaab3n.moe
-64:ff9b:1:abcd:0:5431:4812:4d4d          # dns.eddi.net, doh.eddi.net
+64:ff9b:1:abcd:0:5431:4812:4d4d          # dns.eddi.net
 64:ff9b:1:abcd:0:5431:4812:d733          # us-kan-w-p-1.nashkan.net
 64:ff9b:1:abcd:0:5431:4a39:8053          # adguard.jfchenier.ca
 64:ff9b:1:abcd:0:5431:4a52:2a2a          # ordns.he.net
@@ -1627,11 +1622,11 @@
 64:ff9b:1:abcd:0:5431:4c4c:153d          # arashi.net.eu.org
 64:ff9b:1:abcd:0:5431:4c4c:155d          # arashi.net.eu.org
 64:ff9b:1:abcd:0:5431:4c4c:1562          # arashi.net.eu.org
-64:ff9b:1:abcd:0:5431:4c4c:157b          # arashi.net.eu.org
+64:ff9b:1:abcd:0:5431:4c4c:15a4          # arashi.net.eu.org
 64:ff9b:1:abcd:0:5431:4d44:1d3f          # ahoj.email
 64:ff9b:1:abcd:0:5431:4d44:32ef          # dns.connect.fail
 64:ff9b:1:abcd:0:5431:4d44:58dc          # dns.kuuhaku.moe
-64:ff9b:1:abcd:0:5431:4d58:801           # common.dot.dns.yandex.net
+64:ff9b:1:abcd:0:5431:4d58:801           # common.dot.dns.yandex.net, secondary.dns.yandex.ru
 64:ff9b:1:abcd:0:5431:4d58:802           # safe.dot.dns.yandex.net, secondary.safe.dns.yandex.ru
 64:ff9b:1:abcd:0:5431:4d58:803           # family.dot.dns.yandex.net, secondary.family.dns.yandex.ru
 64:ff9b:1:abcd:0:5431:4d58:807           # family.dns.yandex.ru, family.dot.dns.yandex.net
@@ -1665,7 +1660,7 @@
 64:ff9b:1:abcd:0:5431:5099:9269          # doh.kekew.info
 64:ff9b:1:abcd:0:5431:509c:91c9          # dns.t53.de
 64:ff9b:1:abcd:0:5431:50f9:90f5          # dns.mihanentalpo.me
-64:ff9b:1:abcd:0:5431:50f9:95b2          # muxyuji.ru, www.muxyuji.ru
+64:ff9b:1:abcd:0:5431:50f9:95b2          # muxyuji.ru
 64:ff9b:1:abcd:0:5431:50fe:4f9d          # zrh1-ns01.monzoon.net
 64:ff9b:1:abcd:0:5431:5182:6ffa          # doh.bt.com
 64:ff9b:1:abcd:0:5431:5182:6ffb          # doh.bt.com
@@ -1739,7 +1734,7 @@
 64:ff9b:1:abcd:0:5431:58c6:675b          # dns.scarx.net
 64:ff9b:1:abcd:0:5431:58c6:7316          # ns.ral9005.org
 64:ff9b:1:abcd:0:5431:58c6:7a9a          # hard.dnsforge.de
-64:ff9b:1:abcd:0:5431:58d0:e03c          # ahoj.email, zakaria.website
+64:ff9b:1:abcd:0:5431:58d0:e03c          # ahoj.email
 64:ff9b:1:abcd:0:5431:5920:2020          # resolver.sunet.se
 64:ff9b:1:abcd:0:5431:592b:ae0a          # zdn.ro
 64:ff9b:1:abcd:0:5431:5939:2dce          # dns.farshidhakimy.de
@@ -1786,9 +1781,9 @@
 64:ff9b:1:abcd:0:5431:5e17:4740          # dns.clanto.cloud
 64:ff9b:1:abcd:0:5431:5e82:87cb          # dns.digitalsize.net
 64:ff9b:1:abcd:0:5431:5e8c:e0e           # dns.adguard-dns.com, dns.adguard.com
-64:ff9b:1:abcd:0:5431:5e8c:e0f           # dns-family.adguard.com, family.adguard-dns.com
+64:ff9b:1:abcd:0:5431:5e8c:e0f           # dns-family.adguard.com
 64:ff9b:1:abcd:0:5431:5e8c:e31           # d.adguard-dns.com
-64:ff9b:1:abcd:0:5431:5e8c:e8c           # dns-unfiltered.adguard.com
+64:ff9b:1:abcd:0:5431:5e8c:e8c           # dns-unfiltered.adguard.com, unfiltered.adguard-dns.com
 64:ff9b:1:abcd:0:5431:5e8c:e8d           # dns-unfiltered.adguard.com
 64:ff9b:1:abcd:0:5431:5e8c:f0f           # dns.adguard-dns.com, dns.adguard.com
 64:ff9b:1:abcd:0:5431:5e8c:f10           # dns-family.adguard.com
@@ -1825,7 +1820,7 @@
 64:ff9b:1:abcd:0:5431:6506:606           # dns.tuna.tsinghua.edu.cn
 64:ff9b:1:abcd:0:5431:6522:e5c1          # sukidayo.eu.org
 64:ff9b:1:abcd:0:5431:6565:6565          # dns.twnic.tw
-64:ff9b:1:abcd:0:5431:65c6:c021          # doh.360.cn, dot.360.cn
+64:ff9b:1:abcd:0:5431:65c6:c021          # doh.360.cn
 64:ff9b:1:abcd:0:5431:65c6:c11d          # doh.360.cn, dot.360.cn
 64:ff9b:1:abcd:0:5431:65ec:452b          # httpdns.meituan.com
 64:ff9b:1:abcd:0:5431:6671:5baa          # dns.yameenassotally.com
@@ -1861,11 +1856,11 @@
 64:ff9b:1:abcd:0:5431:678d:9a03          # dns.gi.co.id
 64:ff9b:1:abcd:0:5431:6791:55f8          # dns.mtoo.vip
 64:ff9b:1:abcd:0:5431:6795:1c81          # www.chungocoai.name.vn
-64:ff9b:1:abcd:0:5431:6796:7464          # dns.ningkelle.id, family.dns.ningkelle.id
+64:ff9b:1:abcd:0:5431:6796:7464          # dns.ningkelle.id
 64:ff9b:1:abcd:0:5431:6796:bf54          # dns.diarbagus.id
 64:ff9b:1:abcd:0:5431:6797:8c8b          # dns.repinger.com
 64:ff9b:1:abcd:0:5431:679a:37a2          # dns.iamanuragh.in
-64:ff9b:1:abcd:0:5431:679b:bfb8          # dns.bebasid.com, unfiltered.dns.bebasid.com
+64:ff9b:1:abcd:0:5431:679b:bfb8          # dns.bebasid.com
 64:ff9b:1:abcd:0:5431:679b:bfe1          # dns.caliph.dev
 64:ff9b:1:abcd:0:5431:67a0:3ff2          # dns.engineer.web.id
 64:ff9b:1:abcd:0:5431:67a1:c4c4          # dns.spil.co.id
@@ -1888,7 +1883,6 @@
 64:ff9b:1:abcd:0:5431:6812:1cbe          # tor.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:6812:1dbe          # tor.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:6824:56b5          # geg01.dnscry.pt
-64:ff9b:1:abcd:0:5431:6880:3ead          # doh.dns.sb
 64:ff9b:1:abcd:0:5431:689c:9a0b          # lax01.dnscry.pt
 64:ff9b:1:abcd:0:5431:68a7:c787          # ada.openbld.net
 64:ff9b:1:abcd:0:5431:68ab:fc6f          # adguard.easez.net
@@ -1926,15 +1920,14 @@
 64:ff9b:1:abcd:0:5431:6dec:7702          # dns.levonet.sk
 64:ff9b:1:abcd:0:5431:6dec:7802          # dns.levonet.sk
 64:ff9b:1:abcd:0:5431:6dfa:c446          # adguard.bitteeinbyte.de
+64:ff9b:1:abcd:0:5431:6dfa:c448          # adguard.bitteeinbyte.de
 64:ff9b:1:abcd:0:5431:6dfa:c4d7          # adguard.bitteeinbyte.de
 64:ff9b:1:abcd:0:5431:6dfa:c522          # adguard.bitteeinbyte.de
-64:ff9b:1:abcd:0:5431:6dfa:c54e          # adguard.bitteeinbyte.de
 64:ff9b:1:abcd:0:5431:6dfa:cca9          # area51.mywire.org
 64:ff9b:1:abcd:0:5431:6dfa:cdbc          # area51.mywire.org
 64:ff9b:1:abcd:0:5431:6f14:fe23          # opencdn.jomodns.com
 64:ff9b:1:abcd:0:5431:6faa:6be           # doh.18bit.cn
 64:ff9b:1:abcd:0:5431:6faa:13b8          # doh.18bit.cn
-64:ff9b:1:abcd:0:5431:6feb:de64          # dns.cwlys.com
 64:ff9b:1:abcd:0:5431:704e:7ddd          # himedns.com, sg.yepdns.com
 64:ff9b:1:abcd:0:5431:7076:4f9a          # dns.853852.xyz
 64:ff9b:1:abcd:0:5431:70a3:ea3d          # 2.dns.noridev.moe
@@ -1958,10 +1951,10 @@
 64:ff9b:1:abcd:0:5431:74cb:70df          # dns.sheggi.ch
 64:ff9b:1:abcd:0:5431:74cb:8747          # dns.roedel.cloud
 64:ff9b:1:abcd:0:5431:74cc:c51b          # dns.4-the.win
-64:ff9b:1:abcd:0:5431:761b:7deb          # dns.maolaohei.xyz, dns.warma.me, dns.xwdmw.xyz, draco.plan9-ns2.com, hkname.freecdn.one, jcdns.fun, lion.yazilimatolye.com, pashagame456.com, tlz.asia, vtcuong.site
+64:ff9b:1:abcd:0:5431:761b:7deb          # dns.maolaohei.xyz, dns.xwdmw.xyz, hkname.freecdn.one, tlz.asia
 64:ff9b:1:abcd:0:5431:76a3:aa02          # dns.tipsy.coffee
 64:ff9b:1:abcd:0:5431:772d:73e4          # doh.18bit.cn
-64:ff9b:1:abcd:0:5431:7835:3535          # dns.pub
+64:ff9b:1:abcd:0:5431:7835:3535          # dns.pub, doh.pub, dot.pub
 64:ff9b:1:abcd:0:5431:784c:6b2d          # ns1.alidns.com
 64:ff9b:1:abcd:0:5431:784c:6b2e          # ns2.alidns.com
 64:ff9b:1:abcd:0:5431:784c:6b2f          # ns7.alidns.com
@@ -1990,7 +1983,7 @@
 64:ff9b:1:abcd:0:5431:82e1:f4a6          # deic-lgb.anycast.censurfridns.dk, deic-lgb.anycast.uncensoreddns.org
 64:ff9b:1:abcd:0:5431:82e2:a122          # deic-ore.anycast.censurfridns.dk, deic-ore.anycast.uncensoreddns.org
 64:ff9b:1:abcd:0:5431:85a7:d416          # 3jjxxl.tech, callies-online.site, cloudbenders.fun, d2.shabi.icu, polisitogel.beauty
-64:ff9b:1:abcd:0:5431:85a7:d419          # 3dcosas.xyz, bestwon203.com, mendozasdelivery.com
+64:ff9b:1:abcd:0:5431:85a7:d419          # 3dcosas.xyz, bestwon203.com, dns.pernika.net, edgy-dns.com, family.dns.doubleangels.com, lukscasino-479-tr.xyz, lukscasino-929-tr.xyz, mendozasdelivery.com, tecdrive.site, tuskythehusky.tech
 64:ff9b:1:abcd:0:5431:8666:1414          # ines.zfn.uni-bremen.de
 64:ff9b:1:abcd:0:5431:86a9:2239          # doh.ibr.cs.tu-bs.de
 64:ff9b:1:abcd:0:5431:86c3:580d          # us-chi-w-p-1.nashkan.net
@@ -2032,8 +2025,8 @@
 64:ff9b:1:abcd:0:5431:8c24:383           # tienpham.id.vn
 64:ff9b:1:abcd:0:5431:8c70:1dcf          # doh.ntu.ssooss.win
 64:ff9b:1:abcd:0:5431:8ccd:101           # vip1.alidns.com, vip21.alidns.com
-64:ff9b:1:abcd:0:5431:8ccd:102           # vip2.alidns.com
-64:ff9b:1:abcd:0:5431:8ccd:105           # vip23.alidns.com, vip3.alidns.com
+64:ff9b:1:abcd:0:5431:8ccd:102           # vip2.alidns.com, vip22.alidns.com
+64:ff9b:1:abcd:0:5431:8ccd:105           # vip23.alidns.com
 64:ff9b:1:abcd:0:5431:8ccd:106           # vip24.alidns.com
 64:ff9b:1:abcd:0:5431:8ccd:109           # vip25.alidns.com, vip5.alidns.com
 64:ff9b:1:abcd:0:5431:8ccd:10a           # vip26.alidns.com, vip6.alidns.com
@@ -2050,6 +2043,7 @@
 64:ff9b:1:abcd:0:5431:8e84:e641          # dns.alvosec.com
 64:ff9b:1:abcd:0:5431:8f14:c20           # lis01.dnscry.pt
 64:ff9b:1:abcd:0:5431:8fc6:acca          # goose.buckyfan.net
+64:ff9b:1:abcd:0:5431:8ff4:3cc1          # doh1.b-cdn.net
 64:ff9b:1:abcd:0:5431:8ff4:8020          # in-blr.doh.sb
 64:ff9b:1:abcd:0:5431:904c:87df          # doh.wewitro.net
 64:ff9b:1:abcd:0:5431:904c:c7b1          # dns.comff.net
@@ -2094,14 +2088,14 @@
 64:ff9b:1:abcd:0:5431:9570:7a1e          # family.canadianshield.cira.ca
 64:ff9b:1:abcd:0:5431:9570:9570          # alpha-dns.quad9.net
 64:ff9b:1:abcd:0:5431:95f8:24ea          # chromium.dns.nextdns.io
-64:ff9b:1:abcd:0:5431:95f8:d975          # dns.dnswarden.com
-64:ff9b:1:abcd:0:5431:966b:c81f          # aqua.is.my.waifu.cz, darkness.is.my.waifu.cz, megumin.is.my.waifu.cz, yunyun.is.my.waifu.cz
+64:ff9b:1:abcd:0:5431:95f8:d975          # dns.dnswarden.com, doh.asia.dnswarden.com, doh.eu.dnswarden.com, doh.us.dnswarden.com, fr1.dnswarden.com, sg1.dnswarden.com
+64:ff9b:1:abcd:0:5431:966b:c81f          # aqua.is.my.waifu.cz, darkness.is.my.waifu.cz
 64:ff9b:1:abcd:0:5431:9750:918f          # dns.sstomp.nl
 64:ff9b:1:abcd:0:5431:9791:c81e          # dns.momou.ch
 64:ff9b:1:abcd:0:5431:97f2:4ae7          # jp-tyo-w-p-1.nashkan.net
 64:ff9b:1:abcd:0:5431:97f3:de5e          # jkt01.dnscry.pt
 64:ff9b:1:abcd:0:5431:9835:f7f           # jabber-germany.de, www.jabber-germany.de
-64:ff9b:1:abcd:0:5431:9835:774c          # masters-of-cloud.de
+64:ff9b:1:abcd:0:5431:9835:774c          # masters-of-cloud.de, www.masters-of-cloud.de
 64:ff9b:1:abcd:0:5431:9835:8269          # dns.datenquark.de
 64:ff9b:1:abcd:0:5431:9835:82d2          # dns.kapite.in
 64:ff9b:1:abcd:0:5431:9835:ad24          # dns.psociety.de
@@ -2134,7 +2128,7 @@
 64:ff9b:1:abcd:0:5431:a077:fdd1          # sa01.dns4me.net
 64:ff9b:1:abcd:0:5431:a0fa:5f1c          # dns.hakim.one
 64:ff9b:1:abcd:0:5431:a0fa:e3c4          # dns.bebasid.com
-64:ff9b:1:abcd:0:5431:a0fb:4050          # adg.rueiliu.space, dns.aaytorr.com, dns.guardmydns.com
+64:ff9b:1:abcd:0:5431:a0fb:4050          # dns.aaytorr.com, dns.guardmydns.com
 64:ff9b:1:abcd:0:5431:a123:8803          # doh-primary-pool.goodbyegambling.com
 64:ff9b:1:abcd:0:5431:a181:2286          # 5g.o0o.re
 64:ff9b:1:abcd:0:5431:a213:e3fb          # fezgate.ovh
@@ -2222,15 +2216,15 @@
 64:ff9b:1:abcd:0:5431:ace9:3b62          # dns.pccoach.nl
 64:ff9b:1:abcd:0:5431:ace9:932a          # adguard.hartley.cloud
 64:ff9b:1:abcd:0:5431:ace9:ddf3          # doh.archuser.org
-64:ff9b:1:abcd:0:5431:acea:1be9          # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
-64:ff9b:1:abcd:0:5431:acee:ace4          # alleesph.online
-64:ff9b:1:abcd:0:5431:acee:b01f          # alleesph.online
-64:ff9b:1:abcd:0:5431:acef:31e8          # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, gclouddns.com
-64:ff9b:1:abcd:0:5431:acef:39e6          # alleesph.online, wantaquddin.com, xorbiadns.com
-64:ff9b:1:abcd:0:5431:acef:c143          # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
+64:ff9b:1:abcd:0:5431:acea:1be9          # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, dnsnl-noads.alekberg.net, dnsnl.alekberg.net, dnsse-noads.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, gclouddns.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, sdns22.gkonuralp.com, tk31z.com
+64:ff9b:1:abcd:0:5431:acee:ace4          # alleesph.online, wantaquddin.com, xorbiadns.com
+64:ff9b:1:abcd:0:5431:acee:b01f          # alleesph.online, wantaquddin.com, xorbiadns.com
+64:ff9b:1:abcd:0:5431:acef:31e8          # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
+64:ff9b:1:abcd:0:5431:acef:39e6          # alleesph.online
+64:ff9b:1:abcd:0:5431:acef:c143          # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, dnsnl-noads.alekberg.net, dnsnl.alekberg.net, dnsse-noads.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, gclouddns.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, sdns22.gkonuralp.com, tk31z.com
 64:ff9b:1:abcd:0:5431:ad14:a947          # dns.cahlen.com
 64:ff9b:1:abcd:0:5431:ad49:9fa4          # dns.chilimac.net
-64:ff9b:1:abcd:0:5431:add0:d4cd          # dns.furrix.zone, dns.marbledfennec.net
+64:ff9b:1:abcd:0:5431:add0:d4cd          # dns.furrix.zone, dns.marbledfennec.net, multi.dns.marbledfennec.net
 64:ff9b:1:abcd:0:5431:ade6:9571          # dns.scott-smith.us
 64:ff9b:1:abcd:0:5431:adf9:cdc6          # phx01.dnscry.pt
 64:ff9b:1:abcd:0:5431:adf9:d0f5          # us-saj-w-p-1.nashkan.net
@@ -2238,7 +2232,7 @@
 64:ff9b:1:abcd:0:5431:adff:c9fe          # us1.blissdns.net
 64:ff9b:1:abcd:0:5431:ae44:f84d          # dohdot.coxlab.net
 64:ff9b:1:abcd:0:5431:ae8a:1daf          # doh.tiar.app, dot.tiar.app
-64:ff9b:1:abcd:0:5431:af18:9a42          # dns.rubyfish.cn, ea-dns.rubyfish.cn, uw-dns.rubyfish.cn
+64:ff9b:1:abcd:0:5431:af18:9a42          # dns.rubyfish.cn, ea-dns.rubyfish.cn
 64:ff9b:1:abcd:0:5431:af8f:ed10          # dns.surobe.com
 64:ff9b:1:abcd:0:5431:b009:199e          # dns.svoi.dev
 64:ff9b:1:abcd:0:5431:b009:36db          # de.dns.privex.io
@@ -2248,15 +2242,14 @@
 64:ff9b:1:abcd:0:5431:b06f:dfa7          # sjc01.dnscry.pt
 64:ff9b:1:abcd:0:5431:b07b:a69           # kiv01.dnscry.pt
 64:ff9b:1:abcd:0:5431:b07b:a3c1          # dns.petqa.ru
-64:ff9b:1:abcd:0:5431:b093:f3a4          # blockerads.multimediaconcept.fr
 64:ff9b:1:abcd:0:5431:b0a4:9b83          # dns.chadeyron.fr
 64:ff9b:1:abcd:0:5431:b0a4:a6f5          # dns.chadeyron.fr
-64:ff9b:1:abcd:0:5431:b0a4:b10f          # dns.chadeyron.fr
 64:ff9b:1:abcd:0:5431:b0a4:b1c7          # dns.chadeyron.fr
+64:ff9b:1:abcd:0:5431:b0a4:b7bf          # dns.chadeyron.fr
 64:ff9b:1:abcd:0:5431:b214:2ad5          # vd.i81.ru
 64:ff9b:1:abcd:0:5431:b216:7a64          # dns.shecan.ir
 64:ff9b:1:abcd:0:5431:b221:7699          # dns-1.wil.cloud, dns-2.wil.cloud
-64:ff9b:1:abcd:0:5431:b269:1006          # doh.42l.fr, doh.lacontrevoie.fr
+64:ff9b:1:abcd:0:5431:b269:1006          # doh.42l.fr
 64:ff9b:1:abcd:0:5431:b280:e16d          # tri-dns.net
 64:ff9b:1:abcd:0:5431:b2a2:e40b          # dns.keweon.center
 64:ff9b:1:abcd:0:5431:b2a2:e40c          # dns.keweon.center
@@ -2290,13 +2283,13 @@
 64:ff9b:1:abcd:0:5431:b92f:ddc8          # dns.kukal.cz
 64:ff9b:1:abcd:0:5431:b931:8d26          # getdnsapi.net
 64:ff9b:1:abcd:0:5431:b933:c801          # pro.shecan.ir
-64:ff9b:1:abcd:0:5431:b933:c802          # free.shecan.ir
+64:ff9b:1:abcd:0:5431:b933:c802          # dns.shecan.ir, free.shecan.ir
 64:ff9b:1:abcd:0:5431:b940:4f05          # doh.dns.sb, uk-lon.doh.sb
 64:ff9b:1:abcd:0:5431:b945:a17a          # dns.fancyorg.at
 64:ff9b:1:abcd:0:5431:b946:90a           # dns.kuuhaku.moe
 64:ff9b:1:abcd:0:5431:b947:8a8a          # wikimedia-dns.org
 64:ff9b:1:abcd:0:5431:b95f:da2a          # dns.digitale-gesellschaft.ch
-64:ff9b:1:abcd:0:5431:b95f:da2b          # dns.digitale-gesellschaft.ch, dns2.digitale-gesellschaft.ch
+64:ff9b:1:abcd:0:5431:b95f:da2b          # dns.digitale-gesellschaft.ch
 64:ff9b:1:abcd:0:5431:b95f:dbaa          # resolv1.trash.net
 64:ff9b:1:abcd:0:5431:b95f:dbab          # resolv2.trash.net
 64:ff9b:1:abcd:0:5431:b95f:dbad          # resolv3.trash.net
@@ -2324,11 +2317,11 @@
 64:ff9b:1:abcd:0:5431:b9c3:457e          # dns.l337.site
 64:ff9b:1:abcd:0:5431:b9cf:7d64          # omr01.dnscry.pt
 64:ff9b:1:abcd:0:5431:b9de:9946          # n5.lsasss.com
-64:ff9b:1:abcd:0:5431:b9de:dede          # dns.sb, doh.sb
+64:ff9b:1:abcd:0:5431:b9de:dede          # dns.sb, doh.sb, public-dns-a.dns.sb
 64:ff9b:1:abcd:0:5431:b9e2:b513          # opennic2.i2pd.xyz
 64:ff9b:1:abcd:0:5431:b9e4:88bf          # dns1.techniverse.net
 64:ff9b:1:abcd:0:5431:b9e4:a809          # security-filter-dns.cleanbrowsing.org
-64:ff9b:1:abcd:0:5431:b9e4:a80a          # adult-filter-dns.cleanbrowsing.org
+64:ff9b:1:abcd:0:5431:b9e4:a80a          # adult-filter-dns.cleanbrowsing.org, doh.cleanbrowsing.org
 64:ff9b:1:abcd:0:5431:b9e4:a8a8          # doh.cleanbrowsing.org, family-filter-dns.cleanbrowsing.org
 64:ff9b:1:abcd:0:5431:b9e7:646c          # dns.anon.no
 64:ff9b:1:abcd:0:5431:b9ea:6227          # timmes.nl
@@ -2381,7 +2374,7 @@
 64:ff9b:1:abcd:0:5431:c224:9057          # morbitzer.de, www.morbitzer.de
 64:ff9b:1:abcd:0:5431:c227:cd0a          # muc01.dnscry.pt
 64:ff9b:1:abcd:0:5431:c232:210b          # doh.suche.org
-64:ff9b:1:abcd:0:5431:c235:8902          # dns.foxyfy.net, es-ma.foxyfy.net
+64:ff9b:1:abcd:0:5431:c235:8902          # dns.foxyfy.net
 64:ff9b:1:abcd:0:5431:c237:d4c           # dns.clanless.ovh
 64:ff9b:1:abcd:0:5431:c23b:9c09          # adguard.bonis.de
 64:ff9b:1:abcd:0:5431:c243:4767          # adguard.oms-ctr.ru
@@ -2403,7 +2396,7 @@
 64:ff9b:1:abcd:0:5431:c350:7763          # dns.cert.ee
 64:ff9b:1:abcd:0:5431:c350:7765          # dns.cert.ee
 64:ff9b:1:abcd:0:5431:c372:e4a           # syd02.dnscry.pt
-64:ff9b:1:abcd:0:5431:c385:1910          # dns.comss.one, router.comss.one
+64:ff9b:1:abcd:0:5431:c385:1910          # dns.comss.one
 64:ff9b:1:abcd:0:5431:c3c9:15fb          # doh.zknt.org
 64:ff9b:1:abcd:0:5431:c3c9:2795          # dns.kerekes.xyz
 64:ff9b:1:abcd:0:5431:c3c9:83b7          # dns.a47.me
@@ -2427,7 +2420,7 @@
 64:ff9b:1:abcd:0:5431:ca3d:ec43          # nue01.dnscry.pt
 64:ff9b:1:abcd:0:5431:ca3d:f03d          # adguard.pangerl.it
 64:ff9b:1:abcd:0:5431:ca46:857c          # dns.gnb09.id
-64:ff9b:1:abcd:0:5431:caac:1a24          # adguard.johanliebert.top, dns.edgeburnmedia.com, doh.armadillodns.net, hydra.plan9-ns1.com
+64:ff9b:1:abcd:0:5431:caac:1a24          # adguard.johanliebert.top, dns.edgeburnmedia.com, hydra.plan9-ns1.com
 64:ff9b:1:abcd:0:5431:cb1d:f034          # dns.slinkyman.net
 64:ff9b:1:abcd:0:5431:cb1d:f14c          # per.adfilter.net
 64:ff9b:1:abcd:0:5431:cb6b:161           # httpdns-sc.aliyuncs.com
@@ -2446,7 +2439,7 @@
 64:ff9b:1:abcd:0:5431:cff6:5760          # kronos.plan9-dns.com
 64:ff9b:1:abcd:0:5431:d043:dc02          # sandbox.opendns.com
 64:ff9b:1:abcd:0:5431:d043:dc7b          # familyshield.opendns.com, resolver2-fs.opendns.com
-64:ff9b:1:abcd:0:5431:d043:dcdc          # dns.opendns.com, dns.umbrella.com, resolver2.opendns.com
+64:ff9b:1:abcd:0:5431:d043:dcdc          # dns.opendns.com
 64:ff9b:1:abcd:0:5431:d043:de02          # sandbox.opendns.com
 64:ff9b:1:abcd:0:5431:d043:de7b          # familyshield.opendns.com, resolver1-fs.opendns.com
 64:ff9b:1:abcd:0:5431:d043:dede          # dns.opendns.com
@@ -2458,7 +2451,7 @@
 64:ff9b:1:abcd:0:5431:d412:5             # dns.mnet-online.de
 64:ff9b:1:abcd:0:5431:d412:305           # dns.mnet-online.de
 64:ff9b:1:abcd:0:5431:d43c:3df6          # doh.quickline.ch, dot.quickline.ch
-64:ff9b:1:abcd:0:5431:d43c:3ff6          # doh.quickline.ch, dot.quickline.ch
+64:ff9b:1:abcd:0:5431:d43c:3ff6          # doh.quickline.ch
 64:ff9b:1:abcd:0:5431:d46d:c35d          # dns.comss.one
 64:ff9b:1:abcd:0:5431:d484:7534          # dns.peb-schmidt.de
 64:ff9b:1:abcd:0:5431:d4b9:c819          # dns1.conne.net
@@ -2505,11 +2498,10 @@
 64:ff9b:1:abcd:0:5431:dc84:a3df          # dns.ares-taiwan.com
 64:ff9b:1:abcd:0:5431:dc87:df12          # dns.david888.com
 64:ff9b:1:abcd:0:5431:dc8f:4fc           # ihctw.synology.me
-64:ff9b:1:abcd:0:5431:dc8f:1e9f          # ihctw.synology.me
 64:ff9b:1:abcd:0:5431:dd83:a5a5          # pdns.itxe.net
 64:ff9b:1:abcd:0:5431:de63:72ac          # agh.printk.info
-64:ff9b:1:abcd:0:5431:df05:505           # dns.alidns.com, dns002.alidns.com, dns008.alidns.com, dns031.alidns.com, dns038.alidns.com, dns040.alidns.com, dns051.alidns.com, dns32.alidns.com, dns49.alidns.com, dns50.alidns.com, dns51.alidns.com, dnsag.alidns.com, dnsax.alidns.com, dnsd.alidns.com, dnsl.alidns.com, ns.alidns.com, ns005.alidns.com, ns006.alidns.com, ns010.alidns.com, ns013.alidns.com, ns018.alidns.com, ns04.alidns.com, ns044.alidns.com, ns055.alidns.com, ns064.alidns.com, ns20.alidns.com, ns27.alidns.com, ns38.alidns.com, ns60.alidns.com, nsal.alidns.com, nsay.alidns.com, nsb.alidns.com, nsc.alidns.com, nsi.alidns.com, nsm.alidns.com, nsu.alidns.com, nsy.alidns.com, vip025.alidns.com, vip027.alidns.com, vip034.alidns.com, vip036.alidns.com, vip046.alidns.com, vip058.alidns.com, vip32.alidns.com, vip61.alidns.com, vipab.alidns.com, vipae.alidns.com, vipay.alidns.com, vipc.alidns.com, vipf.alidns.com, vipu.alidns.com
-64:ff9b:1:abcd:0:5431:df06:606           # dns.alidns.com, dns002.alidns.com, dns008.alidns.com, dns031.alidns.com, dns038.alidns.com, dns040.alidns.com, dns051.alidns.com, dns32.alidns.com, dns49.alidns.com, dns50.alidns.com, dns51.alidns.com, dnsag.alidns.com, dnsax.alidns.com, dnsd.alidns.com, dnsl.alidns.com, ns.alidns.com, ns005.alidns.com, ns006.alidns.com, ns010.alidns.com, ns013.alidns.com, ns018.alidns.com, ns04.alidns.com, ns044.alidns.com, ns055.alidns.com, ns064.alidns.com, ns20.alidns.com, ns27.alidns.com, ns38.alidns.com, ns60.alidns.com, nsal.alidns.com, nsay.alidns.com, nsb.alidns.com, nsc.alidns.com, nsi.alidns.com, nsm.alidns.com, nsu.alidns.com, nsy.alidns.com, vip025.alidns.com, vip027.alidns.com, vip034.alidns.com, vip036.alidns.com, vip046.alidns.com, vip058.alidns.com, vip32.alidns.com, vip61.alidns.com, vipab.alidns.com, vipae.alidns.com, vipay.alidns.com, vipc.alidns.com, vipf.alidns.com, vipu.alidns.com
+64:ff9b:1:abcd:0:5431:df05:505           # dns.alidns.com, dns004.alidns.com, dns025.alidns.com, dns04.alidns.com, dns051.alidns.com, dns056.alidns.com, dns07.alidns.com, dns1.alidns.com, dns19.alidns.com, dns39.alidns.com, dns50.alidns.com, dns58.alidns.com, dns9.alidns.com, dnsaf.alidns.com, dnsan.alidns.com, dnsh.alidns.com, dnsm.alidns.com, dnso.alidns.com, dnsw.alidns.com, ns02.alidns.com, ns029.alidns.com, ns032.alidns.com, ns035.alidns.com, ns046.alidns.com, ns23.alidns.com, ns30.alidns.com, ns31.alidns.com, ns43.alidns.com, ns53.alidns.com, ns54.alidns.com, nsk.alidns.com, nss.alidns.com, vip009.alidns.com, vip030.alidns.com, vip037.alidns.com, vip04.alidns.com, vip042.alidns.com, vip050.alidns.com, vip14.alidns.com, vip15.alidns.com, vip52.alidns.com, vip55.alidns.com, vipah.alidns.com, vipai.alidns.com, vipay.alidns.com, vipq.alidns.com
+64:ff9b:1:abcd:0:5431:df06:606           # dns.alidns.com, dns004.alidns.com, dns025.alidns.com, dns04.alidns.com, dns051.alidns.com, dns056.alidns.com, dns07.alidns.com, dns1.alidns.com, dns19.alidns.com, dns39.alidns.com, dns50.alidns.com, dns58.alidns.com, dns9.alidns.com, dnsaf.alidns.com, dnsan.alidns.com, dnsh.alidns.com, dnsm.alidns.com, dnso.alidns.com, dnsw.alidns.com, ns02.alidns.com, ns029.alidns.com, ns032.alidns.com, ns035.alidns.com, ns046.alidns.com, ns23.alidns.com, ns30.alidns.com, ns31.alidns.com, ns43.alidns.com, ns53.alidns.com, ns54.alidns.com, nsk.alidns.com, nss.alidns.com, vip009.alidns.com, vip030.alidns.com, vip037.alidns.com, vip04.alidns.com, vip042.alidns.com, vip050.alidns.com, vip14.alidns.com, vip15.alidns.com, vip52.alidns.com, vip55.alidns.com, vipah.alidns.com, vipai.alidns.com, vipay.alidns.com, vipq.alidns.com
 64:ff9b:1:fffc:2:0:100:1                 # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:100:2                 # security.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:100:3                 # family.cloudflare-dns.com
@@ -2517,7 +2509,7 @@
 64:ff9b:1:fffc:2:0:101:102               # security.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:101:103               # family.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:10a:a0a               # dns.nic.in
-64:ff9b:1:fffc:2:0:10c:c0c               # dns.pub
+64:ff9b:1:fffc:2:0:10c:c0c               # dns.pub, doh.pub, dot.pub
 64:ff9b:1:fffc:2:0:122:2e5c              # doh.killtw.im
 64:ff9b:1:fffc:2:0:1e6:d11a              # agh.kyusang.win
 64:ff9b:1:fffc:2:0:22d:c3ed              # block.abstergo.it
@@ -2539,7 +2531,6 @@
 64:ff9b:1:fffc:2:0:598:821b              # dns.pesaventofilippo.com
 64:ff9b:1:fffc:2:0:5a0:7569              # doh.abraservice.xyz
 64:ff9b:1:fffc:2:0:5a1:2bc5              # chromium.dns.nextdns.io, dns.nextdns.io
-64:ff9b:1:fffc:2:0:5a1:c216              # adguard.ihatemy.live
 64:ff9b:1:fffc:2:0:5af:b4ab              # dus01.dnscry.pt
 64:ff9b:1:fffc:2:0:5b4:3b25              # nsc.torgues.net
 64:ff9b:1:fffc:2:0:5c4:4a4c              # dns.mh4ckt3mh4ckt1c4s.xyz
@@ -2558,7 +2549,7 @@
 64:ff9b:1:fffc:2:0:8d4:5d07              # vip7.alidns.com
 64:ff9b:1:fffc:2:0:8d4:5d08              # vip8.alidns.com
 64:ff9b:1:fffc:2:0:909:909               # dns.quad9.net, dns9.quad9.net
-64:ff9b:1:fffc:2:0:909:90a               # dns-nosec.quad9.net
+64:ff9b:1:fffc:2:0:909:90a               # dns-nosec.quad9.net, dns10.quad9.net
 64:ff9b:1:fffc:2:0:909:90b               # dns11.quad9.net
 64:ff9b:1:fffc:2:0:909:90c               # dns12.quad9.net
 64:ff9b:1:fffc:2:0:909:90d               # dns13.quad9.net
@@ -2657,6 +2648,7 @@
 64:ff9b:1:fffc:2:0:25dd:c25f             # dns.neeb.it
 64:ff9b:1:fffc:2:0:25e4:81a0             # hel01.dnscry.pt
 64:ff9b:1:fffc:2:0:25eb:315f             # doh.azoris.ovh
+64:ff9b:1:fffc:2:0:25fc:e699             # dns2.nextdns.io
 64:ff9b:1:fffc:2:0:2620:6e3a             # doh1.b-cdn.net, doh2.b-cdn.net
 64:ff9b:1:fffc:2:0:262f:b473             # dns.glorydns.com
 64:ff9b:1:fffc:2:0:266b:e873             # ada.openbld.net
@@ -2681,9 +2673,9 @@
 64:ff9b:1:fffc:2:0:2b9a:9aa2             # dns.flymc.cc
 64:ff9b:1:fffc:2:0:2ba1:e005             # blog.kimiblock.top
 64:ff9b:1:fffc:2:0:2ba1:fea2             # blog.kimiblock.top
-64:ff9b:1:fffc:2:0:2ba9:d7c              # edns.233py.com, i.233py.com
+64:ff9b:1:fffc:2:0:2ba9:d7c              # edns.233py.com, i.233py.com, ndns.233py.com
 64:ff9b:1:fffc:2:0:2ba9:e7c              # edns.233py.com, i.233py.com
-64:ff9b:1:fffc:2:0:2ba9:f7c              # dns.233py.com
+64:ff9b:1:fffc:2:0:2ba9:f7c              # dns.233py.com, i.233py.com
 64:ff9b:1:fffc:2:0:2bae:f621             # doh.totoro.pub
 64:ff9b:1:fffc:2:0:2bae:f721             # doh.totoro.pub
 64:ff9b:1:fffc:2:0:2be0:b489             # bne01.dnscry.pt
@@ -2704,7 +2696,7 @@
 64:ff9b:1:fffc:2:0:2d43:5484             # lon01.dnscry.pt
 64:ff9b:1:fffc:2:0:2d43:55db             # rdd01.dnscry.pt
 64:ff9b:1:fffc:2:0:2d43:dbd0             # doh.la.ahadns.net, dot.la.ahadns.net
-64:ff9b:1:fffc:2:0:2d4c:1535             # chromium.dns.nextdns.io
+64:ff9b:1:fffc:2:0:2d4c:1535             # chromium.dns.nextdns.io, dns1.nextdns.io
 64:ff9b:1:fffc:2:0:2d4c:711f             # doh-2.seby.io, doh.seby.io, dot.seby.io
 64:ff9b:1:fffc:2:0:2d4d:19fd             # doh003.280blocker.net
 64:ff9b:1:fffc:2:0:2d4d:1f43             # at.pzhg.me
@@ -2801,12 +2793,12 @@
 64:ff9b:1:fffc:2:0:310c:e6ea             # chaos-system.de
 64:ff9b:1:fffc:2:0:310d:3cec             # adguard.kiboko.it
 64:ff9b:1:fffc:2:0:310d:5f7d             # de-fsn-w-p-1.nashkan.net
-64:ff9b:1:fffc:2:0:31d4:c624             # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com
-64:ff9b:1:fffc:2:0:31d4:c633             # catchen121299.top, dns.daarrk.tech, kx-97795-tr.xyz
-64:ff9b:1:fffc:2:0:31d4:c634             # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech, do-39574-tr.xyz, hfgx.shop, myatris.sbs, xholgm.top
-64:ff9b:1:fffc:2:0:31d4:cf33             # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link, dns.mathewakhil.online
-64:ff9b:1:fffc:2:0:31d4:eb22             # dns.auapi.fun, paradise-human.shop, v2.xx3210766.live
-64:ff9b:1:fffc:2:0:31d4:eb2c             # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top, dns.vod11.xyz, doh.sublime9.xyz, lifeisa.live, pepetio.xyz
+64:ff9b:1:fffc:2:0:31d4:c624             # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com, dns.wibenson.cloud, externalmobiel.lekdijk.online, securedns.vendorvista.xyz, vpn.technicule.info
+64:ff9b:1:fffc:2:0:31d4:c633             # catchen121299.top, dns.daarrk.tech, maqgie.xyz, tujenasnaszato.xyz
+64:ff9b:1:fffc:2:0:31d4:c634             # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech, do-39574-tr.xyz
+64:ff9b:1:fffc:2:0:31d4:cf33             # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link
+64:ff9b:1:fffc:2:0:31d4:eb22             # dns.auapi.fun
+64:ff9b:1:fffc:2:0:31d4:eb2c             # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top
 64:ff9b:1:fffc:2:0:31eb:4a74             # dns.zzuhacker.cn
 64:ff9b:1:fffc:2:0:3274:3bfb             # adguard.shoupperuser.com
 64:ff9b:1:fffc:2:0:334d:6a59             # dns-privacy.puregeni.us
@@ -2852,7 +2844,6 @@
 64:ff9b:1:fffc:2:0:416c:3611             # dns.anon.no
 64:ff9b:1:fffc:2:0:4221:3c22             # arashi.net.eu.org
 64:ff9b:1:fffc:2:0:4221:3cc1             # arashi.net.eu.org
-64:ff9b:1:fffc:2:0:4221:3cc2             # arashi.net.eu.org
 64:ff9b:1:fffc:2:0:4237:9fba             # dnswebvsn.com
 64:ff9b:1:fffc:2:0:423f:b17e             # dns.stevenz.net, doh.sz-dns.com
 64:ff9b:1:fffc:2:0:429a:7667             # renardbleu.dev
@@ -2871,7 +2862,7 @@
 64:ff9b:1:fffc:2:0:46fd:509e             # dns.sarak.as, dns.sarakas.net
 64:ff9b:1:fffc:2:0:4713:f322             # ag.ff0x.ca
 64:ff9b:1:fffc:2:0:4787:476              # doh.aaaab3n.moe
-64:ff9b:1:fffc:2:0:4812:4d4d             # dns.eddi.net, doh.eddi.net
+64:ff9b:1:fffc:2:0:4812:4d4d             # dns.eddi.net
 64:ff9b:1:fffc:2:0:4812:d733             # us-kan-w-p-1.nashkan.net
 64:ff9b:1:fffc:2:0:4a39:8053             # adguard.jfchenier.ca
 64:ff9b:1:fffc:2:0:4a52:2a2a             # ordns.he.net
@@ -2883,11 +2874,11 @@
 64:ff9b:1:fffc:2:0:4c4c:153d             # arashi.net.eu.org
 64:ff9b:1:fffc:2:0:4c4c:155d             # arashi.net.eu.org
 64:ff9b:1:fffc:2:0:4c4c:1562             # arashi.net.eu.org
-64:ff9b:1:fffc:2:0:4c4c:157b             # arashi.net.eu.org
+64:ff9b:1:fffc:2:0:4c4c:15a4             # arashi.net.eu.org
 64:ff9b:1:fffc:2:0:4d44:1d3f             # ahoj.email
 64:ff9b:1:fffc:2:0:4d44:32ef             # dns.connect.fail
 64:ff9b:1:fffc:2:0:4d44:58dc             # dns.kuuhaku.moe
-64:ff9b:1:fffc:2:0:4d58:801              # common.dot.dns.yandex.net
+64:ff9b:1:fffc:2:0:4d58:801              # common.dot.dns.yandex.net, secondary.dns.yandex.ru
 64:ff9b:1:fffc:2:0:4d58:802              # safe.dot.dns.yandex.net, secondary.safe.dns.yandex.ru
 64:ff9b:1:fffc:2:0:4d58:803              # family.dot.dns.yandex.net, secondary.family.dns.yandex.ru
 64:ff9b:1:fffc:2:0:4d58:807              # family.dns.yandex.ru, family.dot.dns.yandex.net
@@ -2921,7 +2912,7 @@
 64:ff9b:1:fffc:2:0:5099:9269             # doh.kekew.info
 64:ff9b:1:fffc:2:0:509c:91c9             # dns.t53.de
 64:ff9b:1:fffc:2:0:50f9:90f5             # dns.mihanentalpo.me
-64:ff9b:1:fffc:2:0:50f9:95b2             # muxyuji.ru, www.muxyuji.ru
+64:ff9b:1:fffc:2:0:50f9:95b2             # muxyuji.ru
 64:ff9b:1:fffc:2:0:50fe:4f9d             # zrh1-ns01.monzoon.net
 64:ff9b:1:fffc:2:0:5182:6ffa             # doh.bt.com
 64:ff9b:1:fffc:2:0:5182:6ffb             # doh.bt.com
@@ -2995,7 +2986,7 @@
 64:ff9b:1:fffc:2:0:58c6:675b             # dns.scarx.net
 64:ff9b:1:fffc:2:0:58c6:7316             # ns.ral9005.org
 64:ff9b:1:fffc:2:0:58c6:7a9a             # hard.dnsforge.de
-64:ff9b:1:fffc:2:0:58d0:e03c             # ahoj.email, zakaria.website
+64:ff9b:1:fffc:2:0:58d0:e03c             # ahoj.email
 64:ff9b:1:fffc:2:0:5920:2020             # resolver.sunet.se
 64:ff9b:1:fffc:2:0:592b:ae0a             # zdn.ro
 64:ff9b:1:fffc:2:0:5939:2dce             # dns.farshidhakimy.de
@@ -3042,9 +3033,9 @@
 64:ff9b:1:fffc:2:0:5e17:4740             # dns.clanto.cloud
 64:ff9b:1:fffc:2:0:5e82:87cb             # dns.digitalsize.net
 64:ff9b:1:fffc:2:0:5e8c:e0e              # dns.adguard-dns.com, dns.adguard.com
-64:ff9b:1:fffc:2:0:5e8c:e0f              # dns-family.adguard.com, family.adguard-dns.com
+64:ff9b:1:fffc:2:0:5e8c:e0f              # dns-family.adguard.com
 64:ff9b:1:fffc:2:0:5e8c:e31              # d.adguard-dns.com
-64:ff9b:1:fffc:2:0:5e8c:e8c              # dns-unfiltered.adguard.com
+64:ff9b:1:fffc:2:0:5e8c:e8c              # dns-unfiltered.adguard.com, unfiltered.adguard-dns.com
 64:ff9b:1:fffc:2:0:5e8c:e8d              # dns-unfiltered.adguard.com
 64:ff9b:1:fffc:2:0:5e8c:f0f              # dns.adguard-dns.com, dns.adguard.com
 64:ff9b:1:fffc:2:0:5e8c:f10              # dns-family.adguard.com
@@ -3081,7 +3072,7 @@
 64:ff9b:1:fffc:2:0:6506:606              # dns.tuna.tsinghua.edu.cn
 64:ff9b:1:fffc:2:0:6522:e5c1             # sukidayo.eu.org
 64:ff9b:1:fffc:2:0:6565:6565             # dns.twnic.tw
-64:ff9b:1:fffc:2:0:65c6:c021             # doh.360.cn, dot.360.cn
+64:ff9b:1:fffc:2:0:65c6:c021             # doh.360.cn
 64:ff9b:1:fffc:2:0:65c6:c11d             # doh.360.cn, dot.360.cn
 64:ff9b:1:fffc:2:0:65ec:452b             # httpdns.meituan.com
 64:ff9b:1:fffc:2:0:6671:5baa             # dns.yameenassotally.com
@@ -3117,11 +3108,11 @@
 64:ff9b:1:fffc:2:0:678d:9a03             # dns.gi.co.id
 64:ff9b:1:fffc:2:0:6791:55f8             # dns.mtoo.vip
 64:ff9b:1:fffc:2:0:6795:1c81             # www.chungocoai.name.vn
-64:ff9b:1:fffc:2:0:6796:7464             # dns.ningkelle.id, family.dns.ningkelle.id
+64:ff9b:1:fffc:2:0:6796:7464             # dns.ningkelle.id
 64:ff9b:1:fffc:2:0:6796:bf54             # dns.diarbagus.id
 64:ff9b:1:fffc:2:0:6797:8c8b             # dns.repinger.com
 64:ff9b:1:fffc:2:0:679a:37a2             # dns.iamanuragh.in
-64:ff9b:1:fffc:2:0:679b:bfb8             # dns.bebasid.com, unfiltered.dns.bebasid.com
+64:ff9b:1:fffc:2:0:679b:bfb8             # dns.bebasid.com
 64:ff9b:1:fffc:2:0:679b:bfe1             # dns.caliph.dev
 64:ff9b:1:fffc:2:0:67a0:3ff2             # dns.engineer.web.id
 64:ff9b:1:fffc:2:0:67a1:c4c4             # dns.spil.co.id
@@ -3144,7 +3135,6 @@
 64:ff9b:1:fffc:2:0:6812:1cbe             # tor.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:6812:1dbe             # tor.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:6824:56b5             # geg01.dnscry.pt
-64:ff9b:1:fffc:2:0:6880:3ead             # doh.dns.sb
 64:ff9b:1:fffc:2:0:689c:9a0b             # lax01.dnscry.pt
 64:ff9b:1:fffc:2:0:68a7:c787             # ada.openbld.net
 64:ff9b:1:fffc:2:0:68ab:fc6f             # adguard.easez.net
@@ -3182,15 +3172,14 @@
 64:ff9b:1:fffc:2:0:6dec:7702             # dns.levonet.sk
 64:ff9b:1:fffc:2:0:6dec:7802             # dns.levonet.sk
 64:ff9b:1:fffc:2:0:6dfa:c446             # adguard.bitteeinbyte.de
+64:ff9b:1:fffc:2:0:6dfa:c448             # adguard.bitteeinbyte.de
 64:ff9b:1:fffc:2:0:6dfa:c4d7             # adguard.bitteeinbyte.de
 64:ff9b:1:fffc:2:0:6dfa:c522             # adguard.bitteeinbyte.de
-64:ff9b:1:fffc:2:0:6dfa:c54e             # adguard.bitteeinbyte.de
 64:ff9b:1:fffc:2:0:6dfa:cca9             # area51.mywire.org
 64:ff9b:1:fffc:2:0:6dfa:cdbc             # area51.mywire.org
 64:ff9b:1:fffc:2:0:6f14:fe23             # opencdn.jomodns.com
 64:ff9b:1:fffc:2:0:6faa:6be              # doh.18bit.cn
 64:ff9b:1:fffc:2:0:6faa:13b8             # doh.18bit.cn
-64:ff9b:1:fffc:2:0:6feb:de64             # dns.cwlys.com
 64:ff9b:1:fffc:2:0:704e:7ddd             # himedns.com, sg.yepdns.com
 64:ff9b:1:fffc:2:0:7076:4f9a             # dns.853852.xyz
 64:ff9b:1:fffc:2:0:70a3:ea3d             # 2.dns.noridev.moe
@@ -3214,10 +3203,10 @@
 64:ff9b:1:fffc:2:0:74cb:70df             # dns.sheggi.ch
 64:ff9b:1:fffc:2:0:74cb:8747             # dns.roedel.cloud
 64:ff9b:1:fffc:2:0:74cc:c51b             # dns.4-the.win
-64:ff9b:1:fffc:2:0:761b:7deb             # dns.maolaohei.xyz, dns.warma.me, dns.xwdmw.xyz, draco.plan9-ns2.com, hkname.freecdn.one, jcdns.fun, lion.yazilimatolye.com, pashagame456.com, tlz.asia, vtcuong.site
+64:ff9b:1:fffc:2:0:761b:7deb             # dns.maolaohei.xyz, dns.xwdmw.xyz, hkname.freecdn.one, tlz.asia
 64:ff9b:1:fffc:2:0:76a3:aa02             # dns.tipsy.coffee
 64:ff9b:1:fffc:2:0:772d:73e4             # doh.18bit.cn
-64:ff9b:1:fffc:2:0:7835:3535             # dns.pub
+64:ff9b:1:fffc:2:0:7835:3535             # dns.pub, doh.pub, dot.pub
 64:ff9b:1:fffc:2:0:784c:6b2d             # ns1.alidns.com
 64:ff9b:1:fffc:2:0:784c:6b2e             # ns2.alidns.com
 64:ff9b:1:fffc:2:0:784c:6b2f             # ns7.alidns.com
@@ -3246,7 +3235,7 @@
 64:ff9b:1:fffc:2:0:82e1:f4a6             # deic-lgb.anycast.censurfridns.dk, deic-lgb.anycast.uncensoreddns.org
 64:ff9b:1:fffc:2:0:82e2:a122             # deic-ore.anycast.censurfridns.dk, deic-ore.anycast.uncensoreddns.org
 64:ff9b:1:fffc:2:0:85a7:d416             # 3jjxxl.tech, callies-online.site, cloudbenders.fun, d2.shabi.icu, polisitogel.beauty
-64:ff9b:1:fffc:2:0:85a7:d419             # 3dcosas.xyz, bestwon203.com, mendozasdelivery.com
+64:ff9b:1:fffc:2:0:85a7:d419             # 3dcosas.xyz, bestwon203.com, dns.pernika.net, edgy-dns.com, family.dns.doubleangels.com, lukscasino-479-tr.xyz, lukscasino-929-tr.xyz, mendozasdelivery.com, tecdrive.site, tuskythehusky.tech
 64:ff9b:1:fffc:2:0:8666:1414             # ines.zfn.uni-bremen.de
 64:ff9b:1:fffc:2:0:86a9:2239             # doh.ibr.cs.tu-bs.de
 64:ff9b:1:fffc:2:0:86c3:580d             # us-chi-w-p-1.nashkan.net
@@ -3288,8 +3277,8 @@
 64:ff9b:1:fffc:2:0:8c24:383              # tienpham.id.vn
 64:ff9b:1:fffc:2:0:8c70:1dcf             # doh.ntu.ssooss.win
 64:ff9b:1:fffc:2:0:8ccd:101              # vip1.alidns.com, vip21.alidns.com
-64:ff9b:1:fffc:2:0:8ccd:102              # vip2.alidns.com
-64:ff9b:1:fffc:2:0:8ccd:105              # vip23.alidns.com, vip3.alidns.com
+64:ff9b:1:fffc:2:0:8ccd:102              # vip2.alidns.com, vip22.alidns.com
+64:ff9b:1:fffc:2:0:8ccd:105              # vip23.alidns.com
 64:ff9b:1:fffc:2:0:8ccd:106              # vip24.alidns.com
 64:ff9b:1:fffc:2:0:8ccd:109              # vip25.alidns.com, vip5.alidns.com
 64:ff9b:1:fffc:2:0:8ccd:10a              # vip26.alidns.com, vip6.alidns.com
@@ -3306,6 +3295,7 @@
 64:ff9b:1:fffc:2:0:8e84:e641             # dns.alvosec.com
 64:ff9b:1:fffc:2:0:8f14:c20              # lis01.dnscry.pt
 64:ff9b:1:fffc:2:0:8fc6:acca             # goose.buckyfan.net
+64:ff9b:1:fffc:2:0:8ff4:3cc1             # doh1.b-cdn.net
 64:ff9b:1:fffc:2:0:8ff4:8020             # in-blr.doh.sb
 64:ff9b:1:fffc:2:0:904c:87df             # doh.wewitro.net
 64:ff9b:1:fffc:2:0:904c:c7b1             # dns.comff.net
@@ -3350,14 +3340,14 @@
 64:ff9b:1:fffc:2:0:9570:7a1e             # family.canadianshield.cira.ca
 64:ff9b:1:fffc:2:0:9570:9570             # alpha-dns.quad9.net
 64:ff9b:1:fffc:2:0:95f8:24ea             # chromium.dns.nextdns.io
-64:ff9b:1:fffc:2:0:95f8:d975             # dns.dnswarden.com
-64:ff9b:1:fffc:2:0:966b:c81f             # aqua.is.my.waifu.cz, darkness.is.my.waifu.cz, megumin.is.my.waifu.cz, yunyun.is.my.waifu.cz
+64:ff9b:1:fffc:2:0:95f8:d975             # dns.dnswarden.com, doh.asia.dnswarden.com, doh.eu.dnswarden.com, doh.us.dnswarden.com, fr1.dnswarden.com, sg1.dnswarden.com
+64:ff9b:1:fffc:2:0:966b:c81f             # aqua.is.my.waifu.cz, darkness.is.my.waifu.cz
 64:ff9b:1:fffc:2:0:9750:918f             # dns.sstomp.nl
 64:ff9b:1:fffc:2:0:9791:c81e             # dns.momou.ch
 64:ff9b:1:fffc:2:0:97f2:4ae7             # jp-tyo-w-p-1.nashkan.net
 64:ff9b:1:fffc:2:0:97f3:de5e             # jkt01.dnscry.pt
 64:ff9b:1:fffc:2:0:9835:f7f              # jabber-germany.de, www.jabber-germany.de
-64:ff9b:1:fffc:2:0:9835:774c             # masters-of-cloud.de
+64:ff9b:1:fffc:2:0:9835:774c             # masters-of-cloud.de, www.masters-of-cloud.de
 64:ff9b:1:fffc:2:0:9835:8269             # dns.datenquark.de
 64:ff9b:1:fffc:2:0:9835:82d2             # dns.kapite.in
 64:ff9b:1:fffc:2:0:9835:ad24             # dns.psociety.de
@@ -3390,7 +3380,7 @@
 64:ff9b:1:fffc:2:0:a077:fdd1             # sa01.dns4me.net
 64:ff9b:1:fffc:2:0:a0fa:5f1c             # dns.hakim.one
 64:ff9b:1:fffc:2:0:a0fa:e3c4             # dns.bebasid.com
-64:ff9b:1:fffc:2:0:a0fb:4050             # adg.rueiliu.space, dns.aaytorr.com, dns.guardmydns.com
+64:ff9b:1:fffc:2:0:a0fb:4050             # dns.aaytorr.com, dns.guardmydns.com
 64:ff9b:1:fffc:2:0:a123:8803             # doh-primary-pool.goodbyegambling.com
 64:ff9b:1:fffc:2:0:a181:2286             # 5g.o0o.re
 64:ff9b:1:fffc:2:0:a213:e3fb             # fezgate.ovh
@@ -3478,15 +3468,15 @@
 64:ff9b:1:fffc:2:0:ace9:3b62             # dns.pccoach.nl
 64:ff9b:1:fffc:2:0:ace9:932a             # adguard.hartley.cloud
 64:ff9b:1:fffc:2:0:ace9:ddf3             # doh.archuser.org
-64:ff9b:1:fffc:2:0:acea:1be9             # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
-64:ff9b:1:fffc:2:0:acee:ace4             # alleesph.online
-64:ff9b:1:fffc:2:0:acee:b01f             # alleesph.online
-64:ff9b:1:fffc:2:0:acef:31e8             # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, gclouddns.com
-64:ff9b:1:fffc:2:0:acef:39e6             # alleesph.online, wantaquddin.com, xorbiadns.com
-64:ff9b:1:fffc:2:0:acef:c143             # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
+64:ff9b:1:fffc:2:0:acea:1be9             # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, dnsnl-noads.alekberg.net, dnsnl.alekberg.net, dnsse-noads.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, gclouddns.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, sdns22.gkonuralp.com, tk31z.com
+64:ff9b:1:fffc:2:0:acee:ace4             # alleesph.online, wantaquddin.com, xorbiadns.com
+64:ff9b:1:fffc:2:0:acee:b01f             # alleesph.online, wantaquddin.com, xorbiadns.com
+64:ff9b:1:fffc:2:0:acef:31e8             # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
+64:ff9b:1:fffc:2:0:acef:39e6             # alleesph.online
+64:ff9b:1:fffc:2:0:acef:c143             # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, dnsnl-noads.alekberg.net, dnsnl.alekberg.net, dnsse-noads.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, gclouddns.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, sdns22.gkonuralp.com, tk31z.com
 64:ff9b:1:fffc:2:0:ad14:a947             # dns.cahlen.com
 64:ff9b:1:fffc:2:0:ad49:9fa4             # dns.chilimac.net
-64:ff9b:1:fffc:2:0:add0:d4cd             # dns.furrix.zone, dns.marbledfennec.net
+64:ff9b:1:fffc:2:0:add0:d4cd             # dns.furrix.zone, dns.marbledfennec.net, multi.dns.marbledfennec.net
 64:ff9b:1:fffc:2:0:ade6:9571             # dns.scott-smith.us
 64:ff9b:1:fffc:2:0:adf9:cdc6             # phx01.dnscry.pt
 64:ff9b:1:fffc:2:0:adf9:d0f5             # us-saj-w-p-1.nashkan.net
@@ -3494,7 +3484,7 @@
 64:ff9b:1:fffc:2:0:adff:c9fe             # us1.blissdns.net
 64:ff9b:1:fffc:2:0:ae44:f84d             # dohdot.coxlab.net
 64:ff9b:1:fffc:2:0:ae8a:1daf             # doh.tiar.app, dot.tiar.app
-64:ff9b:1:fffc:2:0:af18:9a42             # dns.rubyfish.cn, ea-dns.rubyfish.cn, uw-dns.rubyfish.cn
+64:ff9b:1:fffc:2:0:af18:9a42             # dns.rubyfish.cn, ea-dns.rubyfish.cn
 64:ff9b:1:fffc:2:0:af8f:ed10             # dns.surobe.com
 64:ff9b:1:fffc:2:0:b009:199e             # dns.svoi.dev
 64:ff9b:1:fffc:2:0:b009:36db             # de.dns.privex.io
@@ -3504,15 +3494,14 @@
 64:ff9b:1:fffc:2:0:b06f:dfa7             # sjc01.dnscry.pt
 64:ff9b:1:fffc:2:0:b07b:a69              # kiv01.dnscry.pt
 64:ff9b:1:fffc:2:0:b07b:a3c1             # dns.petqa.ru
-64:ff9b:1:fffc:2:0:b093:f3a4             # blockerads.multimediaconcept.fr
 64:ff9b:1:fffc:2:0:b0a4:9b83             # dns.chadeyron.fr
 64:ff9b:1:fffc:2:0:b0a4:a6f5             # dns.chadeyron.fr
-64:ff9b:1:fffc:2:0:b0a4:b10f             # dns.chadeyron.fr
 64:ff9b:1:fffc:2:0:b0a4:b1c7             # dns.chadeyron.fr
+64:ff9b:1:fffc:2:0:b0a4:b7bf             # dns.chadeyron.fr
 64:ff9b:1:fffc:2:0:b214:2ad5             # vd.i81.ru
 64:ff9b:1:fffc:2:0:b216:7a64             # dns.shecan.ir
 64:ff9b:1:fffc:2:0:b221:7699             # dns-1.wil.cloud, dns-2.wil.cloud
-64:ff9b:1:fffc:2:0:b269:1006             # doh.42l.fr, doh.lacontrevoie.fr
+64:ff9b:1:fffc:2:0:b269:1006             # doh.42l.fr
 64:ff9b:1:fffc:2:0:b280:e16d             # tri-dns.net
 64:ff9b:1:fffc:2:0:b2a2:e40b             # dns.keweon.center
 64:ff9b:1:fffc:2:0:b2a2:e40c             # dns.keweon.center
@@ -3546,13 +3535,13 @@
 64:ff9b:1:fffc:2:0:b92f:ddc8             # dns.kukal.cz
 64:ff9b:1:fffc:2:0:b931:8d26             # getdnsapi.net
 64:ff9b:1:fffc:2:0:b933:c801             # pro.shecan.ir
-64:ff9b:1:fffc:2:0:b933:c802             # free.shecan.ir
+64:ff9b:1:fffc:2:0:b933:c802             # dns.shecan.ir, free.shecan.ir
 64:ff9b:1:fffc:2:0:b940:4f05             # doh.dns.sb, uk-lon.doh.sb
 64:ff9b:1:fffc:2:0:b945:a17a             # dns.fancyorg.at
 64:ff9b:1:fffc:2:0:b946:90a              # dns.kuuhaku.moe
 64:ff9b:1:fffc:2:0:b947:8a8a             # wikimedia-dns.org
 64:ff9b:1:fffc:2:0:b95f:da2a             # dns.digitale-gesellschaft.ch
-64:ff9b:1:fffc:2:0:b95f:da2b             # dns.digitale-gesellschaft.ch, dns2.digitale-gesellschaft.ch
+64:ff9b:1:fffc:2:0:b95f:da2b             # dns.digitale-gesellschaft.ch
 64:ff9b:1:fffc:2:0:b95f:dbaa             # resolv1.trash.net
 64:ff9b:1:fffc:2:0:b95f:dbab             # resolv2.trash.net
 64:ff9b:1:fffc:2:0:b95f:dbad             # resolv3.trash.net
@@ -3580,11 +3569,11 @@
 64:ff9b:1:fffc:2:0:b9c3:457e             # dns.l337.site
 64:ff9b:1:fffc:2:0:b9cf:7d64             # omr01.dnscry.pt
 64:ff9b:1:fffc:2:0:b9de:9946             # n5.lsasss.com
-64:ff9b:1:fffc:2:0:b9de:dede             # dns.sb, doh.sb
+64:ff9b:1:fffc:2:0:b9de:dede             # dns.sb, doh.sb, public-dns-a.dns.sb
 64:ff9b:1:fffc:2:0:b9e2:b513             # opennic2.i2pd.xyz
 64:ff9b:1:fffc:2:0:b9e4:88bf             # dns1.techniverse.net
 64:ff9b:1:fffc:2:0:b9e4:a809             # security-filter-dns.cleanbrowsing.org
-64:ff9b:1:fffc:2:0:b9e4:a80a             # adult-filter-dns.cleanbrowsing.org
+64:ff9b:1:fffc:2:0:b9e4:a80a             # adult-filter-dns.cleanbrowsing.org, doh.cleanbrowsing.org
 64:ff9b:1:fffc:2:0:b9e4:a8a8             # doh.cleanbrowsing.org, family-filter-dns.cleanbrowsing.org
 64:ff9b:1:fffc:2:0:b9e7:646c             # dns.anon.no
 64:ff9b:1:fffc:2:0:b9ea:6227             # timmes.nl
@@ -3637,7 +3626,7 @@
 64:ff9b:1:fffc:2:0:c224:9057             # morbitzer.de, www.morbitzer.de
 64:ff9b:1:fffc:2:0:c227:cd0a             # muc01.dnscry.pt
 64:ff9b:1:fffc:2:0:c232:210b             # doh.suche.org
-64:ff9b:1:fffc:2:0:c235:8902             # dns.foxyfy.net, es-ma.foxyfy.net
+64:ff9b:1:fffc:2:0:c235:8902             # dns.foxyfy.net
 64:ff9b:1:fffc:2:0:c237:d4c              # dns.clanless.ovh
 64:ff9b:1:fffc:2:0:c23b:9c09             # adguard.bonis.de
 64:ff9b:1:fffc:2:0:c243:4767             # adguard.oms-ctr.ru
@@ -3659,7 +3648,7 @@
 64:ff9b:1:fffc:2:0:c350:7763             # dns.cert.ee
 64:ff9b:1:fffc:2:0:c350:7765             # dns.cert.ee
 64:ff9b:1:fffc:2:0:c372:e4a              # syd02.dnscry.pt
-64:ff9b:1:fffc:2:0:c385:1910             # dns.comss.one, router.comss.one
+64:ff9b:1:fffc:2:0:c385:1910             # dns.comss.one
 64:ff9b:1:fffc:2:0:c3c9:15fb             # doh.zknt.org
 64:ff9b:1:fffc:2:0:c3c9:2795             # dns.kerekes.xyz
 64:ff9b:1:fffc:2:0:c3c9:83b7             # dns.a47.me
@@ -3683,7 +3672,7 @@
 64:ff9b:1:fffc:2:0:ca3d:ec43             # nue01.dnscry.pt
 64:ff9b:1:fffc:2:0:ca3d:f03d             # adguard.pangerl.it
 64:ff9b:1:fffc:2:0:ca46:857c             # dns.gnb09.id
-64:ff9b:1:fffc:2:0:caac:1a24             # adguard.johanliebert.top, dns.edgeburnmedia.com, doh.armadillodns.net, hydra.plan9-ns1.com
+64:ff9b:1:fffc:2:0:caac:1a24             # adguard.johanliebert.top, dns.edgeburnmedia.com, hydra.plan9-ns1.com
 64:ff9b:1:fffc:2:0:cb1d:f034             # dns.slinkyman.net
 64:ff9b:1:fffc:2:0:cb1d:f14c             # per.adfilter.net
 64:ff9b:1:fffc:2:0:cb6b:161              # httpdns-sc.aliyuncs.com
@@ -3702,7 +3691,7 @@
 64:ff9b:1:fffc:2:0:cff6:5760             # kronos.plan9-dns.com
 64:ff9b:1:fffc:2:0:d043:dc02             # sandbox.opendns.com
 64:ff9b:1:fffc:2:0:d043:dc7b             # familyshield.opendns.com, resolver2-fs.opendns.com
-64:ff9b:1:fffc:2:0:d043:dcdc             # dns.opendns.com, dns.umbrella.com, resolver2.opendns.com
+64:ff9b:1:fffc:2:0:d043:dcdc             # dns.opendns.com
 64:ff9b:1:fffc:2:0:d043:de02             # sandbox.opendns.com
 64:ff9b:1:fffc:2:0:d043:de7b             # familyshield.opendns.com, resolver1-fs.opendns.com
 64:ff9b:1:fffc:2:0:d043:dede             # dns.opendns.com
@@ -3714,7 +3703,7 @@
 64:ff9b:1:fffc:2:0:d412:5                # dns.mnet-online.de
 64:ff9b:1:fffc:2:0:d412:305              # dns.mnet-online.de
 64:ff9b:1:fffc:2:0:d43c:3df6             # doh.quickline.ch, dot.quickline.ch
-64:ff9b:1:fffc:2:0:d43c:3ff6             # doh.quickline.ch, dot.quickline.ch
+64:ff9b:1:fffc:2:0:d43c:3ff6             # doh.quickline.ch
 64:ff9b:1:fffc:2:0:d46d:c35d             # dns.comss.one
 64:ff9b:1:fffc:2:0:d484:7534             # dns.peb-schmidt.de
 64:ff9b:1:fffc:2:0:d4b9:c819             # dns1.conne.net
@@ -3761,11 +3750,10 @@
 64:ff9b:1:fffc:2:0:dc84:a3df             # dns.ares-taiwan.com
 64:ff9b:1:fffc:2:0:dc87:df12             # dns.david888.com
 64:ff9b:1:fffc:2:0:dc8f:4fc              # ihctw.synology.me
-64:ff9b:1:fffc:2:0:dc8f:1e9f             # ihctw.synology.me
 64:ff9b:1:fffc:2:0:dd83:a5a5             # pdns.itxe.net
 64:ff9b:1:fffc:2:0:de63:72ac             # agh.printk.info
-64:ff9b:1:fffc:2:0:df05:505              # dns.alidns.com, dns002.alidns.com, dns008.alidns.com, dns031.alidns.com, dns038.alidns.com, dns040.alidns.com, dns051.alidns.com, dns32.alidns.com, dns49.alidns.com, dns50.alidns.com, dns51.alidns.com, dnsag.alidns.com, dnsax.alidns.com, dnsd.alidns.com, dnsl.alidns.com, ns.alidns.com, ns005.alidns.com, ns006.alidns.com, ns010.alidns.com, ns013.alidns.com, ns018.alidns.com, ns04.alidns.com, ns044.alidns.com, ns055.alidns.com, ns064.alidns.com, ns20.alidns.com, ns27.alidns.com, ns38.alidns.com, ns60.alidns.com, nsal.alidns.com, nsay.alidns.com, nsb.alidns.com, nsc.alidns.com, nsi.alidns.com, nsm.alidns.com, nsu.alidns.com, nsy.alidns.com, vip025.alidns.com, vip027.alidns.com, vip034.alidns.com, vip036.alidns.com, vip046.alidns.com, vip058.alidns.com, vip32.alidns.com, vip61.alidns.com, vipab.alidns.com, vipae.alidns.com, vipay.alidns.com, vipc.alidns.com, vipf.alidns.com, vipu.alidns.com
-64:ff9b:1:fffc:2:0:df06:606              # dns.alidns.com, dns002.alidns.com, dns008.alidns.com, dns031.alidns.com, dns038.alidns.com, dns040.alidns.com, dns051.alidns.com, dns32.alidns.com, dns49.alidns.com, dns50.alidns.com, dns51.alidns.com, dnsag.alidns.com, dnsax.alidns.com, dnsd.alidns.com, dnsl.alidns.com, ns.alidns.com, ns005.alidns.com, ns006.alidns.com, ns010.alidns.com, ns013.alidns.com, ns018.alidns.com, ns04.alidns.com, ns044.alidns.com, ns055.alidns.com, ns064.alidns.com, ns20.alidns.com, ns27.alidns.com, ns38.alidns.com, ns60.alidns.com, nsal.alidns.com, nsay.alidns.com, nsb.alidns.com, nsc.alidns.com, nsi.alidns.com, nsm.alidns.com, nsu.alidns.com, nsy.alidns.com, vip025.alidns.com, vip027.alidns.com, vip034.alidns.com, vip036.alidns.com, vip046.alidns.com, vip058.alidns.com, vip32.alidns.com, vip61.alidns.com, vipab.alidns.com, vipae.alidns.com, vipay.alidns.com, vipc.alidns.com, vipf.alidns.com, vipu.alidns.com
+64:ff9b:1:fffc:2:0:df05:505              # dns.alidns.com, dns004.alidns.com, dns025.alidns.com, dns04.alidns.com, dns051.alidns.com, dns056.alidns.com, dns07.alidns.com, dns1.alidns.com, dns19.alidns.com, dns39.alidns.com, dns50.alidns.com, dns58.alidns.com, dns9.alidns.com, dnsaf.alidns.com, dnsan.alidns.com, dnsh.alidns.com, dnsm.alidns.com, dnso.alidns.com, dnsw.alidns.com, ns02.alidns.com, ns029.alidns.com, ns032.alidns.com, ns035.alidns.com, ns046.alidns.com, ns23.alidns.com, ns30.alidns.com, ns31.alidns.com, ns43.alidns.com, ns53.alidns.com, ns54.alidns.com, nsk.alidns.com, nss.alidns.com, vip009.alidns.com, vip030.alidns.com, vip037.alidns.com, vip04.alidns.com, vip042.alidns.com, vip050.alidns.com, vip14.alidns.com, vip15.alidns.com, vip52.alidns.com, vip55.alidns.com, vipah.alidns.com, vipai.alidns.com, vipay.alidns.com, vipq.alidns.com
+64:ff9b:1:fffc:2:0:df06:606              # dns.alidns.com, dns004.alidns.com, dns025.alidns.com, dns04.alidns.com, dns051.alidns.com, dns056.alidns.com, dns07.alidns.com, dns1.alidns.com, dns19.alidns.com, dns39.alidns.com, dns50.alidns.com, dns58.alidns.com, dns9.alidns.com, dnsaf.alidns.com, dnsan.alidns.com, dnsh.alidns.com, dnsm.alidns.com, dnso.alidns.com, dnsw.alidns.com, ns02.alidns.com, ns029.alidns.com, ns032.alidns.com, ns035.alidns.com, ns046.alidns.com, ns23.alidns.com, ns30.alidns.com, ns31.alidns.com, ns43.alidns.com, ns53.alidns.com, ns54.alidns.com, nsk.alidns.com, nss.alidns.com, vip009.alidns.com, vip030.alidns.com, vip037.alidns.com, vip04.alidns.com, vip042.alidns.com, vip050.alidns.com, vip14.alidns.com, vip15.alidns.com, vip52.alidns.com, vip55.alidns.com, vipah.alidns.com, vipai.alidns.com, vipay.alidns.com, vipq.alidns.com
 64:ff9b:1:fffd:1:0:100:1                 # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:100:2                 # security.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:100:3                 # family.cloudflare-dns.com
@@ -3773,7 +3761,7 @@
 64:ff9b:1:fffd:1:0:101:102               # security.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:101:103               # family.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:10a:a0a               # dns.nic.in
-64:ff9b:1:fffd:1:0:10c:c0c               # dns.pub
+64:ff9b:1:fffd:1:0:10c:c0c               # dns.pub, doh.pub, dot.pub
 64:ff9b:1:fffd:1:0:122:2e5c              # doh.killtw.im
 64:ff9b:1:fffd:1:0:1e6:d11a              # agh.kyusang.win
 64:ff9b:1:fffd:1:0:22d:c3ed              # block.abstergo.it
@@ -3795,7 +3783,6 @@
 64:ff9b:1:fffd:1:0:598:821b              # dns.pesaventofilippo.com
 64:ff9b:1:fffd:1:0:5a0:7569              # doh.abraservice.xyz
 64:ff9b:1:fffd:1:0:5a1:2bc5              # chromium.dns.nextdns.io, dns.nextdns.io
-64:ff9b:1:fffd:1:0:5a1:c216              # adguard.ihatemy.live
 64:ff9b:1:fffd:1:0:5af:b4ab              # dus01.dnscry.pt
 64:ff9b:1:fffd:1:0:5b4:3b25              # nsc.torgues.net
 64:ff9b:1:fffd:1:0:5c4:4a4c              # dns.mh4ckt3mh4ckt1c4s.xyz
@@ -3814,7 +3801,7 @@
 64:ff9b:1:fffd:1:0:8d4:5d07              # vip7.alidns.com
 64:ff9b:1:fffd:1:0:8d4:5d08              # vip8.alidns.com
 64:ff9b:1:fffd:1:0:909:909               # dns.quad9.net, dns9.quad9.net
-64:ff9b:1:fffd:1:0:909:90a               # dns-nosec.quad9.net
+64:ff9b:1:fffd:1:0:909:90a               # dns-nosec.quad9.net, dns10.quad9.net
 64:ff9b:1:fffd:1:0:909:90b               # dns11.quad9.net
 64:ff9b:1:fffd:1:0:909:90c               # dns12.quad9.net
 64:ff9b:1:fffd:1:0:909:90d               # dns13.quad9.net
@@ -3913,6 +3900,7 @@
 64:ff9b:1:fffd:1:0:25dd:c25f             # dns.neeb.it
 64:ff9b:1:fffd:1:0:25e4:81a0             # hel01.dnscry.pt
 64:ff9b:1:fffd:1:0:25eb:315f             # doh.azoris.ovh
+64:ff9b:1:fffd:1:0:25fc:e699             # dns2.nextdns.io
 64:ff9b:1:fffd:1:0:2620:6e3a             # doh1.b-cdn.net, doh2.b-cdn.net
 64:ff9b:1:fffd:1:0:262f:b473             # dns.glorydns.com
 64:ff9b:1:fffd:1:0:266b:e873             # ada.openbld.net
@@ -3937,9 +3925,9 @@
 64:ff9b:1:fffd:1:0:2b9a:9aa2             # dns.flymc.cc
 64:ff9b:1:fffd:1:0:2ba1:e005             # blog.kimiblock.top
 64:ff9b:1:fffd:1:0:2ba1:fea2             # blog.kimiblock.top
-64:ff9b:1:fffd:1:0:2ba9:d7c              # edns.233py.com, i.233py.com
+64:ff9b:1:fffd:1:0:2ba9:d7c              # edns.233py.com, i.233py.com, ndns.233py.com
 64:ff9b:1:fffd:1:0:2ba9:e7c              # edns.233py.com, i.233py.com
-64:ff9b:1:fffd:1:0:2ba9:f7c              # dns.233py.com
+64:ff9b:1:fffd:1:0:2ba9:f7c              # dns.233py.com, i.233py.com
 64:ff9b:1:fffd:1:0:2bae:f621             # doh.totoro.pub
 64:ff9b:1:fffd:1:0:2bae:f721             # doh.totoro.pub
 64:ff9b:1:fffd:1:0:2be0:b489             # bne01.dnscry.pt
@@ -3960,7 +3948,7 @@
 64:ff9b:1:fffd:1:0:2d43:5484             # lon01.dnscry.pt
 64:ff9b:1:fffd:1:0:2d43:55db             # rdd01.dnscry.pt
 64:ff9b:1:fffd:1:0:2d43:dbd0             # doh.la.ahadns.net, dot.la.ahadns.net
-64:ff9b:1:fffd:1:0:2d4c:1535             # chromium.dns.nextdns.io
+64:ff9b:1:fffd:1:0:2d4c:1535             # chromium.dns.nextdns.io, dns1.nextdns.io
 64:ff9b:1:fffd:1:0:2d4c:711f             # doh-2.seby.io, doh.seby.io, dot.seby.io
 64:ff9b:1:fffd:1:0:2d4d:19fd             # doh003.280blocker.net
 64:ff9b:1:fffd:1:0:2d4d:1f43             # at.pzhg.me
@@ -4057,12 +4045,12 @@
 64:ff9b:1:fffd:1:0:310c:e6ea             # chaos-system.de
 64:ff9b:1:fffd:1:0:310d:3cec             # adguard.kiboko.it
 64:ff9b:1:fffd:1:0:310d:5f7d             # de-fsn-w-p-1.nashkan.net
-64:ff9b:1:fffd:1:0:31d4:c624             # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com
-64:ff9b:1:fffd:1:0:31d4:c633             # catchen121299.top, dns.daarrk.tech, kx-97795-tr.xyz
-64:ff9b:1:fffd:1:0:31d4:c634             # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech, do-39574-tr.xyz, hfgx.shop, myatris.sbs, xholgm.top
-64:ff9b:1:fffd:1:0:31d4:cf33             # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link, dns.mathewakhil.online
-64:ff9b:1:fffd:1:0:31d4:eb22             # dns.auapi.fun, paradise-human.shop, v2.xx3210766.live
-64:ff9b:1:fffd:1:0:31d4:eb2c             # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top, dns.vod11.xyz, doh.sublime9.xyz, lifeisa.live, pepetio.xyz
+64:ff9b:1:fffd:1:0:31d4:c624             # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com, dns.wibenson.cloud, externalmobiel.lekdijk.online, securedns.vendorvista.xyz, vpn.technicule.info
+64:ff9b:1:fffd:1:0:31d4:c633             # catchen121299.top, dns.daarrk.tech, maqgie.xyz, tujenasnaszato.xyz
+64:ff9b:1:fffd:1:0:31d4:c634             # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech, do-39574-tr.xyz
+64:ff9b:1:fffd:1:0:31d4:cf33             # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link
+64:ff9b:1:fffd:1:0:31d4:eb22             # dns.auapi.fun
+64:ff9b:1:fffd:1:0:31d4:eb2c             # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top
 64:ff9b:1:fffd:1:0:31eb:4a74             # dns.zzuhacker.cn
 64:ff9b:1:fffd:1:0:3274:3bfb             # adguard.shoupperuser.com
 64:ff9b:1:fffd:1:0:334d:6a59             # dns-privacy.puregeni.us
@@ -4108,7 +4096,6 @@
 64:ff9b:1:fffd:1:0:416c:3611             # dns.anon.no
 64:ff9b:1:fffd:1:0:4221:3c22             # arashi.net.eu.org
 64:ff9b:1:fffd:1:0:4221:3cc1             # arashi.net.eu.org
-64:ff9b:1:fffd:1:0:4221:3cc2             # arashi.net.eu.org
 64:ff9b:1:fffd:1:0:4237:9fba             # dnswebvsn.com
 64:ff9b:1:fffd:1:0:423f:b17e             # dns.stevenz.net, doh.sz-dns.com
 64:ff9b:1:fffd:1:0:429a:7667             # renardbleu.dev
@@ -4127,7 +4114,7 @@
 64:ff9b:1:fffd:1:0:46fd:509e             # dns.sarak.as, dns.sarakas.net
 64:ff9b:1:fffd:1:0:4713:f322             # ag.ff0x.ca
 64:ff9b:1:fffd:1:0:4787:476              # doh.aaaab3n.moe
-64:ff9b:1:fffd:1:0:4812:4d4d             # dns.eddi.net, doh.eddi.net
+64:ff9b:1:fffd:1:0:4812:4d4d             # dns.eddi.net
 64:ff9b:1:fffd:1:0:4812:d733             # us-kan-w-p-1.nashkan.net
 64:ff9b:1:fffd:1:0:4a39:8053             # adguard.jfchenier.ca
 64:ff9b:1:fffd:1:0:4a52:2a2a             # ordns.he.net
@@ -4139,11 +4126,11 @@
 64:ff9b:1:fffd:1:0:4c4c:153d             # arashi.net.eu.org
 64:ff9b:1:fffd:1:0:4c4c:155d             # arashi.net.eu.org
 64:ff9b:1:fffd:1:0:4c4c:1562             # arashi.net.eu.org
-64:ff9b:1:fffd:1:0:4c4c:157b             # arashi.net.eu.org
+64:ff9b:1:fffd:1:0:4c4c:15a4             # arashi.net.eu.org
 64:ff9b:1:fffd:1:0:4d44:1d3f             # ahoj.email
 64:ff9b:1:fffd:1:0:4d44:32ef             # dns.connect.fail
 64:ff9b:1:fffd:1:0:4d44:58dc             # dns.kuuhaku.moe
-64:ff9b:1:fffd:1:0:4d58:801              # common.dot.dns.yandex.net
+64:ff9b:1:fffd:1:0:4d58:801              # common.dot.dns.yandex.net, secondary.dns.yandex.ru
 64:ff9b:1:fffd:1:0:4d58:802              # safe.dot.dns.yandex.net, secondary.safe.dns.yandex.ru
 64:ff9b:1:fffd:1:0:4d58:803              # family.dot.dns.yandex.net, secondary.family.dns.yandex.ru
 64:ff9b:1:fffd:1:0:4d58:807              # family.dns.yandex.ru, family.dot.dns.yandex.net
@@ -4177,7 +4164,7 @@
 64:ff9b:1:fffd:1:0:5099:9269             # doh.kekew.info
 64:ff9b:1:fffd:1:0:509c:91c9             # dns.t53.de
 64:ff9b:1:fffd:1:0:50f9:90f5             # dns.mihanentalpo.me
-64:ff9b:1:fffd:1:0:50f9:95b2             # muxyuji.ru, www.muxyuji.ru
+64:ff9b:1:fffd:1:0:50f9:95b2             # muxyuji.ru
 64:ff9b:1:fffd:1:0:50fe:4f9d             # zrh1-ns01.monzoon.net
 64:ff9b:1:fffd:1:0:5182:6ffa             # doh.bt.com
 64:ff9b:1:fffd:1:0:5182:6ffb             # doh.bt.com
@@ -4251,7 +4238,7 @@
 64:ff9b:1:fffd:1:0:58c6:675b             # dns.scarx.net
 64:ff9b:1:fffd:1:0:58c6:7316             # ns.ral9005.org
 64:ff9b:1:fffd:1:0:58c6:7a9a             # hard.dnsforge.de
-64:ff9b:1:fffd:1:0:58d0:e03c             # ahoj.email, zakaria.website
+64:ff9b:1:fffd:1:0:58d0:e03c             # ahoj.email
 64:ff9b:1:fffd:1:0:5920:2020             # resolver.sunet.se
 64:ff9b:1:fffd:1:0:592b:ae0a             # zdn.ro
 64:ff9b:1:fffd:1:0:5939:2dce             # dns.farshidhakimy.de
@@ -4298,9 +4285,9 @@
 64:ff9b:1:fffd:1:0:5e17:4740             # dns.clanto.cloud
 64:ff9b:1:fffd:1:0:5e82:87cb             # dns.digitalsize.net
 64:ff9b:1:fffd:1:0:5e8c:e0e              # dns.adguard-dns.com, dns.adguard.com
-64:ff9b:1:fffd:1:0:5e8c:e0f              # dns-family.adguard.com, family.adguard-dns.com
+64:ff9b:1:fffd:1:0:5e8c:e0f              # dns-family.adguard.com
 64:ff9b:1:fffd:1:0:5e8c:e31              # d.adguard-dns.com
-64:ff9b:1:fffd:1:0:5e8c:e8c              # dns-unfiltered.adguard.com
+64:ff9b:1:fffd:1:0:5e8c:e8c              # dns-unfiltered.adguard.com, unfiltered.adguard-dns.com
 64:ff9b:1:fffd:1:0:5e8c:e8d              # dns-unfiltered.adguard.com
 64:ff9b:1:fffd:1:0:5e8c:f0f              # dns.adguard-dns.com, dns.adguard.com
 64:ff9b:1:fffd:1:0:5e8c:f10              # dns-family.adguard.com
@@ -4337,7 +4324,7 @@
 64:ff9b:1:fffd:1:0:6506:606              # dns.tuna.tsinghua.edu.cn
 64:ff9b:1:fffd:1:0:6522:e5c1             # sukidayo.eu.org
 64:ff9b:1:fffd:1:0:6565:6565             # dns.twnic.tw
-64:ff9b:1:fffd:1:0:65c6:c021             # doh.360.cn, dot.360.cn
+64:ff9b:1:fffd:1:0:65c6:c021             # doh.360.cn
 64:ff9b:1:fffd:1:0:65c6:c11d             # doh.360.cn, dot.360.cn
 64:ff9b:1:fffd:1:0:65ec:452b             # httpdns.meituan.com
 64:ff9b:1:fffd:1:0:6671:5baa             # dns.yameenassotally.com
@@ -4373,11 +4360,11 @@
 64:ff9b:1:fffd:1:0:678d:9a03             # dns.gi.co.id
 64:ff9b:1:fffd:1:0:6791:55f8             # dns.mtoo.vip
 64:ff9b:1:fffd:1:0:6795:1c81             # www.chungocoai.name.vn
-64:ff9b:1:fffd:1:0:6796:7464             # dns.ningkelle.id, family.dns.ningkelle.id
+64:ff9b:1:fffd:1:0:6796:7464             # dns.ningkelle.id
 64:ff9b:1:fffd:1:0:6796:bf54             # dns.diarbagus.id
 64:ff9b:1:fffd:1:0:6797:8c8b             # dns.repinger.com
 64:ff9b:1:fffd:1:0:679a:37a2             # dns.iamanuragh.in
-64:ff9b:1:fffd:1:0:679b:bfb8             # dns.bebasid.com, unfiltered.dns.bebasid.com
+64:ff9b:1:fffd:1:0:679b:bfb8             # dns.bebasid.com
 64:ff9b:1:fffd:1:0:679b:bfe1             # dns.caliph.dev
 64:ff9b:1:fffd:1:0:67a0:3ff2             # dns.engineer.web.id
 64:ff9b:1:fffd:1:0:67a1:c4c4             # dns.spil.co.id
@@ -4400,7 +4387,6 @@
 64:ff9b:1:fffd:1:0:6812:1cbe             # tor.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:6812:1dbe             # tor.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:6824:56b5             # geg01.dnscry.pt
-64:ff9b:1:fffd:1:0:6880:3ead             # doh.dns.sb
 64:ff9b:1:fffd:1:0:689c:9a0b             # lax01.dnscry.pt
 64:ff9b:1:fffd:1:0:68a7:c787             # ada.openbld.net
 64:ff9b:1:fffd:1:0:68ab:fc6f             # adguard.easez.net
@@ -4438,15 +4424,14 @@
 64:ff9b:1:fffd:1:0:6dec:7702             # dns.levonet.sk
 64:ff9b:1:fffd:1:0:6dec:7802             # dns.levonet.sk
 64:ff9b:1:fffd:1:0:6dfa:c446             # adguard.bitteeinbyte.de
+64:ff9b:1:fffd:1:0:6dfa:c448             # adguard.bitteeinbyte.de
 64:ff9b:1:fffd:1:0:6dfa:c4d7             # adguard.bitteeinbyte.de
 64:ff9b:1:fffd:1:0:6dfa:c522             # adguard.bitteeinbyte.de
-64:ff9b:1:fffd:1:0:6dfa:c54e             # adguard.bitteeinbyte.de
 64:ff9b:1:fffd:1:0:6dfa:cca9             # area51.mywire.org
 64:ff9b:1:fffd:1:0:6dfa:cdbc             # area51.mywire.org
 64:ff9b:1:fffd:1:0:6f14:fe23             # opencdn.jomodns.com
 64:ff9b:1:fffd:1:0:6faa:6be              # doh.18bit.cn
 64:ff9b:1:fffd:1:0:6faa:13b8             # doh.18bit.cn
-64:ff9b:1:fffd:1:0:6feb:de64             # dns.cwlys.com
 64:ff9b:1:fffd:1:0:704e:7ddd             # himedns.com, sg.yepdns.com
 64:ff9b:1:fffd:1:0:7076:4f9a             # dns.853852.xyz
 64:ff9b:1:fffd:1:0:70a3:ea3d             # 2.dns.noridev.moe
@@ -4470,10 +4455,10 @@
 64:ff9b:1:fffd:1:0:74cb:70df             # dns.sheggi.ch
 64:ff9b:1:fffd:1:0:74cb:8747             # dns.roedel.cloud
 64:ff9b:1:fffd:1:0:74cc:c51b             # dns.4-the.win
-64:ff9b:1:fffd:1:0:761b:7deb             # dns.maolaohei.xyz, dns.warma.me, dns.xwdmw.xyz, draco.plan9-ns2.com, hkname.freecdn.one, jcdns.fun, lion.yazilimatolye.com, pashagame456.com, tlz.asia, vtcuong.site
+64:ff9b:1:fffd:1:0:761b:7deb             # dns.maolaohei.xyz, dns.xwdmw.xyz, hkname.freecdn.one, tlz.asia
 64:ff9b:1:fffd:1:0:76a3:aa02             # dns.tipsy.coffee
 64:ff9b:1:fffd:1:0:772d:73e4             # doh.18bit.cn
-64:ff9b:1:fffd:1:0:7835:3535             # dns.pub
+64:ff9b:1:fffd:1:0:7835:3535             # dns.pub, doh.pub, dot.pub
 64:ff9b:1:fffd:1:0:784c:6b2d             # ns1.alidns.com
 64:ff9b:1:fffd:1:0:784c:6b2e             # ns2.alidns.com
 64:ff9b:1:fffd:1:0:784c:6b2f             # ns7.alidns.com
@@ -4502,7 +4487,7 @@
 64:ff9b:1:fffd:1:0:82e1:f4a6             # deic-lgb.anycast.censurfridns.dk, deic-lgb.anycast.uncensoreddns.org
 64:ff9b:1:fffd:1:0:82e2:a122             # deic-ore.anycast.censurfridns.dk, deic-ore.anycast.uncensoreddns.org
 64:ff9b:1:fffd:1:0:85a7:d416             # 3jjxxl.tech, callies-online.site, cloudbenders.fun, d2.shabi.icu, polisitogel.beauty
-64:ff9b:1:fffd:1:0:85a7:d419             # 3dcosas.xyz, bestwon203.com, mendozasdelivery.com
+64:ff9b:1:fffd:1:0:85a7:d419             # 3dcosas.xyz, bestwon203.com, dns.pernika.net, edgy-dns.com, family.dns.doubleangels.com, lukscasino-479-tr.xyz, lukscasino-929-tr.xyz, mendozasdelivery.com, tecdrive.site, tuskythehusky.tech
 64:ff9b:1:fffd:1:0:8666:1414             # ines.zfn.uni-bremen.de
 64:ff9b:1:fffd:1:0:86a9:2239             # doh.ibr.cs.tu-bs.de
 64:ff9b:1:fffd:1:0:86c3:580d             # us-chi-w-p-1.nashkan.net
@@ -4544,8 +4529,8 @@
 64:ff9b:1:fffd:1:0:8c24:383              # tienpham.id.vn
 64:ff9b:1:fffd:1:0:8c70:1dcf             # doh.ntu.ssooss.win
 64:ff9b:1:fffd:1:0:8ccd:101              # vip1.alidns.com, vip21.alidns.com
-64:ff9b:1:fffd:1:0:8ccd:102              # vip2.alidns.com
-64:ff9b:1:fffd:1:0:8ccd:105              # vip23.alidns.com, vip3.alidns.com
+64:ff9b:1:fffd:1:0:8ccd:102              # vip2.alidns.com, vip22.alidns.com
+64:ff9b:1:fffd:1:0:8ccd:105              # vip23.alidns.com
 64:ff9b:1:fffd:1:0:8ccd:106              # vip24.alidns.com
 64:ff9b:1:fffd:1:0:8ccd:109              # vip25.alidns.com, vip5.alidns.com
 64:ff9b:1:fffd:1:0:8ccd:10a              # vip26.alidns.com, vip6.alidns.com
@@ -4562,6 +4547,7 @@
 64:ff9b:1:fffd:1:0:8e84:e641             # dns.alvosec.com
 64:ff9b:1:fffd:1:0:8f14:c20              # lis01.dnscry.pt
 64:ff9b:1:fffd:1:0:8fc6:acca             # goose.buckyfan.net
+64:ff9b:1:fffd:1:0:8ff4:3cc1             # doh1.b-cdn.net
 64:ff9b:1:fffd:1:0:8ff4:8020             # in-blr.doh.sb
 64:ff9b:1:fffd:1:0:904c:87df             # doh.wewitro.net
 64:ff9b:1:fffd:1:0:904c:c7b1             # dns.comff.net
@@ -4606,14 +4592,14 @@
 64:ff9b:1:fffd:1:0:9570:7a1e             # family.canadianshield.cira.ca
 64:ff9b:1:fffd:1:0:9570:9570             # alpha-dns.quad9.net
 64:ff9b:1:fffd:1:0:95f8:24ea             # chromium.dns.nextdns.io
-64:ff9b:1:fffd:1:0:95f8:d975             # dns.dnswarden.com
-64:ff9b:1:fffd:1:0:966b:c81f             # aqua.is.my.waifu.cz, darkness.is.my.waifu.cz, megumin.is.my.waifu.cz, yunyun.is.my.waifu.cz
+64:ff9b:1:fffd:1:0:95f8:d975             # dns.dnswarden.com, doh.asia.dnswarden.com, doh.eu.dnswarden.com, doh.us.dnswarden.com, fr1.dnswarden.com, sg1.dnswarden.com
+64:ff9b:1:fffd:1:0:966b:c81f             # aqua.is.my.waifu.cz, darkness.is.my.waifu.cz
 64:ff9b:1:fffd:1:0:9750:918f             # dns.sstomp.nl
 64:ff9b:1:fffd:1:0:9791:c81e             # dns.momou.ch
 64:ff9b:1:fffd:1:0:97f2:4ae7             # jp-tyo-w-p-1.nashkan.net
 64:ff9b:1:fffd:1:0:97f3:de5e             # jkt01.dnscry.pt
 64:ff9b:1:fffd:1:0:9835:f7f              # jabber-germany.de, www.jabber-germany.de
-64:ff9b:1:fffd:1:0:9835:774c             # masters-of-cloud.de
+64:ff9b:1:fffd:1:0:9835:774c             # masters-of-cloud.de, www.masters-of-cloud.de
 64:ff9b:1:fffd:1:0:9835:8269             # dns.datenquark.de
 64:ff9b:1:fffd:1:0:9835:82d2             # dns.kapite.in
 64:ff9b:1:fffd:1:0:9835:ad24             # dns.psociety.de
@@ -4646,7 +4632,7 @@
 64:ff9b:1:fffd:1:0:a077:fdd1             # sa01.dns4me.net
 64:ff9b:1:fffd:1:0:a0fa:5f1c             # dns.hakim.one
 64:ff9b:1:fffd:1:0:a0fa:e3c4             # dns.bebasid.com
-64:ff9b:1:fffd:1:0:a0fb:4050             # adg.rueiliu.space, dns.aaytorr.com, dns.guardmydns.com
+64:ff9b:1:fffd:1:0:a0fb:4050             # dns.aaytorr.com, dns.guardmydns.com
 64:ff9b:1:fffd:1:0:a123:8803             # doh-primary-pool.goodbyegambling.com
 64:ff9b:1:fffd:1:0:a181:2286             # 5g.o0o.re
 64:ff9b:1:fffd:1:0:a213:e3fb             # fezgate.ovh
@@ -4734,15 +4720,15 @@
 64:ff9b:1:fffd:1:0:ace9:3b62             # dns.pccoach.nl
 64:ff9b:1:fffd:1:0:ace9:932a             # adguard.hartley.cloud
 64:ff9b:1:fffd:1:0:ace9:ddf3             # doh.archuser.org
-64:ff9b:1:fffd:1:0:acea:1be9             # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
-64:ff9b:1:fffd:1:0:acee:ace4             # alleesph.online
-64:ff9b:1:fffd:1:0:acee:b01f             # alleesph.online
-64:ff9b:1:fffd:1:0:acef:31e8             # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, gclouddns.com
-64:ff9b:1:fffd:1:0:acef:39e6             # alleesph.online, wantaquddin.com, xorbiadns.com
-64:ff9b:1:fffd:1:0:acef:c143             # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
+64:ff9b:1:fffd:1:0:acea:1be9             # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, dnsnl-noads.alekberg.net, dnsnl.alekberg.net, dnsse-noads.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, gclouddns.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, sdns22.gkonuralp.com, tk31z.com
+64:ff9b:1:fffd:1:0:acee:ace4             # alleesph.online, wantaquddin.com, xorbiadns.com
+64:ff9b:1:fffd:1:0:acee:b01f             # alleesph.online, wantaquddin.com, xorbiadns.com
+64:ff9b:1:fffd:1:0:acef:31e8             # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
+64:ff9b:1:fffd:1:0:acef:39e6             # alleesph.online
+64:ff9b:1:fffd:1:0:acef:c143             # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, dnsnl-noads.alekberg.net, dnsnl.alekberg.net, dnsse-noads.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, gclouddns.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, sdns22.gkonuralp.com, tk31z.com
 64:ff9b:1:fffd:1:0:ad14:a947             # dns.cahlen.com
 64:ff9b:1:fffd:1:0:ad49:9fa4             # dns.chilimac.net
-64:ff9b:1:fffd:1:0:add0:d4cd             # dns.furrix.zone, dns.marbledfennec.net
+64:ff9b:1:fffd:1:0:add0:d4cd             # dns.furrix.zone, dns.marbledfennec.net, multi.dns.marbledfennec.net
 64:ff9b:1:fffd:1:0:ade6:9571             # dns.scott-smith.us
 64:ff9b:1:fffd:1:0:adf9:cdc6             # phx01.dnscry.pt
 64:ff9b:1:fffd:1:0:adf9:d0f5             # us-saj-w-p-1.nashkan.net
@@ -4750,7 +4736,7 @@
 64:ff9b:1:fffd:1:0:adff:c9fe             # us1.blissdns.net
 64:ff9b:1:fffd:1:0:ae44:f84d             # dohdot.coxlab.net
 64:ff9b:1:fffd:1:0:ae8a:1daf             # doh.tiar.app, dot.tiar.app
-64:ff9b:1:fffd:1:0:af18:9a42             # dns.rubyfish.cn, ea-dns.rubyfish.cn, uw-dns.rubyfish.cn
+64:ff9b:1:fffd:1:0:af18:9a42             # dns.rubyfish.cn, ea-dns.rubyfish.cn
 64:ff9b:1:fffd:1:0:af8f:ed10             # dns.surobe.com
 64:ff9b:1:fffd:1:0:b009:199e             # dns.svoi.dev
 64:ff9b:1:fffd:1:0:b009:36db             # de.dns.privex.io
@@ -4760,15 +4746,14 @@
 64:ff9b:1:fffd:1:0:b06f:dfa7             # sjc01.dnscry.pt
 64:ff9b:1:fffd:1:0:b07b:a69              # kiv01.dnscry.pt
 64:ff9b:1:fffd:1:0:b07b:a3c1             # dns.petqa.ru
-64:ff9b:1:fffd:1:0:b093:f3a4             # blockerads.multimediaconcept.fr
 64:ff9b:1:fffd:1:0:b0a4:9b83             # dns.chadeyron.fr
 64:ff9b:1:fffd:1:0:b0a4:a6f5             # dns.chadeyron.fr
-64:ff9b:1:fffd:1:0:b0a4:b10f             # dns.chadeyron.fr
 64:ff9b:1:fffd:1:0:b0a4:b1c7             # dns.chadeyron.fr
+64:ff9b:1:fffd:1:0:b0a4:b7bf             # dns.chadeyron.fr
 64:ff9b:1:fffd:1:0:b214:2ad5             # vd.i81.ru
 64:ff9b:1:fffd:1:0:b216:7a64             # dns.shecan.ir
 64:ff9b:1:fffd:1:0:b221:7699             # dns-1.wil.cloud, dns-2.wil.cloud
-64:ff9b:1:fffd:1:0:b269:1006             # doh.42l.fr, doh.lacontrevoie.fr
+64:ff9b:1:fffd:1:0:b269:1006             # doh.42l.fr
 64:ff9b:1:fffd:1:0:b280:e16d             # tri-dns.net
 64:ff9b:1:fffd:1:0:b2a2:e40b             # dns.keweon.center
 64:ff9b:1:fffd:1:0:b2a2:e40c             # dns.keweon.center
@@ -4802,13 +4787,13 @@
 64:ff9b:1:fffd:1:0:b92f:ddc8             # dns.kukal.cz
 64:ff9b:1:fffd:1:0:b931:8d26             # getdnsapi.net
 64:ff9b:1:fffd:1:0:b933:c801             # pro.shecan.ir
-64:ff9b:1:fffd:1:0:b933:c802             # free.shecan.ir
+64:ff9b:1:fffd:1:0:b933:c802             # dns.shecan.ir, free.shecan.ir
 64:ff9b:1:fffd:1:0:b940:4f05             # doh.dns.sb, uk-lon.doh.sb
 64:ff9b:1:fffd:1:0:b945:a17a             # dns.fancyorg.at
 64:ff9b:1:fffd:1:0:b946:90a              # dns.kuuhaku.moe
 64:ff9b:1:fffd:1:0:b947:8a8a             # wikimedia-dns.org
 64:ff9b:1:fffd:1:0:b95f:da2a             # dns.digitale-gesellschaft.ch
-64:ff9b:1:fffd:1:0:b95f:da2b             # dns.digitale-gesellschaft.ch, dns2.digitale-gesellschaft.ch
+64:ff9b:1:fffd:1:0:b95f:da2b             # dns.digitale-gesellschaft.ch
 64:ff9b:1:fffd:1:0:b95f:dbaa             # resolv1.trash.net
 64:ff9b:1:fffd:1:0:b95f:dbab             # resolv2.trash.net
 64:ff9b:1:fffd:1:0:b95f:dbad             # resolv3.trash.net
@@ -4836,11 +4821,11 @@
 64:ff9b:1:fffd:1:0:b9c3:457e             # dns.l337.site
 64:ff9b:1:fffd:1:0:b9cf:7d64             # omr01.dnscry.pt
 64:ff9b:1:fffd:1:0:b9de:9946             # n5.lsasss.com
-64:ff9b:1:fffd:1:0:b9de:dede             # dns.sb, doh.sb
+64:ff9b:1:fffd:1:0:b9de:dede             # dns.sb, doh.sb, public-dns-a.dns.sb
 64:ff9b:1:fffd:1:0:b9e2:b513             # opennic2.i2pd.xyz
 64:ff9b:1:fffd:1:0:b9e4:88bf             # dns1.techniverse.net
 64:ff9b:1:fffd:1:0:b9e4:a809             # security-filter-dns.cleanbrowsing.org
-64:ff9b:1:fffd:1:0:b9e4:a80a             # adult-filter-dns.cleanbrowsing.org
+64:ff9b:1:fffd:1:0:b9e4:a80a             # adult-filter-dns.cleanbrowsing.org, doh.cleanbrowsing.org
 64:ff9b:1:fffd:1:0:b9e4:a8a8             # doh.cleanbrowsing.org, family-filter-dns.cleanbrowsing.org
 64:ff9b:1:fffd:1:0:b9e7:646c             # dns.anon.no
 64:ff9b:1:fffd:1:0:b9ea:6227             # timmes.nl
@@ -4893,7 +4878,7 @@
 64:ff9b:1:fffd:1:0:c224:9057             # morbitzer.de, www.morbitzer.de
 64:ff9b:1:fffd:1:0:c227:cd0a             # muc01.dnscry.pt
 64:ff9b:1:fffd:1:0:c232:210b             # doh.suche.org
-64:ff9b:1:fffd:1:0:c235:8902             # dns.foxyfy.net, es-ma.foxyfy.net
+64:ff9b:1:fffd:1:0:c235:8902             # dns.foxyfy.net
 64:ff9b:1:fffd:1:0:c237:d4c              # dns.clanless.ovh
 64:ff9b:1:fffd:1:0:c23b:9c09             # adguard.bonis.de
 64:ff9b:1:fffd:1:0:c243:4767             # adguard.oms-ctr.ru
@@ -4915,7 +4900,7 @@
 64:ff9b:1:fffd:1:0:c350:7763             # dns.cert.ee
 64:ff9b:1:fffd:1:0:c350:7765             # dns.cert.ee
 64:ff9b:1:fffd:1:0:c372:e4a              # syd02.dnscry.pt
-64:ff9b:1:fffd:1:0:c385:1910             # dns.comss.one, router.comss.one
+64:ff9b:1:fffd:1:0:c385:1910             # dns.comss.one
 64:ff9b:1:fffd:1:0:c3c9:15fb             # doh.zknt.org
 64:ff9b:1:fffd:1:0:c3c9:2795             # dns.kerekes.xyz
 64:ff9b:1:fffd:1:0:c3c9:83b7             # dns.a47.me
@@ -4939,7 +4924,7 @@
 64:ff9b:1:fffd:1:0:ca3d:ec43             # nue01.dnscry.pt
 64:ff9b:1:fffd:1:0:ca3d:f03d             # adguard.pangerl.it
 64:ff9b:1:fffd:1:0:ca46:857c             # dns.gnb09.id
-64:ff9b:1:fffd:1:0:caac:1a24             # adguard.johanliebert.top, dns.edgeburnmedia.com, doh.armadillodns.net, hydra.plan9-ns1.com
+64:ff9b:1:fffd:1:0:caac:1a24             # adguard.johanliebert.top, dns.edgeburnmedia.com, hydra.plan9-ns1.com
 64:ff9b:1:fffd:1:0:cb1d:f034             # dns.slinkyman.net
 64:ff9b:1:fffd:1:0:cb1d:f14c             # per.adfilter.net
 64:ff9b:1:fffd:1:0:cb6b:161              # httpdns-sc.aliyuncs.com
@@ -4958,7 +4943,7 @@
 64:ff9b:1:fffd:1:0:cff6:5760             # kronos.plan9-dns.com
 64:ff9b:1:fffd:1:0:d043:dc02             # sandbox.opendns.com
 64:ff9b:1:fffd:1:0:d043:dc7b             # familyshield.opendns.com, resolver2-fs.opendns.com
-64:ff9b:1:fffd:1:0:d043:dcdc             # dns.opendns.com, dns.umbrella.com, resolver2.opendns.com
+64:ff9b:1:fffd:1:0:d043:dcdc             # dns.opendns.com
 64:ff9b:1:fffd:1:0:d043:de02             # sandbox.opendns.com
 64:ff9b:1:fffd:1:0:d043:de7b             # familyshield.opendns.com, resolver1-fs.opendns.com
 64:ff9b:1:fffd:1:0:d043:dede             # dns.opendns.com
@@ -4970,7 +4955,7 @@
 64:ff9b:1:fffd:1:0:d412:5                # dns.mnet-online.de
 64:ff9b:1:fffd:1:0:d412:305              # dns.mnet-online.de
 64:ff9b:1:fffd:1:0:d43c:3df6             # doh.quickline.ch, dot.quickline.ch
-64:ff9b:1:fffd:1:0:d43c:3ff6             # doh.quickline.ch, dot.quickline.ch
+64:ff9b:1:fffd:1:0:d43c:3ff6             # doh.quickline.ch
 64:ff9b:1:fffd:1:0:d46d:c35d             # dns.comss.one
 64:ff9b:1:fffd:1:0:d484:7534             # dns.peb-schmidt.de
 64:ff9b:1:fffd:1:0:d4b9:c819             # dns1.conne.net
@@ -5017,11 +5002,10 @@
 64:ff9b:1:fffd:1:0:dc84:a3df             # dns.ares-taiwan.com
 64:ff9b:1:fffd:1:0:dc87:df12             # dns.david888.com
 64:ff9b:1:fffd:1:0:dc8f:4fc              # ihctw.synology.me
-64:ff9b:1:fffd:1:0:dc8f:1e9f             # ihctw.synology.me
 64:ff9b:1:fffd:1:0:dd83:a5a5             # pdns.itxe.net
 64:ff9b:1:fffd:1:0:de63:72ac             # agh.printk.info
-64:ff9b:1:fffd:1:0:df05:505              # dns.alidns.com, dns002.alidns.com, dns008.alidns.com, dns031.alidns.com, dns038.alidns.com, dns040.alidns.com, dns051.alidns.com, dns32.alidns.com, dns49.alidns.com, dns50.alidns.com, dns51.alidns.com, dnsag.alidns.com, dnsax.alidns.com, dnsd.alidns.com, dnsl.alidns.com, ns.alidns.com, ns005.alidns.com, ns006.alidns.com, ns010.alidns.com, ns013.alidns.com, ns018.alidns.com, ns04.alidns.com, ns044.alidns.com, ns055.alidns.com, ns064.alidns.com, ns20.alidns.com, ns27.alidns.com, ns38.alidns.com, ns60.alidns.com, nsal.alidns.com, nsay.alidns.com, nsb.alidns.com, nsc.alidns.com, nsi.alidns.com, nsm.alidns.com, nsu.alidns.com, nsy.alidns.com, vip025.alidns.com, vip027.alidns.com, vip034.alidns.com, vip036.alidns.com, vip046.alidns.com, vip058.alidns.com, vip32.alidns.com, vip61.alidns.com, vipab.alidns.com, vipae.alidns.com, vipay.alidns.com, vipc.alidns.com, vipf.alidns.com, vipu.alidns.com
-64:ff9b:1:fffd:1:0:df06:606              # dns.alidns.com, dns002.alidns.com, dns008.alidns.com, dns031.alidns.com, dns038.alidns.com, dns040.alidns.com, dns051.alidns.com, dns32.alidns.com, dns49.alidns.com, dns50.alidns.com, dns51.alidns.com, dnsag.alidns.com, dnsax.alidns.com, dnsd.alidns.com, dnsl.alidns.com, ns.alidns.com, ns005.alidns.com, ns006.alidns.com, ns010.alidns.com, ns013.alidns.com, ns018.alidns.com, ns04.alidns.com, ns044.alidns.com, ns055.alidns.com, ns064.alidns.com, ns20.alidns.com, ns27.alidns.com, ns38.alidns.com, ns60.alidns.com, nsal.alidns.com, nsay.alidns.com, nsb.alidns.com, nsc.alidns.com, nsi.alidns.com, nsm.alidns.com, nsu.alidns.com, nsy.alidns.com, vip025.alidns.com, vip027.alidns.com, vip034.alidns.com, vip036.alidns.com, vip046.alidns.com, vip058.alidns.com, vip32.alidns.com, vip61.alidns.com, vipab.alidns.com, vipae.alidns.com, vipay.alidns.com, vipc.alidns.com, vipf.alidns.com, vipu.alidns.com
+64:ff9b:1:fffd:1:0:df05:505              # dns.alidns.com, dns004.alidns.com, dns025.alidns.com, dns04.alidns.com, dns051.alidns.com, dns056.alidns.com, dns07.alidns.com, dns1.alidns.com, dns19.alidns.com, dns39.alidns.com, dns50.alidns.com, dns58.alidns.com, dns9.alidns.com, dnsaf.alidns.com, dnsan.alidns.com, dnsh.alidns.com, dnsm.alidns.com, dnso.alidns.com, dnsw.alidns.com, ns02.alidns.com, ns029.alidns.com, ns032.alidns.com, ns035.alidns.com, ns046.alidns.com, ns23.alidns.com, ns30.alidns.com, ns31.alidns.com, ns43.alidns.com, ns53.alidns.com, ns54.alidns.com, nsk.alidns.com, nss.alidns.com, vip009.alidns.com, vip030.alidns.com, vip037.alidns.com, vip04.alidns.com, vip042.alidns.com, vip050.alidns.com, vip14.alidns.com, vip15.alidns.com, vip52.alidns.com, vip55.alidns.com, vipah.alidns.com, vipai.alidns.com, vipay.alidns.com, vipq.alidns.com
+64:ff9b:1:fffd:1:0:df06:606              # dns.alidns.com, dns004.alidns.com, dns025.alidns.com, dns04.alidns.com, dns051.alidns.com, dns056.alidns.com, dns07.alidns.com, dns1.alidns.com, dns19.alidns.com, dns39.alidns.com, dns50.alidns.com, dns58.alidns.com, dns9.alidns.com, dnsaf.alidns.com, dnsan.alidns.com, dnsh.alidns.com, dnsm.alidns.com, dnso.alidns.com, dnsw.alidns.com, ns02.alidns.com, ns029.alidns.com, ns032.alidns.com, ns035.alidns.com, ns046.alidns.com, ns23.alidns.com, ns30.alidns.com, ns31.alidns.com, ns43.alidns.com, ns53.alidns.com, ns54.alidns.com, nsk.alidns.com, nss.alidns.com, vip009.alidns.com, vip030.alidns.com, vip037.alidns.com, vip04.alidns.com, vip042.alidns.com, vip050.alidns.com, vip14.alidns.com, vip15.alidns.com, vip52.alidns.com, vip55.alidns.com, vipah.alidns.com, vipai.alidns.com, vipay.alidns.com, vipq.alidns.com
 64:ff9b:1:fffe::100:1                    # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1:fffe::100:2                    # security.cloudflare-dns.com
 64:ff9b:1:fffe::100:3                    # family.cloudflare-dns.com
@@ -5029,7 +5013,7 @@
 64:ff9b:1:fffe::101:102                  # security.cloudflare-dns.com
 64:ff9b:1:fffe::101:103                  # family.cloudflare-dns.com
 64:ff9b:1:fffe::10a:a0a                  # dns.nic.in
-64:ff9b:1:fffe::10c:c0c                  # dns.pub
+64:ff9b:1:fffe::10c:c0c                  # dns.pub, doh.pub, dot.pub
 64:ff9b:1:fffe::122:2e5c                 # doh.killtw.im
 64:ff9b:1:fffe::1e6:d11a                 # agh.kyusang.win
 64:ff9b:1:fffe::22d:c3ed                 # block.abstergo.it
@@ -5051,7 +5035,6 @@
 64:ff9b:1:fffe::598:821b                 # dns.pesaventofilippo.com
 64:ff9b:1:fffe::5a0:7569                 # doh.abraservice.xyz
 64:ff9b:1:fffe::5a1:2bc5                 # chromium.dns.nextdns.io, dns.nextdns.io
-64:ff9b:1:fffe::5a1:c216                 # adguard.ihatemy.live
 64:ff9b:1:fffe::5af:b4ab                 # dus01.dnscry.pt
 64:ff9b:1:fffe::5b4:3b25                 # nsc.torgues.net
 64:ff9b:1:fffe::5c4:4a4c                 # dns.mh4ckt3mh4ckt1c4s.xyz
@@ -5070,7 +5053,7 @@
 64:ff9b:1:fffe::8d4:5d07                 # vip7.alidns.com
 64:ff9b:1:fffe::8d4:5d08                 # vip8.alidns.com
 64:ff9b:1:fffe::909:909                  # dns.quad9.net, dns9.quad9.net
-64:ff9b:1:fffe::909:90a                  # dns-nosec.quad9.net
+64:ff9b:1:fffe::909:90a                  # dns-nosec.quad9.net, dns10.quad9.net
 64:ff9b:1:fffe::909:90b                  # dns11.quad9.net
 64:ff9b:1:fffe::909:90c                  # dns12.quad9.net
 64:ff9b:1:fffe::909:90d                  # dns13.quad9.net
@@ -5169,6 +5152,7 @@
 64:ff9b:1:fffe::25dd:c25f                # dns.neeb.it
 64:ff9b:1:fffe::25e4:81a0                # hel01.dnscry.pt
 64:ff9b:1:fffe::25eb:315f                # doh.azoris.ovh
+64:ff9b:1:fffe::25fc:e699                # dns2.nextdns.io
 64:ff9b:1:fffe::2620:6e3a                # doh1.b-cdn.net, doh2.b-cdn.net
 64:ff9b:1:fffe::262f:b473                # dns.glorydns.com
 64:ff9b:1:fffe::266b:e873                # ada.openbld.net
@@ -5193,9 +5177,9 @@
 64:ff9b:1:fffe::2b9a:9aa2                # dns.flymc.cc
 64:ff9b:1:fffe::2ba1:e005                # blog.kimiblock.top
 64:ff9b:1:fffe::2ba1:fea2                # blog.kimiblock.top
-64:ff9b:1:fffe::2ba9:d7c                 # edns.233py.com, i.233py.com
+64:ff9b:1:fffe::2ba9:d7c                 # edns.233py.com, i.233py.com, ndns.233py.com
 64:ff9b:1:fffe::2ba9:e7c                 # edns.233py.com, i.233py.com
-64:ff9b:1:fffe::2ba9:f7c                 # dns.233py.com
+64:ff9b:1:fffe::2ba9:f7c                 # dns.233py.com, i.233py.com
 64:ff9b:1:fffe::2bae:f621                # doh.totoro.pub
 64:ff9b:1:fffe::2bae:f721                # doh.totoro.pub
 64:ff9b:1:fffe::2be0:b489                # bne01.dnscry.pt
@@ -5216,7 +5200,7 @@
 64:ff9b:1:fffe::2d43:5484                # lon01.dnscry.pt
 64:ff9b:1:fffe::2d43:55db                # rdd01.dnscry.pt
 64:ff9b:1:fffe::2d43:dbd0                # doh.la.ahadns.net, dot.la.ahadns.net
-64:ff9b:1:fffe::2d4c:1535                # chromium.dns.nextdns.io
+64:ff9b:1:fffe::2d4c:1535                # chromium.dns.nextdns.io, dns1.nextdns.io
 64:ff9b:1:fffe::2d4c:711f                # doh-2.seby.io, doh.seby.io, dot.seby.io
 64:ff9b:1:fffe::2d4d:19fd                # doh003.280blocker.net
 64:ff9b:1:fffe::2d4d:1f43                # at.pzhg.me
@@ -5313,12 +5297,12 @@
 64:ff9b:1:fffe::310c:e6ea                # chaos-system.de
 64:ff9b:1:fffe::310d:3cec                # adguard.kiboko.it
 64:ff9b:1:fffe::310d:5f7d                # de-fsn-w-p-1.nashkan.net
-64:ff9b:1:fffe::31d4:c624                # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com
-64:ff9b:1:fffe::31d4:c633                # catchen121299.top, dns.daarrk.tech, kx-97795-tr.xyz
-64:ff9b:1:fffe::31d4:c634                # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech, do-39574-tr.xyz, hfgx.shop, myatris.sbs, xholgm.top
-64:ff9b:1:fffe::31d4:cf33                # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link, dns.mathewakhil.online
-64:ff9b:1:fffe::31d4:eb22                # dns.auapi.fun, paradise-human.shop, v2.xx3210766.live
-64:ff9b:1:fffe::31d4:eb2c                # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top, dns.vod11.xyz, doh.sublime9.xyz, lifeisa.live, pepetio.xyz
+64:ff9b:1:fffe::31d4:c624                # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com, dns.wibenson.cloud, externalmobiel.lekdijk.online, securedns.vendorvista.xyz, vpn.technicule.info
+64:ff9b:1:fffe::31d4:c633                # catchen121299.top, dns.daarrk.tech, maqgie.xyz, tujenasnaszato.xyz
+64:ff9b:1:fffe::31d4:c634                # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech, do-39574-tr.xyz
+64:ff9b:1:fffe::31d4:cf33                # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link
+64:ff9b:1:fffe::31d4:eb22                # dns.auapi.fun
+64:ff9b:1:fffe::31d4:eb2c                # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top
 64:ff9b:1:fffe::31eb:4a74                # dns.zzuhacker.cn
 64:ff9b:1:fffe::3274:3bfb                # adguard.shoupperuser.com
 64:ff9b:1:fffe::334d:6a59                # dns-privacy.puregeni.us
@@ -5364,7 +5348,6 @@
 64:ff9b:1:fffe::416c:3611                # dns.anon.no
 64:ff9b:1:fffe::4221:3c22                # arashi.net.eu.org
 64:ff9b:1:fffe::4221:3cc1                # arashi.net.eu.org
-64:ff9b:1:fffe::4221:3cc2                # arashi.net.eu.org
 64:ff9b:1:fffe::4237:9fba                # dnswebvsn.com
 64:ff9b:1:fffe::423f:b17e                # dns.stevenz.net, doh.sz-dns.com
 64:ff9b:1:fffe::429a:7667                # renardbleu.dev
@@ -5383,7 +5366,7 @@
 64:ff9b:1:fffe::46fd:509e                # dns.sarak.as, dns.sarakas.net
 64:ff9b:1:fffe::4713:f322                # ag.ff0x.ca
 64:ff9b:1:fffe::4787:476                 # doh.aaaab3n.moe
-64:ff9b:1:fffe::4812:4d4d                # dns.eddi.net, doh.eddi.net
+64:ff9b:1:fffe::4812:4d4d                # dns.eddi.net
 64:ff9b:1:fffe::4812:d733                # us-kan-w-p-1.nashkan.net
 64:ff9b:1:fffe::4a39:8053                # adguard.jfchenier.ca
 64:ff9b:1:fffe::4a52:2a2a                # ordns.he.net
@@ -5395,11 +5378,11 @@
 64:ff9b:1:fffe::4c4c:153d                # arashi.net.eu.org
 64:ff9b:1:fffe::4c4c:155d                # arashi.net.eu.org
 64:ff9b:1:fffe::4c4c:1562                # arashi.net.eu.org
-64:ff9b:1:fffe::4c4c:157b                # arashi.net.eu.org
+64:ff9b:1:fffe::4c4c:15a4                # arashi.net.eu.org
 64:ff9b:1:fffe::4d44:1d3f                # ahoj.email
 64:ff9b:1:fffe::4d44:32ef                # dns.connect.fail
 64:ff9b:1:fffe::4d44:58dc                # dns.kuuhaku.moe
-64:ff9b:1:fffe::4d58:801                 # common.dot.dns.yandex.net
+64:ff9b:1:fffe::4d58:801                 # common.dot.dns.yandex.net, secondary.dns.yandex.ru
 64:ff9b:1:fffe::4d58:802                 # safe.dot.dns.yandex.net, secondary.safe.dns.yandex.ru
 64:ff9b:1:fffe::4d58:803                 # family.dot.dns.yandex.net, secondary.family.dns.yandex.ru
 64:ff9b:1:fffe::4d58:807                 # family.dns.yandex.ru, family.dot.dns.yandex.net
@@ -5433,7 +5416,7 @@
 64:ff9b:1:fffe::5099:9269                # doh.kekew.info
 64:ff9b:1:fffe::509c:91c9                # dns.t53.de
 64:ff9b:1:fffe::50f9:90f5                # dns.mihanentalpo.me
-64:ff9b:1:fffe::50f9:95b2                # muxyuji.ru, www.muxyuji.ru
+64:ff9b:1:fffe::50f9:95b2                # muxyuji.ru
 64:ff9b:1:fffe::50fe:4f9d                # zrh1-ns01.monzoon.net
 64:ff9b:1:fffe::5182:6ffa                # doh.bt.com
 64:ff9b:1:fffe::5182:6ffb                # doh.bt.com
@@ -5507,7 +5490,7 @@
 64:ff9b:1:fffe::58c6:675b                # dns.scarx.net
 64:ff9b:1:fffe::58c6:7316                # ns.ral9005.org
 64:ff9b:1:fffe::58c6:7a9a                # hard.dnsforge.de
-64:ff9b:1:fffe::58d0:e03c                # ahoj.email, zakaria.website
+64:ff9b:1:fffe::58d0:e03c                # ahoj.email
 64:ff9b:1:fffe::5920:2020                # resolver.sunet.se
 64:ff9b:1:fffe::592b:ae0a                # zdn.ro
 64:ff9b:1:fffe::5939:2dce                # dns.farshidhakimy.de
@@ -5554,9 +5537,9 @@
 64:ff9b:1:fffe::5e17:4740                # dns.clanto.cloud
 64:ff9b:1:fffe::5e82:87cb                # dns.digitalsize.net
 64:ff9b:1:fffe::5e8c:e0e                 # dns.adguard-dns.com, dns.adguard.com
-64:ff9b:1:fffe::5e8c:e0f                 # dns-family.adguard.com, family.adguard-dns.com
+64:ff9b:1:fffe::5e8c:e0f                 # dns-family.adguard.com
 64:ff9b:1:fffe::5e8c:e31                 # d.adguard-dns.com
-64:ff9b:1:fffe::5e8c:e8c                 # dns-unfiltered.adguard.com
+64:ff9b:1:fffe::5e8c:e8c                 # dns-unfiltered.adguard.com, unfiltered.adguard-dns.com
 64:ff9b:1:fffe::5e8c:e8d                 # dns-unfiltered.adguard.com
 64:ff9b:1:fffe::5e8c:f0f                 # dns.adguard-dns.com, dns.adguard.com
 64:ff9b:1:fffe::5e8c:f10                 # dns-family.adguard.com
@@ -5593,7 +5576,7 @@
 64:ff9b:1:fffe::6506:606                 # dns.tuna.tsinghua.edu.cn
 64:ff9b:1:fffe::6522:e5c1                # sukidayo.eu.org
 64:ff9b:1:fffe::6565:6565                # dns.twnic.tw
-64:ff9b:1:fffe::65c6:c021                # doh.360.cn, dot.360.cn
+64:ff9b:1:fffe::65c6:c021                # doh.360.cn
 64:ff9b:1:fffe::65c6:c11d                # doh.360.cn, dot.360.cn
 64:ff9b:1:fffe::65ec:452b                # httpdns.meituan.com
 64:ff9b:1:fffe::6671:5baa                # dns.yameenassotally.com
@@ -5629,11 +5612,11 @@
 64:ff9b:1:fffe::678d:9a03                # dns.gi.co.id
 64:ff9b:1:fffe::6791:55f8                # dns.mtoo.vip
 64:ff9b:1:fffe::6795:1c81                # www.chungocoai.name.vn
-64:ff9b:1:fffe::6796:7464                # dns.ningkelle.id, family.dns.ningkelle.id
+64:ff9b:1:fffe::6796:7464                # dns.ningkelle.id
 64:ff9b:1:fffe::6796:bf54                # dns.diarbagus.id
 64:ff9b:1:fffe::6797:8c8b                # dns.repinger.com
 64:ff9b:1:fffe::679a:37a2                # dns.iamanuragh.in
-64:ff9b:1:fffe::679b:bfb8                # dns.bebasid.com, unfiltered.dns.bebasid.com
+64:ff9b:1:fffe::679b:bfb8                # dns.bebasid.com
 64:ff9b:1:fffe::679b:bfe1                # dns.caliph.dev
 64:ff9b:1:fffe::67a0:3ff2                # dns.engineer.web.id
 64:ff9b:1:fffe::67a1:c4c4                # dns.spil.co.id
@@ -5656,7 +5639,6 @@
 64:ff9b:1:fffe::6812:1cbe                # tor.cloudflare-dns.com
 64:ff9b:1:fffe::6812:1dbe                # tor.cloudflare-dns.com
 64:ff9b:1:fffe::6824:56b5                # geg01.dnscry.pt
-64:ff9b:1:fffe::6880:3ead                # doh.dns.sb
 64:ff9b:1:fffe::689c:9a0b                # lax01.dnscry.pt
 64:ff9b:1:fffe::68a7:c787                # ada.openbld.net
 64:ff9b:1:fffe::68ab:fc6f                # adguard.easez.net
@@ -5694,15 +5676,14 @@
 64:ff9b:1:fffe::6dec:7702                # dns.levonet.sk
 64:ff9b:1:fffe::6dec:7802                # dns.levonet.sk
 64:ff9b:1:fffe::6dfa:c446                # adguard.bitteeinbyte.de
+64:ff9b:1:fffe::6dfa:c448                # adguard.bitteeinbyte.de
 64:ff9b:1:fffe::6dfa:c4d7                # adguard.bitteeinbyte.de
 64:ff9b:1:fffe::6dfa:c522                # adguard.bitteeinbyte.de
-64:ff9b:1:fffe::6dfa:c54e                # adguard.bitteeinbyte.de
 64:ff9b:1:fffe::6dfa:cca9                # area51.mywire.org
 64:ff9b:1:fffe::6dfa:cdbc                # area51.mywire.org
 64:ff9b:1:fffe::6f14:fe23                # opencdn.jomodns.com
 64:ff9b:1:fffe::6faa:6be                 # doh.18bit.cn
 64:ff9b:1:fffe::6faa:13b8                # doh.18bit.cn
-64:ff9b:1:fffe::6feb:de64                # dns.cwlys.com
 64:ff9b:1:fffe::704e:7ddd                # himedns.com, sg.yepdns.com
 64:ff9b:1:fffe::7076:4f9a                # dns.853852.xyz
 64:ff9b:1:fffe::70a3:ea3d                # 2.dns.noridev.moe
@@ -5726,10 +5707,10 @@
 64:ff9b:1:fffe::74cb:70df                # dns.sheggi.ch
 64:ff9b:1:fffe::74cb:8747                # dns.roedel.cloud
 64:ff9b:1:fffe::74cc:c51b                # dns.4-the.win
-64:ff9b:1:fffe::761b:7deb                # dns.maolaohei.xyz, dns.warma.me, dns.xwdmw.xyz, draco.plan9-ns2.com, hkname.freecdn.one, jcdns.fun, lion.yazilimatolye.com, pashagame456.com, tlz.asia, vtcuong.site
+64:ff9b:1:fffe::761b:7deb                # dns.maolaohei.xyz, dns.xwdmw.xyz, hkname.freecdn.one, tlz.asia
 64:ff9b:1:fffe::76a3:aa02                # dns.tipsy.coffee
 64:ff9b:1:fffe::772d:73e4                # doh.18bit.cn
-64:ff9b:1:fffe::7835:3535                # dns.pub
+64:ff9b:1:fffe::7835:3535                # dns.pub, doh.pub, dot.pub
 64:ff9b:1:fffe::784c:6b2d                # ns1.alidns.com
 64:ff9b:1:fffe::784c:6b2e                # ns2.alidns.com
 64:ff9b:1:fffe::784c:6b2f                # ns7.alidns.com
@@ -5758,7 +5739,7 @@
 64:ff9b:1:fffe::82e1:f4a6                # deic-lgb.anycast.censurfridns.dk, deic-lgb.anycast.uncensoreddns.org
 64:ff9b:1:fffe::82e2:a122                # deic-ore.anycast.censurfridns.dk, deic-ore.anycast.uncensoreddns.org
 64:ff9b:1:fffe::85a7:d416                # 3jjxxl.tech, callies-online.site, cloudbenders.fun, d2.shabi.icu, polisitogel.beauty
-64:ff9b:1:fffe::85a7:d419                # 3dcosas.xyz, bestwon203.com, mendozasdelivery.com
+64:ff9b:1:fffe::85a7:d419                # 3dcosas.xyz, bestwon203.com, dns.pernika.net, edgy-dns.com, family.dns.doubleangels.com, lukscasino-479-tr.xyz, lukscasino-929-tr.xyz, mendozasdelivery.com, tecdrive.site, tuskythehusky.tech
 64:ff9b:1:fffe::8666:1414                # ines.zfn.uni-bremen.de
 64:ff9b:1:fffe::86a9:2239                # doh.ibr.cs.tu-bs.de
 64:ff9b:1:fffe::86c3:580d                # us-chi-w-p-1.nashkan.net
@@ -5800,8 +5781,8 @@
 64:ff9b:1:fffe::8c24:383                 # tienpham.id.vn
 64:ff9b:1:fffe::8c70:1dcf                # doh.ntu.ssooss.win
 64:ff9b:1:fffe::8ccd:101                 # vip1.alidns.com, vip21.alidns.com
-64:ff9b:1:fffe::8ccd:102                 # vip2.alidns.com
-64:ff9b:1:fffe::8ccd:105                 # vip23.alidns.com, vip3.alidns.com
+64:ff9b:1:fffe::8ccd:102                 # vip2.alidns.com, vip22.alidns.com
+64:ff9b:1:fffe::8ccd:105                 # vip23.alidns.com
 64:ff9b:1:fffe::8ccd:106                 # vip24.alidns.com
 64:ff9b:1:fffe::8ccd:109                 # vip25.alidns.com, vip5.alidns.com
 64:ff9b:1:fffe::8ccd:10a                 # vip26.alidns.com, vip6.alidns.com
@@ -5818,6 +5799,7 @@
 64:ff9b:1:fffe::8e84:e641                # dns.alvosec.com
 64:ff9b:1:fffe::8f14:c20                 # lis01.dnscry.pt
 64:ff9b:1:fffe::8fc6:acca                # goose.buckyfan.net
+64:ff9b:1:fffe::8ff4:3cc1                # doh1.b-cdn.net
 64:ff9b:1:fffe::8ff4:8020                # in-blr.doh.sb
 64:ff9b:1:fffe::904c:87df                # doh.wewitro.net
 64:ff9b:1:fffe::904c:c7b1                # dns.comff.net
@@ -5862,14 +5844,14 @@
 64:ff9b:1:fffe::9570:7a1e                # family.canadianshield.cira.ca
 64:ff9b:1:fffe::9570:9570                # alpha-dns.quad9.net
 64:ff9b:1:fffe::95f8:24ea                # chromium.dns.nextdns.io
-64:ff9b:1:fffe::95f8:d975                # dns.dnswarden.com
-64:ff9b:1:fffe::966b:c81f                # aqua.is.my.waifu.cz, darkness.is.my.waifu.cz, megumin.is.my.waifu.cz, yunyun.is.my.waifu.cz
+64:ff9b:1:fffe::95f8:d975                # dns.dnswarden.com, doh.asia.dnswarden.com, doh.eu.dnswarden.com, doh.us.dnswarden.com, fr1.dnswarden.com, sg1.dnswarden.com
+64:ff9b:1:fffe::966b:c81f                # aqua.is.my.waifu.cz, darkness.is.my.waifu.cz
 64:ff9b:1:fffe::9750:918f                # dns.sstomp.nl
 64:ff9b:1:fffe::9791:c81e                # dns.momou.ch
 64:ff9b:1:fffe::97f2:4ae7                # jp-tyo-w-p-1.nashkan.net
 64:ff9b:1:fffe::97f3:de5e                # jkt01.dnscry.pt
 64:ff9b:1:fffe::9835:f7f                 # jabber-germany.de, www.jabber-germany.de
-64:ff9b:1:fffe::9835:774c                # masters-of-cloud.de
+64:ff9b:1:fffe::9835:774c                # masters-of-cloud.de, www.masters-of-cloud.de
 64:ff9b:1:fffe::9835:8269                # dns.datenquark.de
 64:ff9b:1:fffe::9835:82d2                # dns.kapite.in
 64:ff9b:1:fffe::9835:ad24                # dns.psociety.de
@@ -5902,7 +5884,7 @@
 64:ff9b:1:fffe::a077:fdd1                # sa01.dns4me.net
 64:ff9b:1:fffe::a0fa:5f1c                # dns.hakim.one
 64:ff9b:1:fffe::a0fa:e3c4                # dns.bebasid.com
-64:ff9b:1:fffe::a0fb:4050                # adg.rueiliu.space, dns.aaytorr.com, dns.guardmydns.com
+64:ff9b:1:fffe::a0fb:4050                # dns.aaytorr.com, dns.guardmydns.com
 64:ff9b:1:fffe::a123:8803                # doh-primary-pool.goodbyegambling.com
 64:ff9b:1:fffe::a181:2286                # 5g.o0o.re
 64:ff9b:1:fffe::a213:e3fb                # fezgate.ovh
@@ -5990,15 +5972,15 @@
 64:ff9b:1:fffe::ace9:3b62                # dns.pccoach.nl
 64:ff9b:1:fffe::ace9:932a                # adguard.hartley.cloud
 64:ff9b:1:fffe::ace9:ddf3                # doh.archuser.org
-64:ff9b:1:fffe::acea:1be9                # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
-64:ff9b:1:fffe::acee:ace4                # alleesph.online
-64:ff9b:1:fffe::acee:b01f                # alleesph.online
-64:ff9b:1:fffe::acef:31e8                # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, gclouddns.com
-64:ff9b:1:fffe::acef:39e6                # alleesph.online, wantaquddin.com, xorbiadns.com
-64:ff9b:1:fffe::acef:c143                # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
+64:ff9b:1:fffe::acea:1be9                # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, dnsnl-noads.alekberg.net, dnsnl.alekberg.net, dnsse-noads.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, gclouddns.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, sdns22.gkonuralp.com, tk31z.com
+64:ff9b:1:fffe::acee:ace4                # alleesph.online, wantaquddin.com, xorbiadns.com
+64:ff9b:1:fffe::acee:b01f                # alleesph.online, wantaquddin.com, xorbiadns.com
+64:ff9b:1:fffe::acef:31e8                # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnsnl-noads.alekberg.net, gclouddns.com, odoh-target-noads.alekberg.net
+64:ff9b:1:fffe::acef:39e6                # alleesph.online
+64:ff9b:1:fffe::acef:c143                # adfiltro.fun, affcdn.net, dns.labnekotest.site, dnses.alekberg.net, dnsnl-noads.alekberg.net, dnsnl.alekberg.net, dnsse-noads.alekberg.net, dnsse.alekberg.net, drs.rustsword.com, gclouddns.com, odoh-target-noads-se.alekberg.net, odoh-target-noads.alekberg.net, odoh-target-se.alekberg.net, odoh-target.alekberg.net, sdns22.gkonuralp.com, tk31z.com
 64:ff9b:1:fffe::ad14:a947                # dns.cahlen.com
 64:ff9b:1:fffe::ad49:9fa4                # dns.chilimac.net
-64:ff9b:1:fffe::add0:d4cd                # dns.furrix.zone, dns.marbledfennec.net
+64:ff9b:1:fffe::add0:d4cd                # dns.furrix.zone, dns.marbledfennec.net, multi.dns.marbledfennec.net
 64:ff9b:1:fffe::ade6:9571                # dns.scott-smith.us
 64:ff9b:1:fffe::adf9:cdc6                # phx01.dnscry.pt
 64:ff9b:1:fffe::adf9:d0f5                # us-saj-w-p-1.nashkan.net
@@ -6006,7 +5988,7 @@
 64:ff9b:1:fffe::adff:c9fe                # us1.blissdns.net
 64:ff9b:1:fffe::ae44:f84d                # dohdot.coxlab.net
 64:ff9b:1:fffe::ae8a:1daf                # doh.tiar.app, dot.tiar.app
-64:ff9b:1:fffe::af18:9a42                # dns.rubyfish.cn, ea-dns.rubyfish.cn, uw-dns.rubyfish.cn
+64:ff9b:1:fffe::af18:9a42                # dns.rubyfish.cn, ea-dns.rubyfish.cn
 64:ff9b:1:fffe::af8f:ed10                # dns.surobe.com
 64:ff9b:1:fffe::b009:199e                # dns.svoi.dev
 64:ff9b:1:fffe::b009:36db                # de.dns.privex.io
@@ -6016,15 +5998,14 @@
 64:ff9b:1:fffe::b06f:dfa7                # sjc01.dnscry.pt
 64:ff9b:1:fffe::b07b:a69                 # kiv01.dnscry.pt
 64:ff9b:1:fffe::b07b:a3c1                # dns.petqa.ru
-64:ff9b:1:fffe::b093:f3a4                # blockerads.multimediaconcept.fr
 64:ff9b:1:fffe::b0a4:9b83                # dns.chadeyron.fr
 64:ff9b:1:fffe::b0a4:a6f5                # dns.chadeyron.fr
-64:ff9b:1:fffe::b0a4:b10f                # dns.chadeyron.fr
 64:ff9b:1:fffe::b0a4:b1c7                # dns.chadeyron.fr
+64:ff9b:1:fffe::b0a4:b7bf                # dns.chadeyron.fr
 64:ff9b:1:fffe::b214:2ad5                # vd.i81.ru
 64:ff9b:1:fffe::b216:7a64                # dns.shecan.ir
 64:ff9b:1:fffe::b221:7699                # dns-1.wil.cloud, dns-2.wil.cloud
-64:ff9b:1:fffe::b269:1006                # doh.42l.fr, doh.lacontrevoie.fr
+64:ff9b:1:fffe::b269:1006                # doh.42l.fr
 64:ff9b:1:fffe::b280:e16d                # tri-dns.net
 64:ff9b:1:fffe::b2a2:e40b                # dns.keweon.center
 64:ff9b:1:fffe::b2a2:e40c                # dns.keweon.center
@@ -6058,13 +6039,13 @@
 64:ff9b:1:fffe::b92f:ddc8                # dns.kukal.cz
 64:ff9b:1:fffe::b931:8d26                # getdnsapi.net
 64:ff9b:1:fffe::b933:c801                # pro.shecan.ir
-64:ff9b:1:fffe::b933:c802                # free.shecan.ir
+64:ff9b:1:fffe::b933:c802                # dns.shecan.ir, free.shecan.ir
 64:ff9b:1:fffe::b940:4f05                # doh.dns.sb, uk-lon.doh.sb
 64:ff9b:1:fffe::b945:a17a                # dns.fancyorg.at
 64:ff9b:1:fffe::b946:90a                 # dns.kuuhaku.moe
 64:ff9b:1:fffe::b947:8a8a                # wikimedia-dns.org
 64:ff9b:1:fffe::b95f:da2a                # dns.digitale-gesellschaft.ch
-64:ff9b:1:fffe::b95f:da2b                # dns.digitale-gesellschaft.ch, dns2.digitale-gesellschaft.ch
+64:ff9b:1:fffe::b95f:da2b                # dns.digitale-gesellschaft.ch
 64:ff9b:1:fffe::b95f:dbaa                # resolv1.trash.net
 64:ff9b:1:fffe::b95f:dbab                # resolv2.trash.net
 64:ff9b:1:fffe::b95f:dbad                # resolv3.trash.net
@@ -6092,11 +6073,11 @@
 64:ff9b:1:fffe::b9c3:457e                # dns.l337.site
 64:ff9b:1:fffe::b9cf:7d64                # omr01.dnscry.pt
 64:ff9b:1:fffe::b9de:9946                # n5.lsasss.com
-64:ff9b:1:fffe::b9de:dede                # dns.sb, doh.sb
+64:ff9b:1:fffe::b9de:dede                # dns.sb, doh.sb, public-dns-a.dns.sb
 64:ff9b:1:fffe::b9e2:b513                # opennic2.i2pd.xyz
 64:ff9b:1:fffe::b9e4:88bf                # dns1.techniverse.net
 64:ff9b:1:fffe::b9e4:a809                # security-filter-dns.cleanbrowsing.org
-64:ff9b:1:fffe::b9e4:a80a                # adult-filter-dns.cleanbrowsing.org
+64:ff9b:1:fffe::b9e4:a80a                # adult-filter-dns.cleanbrowsing.org, doh.cleanbrowsing.org
 64:ff9b:1:fffe::b9e4:a8a8                # doh.cleanbrowsing.org, family-filter-dns.cleanbrowsing.org
 64:ff9b:1:fffe::b9e7:646c                # dns.anon.no
 64:ff9b:1:fffe::b9ea:6227                # timmes.nl
@@ -6149,7 +6130,7 @@
 64:ff9b:1:fffe::c224:9057                # morbitzer.de, www.morbitzer.de
 64:ff9b:1:fffe::c227:cd0a                # muc01.dnscry.pt
 64:ff9b:1:fffe::c232:210b                # doh.suche.org
-64:ff9b:1:fffe::c235:8902                # dns.foxyfy.net, es-ma.foxyfy.net
+64:ff9b:1:fffe::c235:8902                # dns.foxyfy.net
 64:ff9b:1:fffe::c237:d4c                 # dns.clanless.ovh
 64:ff9b:1:fffe::c23b:9c09                # adguard.bonis.de
 64:ff9b:1:fffe::c243:4767                # adguard.oms-ctr.ru
@@ -6171,7 +6152,7 @@
 64:ff9b:1:fffe::c350:7763                # dns.cert.ee
 64:ff9b:1:fffe::c350:7765                # dns.cert.ee
 64:ff9b:1:fffe::c372:e4a                 # syd02.dnscry.pt
-64:ff9b:1:fffe::c385:1910                # dns.comss.one, router.comss.one
+64:ff9b:1:fffe::c385:1910                # dns.comss.one
 64:ff9b:1:fffe::c3c9:15fb                # doh.zknt.org
 64:ff9b:1:fffe::c3c9:2795                # dns.kerekes.xyz
 64:ff9b:1:fffe::c3c9:83b7                # dns.a47.me
@@ -6195,7 +6176,7 @@
 64:ff9b:1:fffe::ca3d:ec43                # nue01.dnscry.pt
 64:ff9b:1:fffe::ca3d:f03d                # adguard.pangerl.it
 64:ff9b:1:fffe::ca46:857c                # dns.gnb09.id
-64:ff9b:1:fffe::caac:1a24                # adguard.johanliebert.top, dns.edgeburnmedia.com, doh.armadillodns.net, hydra.plan9-ns1.com
+64:ff9b:1:fffe::caac:1a24                # adguard.johanliebert.top, dns.edgeburnmedia.com, hydra.plan9-ns1.com
 64:ff9b:1:fffe::cb1d:f034                # dns.slinkyman.net
 64:ff9b:1:fffe::cb1d:f14c                # per.adfilter.net
 64:ff9b:1:fffe::cb6b:161                 # httpdns-sc.aliyuncs.com
@@ -6214,7 +6195,7 @@
 64:ff9b:1:fffe::cff6:5760                # kronos.plan9-dns.com
 64:ff9b:1:fffe::d043:dc02                # sandbox.opendns.com
 64:ff9b:1:fffe::d043:dc7b                # familyshield.opendns.com, resolver2-fs.opendns.com
-64:ff9b:1:fffe::d043:dcdc                # dns.opendns.com, dns.umbrella.com, resolver2.opendns.com
+64:ff9b:1:fffe::d043:dcdc                # dns.opendns.com
 64:ff9b:1:fffe::d043:de02                # sandbox.opendns.com
 64:ff9b:1:fffe::d043:de7b                # familyshield.opendns.com, resolver1-fs.opendns.com
 64:ff9b:1:fffe::d043:dede                # dns.opendns.com
@@ -6226,7 +6207,7 @@
 64:ff9b:1:fffe::d412:5                   # dns.mnet-online.de
 64:ff9b:1:fffe::d412:305                 # dns.mnet-online.de
 64:ff9b:1:fffe::d43c:3df6                # doh.quickline.ch, dot.quickline.ch
-64:ff9b:1:fffe::d43c:3ff6                # doh.quickline.ch, dot.quickline.ch
+64:ff9b:1:fffe::d43c:3ff6                # doh.quickline.ch
 64:ff9b:1:fffe::d46d:c35d                # dns.comss.one
 64:ff9b:1:fffe::d484:7534                # dns.peb-schmidt.de
 64:ff9b:1:fffe::d4b9:c819                # dns1.conne.net
@@ -6273,8 +6254,7 @@
 64:ff9b:1:fffe::dc84:a3df                # dns.ares-taiwan.com
 64:ff9b:1:fffe::dc87:df12                # dns.david888.com
 64:ff9b:1:fffe::dc8f:4fc                 # ihctw.synology.me
-64:ff9b:1:fffe::dc8f:1e9f                # ihctw.synology.me
 64:ff9b:1:fffe::dd83:a5a5                # pdns.itxe.net
 64:ff9b:1:fffe::de63:72ac                # agh.printk.info
-64:ff9b:1:fffe::df05:505                 # dns.alidns.com, dns002.alidns.com, dns008.alidns.com, dns031.alidns.com, dns038.alidns.com, dns040.alidns.com, dns051.alidns.com, dns32.alidns.com, dns49.alidns.com, dns50.alidns.com, dns51.alidns.com, dnsag.alidns.com, dnsax.alidns.com, dnsd.alidns.com, dnsl.alidns.com, ns.alidns.com, ns005.alidns.com, ns006.alidns.com, ns010.alidns.com, ns013.alidns.com, ns018.alidns.com, ns04.alidns.com, ns044.alidns.com, ns055.alidns.com, ns064.alidns.com, ns20.alidns.com, ns27.alidns.com, ns38.alidns.com, ns60.alidns.com, nsal.alidns.com, nsay.alidns.com, nsb.alidns.com, nsc.alidns.com, nsi.alidns.com, nsm.alidns.com, nsu.alidns.com, nsy.alidns.com, vip025.alidns.com, vip027.alidns.com, vip034.alidns.com, vip036.alidns.com, vip046.alidns.com, vip058.alidns.com, vip32.alidns.com, vip61.alidns.com, vipab.alidns.com, vipae.alidns.com, vipay.alidns.com, vipc.alidns.com, vipf.alidns.com, vipu.alidns.com
-64:ff9b:1:fffe::df06:606                 # dns.alidns.com, dns002.alidns.com, dns008.alidns.com, dns031.alidns.com, dns038.alidns.com, dns040.alidns.com, dns051.alidns.com, dns32.alidns.com, dns49.alidns.com, dns50.alidns.com, dns51.alidns.com, dnsag.alidns.com, dnsax.alidns.com, dnsd.alidns.com, dnsl.alidns.com, ns.alidns.com, ns005.alidns.com, ns006.alidns.com, ns010.alidns.com, ns013.alidns.com, ns018.alidns.com, ns04.alidns.com, ns044.alidns.com, ns055.alidns.com, ns064.alidns.com, ns20.alidns.com, ns27.alidns.com, ns38.alidns.com, ns60.alidns.com, nsal.alidns.com, nsay.alidns.com, nsb.alidns.com, nsc.alidns.com, nsi.alidns.com, nsm.alidns.com, nsu.alidns.com, nsy.alidns.com, vip025.alidns.com, vip027.alidns.com, vip034.alidns.com, vip036.alidns.com, vip046.alidns.com, vip058.alidns.com, vip32.alidns.com, vip61.alidns.com, vipab.alidns.com, vipae.alidns.com, vipay.alidns.com, vipc.alidns.com, vipf.alidns.com, vipu.alidns.com
+64:ff9b:1:fffe::df05:505                 # dns.alidns.com, dns004.alidns.com, dns025.alidns.com, dns04.alidns.com, dns051.alidns.com, dns056.alidns.com, dns07.alidns.com, dns1.alidns.com, dns19.alidns.com, dns39.alidns.com, dns50.alidns.com, dns58.alidns.com, dns9.alidns.com, dnsaf.alidns.com, dnsan.alidns.com, dnsh.alidns.com, dnsm.alidns.com, dnso.alidns.com, dnsw.alidns.com, ns02.alidns.com, ns029.alidns.com, ns032.alidns.com, ns035.alidns.com, ns046.alidns.com, ns23.alidns.com, ns30.alidns.com, ns31.alidns.com, ns43.alidns.com, ns53.alidns.com, ns54.alidns.com, nsk.alidns.com, nss.alidns.com, vip009.alidns.com, vip030.alidns.com, vip037.alidns.com, vip04.alidns.com, vip042.alidns.com, vip050.alidns.com, vip14.alidns.com, vip15.alidns.com, vip52.alidns.com, vip55.alidns.com, vipah.alidns.com, vipai.alidns.com, vipay.alidns.com, vipq.alidns.com
+64:ff9b:1:fffe::df06:606                 # dns.alidns.com, dns004.alidns.com, dns025.alidns.com, dns04.alidns.com, dns051.alidns.com, dns056.alidns.com, dns07.alidns.com, dns1.alidns.com, dns19.alidns.com, dns39.alidns.com, dns50.alidns.com, dns58.alidns.com, dns9.alidns.com, dnsaf.alidns.com, dnsan.alidns.com, dnsh.alidns.com, dnsm.alidns.com, dnso.alidns.com, dnsw.alidns.com, ns02.alidns.com, ns029.alidns.com, ns032.alidns.com, ns035.alidns.com, ns046.alidns.com, ns23.alidns.com, ns30.alidns.com, ns31.alidns.com, ns43.alidns.com, ns53.alidns.com, ns54.alidns.com, nsk.alidns.com, nss.alidns.com, vip009.alidns.com, vip030.alidns.com, vip037.alidns.com, vip04.alidns.com, vip042.alidns.com, vip050.alidns.com, vip14.alidns.com, vip15.alidns.com, vip52.alidns.com, vip55.alidns.com, vipah.alidns.com, vipai.alidns.com, vipay.alidns.com, vipq.alidns.com
