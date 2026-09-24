@@ -6,7 +6,7 @@
 64:ff9b:1::101:103                       # family.cloudflare-dns.com
 64:ff9b:1::5a1:2bc5                      # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::808:404                       # 8888.google, dns.google, dns.google.com, google-public-dns-b.google.com
-64:ff9b:1::808:808                       # 8888.google, dns.google.com
+64:ff9b:1::808:808                       # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
 64:ff9b:1::8d4:5d01                      # vip1.alidns.com
 64:ff9b:1::8d4:5d02                      # vip2.alidns.com
 64:ff9b:1::8d4:5d03                      # vip3.alidns.com
@@ -86,6 +86,7 @@
 64:ff9b:1::4d58:808                      # common.dot.dns.yandex.net
 64:ff9b:1::5e8c:e0e                      # dns.adguard.com
 64:ff9b:1::5e8c:f0f                      # dns.adguard.com
+64:ff9b:1::606a:7e8                      # doh.xfinity.com
 64:ff9b:1::606a:7ea                      # doh.xfinity.com
 64:ff9b:1::6702:3905                     # public.dns.iij.jp
 64:ff9b:1::6702:3906                     # public.dns.iij.jp
@@ -204,7 +205,6 @@
 64:ff9b:1::c777:415e                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::c819:20c5                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::cb77:a905                     # alidns.com
-64:ff9b:1::cb77:a926                     # alidns.com
 64:ff9b:1::cb77:a94c                     # alidns.com
 64:ff9b:1::cb77:a9e3                     # alidns.com
 64:ff9b:1::cb77:a9f1                     # alidns.com
@@ -226,7 +226,7 @@
 64:ff9b:1:abcd:0:5431:101:103            # family.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:5a1:2bc5           # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:808:404            # 8888.google, dns.google, dns.google.com, google-public-dns-b.google.com
-64:ff9b:1:abcd:0:5431:808:808            # 8888.google, dns.google.com
+64:ff9b:1:abcd:0:5431:808:808            # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
 64:ff9b:1:abcd:0:5431:8d4:5d01           # vip1.alidns.com
 64:ff9b:1:abcd:0:5431:8d4:5d02           # vip2.alidns.com
 64:ff9b:1:abcd:0:5431:8d4:5d03           # vip3.alidns.com
@@ -306,6 +306,7 @@
 64:ff9b:1:abcd:0:5431:4d58:808           # common.dot.dns.yandex.net
 64:ff9b:1:abcd:0:5431:5e8c:e0e           # dns.adguard.com
 64:ff9b:1:abcd:0:5431:5e8c:f0f           # dns.adguard.com
+64:ff9b:1:abcd:0:5431:606a:7e8           # doh.xfinity.com
 64:ff9b:1:abcd:0:5431:606a:7ea           # doh.xfinity.com
 64:ff9b:1:abcd:0:5431:6702:3905          # public.dns.iij.jp
 64:ff9b:1:abcd:0:5431:6702:3906          # public.dns.iij.jp
@@ -424,7 +425,6 @@
 64:ff9b:1:abcd:0:5431:c777:415e          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:c819:20c5          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:cb77:a905          # alidns.com
-64:ff9b:1:abcd:0:5431:cb77:a926          # alidns.com
 64:ff9b:1:abcd:0:5431:cb77:a94c          # alidns.com
 64:ff9b:1:abcd:0:5431:cb77:a9e3          # alidns.com
 64:ff9b:1:abcd:0:5431:cb77:a9f1          # alidns.com
@@ -446,7 +446,7 @@
 64:ff9b:1:fffc:2:0:101:103               # family.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:5a1:2bc5              # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:808:404               # 8888.google, dns.google, dns.google.com, google-public-dns-b.google.com
-64:ff9b:1:fffc:2:0:808:808               # 8888.google, dns.google.com
+64:ff9b:1:fffc:2:0:808:808               # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
 64:ff9b:1:fffc:2:0:8d4:5d01              # vip1.alidns.com
 64:ff9b:1:fffc:2:0:8d4:5d02              # vip2.alidns.com
 64:ff9b:1:fffc:2:0:8d4:5d03              # vip3.alidns.com
@@ -526,6 +526,7 @@
 64:ff9b:1:fffc:2:0:4d58:808              # common.dot.dns.yandex.net
 64:ff9b:1:fffc:2:0:5e8c:e0e              # dns.adguard.com
 64:ff9b:1:fffc:2:0:5e8c:f0f              # dns.adguard.com
+64:ff9b:1:fffc:2:0:606a:7e8              # doh.xfinity.com
 64:ff9b:1:fffc:2:0:606a:7ea              # doh.xfinity.com
 64:ff9b:1:fffc:2:0:6702:3905             # public.dns.iij.jp
 64:ff9b:1:fffc:2:0:6702:3906             # public.dns.iij.jp
@@ -644,7 +645,6 @@
 64:ff9b:1:fffc:2:0:c777:415e             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:c819:20c5             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:cb77:a905             # alidns.com
-64:ff9b:1:fffc:2:0:cb77:a926             # alidns.com
 64:ff9b:1:fffc:2:0:cb77:a94c             # alidns.com
 64:ff9b:1:fffc:2:0:cb77:a9e3             # alidns.com
 64:ff9b:1:fffc:2:0:cb77:a9f1             # alidns.com
@@ -666,7 +666,7 @@
 64:ff9b:1:fffd:1:0:101:103               # family.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:5a1:2bc5              # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:808:404               # 8888.google, dns.google, dns.google.com, google-public-dns-b.google.com
-64:ff9b:1:fffd:1:0:808:808               # 8888.google, dns.google.com
+64:ff9b:1:fffd:1:0:808:808               # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
 64:ff9b:1:fffd:1:0:8d4:5d01              # vip1.alidns.com
 64:ff9b:1:fffd:1:0:8d4:5d02              # vip2.alidns.com
 64:ff9b:1:fffd:1:0:8d4:5d03              # vip3.alidns.com
@@ -746,6 +746,7 @@
 64:ff9b:1:fffd:1:0:4d58:808              # common.dot.dns.yandex.net
 64:ff9b:1:fffd:1:0:5e8c:e0e              # dns.adguard.com
 64:ff9b:1:fffd:1:0:5e8c:f0f              # dns.adguard.com
+64:ff9b:1:fffd:1:0:606a:7e8              # doh.xfinity.com
 64:ff9b:1:fffd:1:0:606a:7ea              # doh.xfinity.com
 64:ff9b:1:fffd:1:0:6702:3905             # public.dns.iij.jp
 64:ff9b:1:fffd:1:0:6702:3906             # public.dns.iij.jp
@@ -864,7 +865,6 @@
 64:ff9b:1:fffd:1:0:c777:415e             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:c819:20c5             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:cb77:a905             # alidns.com
-64:ff9b:1:fffd:1:0:cb77:a926             # alidns.com
 64:ff9b:1:fffd:1:0:cb77:a94c             # alidns.com
 64:ff9b:1:fffd:1:0:cb77:a9e3             # alidns.com
 64:ff9b:1:fffd:1:0:cb77:a9f1             # alidns.com
@@ -886,7 +886,7 @@
 64:ff9b:1:fffe::101:103                  # family.cloudflare-dns.com
 64:ff9b:1:fffe::5a1:2bc5                 # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::808:404                  # 8888.google, dns.google, dns.google.com, google-public-dns-b.google.com
-64:ff9b:1:fffe::808:808                  # 8888.google, dns.google.com
+64:ff9b:1:fffe::808:808                  # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
 64:ff9b:1:fffe::8d4:5d01                 # vip1.alidns.com
 64:ff9b:1:fffe::8d4:5d02                 # vip2.alidns.com
 64:ff9b:1:fffe::8d4:5d03                 # vip3.alidns.com
@@ -966,6 +966,7 @@
 64:ff9b:1:fffe::4d58:808                 # common.dot.dns.yandex.net
 64:ff9b:1:fffe::5e8c:e0e                 # dns.adguard.com
 64:ff9b:1:fffe::5e8c:f0f                 # dns.adguard.com
+64:ff9b:1:fffe::606a:7e8                 # doh.xfinity.com
 64:ff9b:1:fffe::606a:7ea                 # doh.xfinity.com
 64:ff9b:1:fffe::6702:3905                # public.dns.iij.jp
 64:ff9b:1:fffe::6702:3906                # public.dns.iij.jp
@@ -1084,7 +1085,6 @@
 64:ff9b:1:fffe::c777:415e                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::c819:20c5                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::cb77:a905                # alidns.com
-64:ff9b:1:fffe::cb77:a926                # alidns.com
 64:ff9b:1:fffe::cb77:a94c                # alidns.com
 64:ff9b:1:fffe::cb77:a9e3                # alidns.com
 64:ff9b:1:fffe::cb77:a9f1                # alidns.com
