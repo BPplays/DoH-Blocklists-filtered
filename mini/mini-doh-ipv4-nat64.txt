@@ -4,9 +4,8 @@
 64:ff9b:1::101:101                       # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1::101:102                       # security.cloudflare-dns.com
 64:ff9b:1::101:103                       # family.cloudflare-dns.com
-64:ff9b:1::5a1:2bc5                      # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::808:404                       # 8888.google, dns.google, google-public-dns-b.google.com
-64:ff9b:1::808:808                       # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
+64:ff9b:1::808:808                       # 8888.google
 64:ff9b:1::8d4:5d01                      # vip1.alidns.com
 64:ff9b:1::8d4:5d02                      # vip2.alidns.com
 64:ff9b:1::8d4:5d03                      # vip3.alidns.com
@@ -45,6 +44,7 @@
 64:ff9b:1::2760:9938                     # ns2.alidns.com
 64:ff9b:1::2760:9939                     # ns7.alidns.com
 64:ff9b:1::2760:993a                     # ns8.alidns.com
+64:ff9b:1::2d20:4b18                     # cleanbrowsing.org
 64:ff9b:1::2f58:2c97                     # vip21.alidns.com
 64:ff9b:1::2f58:2c98                     # vip22.alidns.com
 64:ff9b:1::2f58:2c9b                     # vip25.alidns.com
@@ -84,16 +84,18 @@
 64:ff9b:1::5e8c:e0e                      # dns.adguard.com
 64:ff9b:1::5e8c:f0f                      # dns.adguard.com
 64:ff9b:1::606a:7e8                      # doh.xfinity.com
+64:ff9b:1::606a:7ea                      # doh.xfinity.com
 64:ff9b:1::6702:3905                     # public.dns.iij.jp
 64:ff9b:1::6702:3906                     # public.dns.iij.jp
 64:ff9b:1::6757:44c4                     # family-adblock.bebasid.com, internetsehat.bebasid.com
-64:ff9b:1::679b:bfb8                     # dns.bebasid.com
+64:ff9b:1::679b:bfb8                     # dns.bebasid.com, unfiltered.dns.bebasid.com
 64:ff9b:1::679b:bfe0                     # dns.caliph.dev
 64:ff9b:1::6810:f8f9                     # cloudflare-dns.com
 64:ff9b:1::6810:f9f9                     # cloudflare-dns.com
 64:ff9b:1::6812:1cbe                     # tor.cloudflare-dns.com
 64:ff9b:1::6812:1dbe                     # tor.cloudflare-dns.com
 64:ff9b:1::6880:3ead                     # doh.dns.sb
+64:ff9b:1::68ee:b51c                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::6a0b:1e71                     # vip21.alidns.com
 64:ff9b:1::6a0b:1e72                     # vip22.alidns.com
 64:ff9b:1::6a0b:2997                     # vip21.alidns.com
@@ -109,6 +111,7 @@
 64:ff9b:1::784c:6b39                     # ns7.alidns.com
 64:ff9b:1::784c:6b3a                     # ns8.alidns.com
 64:ff9b:1::8942:759                      # max.rethinkdns.com
+64:ff9b:1::89dc:306e                     # cleanbrowsing.org
 64:ff9b:1::8b40:8526                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::8b5f:406d                     # vip9.alidns.com
 64:ff9b:1::8b5f:406e                     # vip10.alidns.com
@@ -198,14 +201,15 @@
 64:ff9b:1::c2f2:205                      # extended.dns.mullvad.net
 64:ff9b:1::c2f2:206                      # family.dns.mullvad.net
 64:ff9b:1::c2f2:209                      # all.dns.mullvad.net
-64:ff9b:1::c777:415e                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::cb77:a905                     # alidns.com
 64:ff9b:1::cb77:a94c                     # alidns.com
 64:ff9b:1::cb77:a9a8                     # alidns.com
+64:ff9b:1::cb77:a9f1                     # alidns.com
 64:ff9b:1::cbb4:8c4d                     # iij.jp
 64:ff9b:1::d043:dcdc                     # dns.opendns.com
 64:ff9b:1::d043:dede                     # dns.opendns.com
 64:ff9b:1::d0a7:f879                     # cleanbrowsing.org
+64:ff9b:1::d1d1:39a5                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1::d43c:3df6                     # doh.quickline.ch
 64:ff9b:1::d43c:3ff6                     # doh.quickline.ch
 64:ff9b:1::d5e3:adeb                     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -218,9 +222,8 @@
 64:ff9b:1:abcd:0:5431:101:101            # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:101:102            # security.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:101:103            # family.cloudflare-dns.com
-64:ff9b:1:abcd:0:5431:5a1:2bc5           # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:808:404            # 8888.google, dns.google, google-public-dns-b.google.com
-64:ff9b:1:abcd:0:5431:808:808            # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
+64:ff9b:1:abcd:0:5431:808:808            # 8888.google
 64:ff9b:1:abcd:0:5431:8d4:5d01           # vip1.alidns.com
 64:ff9b:1:abcd:0:5431:8d4:5d02           # vip2.alidns.com
 64:ff9b:1:abcd:0:5431:8d4:5d03           # vip3.alidns.com
@@ -259,6 +262,7 @@
 64:ff9b:1:abcd:0:5431:2760:9938          # ns2.alidns.com
 64:ff9b:1:abcd:0:5431:2760:9939          # ns7.alidns.com
 64:ff9b:1:abcd:0:5431:2760:993a          # ns8.alidns.com
+64:ff9b:1:abcd:0:5431:2d20:4b18          # cleanbrowsing.org
 64:ff9b:1:abcd:0:5431:2f58:2c97          # vip21.alidns.com
 64:ff9b:1:abcd:0:5431:2f58:2c98          # vip22.alidns.com
 64:ff9b:1:abcd:0:5431:2f58:2c9b          # vip25.alidns.com
@@ -298,16 +302,18 @@
 64:ff9b:1:abcd:0:5431:5e8c:e0e           # dns.adguard.com
 64:ff9b:1:abcd:0:5431:5e8c:f0f           # dns.adguard.com
 64:ff9b:1:abcd:0:5431:606a:7e8           # doh.xfinity.com
+64:ff9b:1:abcd:0:5431:606a:7ea           # doh.xfinity.com
 64:ff9b:1:abcd:0:5431:6702:3905          # public.dns.iij.jp
 64:ff9b:1:abcd:0:5431:6702:3906          # public.dns.iij.jp
 64:ff9b:1:abcd:0:5431:6757:44c4          # family-adblock.bebasid.com, internetsehat.bebasid.com
-64:ff9b:1:abcd:0:5431:679b:bfb8          # dns.bebasid.com
+64:ff9b:1:abcd:0:5431:679b:bfb8          # dns.bebasid.com, unfiltered.dns.bebasid.com
 64:ff9b:1:abcd:0:5431:679b:bfe0          # dns.caliph.dev
 64:ff9b:1:abcd:0:5431:6810:f8f9          # cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:6810:f9f9          # cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:6812:1cbe          # tor.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:6812:1dbe          # tor.cloudflare-dns.com
 64:ff9b:1:abcd:0:5431:6880:3ead          # doh.dns.sb
+64:ff9b:1:abcd:0:5431:68ee:b51c          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:6a0b:1e71          # vip21.alidns.com
 64:ff9b:1:abcd:0:5431:6a0b:1e72          # vip22.alidns.com
 64:ff9b:1:abcd:0:5431:6a0b:2997          # vip21.alidns.com
@@ -323,6 +329,7 @@
 64:ff9b:1:abcd:0:5431:784c:6b39          # ns7.alidns.com
 64:ff9b:1:abcd:0:5431:784c:6b3a          # ns8.alidns.com
 64:ff9b:1:abcd:0:5431:8942:759           # max.rethinkdns.com
+64:ff9b:1:abcd:0:5431:89dc:306e          # cleanbrowsing.org
 64:ff9b:1:abcd:0:5431:8b40:8526          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:8b5f:406d          # vip9.alidns.com
 64:ff9b:1:abcd:0:5431:8b5f:406e          # vip10.alidns.com
@@ -412,14 +419,15 @@
 64:ff9b:1:abcd:0:5431:c2f2:205           # extended.dns.mullvad.net
 64:ff9b:1:abcd:0:5431:c2f2:206           # family.dns.mullvad.net
 64:ff9b:1:abcd:0:5431:c2f2:209           # all.dns.mullvad.net
-64:ff9b:1:abcd:0:5431:c777:415e          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:cb77:a905          # alidns.com
 64:ff9b:1:abcd:0:5431:cb77:a94c          # alidns.com
 64:ff9b:1:abcd:0:5431:cb77:a9a8          # alidns.com
+64:ff9b:1:abcd:0:5431:cb77:a9f1          # alidns.com
 64:ff9b:1:abcd:0:5431:cbb4:8c4d          # iij.jp
 64:ff9b:1:abcd:0:5431:d043:dcdc          # dns.opendns.com
 64:ff9b:1:abcd:0:5431:d043:dede          # dns.opendns.com
 64:ff9b:1:abcd:0:5431:d0a7:f879          # cleanbrowsing.org
+64:ff9b:1:abcd:0:5431:d1d1:39a5          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:abcd:0:5431:d43c:3df6          # doh.quickline.ch
 64:ff9b:1:abcd:0:5431:d43c:3ff6          # doh.quickline.ch
 64:ff9b:1:abcd:0:5431:d5e3:adeb          # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -432,9 +440,8 @@
 64:ff9b:1:fffc:2:0:101:101               # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:101:102               # security.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:101:103               # family.cloudflare-dns.com
-64:ff9b:1:fffc:2:0:5a1:2bc5              # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:808:404               # 8888.google, dns.google, google-public-dns-b.google.com
-64:ff9b:1:fffc:2:0:808:808               # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
+64:ff9b:1:fffc:2:0:808:808               # 8888.google
 64:ff9b:1:fffc:2:0:8d4:5d01              # vip1.alidns.com
 64:ff9b:1:fffc:2:0:8d4:5d02              # vip2.alidns.com
 64:ff9b:1:fffc:2:0:8d4:5d03              # vip3.alidns.com
@@ -473,6 +480,7 @@
 64:ff9b:1:fffc:2:0:2760:9938             # ns2.alidns.com
 64:ff9b:1:fffc:2:0:2760:9939             # ns7.alidns.com
 64:ff9b:1:fffc:2:0:2760:993a             # ns8.alidns.com
+64:ff9b:1:fffc:2:0:2d20:4b18             # cleanbrowsing.org
 64:ff9b:1:fffc:2:0:2f58:2c97             # vip21.alidns.com
 64:ff9b:1:fffc:2:0:2f58:2c98             # vip22.alidns.com
 64:ff9b:1:fffc:2:0:2f58:2c9b             # vip25.alidns.com
@@ -512,16 +520,18 @@
 64:ff9b:1:fffc:2:0:5e8c:e0e              # dns.adguard.com
 64:ff9b:1:fffc:2:0:5e8c:f0f              # dns.adguard.com
 64:ff9b:1:fffc:2:0:606a:7e8              # doh.xfinity.com
+64:ff9b:1:fffc:2:0:606a:7ea              # doh.xfinity.com
 64:ff9b:1:fffc:2:0:6702:3905             # public.dns.iij.jp
 64:ff9b:1:fffc:2:0:6702:3906             # public.dns.iij.jp
 64:ff9b:1:fffc:2:0:6757:44c4             # family-adblock.bebasid.com, internetsehat.bebasid.com
-64:ff9b:1:fffc:2:0:679b:bfb8             # dns.bebasid.com
+64:ff9b:1:fffc:2:0:679b:bfb8             # dns.bebasid.com, unfiltered.dns.bebasid.com
 64:ff9b:1:fffc:2:0:679b:bfe0             # dns.caliph.dev
 64:ff9b:1:fffc:2:0:6810:f8f9             # cloudflare-dns.com
 64:ff9b:1:fffc:2:0:6810:f9f9             # cloudflare-dns.com
 64:ff9b:1:fffc:2:0:6812:1cbe             # tor.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:6812:1dbe             # tor.cloudflare-dns.com
 64:ff9b:1:fffc:2:0:6880:3ead             # doh.dns.sb
+64:ff9b:1:fffc:2:0:68ee:b51c             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:6a0b:1e71             # vip21.alidns.com
 64:ff9b:1:fffc:2:0:6a0b:1e72             # vip22.alidns.com
 64:ff9b:1:fffc:2:0:6a0b:2997             # vip21.alidns.com
@@ -537,6 +547,7 @@
 64:ff9b:1:fffc:2:0:784c:6b39             # ns7.alidns.com
 64:ff9b:1:fffc:2:0:784c:6b3a             # ns8.alidns.com
 64:ff9b:1:fffc:2:0:8942:759              # max.rethinkdns.com
+64:ff9b:1:fffc:2:0:89dc:306e             # cleanbrowsing.org
 64:ff9b:1:fffc:2:0:8b40:8526             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:8b5f:406d             # vip9.alidns.com
 64:ff9b:1:fffc:2:0:8b5f:406e             # vip10.alidns.com
@@ -626,14 +637,15 @@
 64:ff9b:1:fffc:2:0:c2f2:205              # extended.dns.mullvad.net
 64:ff9b:1:fffc:2:0:c2f2:206              # family.dns.mullvad.net
 64:ff9b:1:fffc:2:0:c2f2:209              # all.dns.mullvad.net
-64:ff9b:1:fffc:2:0:c777:415e             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:cb77:a905             # alidns.com
 64:ff9b:1:fffc:2:0:cb77:a94c             # alidns.com
 64:ff9b:1:fffc:2:0:cb77:a9a8             # alidns.com
+64:ff9b:1:fffc:2:0:cb77:a9f1             # alidns.com
 64:ff9b:1:fffc:2:0:cbb4:8c4d             # iij.jp
 64:ff9b:1:fffc:2:0:d043:dcdc             # dns.opendns.com
 64:ff9b:1:fffc:2:0:d043:dede             # dns.opendns.com
 64:ff9b:1:fffc:2:0:d0a7:f879             # cleanbrowsing.org
+64:ff9b:1:fffc:2:0:d1d1:39a5             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffc:2:0:d43c:3df6             # doh.quickline.ch
 64:ff9b:1:fffc:2:0:d43c:3ff6             # doh.quickline.ch
 64:ff9b:1:fffc:2:0:d5e3:adeb             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -646,9 +658,8 @@
 64:ff9b:1:fffd:1:0:101:101               # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:101:102               # security.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:101:103               # family.cloudflare-dns.com
-64:ff9b:1:fffd:1:0:5a1:2bc5              # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:808:404               # 8888.google, dns.google, google-public-dns-b.google.com
-64:ff9b:1:fffd:1:0:808:808               # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
+64:ff9b:1:fffd:1:0:808:808               # 8888.google
 64:ff9b:1:fffd:1:0:8d4:5d01              # vip1.alidns.com
 64:ff9b:1:fffd:1:0:8d4:5d02              # vip2.alidns.com
 64:ff9b:1:fffd:1:0:8d4:5d03              # vip3.alidns.com
@@ -687,6 +698,7 @@
 64:ff9b:1:fffd:1:0:2760:9938             # ns2.alidns.com
 64:ff9b:1:fffd:1:0:2760:9939             # ns7.alidns.com
 64:ff9b:1:fffd:1:0:2760:993a             # ns8.alidns.com
+64:ff9b:1:fffd:1:0:2d20:4b18             # cleanbrowsing.org
 64:ff9b:1:fffd:1:0:2f58:2c97             # vip21.alidns.com
 64:ff9b:1:fffd:1:0:2f58:2c98             # vip22.alidns.com
 64:ff9b:1:fffd:1:0:2f58:2c9b             # vip25.alidns.com
@@ -726,16 +738,18 @@
 64:ff9b:1:fffd:1:0:5e8c:e0e              # dns.adguard.com
 64:ff9b:1:fffd:1:0:5e8c:f0f              # dns.adguard.com
 64:ff9b:1:fffd:1:0:606a:7e8              # doh.xfinity.com
+64:ff9b:1:fffd:1:0:606a:7ea              # doh.xfinity.com
 64:ff9b:1:fffd:1:0:6702:3905             # public.dns.iij.jp
 64:ff9b:1:fffd:1:0:6702:3906             # public.dns.iij.jp
 64:ff9b:1:fffd:1:0:6757:44c4             # family-adblock.bebasid.com, internetsehat.bebasid.com
-64:ff9b:1:fffd:1:0:679b:bfb8             # dns.bebasid.com
+64:ff9b:1:fffd:1:0:679b:bfb8             # dns.bebasid.com, unfiltered.dns.bebasid.com
 64:ff9b:1:fffd:1:0:679b:bfe0             # dns.caliph.dev
 64:ff9b:1:fffd:1:0:6810:f8f9             # cloudflare-dns.com
 64:ff9b:1:fffd:1:0:6810:f9f9             # cloudflare-dns.com
 64:ff9b:1:fffd:1:0:6812:1cbe             # tor.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:6812:1dbe             # tor.cloudflare-dns.com
 64:ff9b:1:fffd:1:0:6880:3ead             # doh.dns.sb
+64:ff9b:1:fffd:1:0:68ee:b51c             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:6a0b:1e71             # vip21.alidns.com
 64:ff9b:1:fffd:1:0:6a0b:1e72             # vip22.alidns.com
 64:ff9b:1:fffd:1:0:6a0b:2997             # vip21.alidns.com
@@ -751,6 +765,7 @@
 64:ff9b:1:fffd:1:0:784c:6b39             # ns7.alidns.com
 64:ff9b:1:fffd:1:0:784c:6b3a             # ns8.alidns.com
 64:ff9b:1:fffd:1:0:8942:759              # max.rethinkdns.com
+64:ff9b:1:fffd:1:0:89dc:306e             # cleanbrowsing.org
 64:ff9b:1:fffd:1:0:8b40:8526             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:8b5f:406d             # vip9.alidns.com
 64:ff9b:1:fffd:1:0:8b5f:406e             # vip10.alidns.com
@@ -840,14 +855,15 @@
 64:ff9b:1:fffd:1:0:c2f2:205              # extended.dns.mullvad.net
 64:ff9b:1:fffd:1:0:c2f2:206              # family.dns.mullvad.net
 64:ff9b:1:fffd:1:0:c2f2:209              # all.dns.mullvad.net
-64:ff9b:1:fffd:1:0:c777:415e             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:cb77:a905             # alidns.com
 64:ff9b:1:fffd:1:0:cb77:a94c             # alidns.com
 64:ff9b:1:fffd:1:0:cb77:a9a8             # alidns.com
+64:ff9b:1:fffd:1:0:cb77:a9f1             # alidns.com
 64:ff9b:1:fffd:1:0:cbb4:8c4d             # iij.jp
 64:ff9b:1:fffd:1:0:d043:dcdc             # dns.opendns.com
 64:ff9b:1:fffd:1:0:d043:dede             # dns.opendns.com
 64:ff9b:1:fffd:1:0:d0a7:f879             # cleanbrowsing.org
+64:ff9b:1:fffd:1:0:d1d1:39a5             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffd:1:0:d43c:3df6             # doh.quickline.ch
 64:ff9b:1:fffd:1:0:d43c:3ff6             # doh.quickline.ch
 64:ff9b:1:fffd:1:0:d5e3:adeb             # chromium.dns.nextdns.io, firefox.dns.nextdns.io
@@ -860,9 +876,8 @@
 64:ff9b:1:fffe::101:101                  # 1dot1dot1dot1.cloudflare-dns.com
 64:ff9b:1:fffe::101:102                  # security.cloudflare-dns.com
 64:ff9b:1:fffe::101:103                  # family.cloudflare-dns.com
-64:ff9b:1:fffe::5a1:2bc5                 # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::808:404                  # 8888.google, dns.google, google-public-dns-b.google.com
-64:ff9b:1:fffe::808:808                  # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
+64:ff9b:1:fffe::808:808                  # 8888.google
 64:ff9b:1:fffe::8d4:5d01                 # vip1.alidns.com
 64:ff9b:1:fffe::8d4:5d02                 # vip2.alidns.com
 64:ff9b:1:fffe::8d4:5d03                 # vip3.alidns.com
@@ -901,6 +916,7 @@
 64:ff9b:1:fffe::2760:9938                # ns2.alidns.com
 64:ff9b:1:fffe::2760:9939                # ns7.alidns.com
 64:ff9b:1:fffe::2760:993a                # ns8.alidns.com
+64:ff9b:1:fffe::2d20:4b18                # cleanbrowsing.org
 64:ff9b:1:fffe::2f58:2c97                # vip21.alidns.com
 64:ff9b:1:fffe::2f58:2c98                # vip22.alidns.com
 64:ff9b:1:fffe::2f58:2c9b                # vip25.alidns.com
@@ -940,16 +956,18 @@
 64:ff9b:1:fffe::5e8c:e0e                 # dns.adguard.com
 64:ff9b:1:fffe::5e8c:f0f                 # dns.adguard.com
 64:ff9b:1:fffe::606a:7e8                 # doh.xfinity.com
+64:ff9b:1:fffe::606a:7ea                 # doh.xfinity.com
 64:ff9b:1:fffe::6702:3905                # public.dns.iij.jp
 64:ff9b:1:fffe::6702:3906                # public.dns.iij.jp
 64:ff9b:1:fffe::6757:44c4                # family-adblock.bebasid.com, internetsehat.bebasid.com
-64:ff9b:1:fffe::679b:bfb8                # dns.bebasid.com
+64:ff9b:1:fffe::679b:bfb8                # dns.bebasid.com, unfiltered.dns.bebasid.com
 64:ff9b:1:fffe::679b:bfe0                # dns.caliph.dev
 64:ff9b:1:fffe::6810:f8f9                # cloudflare-dns.com
 64:ff9b:1:fffe::6810:f9f9                # cloudflare-dns.com
 64:ff9b:1:fffe::6812:1cbe                # tor.cloudflare-dns.com
 64:ff9b:1:fffe::6812:1dbe                # tor.cloudflare-dns.com
 64:ff9b:1:fffe::6880:3ead                # doh.dns.sb
+64:ff9b:1:fffe::68ee:b51c                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::6a0b:1e71                # vip21.alidns.com
 64:ff9b:1:fffe::6a0b:1e72                # vip22.alidns.com
 64:ff9b:1:fffe::6a0b:2997                # vip21.alidns.com
@@ -965,6 +983,7 @@
 64:ff9b:1:fffe::784c:6b39                # ns7.alidns.com
 64:ff9b:1:fffe::784c:6b3a                # ns8.alidns.com
 64:ff9b:1:fffe::8942:759                 # max.rethinkdns.com
+64:ff9b:1:fffe::89dc:306e                # cleanbrowsing.org
 64:ff9b:1:fffe::8b40:8526                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::8b5f:406d                # vip9.alidns.com
 64:ff9b:1:fffe::8b5f:406e                # vip10.alidns.com
@@ -1054,14 +1073,15 @@
 64:ff9b:1:fffe::c2f2:205                 # extended.dns.mullvad.net
 64:ff9b:1:fffe::c2f2:206                 # family.dns.mullvad.net
 64:ff9b:1:fffe::c2f2:209                 # all.dns.mullvad.net
-64:ff9b:1:fffe::c777:415e                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::cb77:a905                # alidns.com
 64:ff9b:1:fffe::cb77:a94c                # alidns.com
 64:ff9b:1:fffe::cb77:a9a8                # alidns.com
+64:ff9b:1:fffe::cb77:a9f1                # alidns.com
 64:ff9b:1:fffe::cbb4:8c4d                # iij.jp
 64:ff9b:1:fffe::d043:dcdc                # dns.opendns.com
 64:ff9b:1:fffe::d043:dede                # dns.opendns.com
 64:ff9b:1:fffe::d0a7:f879                # cleanbrowsing.org
+64:ff9b:1:fffe::d1d1:39a5                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 64:ff9b:1:fffe::d43c:3df6                # doh.quickline.ch
 64:ff9b:1:fffe::d43c:3ff6                # doh.quickline.ch
 64:ff9b:1:fffe::d5e3:adeb                # chromium.dns.nextdns.io, firefox.dns.nextdns.io
