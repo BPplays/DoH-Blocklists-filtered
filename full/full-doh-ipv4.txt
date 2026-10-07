@@ -1,12 +1,18 @@
 1.0.0.1          # 1dot1dot1dot1.cloudflare-dns.com
+1.0.0.2          # security.cloudflare-dns.com
+1.0.0.3          # family.cloudflare-dns.com
 1.1.1.1          # 1dot1dot1dot1.cloudflare-dns.com
+1.1.1.2          # security.cloudflare-dns.com
+1.1.1.3          # family.cloudflare-dns.com
 1.10.10.10       # dns.nic.in
 1.12.12.12       # dns.pub
 1.230.209.26     # agh.kyusang.win
-2.59.170.20      # doh.eastas.pi-dns.com, doh.northeu.pi-dns.com, dot.centraleu.pi-dns.com, pm9352-bd.xyz
+2.59.170.20      # doh.eastas.pi-dns.com, doh.northeu.pi-dns.com, pm9352-bd.xyz
 2.135.147.99     # kz-pav-w-p-1.nashkan.net
+5.2.75.75        # doh.nl.ahadns.net
 5.11.11.5        # africadns1.liquidtelecom.net
 5.11.11.11       # africadns2.liquidtelecom.net
+5.51.209.9       # dns.chadeyron.fr
 5.78.158.2       # adguard.ihatemy.live
 5.79.70.195      # dns.ginovs.nl
 5.161.194.22     # adguard.ihatemy.live
@@ -14,13 +20,16 @@
 5.180.59.37      # nsc.torgues.net
 5.196.74.76      # dns.mh4ckt3mh4ckt1c4s.xyz
 8.8.4.4          # dns.google.com
-8.8.8.8          # dns.google.com
+8.8.8.8          # dns.google.com, google-public-dns-a.google.com
 8.160.173.68     # dns.23-4.cn
 8.212.93.6       # vip6.alidns.com
+8.212.93.7       # vip7.alidns.com
 8.212.93.8       # vip8.alidns.com
-9.9.9.9          # dns.quad9.net
-9.9.9.10         # dns-nosec.quad9.net
+9.9.9.9          # dns.quad9.net, dns9.quad9.net
+9.9.9.10         # dns-nosec.quad9.net, dns10.quad9.net
+9.9.9.11         # dns11.quad9.net
 9.9.9.12         # dns12.quad9.net
+14.1.112.12      # vip22.alidns.com
 14.1.112.16      # vip26.alidns.com
 14.1.112.21      # vip23.alidns.com
 14.1.112.25      # vip27.alidns.com
@@ -39,6 +48,7 @@
 23.230.253.98    # dfw02.dnscry.pt
 23.239.3.190     # dns.efficientdocuments.com
 23.239.10.192    # dns.fizz.studio
+24.240.146.7     # doh-01.spectrum.com
 24.240.146.8     # doh-02.spectrum.com
 31.13.248.149    # dns.burgas.pro
 31.202.133.115   # dns.ha-dvin.pp.ua
@@ -48,6 +58,7 @@
 37.114.32.8      # dns.internal.hosmatic.com
 37.120.183.220   # dns.kernel-error.de
 37.120.187.202   # adguard.shutgaming.net
+37.156.68.20     # resolv.flokinet.net
 37.157.254.69    # dns.expert
 37.187.149.237   # dns.lvolland.fr
 37.221.95.37     # dns.foxyfy.net
@@ -80,6 +91,7 @@
 45.8.222.103     # jp-nrt.doh.sb
 45.11.45.11      # dns.sb
 45.32.75.24      # cleanbrowsing.org
+45.32.86.63      # lelux.fi
 45.33.60.119     # dns.elemental.software
 45.33.66.148     # sink.nolo.ltd
 45.63.105.236    # dns.liberador.net
@@ -93,11 +105,14 @@
 45.79.156.126    # adg.jnorton.us
 45.79.208.98     # performance.gosami.xyz
 45.79.248.146    # dns.13evl.com
+45.82.120.61     # fra01.dnscry.pt
 45.86.125.58     # dns.dnshome.de
 45.86.125.59     # dns.dnshome.de
 45.86.162.110    # ams02.dnscry.pt
 45.90.28.0       # anycast.dns.nextdns.io
 45.90.30.0       # anycast.dns.nextdns.io
+45.91.93.218     # gb-lon-w-p-2.nashkan.net
+45.95.38.29      # naw01.dnscry.pt
 45.95.80.221     # dns.b33.space
 45.125.0.26      # hk-hkg.doh.sb
 45.129.181.164   # dns.kescher.at
@@ -121,8 +136,10 @@
 46.226.143.83    # dns.cert.ee
 46.226.143.86    # dns.cert.ee
 46.253.255.81    # dns.hanmey.de
+47.88.44.152     # vip22.alidns.com
 47.88.44.156     # vip26.alidns.com
 47.88.44.157     # vip27.alidns.com
+47.88.82.208     # vip7.alidns.com
 47.88.82.209     # vip8.alidns.com
 47.88.134.33     # vip27.alidns.com
 47.89.71.33      # vip27.alidns.com
@@ -134,7 +151,9 @@
 47.118.199.217   # ns7.alidns.com
 47.118.199.218   # ns8.alidns.com
 47.246.88.161    # vip27.alidns.com
+47.253.24.27     # vip7.alidns.com
 47.253.24.28     # vip8.alidns.com
+47.254.160.176   # vip7.alidns.com
 47.254.160.177   # vip8.alidns.com
 49.12.43.208     # clean.dnsforge.de
 49.12.67.122     # dnsforge.de
@@ -144,15 +163,16 @@
 49.12.230.234    # chaos-system.de
 49.13.60.236     # adguard.kiboko.it
 49.13.95.125     # de-fsn-w-p-1.nashkan.net
-49.212.198.36    # adguard.kantinyoyok.xyz, axaxa.fun, dns.kugoapps.com, externalmobiel.lekdijk.online, vpn.technicule.info
+49.212.198.36    # adguard.kantinyoyok.xyz, axaxa.fun, dns.wibenson.cloud, externalmobiel.lekdijk.online, vpn.technicule.info
 49.212.198.51    # catchen121299.top, dns.daarrk.tech
 49.212.198.52    # adguard.ajinga.net, adguard.londonwebnerd.cloud, atris.cyou, cynntex.fun, deep-henchman-excuse.cfd, dns.cybertonic.tech
-49.212.207.51    # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link, dns.mathewakhil.online
+49.212.207.51    # adg.yybyy.wiki, ads.hunga1k47.com, ag.brianlee.fun, dns-free.link
 49.212.235.34    # dns.auapi.fun
-49.212.235.44    # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top
+49.212.235.44    # dns.butterfly87.sbs, dns.f97.xyz
 50.116.59.251    # adguard.shoupperuser.com
 51.77.106.89     # dns-privacy.puregeni.us
 51.77.149.139    # dns.kawa.tf
+51.77.227.78     # ns2.flodns.net
 51.79.160.237    # dns.infosec.xyz
 51.79.178.52     # dns.doh.best
 51.83.134.179    # doh.30x.me
@@ -186,21 +206,28 @@
 66.33.60.130     # arashi.net.eu.org
 66.33.60.193     # arashi.net.eu.org
 66.55.159.186    # dnswebvsn.com
+66.63.177.126    # doh.sz-dns.com
+66.187.7.140     # dtw01.dnscry.pt
 68.74.137.173    # agh.gloom.nexus
 68.105.28.11     # doh.cox.net
 68.105.28.12     # doh.cox.net
+68.183.19.93     # doh-primary-pool.detoxifypornblocker.com
+69.197.141.68    # us-kan-w-f-1.nashkan.net
 70.34.255.128    # dns.netvpn.net
 71.19.243.34     # ag.ff0x.ca
 71.163.23.245    # dns.chilimac.net
 72.18.77.77      # dns.eddi.net
 74.57.128.83     # adguard.jfchenier.ca
+74.82.42.42      # ordns.he.net
 74.208.208.172   # dns.narl.app
 75.119.137.239   # dns.christian.moe, dns.imchristian.de
-76.76.2.11       # p0.freedns.controld.com, p1.freedns.controld.com
+76.76.2.11       # p0.freedns.controld.com, p1.freedns.controld.com, p2.freedns.controld.com, p3.freedns.controld.com
 76.76.2.22       # dns.controld.com
 76.76.21.98      # arashi.net.eu.org
+76.76.21.241     # arashi.net.eu.org
 77.68.29.63      # ahoj.email
 77.68.50.239     # dns.connect.fail
+77.68.88.220     # dns.kuuhaku.moe
 77.88.8.1        # common.dot.dns.yandex.net
 77.88.8.7        # family.dns.yandex.ru
 77.88.8.8        # common.dot.dns.yandex.net
@@ -208,7 +235,7 @@
 77.247.127.107   # abn01.dnscry.pt
 78.47.163.141    # adfree.usableprivacy.net
 78.94.217.198    # dns.b72.com
-78.142.193.50    # nl-ams.doh.sb, ru-mow.doh.sb
+78.142.193.50    # nl-ams.doh.sb
 78.142.193.51    # nl-ams.doh.sb, ru-mow.doh.sb
 78.142.193.52    # nl-ams.doh.sb, ru-mow.doh.sb
 78.142.193.53    # nl-ams.doh.sb
@@ -218,6 +245,7 @@
 79.143.240.5     # res-acst1.absolight.net
 79.143.240.6     # res-acst2.absolight.net
 79.143.240.77    # resolver2.absolight.net
+79.143.240.79    # resolver1.absolight.net
 79.143.240.81    # resolver3.absolight.net
 79.184.9.36      # adguard.piekacz.pl
 79.184.69.228    # adguard.piekacz.pl
@@ -234,6 +262,7 @@
 81.187.221.24    # dns-tls.bitwiseshift.net
 81.196.104.182   # addns1.m-it.ro
 81.243.96.113    # dns.jichi.io
+82.31.124.121    # dns.tesem.dog
 82.64.29.93      # cloud.tezoi.com
 82.65.176.187    # dns.kebree.fr
 82.65.209.69     # adb-home.xaoimoon.fr
@@ -271,9 +300,10 @@
 88.99.65.186     # pihole1.hoerli.net
 88.99.93.80      # dns.glf.wtf
 88.99.142.87     # dns.luma-medien.com
-88.112.34.201    # doh.mmmalia.com
+88.112.34.201    # doh.mmmalia.com, doh.pyry.me
 88.198.122.154   # hard.dnsforge.de
 88.208.224.60    # ahoj.email
+89.32.32.32      # resolver.sunet.se
 89.57.45.206     # dns.farshidhakimy.de
 89.58.3.251      # adfreedns.top
 89.58.59.189     # dns.gayanalysing.co.uk
@@ -293,7 +323,10 @@
 92.205.21.178    # dns.3wv.de
 93.4.84.37       # adguard.maison.gifino.fr
 93.66.205.24     # adguard.depieri.net
+93.66.239.94     # adguard.depieri.net
 93.67.83.156     # block.abstergo.it
+93.95.115.21     # eyg01.dnscry.pt
+93.190.126.69    # doh.immerda.ch
 93.231.23.132    # dns.reitmeier.me
 94.16.111.86     # dns.immanuelschaffer.de
 94.23.71.64      # dns.clanto.cloud
@@ -305,6 +338,7 @@
 94.140.14.141    # dns-unfiltered.adguard.com
 94.140.15.15     # dns.adguard-dns.com, dns.adguard.com
 94.140.15.16     # dns-family.adguard.com
+94.142.242.248   # dns.sindominio.net
 94.237.69.95     # dns.pnh.my.id
 94.247.43.254    # opennic1.eth-services.de
 95.111.236.127   # dns.kastner-online.de
@@ -326,6 +360,7 @@
 101.236.69.43    # httpdns.meituan.com
 103.1.223.110    # agh-yz.russel053.com
 103.4.235.188    # dns.netraptor.com.au
+103.6.212.123    # nz01.dns4me.net
 103.37.152.92    # httpdns.meituan.com
 103.73.65.33     # au-syd-w-f-1.nashkan.net
 103.86.96.100    # dns1.nordvpn.com
@@ -341,12 +376,14 @@
 103.155.191.184  # dns.bebasid.com, unfiltered.dns.bebasid.com
 103.155.191.224  # dns.caliph.dev
 103.160.63.242   # dns.engineer.web.id
+103.161.196.196  # dns.spil.co.id
 103.176.20.107   # dns.nguyendn.com
 103.181.143.111  # d.apemlegit.my.id
 103.196.38.200   # query.hdns.io
 103.196.152.126  # dns.goldplate.org
 103.230.156.210  # dns.ashleyjackson.net
 103.249.238.124  # adl.adfilter.net
+104.36.86.181    # geg01.dnscry.pt
 104.128.62.173   # doh.dns.sb
 104.167.199.135  # ada.openbld.net
 104.171.252.111  # adguard.easez.net
@@ -357,6 +394,8 @@
 104.238.181.28   # chromium.dns.nextdns.io
 104.244.72.39    # dns.bofh.in
 104.248.104.66   # ca.doh.cloudveil.org
+106.11.30.114    # vip22.alidns.com
+106.11.41.152    # vip22.alidns.com
 106.55.44.79     # dns.b612.me
 107.172.8.5      # us-sj.foxyfy.net
 107.173.187.132  # dns.girino.org
@@ -364,6 +403,7 @@
 108.175.15.215   # dns.keviland.com
 109.70.74.38     # dns.dynx.pro
 109.70.74.68     # dns.dynx.pro
+109.74.205.250   # dns.kuuhaku.moe
 109.123.236.250  # dns.marasov.id
 109.173.160.28   # dns.kamilszczepanski.com
 109.205.183.11   # adguard.bonsirven.eu
@@ -372,7 +412,9 @@
 109.236.120.2    # dns.levonet.sk
 109.250.196.110  # adguard.bitteeinbyte.de
 109.250.196.127  # adguard.bitteeinbyte.de
+109.250.197.42   # adguard.bitteeinbyte.de
 109.250.197.208  # adguard.bitteeinbyte.de
+109.250.204.125  # area51.mywire.org
 109.250.204.130  # area51.mywire.org
 109.250.204.142  # area51.mywire.org
 109.250.205.158  # area51.mywire.org
@@ -381,6 +423,7 @@
 111.170.19.184   # doh.18bit.cn
 112.118.125.209  # dns.853852.xyz
 112.163.234.61   # 2.dns.noridev.moe
+112.213.32.219   # syd.adfilter.net
 113.179.20.238   # tungdnsne.duckdns.org
 114.33.26.67     # dns.jundev.org
 114.34.0.56      # adguard.shuting.idv.tw
@@ -410,6 +453,7 @@
 128.242.11.227   # dns.flwagners.com
 128.254.206.25   # dns.practicallyunhackable.com
 128.254.207.50   # mia01.dnscry.pt
+130.59.31.80     # switch.ch
 130.225.244.166  # deic-lgb.anycast.censurfridns.dk, deic-lgb.anycast.uncensoreddns.org
 130.226.161.34   # deic-ore.anycast.censurfridns.dk, deic-ore.anycast.uncensoreddns.org
 133.167.212.21   # adfiltro.fun, alleesph.online
@@ -431,6 +475,8 @@
 138.236.128.101  # cluster-1.gac.edu
 139.59.219.245   # sg-dns1.bancuh.com
 139.64.133.38    # firefox.dns.nextdns.io
+139.95.64.109    # vip9.alidns.com
+139.95.66.1      # vip9.alidns.com
 139.99.44.3      # adblock.krctech.dev
 139.199.163.65   # dns.b612.me
 139.224.142.101  # ns8.alidns.com
@@ -439,10 +485,14 @@
 139.224.142.127  # ns7.alidns.com
 140.36.3.131     # tienpham.id.vn
 140.112.29.207   # doh.ntu.ssooss.win
+140.205.1.2      # vip22.alidns.com
 140.205.1.5      # vip23.alidns.com
 140.205.1.10     # vip26.alidns.com, vip6.alidns.com
-140.205.1.13     # vip27.alidns.com
+140.205.1.13     # vip27.alidns.com, vip7.alidns.com
 140.205.1.14     # vip8.alidns.com
+140.205.29.114   # vip22.alidns.com
+140.205.103.202  # vip22.alidns.com
+141.84.69.2      # esel.stusta.mhn.de
 141.94.89.163    # 1a.ns.ozer.im
 142.132.188.241  # hole.elbschloss.xyz
 142.132.230.65   # dns.alvosec.com
@@ -463,14 +513,17 @@
 149.28.144.189   # dns.mikrotikrumahan.my.id
 149.88.64.107    # dns.886886886.xyz
 149.104.186.91   # dnsenc.com
+149.112.112.9    # dns9.quad9.net
+149.112.112.10   # dns10.quad9.net
+149.112.112.11   # dns11.quad9.net
 149.112.112.12   # dns12.quad9.net
-149.112.112.112  # dns.quad9.net, rpz-public-resolver1.rrdns.pch.net
+149.112.112.112  # dns.quad9.net
 149.112.121.10   # private.canadianshield.cira.ca
 149.112.121.30   # family.canadianshield.cira.ca
 149.112.122.10   # private.canadianshield.cira.ca
 149.112.122.30   # family.canadianshield.cira.ca
 149.112.149.112  # alpha-dns.quad9.net
-149.248.217.117  # dns.dnswarden.com
+149.248.217.117  # dns.dnswarden.com, doh.asia.dnswarden.com
 150.107.200.31   # aqua.is.my.waifu.cz, darkness.is.my.waifu.cz
 151.145.200.30   # dns.momou.ch
 151.243.222.94   # jkt01.dnscry.pt
@@ -479,6 +532,7 @@
 152.53.130.105   # dns.datenquark.de
 152.53.130.210   # dns.kapite.in
 152.53.173.36    # dns.psociety.de
+153.31.113.36    # nicsezcheckfbi.gov
 154.0.175.29     # pihole.datamatter.co.za
 154.90.44.84     # secure-dns.pleumkungz.com
 154.212.208.25   # dns.foximao.cn
@@ -492,7 +546,9 @@
 155.102.176.88   # iterator.lazada.com
 155.138.131.15   # dns.kusoneko.moe
 157.90.124.62    # dns.brahma.world
+157.131.42.41    # resolver4.dns.openinternet.io
 157.180.15.214   # dns.envs.net
+158.64.1.29      # dnspub.restena.lu
 158.69.207.80    # dns.asysec.com
 159.65.244.135   # dns.moog.sh
 159.69.4.2       # dns.caspervk.net
@@ -501,14 +557,17 @@
 159.195.62.166   # dns.brembeck.cloud
 160.250.95.28    # dns.hakim.one
 160.250.227.196  # dns.bebasid.com
+160.251.64.80    # 3dcosas.xyz, adguard.johanliebert.top
 161.129.34.134   # 5g.o0o.re
 162.19.227.251   # fezgate.ovh
 162.159.61.3     # chrome.cloudflare-dns.com
 162.159.61.5     # opera.cloudflare-dns.com
 162.159.61.8     # dns.cloudflare.com
+162.159.62.1     # odoh.cloudflare-dns.com
 162.221.218.241  # dns.zemows.industries
 164.90.207.7     # adblockersite.com
 164.132.7.242    # dns.christerwaren.fi
+165.227.233.200  # doh.dnscrypt.uk
 167.179.78.123   # dns.fullaccesstointernet.jp.eu.org
 167.235.31.95    # dns.technologycage.com
 167.235.50.40    # dns.cloudfiction.eu
@@ -520,11 +579,13 @@
 170.33.23.13     # vip23.alidns.com
 170.33.24.73     # vip23.alidns.com
 170.33.32.213    # vip6.alidns.com
+170.33.32.214    # vip7.alidns.com
 170.33.32.215    # vip8.alidns.com
 170.33.73.29     # vip6.alidns.com
+170.33.80.9      # vip22.alidns.com
 170.33.80.10     # vip23.alidns.com
 170.33.80.13     # vip26.alidns.com, vip6.alidns.com
-170.33.80.14     # vip27.alidns.com
+170.33.80.14     # vip27.alidns.com, vip7.alidns.com
 170.33.80.15     # vip8.alidns.com
 170.39.224.134   # chromium.dns.nextdns.io
 170.39.225.135   # firefox.dns.nextdns.io
@@ -532,23 +593,30 @@
 172.64.41.3      # chrome.cloudflare-dns.com
 172.64.41.5      # opera.cloudflare-dns.com
 172.64.41.8      # dns.cloudflare.com
+172.64.42.1      # odoh.cloudflare-dns.com
+172.104.92.233   # dns.kuuhaku.moe
 172.104.175.59   # dns.9999.sg
 172.232.185.183  # dns.horcrux.vip
+172.233.59.98    # dns.pccoach.nl
 172.233.147.42   # adguard.hartley.cloud
+172.234.26.72    # dns.edgy.network
+172.234.212.139  # dns.edgy.network
 172.236.104.43   # fidelius.top, revelio.top
 172.236.104.157  # fidelius.top, revelio.top
 172.237.129.108  # www.dltuykfgp.top
 172.237.129.236  # www.dltuykfgp.top
 172.237.129.242  # www.dltuykfgp.top
 172.238.172.122  # fidelius.top, revelio.top
+172.238.172.213  # dns.edgy.network
 172.238.172.228  # dns.edgeburnmedia.com
 172.238.176.31   # dns.edgeburnmedia.com
 172.239.57.230   # dns.edgeburnmedia.com
 173.20.169.71    # dns.cahlen.com
-173.208.212.205  # dns.furrix.zone
+173.208.212.205  # dns.furrix.zone, dns.marbledfennec.net
 173.249.208.245  # us-saj-w-p-1.nashkan.net
 173.255.201.254  # us1.blissdns.net
 174.68.248.77    # dohdot.coxlab.net
+174.138.29.175   # dot.tiar.app
 175.24.154.66    # dns.rubyfish.cn
 176.9.54.219     # de.dns.privex.io
 176.9.242.147    # dns.redvau.lt
@@ -556,6 +624,7 @@
 176.163.8.194    # dns.chadeyron.fr
 176.163.14.140   # dns.chadeyron.fr
 176.182.156.70   # dns.chadeyron.fr
+178.22.122.100   # dns.shecan.ir
 178.33.118.153   # dns-1.wil.cloud, dns-2.wil.cloud
 178.162.228.11   # dns.keweon.center
 178.162.228.12   # dns.keweon.center
@@ -578,14 +647,17 @@
 185.38.27.139    # kracon.anycast.uncensoreddns.org
 185.44.82.158    # dns.dremaxx.de
 185.47.221.200   # dns.kukal.cz
+185.49.141.38    # getdnsapi.net
 185.51.200.1     # pro.shecan.ir
 185.64.79.5      # uk-lon.doh.sb
 185.69.161.122   # dns.fancyorg.at
+185.70.9.10      # dns.kuuhaku.moe
 185.71.138.138   # wikimedia-dns.org
-185.95.218.42    # dns.digitale-gesellschaft.ch, dns1.digitale-gesellschaft.ch
-185.95.218.43    # dns.digitale-gesellschaft.ch
+185.95.218.42    # dns.digitale-gesellschaft.ch
+185.95.218.43    # dns.digitale-gesellschaft.ch, dns2.digitale-gesellschaft.ch
 185.95.219.170   # resolv1.trash.net
 185.95.219.173   # resolv3.trash.net
+185.109.168.44   # gb-cov-w-p-1.nashkan.net
 185.111.159.59   # asia.tri-dns.net
 185.111.188.46   # dns1.dnscrypt.ca
 185.121.169.47   # dns.dremaxx.de
@@ -600,6 +672,7 @@
 185.195.69.126   # dns.l337.site
 185.207.125.100  # omr01.dnscry.pt
 185.222.222.222  # dns.sb
+185.226.181.19   # opennic2.i2pd.xyz
 185.228.136.191  # dns1.techniverse.net
 185.228.168.10   # adult-filter-dns.cleanbrowsing.org
 185.231.100.108  # dns.anon.no
@@ -610,7 +683,9 @@
 188.34.161.210   # root.hagezi.org
 188.68.33.96     # dns.karl.one
 188.68.40.234    # dns.grqu.de
+188.68.50.215    # dukun.de
 188.190.191.78   # dns.adnull.com
+188.245.45.16    # rumpelsepp.org
 188.245.165.100  # dns.deadsec.net
 192.64.119.49    # affsoft.cc
 192.99.139.168   # dns.islandnet.com
@@ -632,7 +707,7 @@
 194.26.213.15    # dub01.dnscry.pt
 194.28.99.248    # dns.dremaxx.de
 194.32.107.48    # trf01.dnscry.pt
-194.53.137.2     # dns.foxyfy.net, es-ma.foxyfy.net
+194.53.137.2     # dns.foxyfy.net
 194.55.13.76     # dns.clanless.ovh
 194.59.156.9     # adguard.bonis.de
 194.97.157.22    # dns.floriantinney.de
@@ -643,13 +718,13 @@
 194.242.2.4      # base.dns.mullvad.net
 194.242.2.5      # extended.dns.mullvad.net
 194.242.2.9      # all.dns.mullvad.net
-195.3.221.162    # waw02.dnscry.pt
+195.3.221.162    # waw01.dnscry.pt, waw02.dnscry.pt
 195.35.113.73    # dns.anon.no
 195.38.160.7     # dns.cctld.kg
 195.72.60.66     # sto01.dnscry.pt
 195.80.119.99    # dns.cert.ee
 195.80.119.101   # dns.cert.ee
-195.133.25.16    # dns.comss.one
+195.133.25.16    # dns.comss.one, router.comss.one
 195.201.39.149   # dns.kerekes.xyz
 195.201.131.183  # dns.a47.me
 195.208.119.157  # dns.iamninja.ru
@@ -664,10 +739,11 @@
 202.61.236.67    # nue01.dnscry.pt
 202.61.240.61    # adguard.pangerl.it
 202.70.133.124   # dns.gnb09.id
-202.172.26.36    # adg.rueiliu.space, adguard.johanliebert.top
+202.172.26.36    # adg.rueiliu.space
 203.88.117.153   # renardbleu.dev
 204.9.92.87      # adguard1.leadmon.net
-204.12.237.197   # dns.furrix.zone, dns.marbledfennec.net
+204.10.79.38     # doh.sunoaki.net
+204.12.237.197   # dns.furrix.zone
 207.154.211.203  # adb.aadityakushwaha.com
 207.154.238.154  # dns.cloudtrust.solutions
 207.207.210.107  # dns.d4d.moe
@@ -685,6 +761,7 @@
 213.166.247.100  # dns.csaonline.de
 213.167.231.6    # dns.beta.gandi.net
 213.183.86.9     # adguard.bonis.de
+213.188.209.115  # doh.sunoaki.net
 213.199.49.11    # ric.openbld.net
 213.202.211.221  # ns2.opennameserver.org
 213.226.127.98   # dns.lgprk.com
@@ -695,7 +772,9 @@
 216.128.181.13   # ca-yyc.doh.sb
 216.189.147.50   # vpsus3.pzhg.me
 216.250.97.148   # hkg02.dnscry.pt
+217.70.184.38    # dns0.eu
 217.91.179.72    # doh.kekew.info
+217.154.99.101   # dns.mateo.ovh
 217.154.148.131  # adguard.pggns.de
 217.154.173.29   # dnscache0.ns71.net
 217.160.213.186  # testguard.meexx.de
@@ -706,5 +785,5 @@
 220.132.163.223  # dns.ares-taiwan.com
 220.135.223.18   # dns.david888.com
 222.99.114.172   # agh.printk.info
-223.5.5.5        # dns.alidns.com, dns013.alidns.com, dns018.alidns.com, dns019.alidns.com, dns029.alidns.com, dns064.alidns.com, dns13.alidns.com, dns22.alidns.com, dns32.alidns.com, dns35.alidns.com, dns36.alidns.com, dns47.alidns.com, dns54.alidns.com, dns6.alidns.com, dns64.alidns.com, dns7.alidns.com, dnse.alidns.com, dnst.alidns.com, ns027.alidns.com, ns038.alidns.com, ns058.alidns.com, ns17.alidns.com, ns31.alidns.com, ns4.alidns.com, ns42.alidns.com, ns51.alidns.com, ns60.alidns.com, nsac.alidns.com, nsau.alidns.com, nsb.alidns.com, nsc.alidns.com, nsh.alidns.com, nsq.alidns.com, nsx.alidns.com, vip008.alidns.com, vip020.alidns.com, vip031.alidns.com, vip056.alidns.com, vip064.alidns.com, vip29.alidns.com, vip31.alidns.com, vip40.alidns.com, vip41.alidns.com, vip47.alidns.com, vip52.alidns.com, vip56.alidns.com, vip57.alidns.com, vipai.alidns.com, vipap.alidns.com, vipax.alidns.com, vipt.alidns.com
-223.6.6.6        # dns.alidns.com, dns013.alidns.com, dns018.alidns.com, dns019.alidns.com, dns029.alidns.com, dns064.alidns.com, dns13.alidns.com, dns22.alidns.com, dns32.alidns.com, dns35.alidns.com, dns36.alidns.com, dns47.alidns.com, dns54.alidns.com, dns6.alidns.com, dns64.alidns.com, dns7.alidns.com, dnse.alidns.com, dnst.alidns.com, ns027.alidns.com, ns038.alidns.com, ns058.alidns.com, ns17.alidns.com, ns31.alidns.com, ns4.alidns.com, ns42.alidns.com, ns51.alidns.com, ns60.alidns.com, nsac.alidns.com, nsau.alidns.com, nsb.alidns.com, nsc.alidns.com, nsh.alidns.com, nsq.alidns.com, nsx.alidns.com, vip008.alidns.com, vip020.alidns.com, vip031.alidns.com, vip056.alidns.com, vip064.alidns.com, vip29.alidns.com, vip31.alidns.com, vip40.alidns.com, vip41.alidns.com, vip47.alidns.com, vip52.alidns.com, vip56.alidns.com, vip57.alidns.com, vipai.alidns.com, vipap.alidns.com, vipax.alidns.com, vipt.alidns.com
+223.5.5.5        # dns.alidns.com, dns001.alidns.com, dns009.alidns.com, dns02.alidns.com, dns035.alidns.com, dns044.alidns.com, dns050.alidns.com, dns056.alidns.com, dns22.alidns.com, dns26.alidns.com, dns28.alidns.com, dns4.alidns.com, dns45.alidns.com, dns55.alidns.com, dns9.alidns.com, dnsad.alidns.com, dnsan.alidns.com, dnsaw.alidns.com, dnsh.alidns.com, dnsk.alidns.com, dnsq.alidns.com, dnsr.alidns.com, ns.alidns.com, ns014.alidns.com, ns019.alidns.com, ns023.alidns.com, ns024.alidns.com, ns028.alidns.com, ns033.alidns.com, ns051.alidns.com, ns063.alidns.com, ns12.alidns.com, ns29.alidns.com, ns33.alidns.com, ns53.alidns.com, ns57.alidns.com, ns63.alidns.com, nsae.alidns.com, nsax.alidns.com, nsk.alidns.com, nsn.alidns.com, nsq.alidns.com, nsx.alidns.com, vip005.alidns.com, vip019.alidns.com, vip02.alidns.com, vip034.alidns.com, vip049.alidns.com, vip050.alidns.com, vip052.alidns.com, vip054.alidns.com, vip33.alidns.com, vip36.alidns.com, vipae.alidns.com, vipaf.alidns.com, vipaw.alidns.com, vipay.alidns.com, vipp.alidns.com, vipu.alidns.com, vipx.alidns.com
+223.6.6.6        # dns.alidns.com, dns001.alidns.com, dns009.alidns.com, dns02.alidns.com, dns035.alidns.com, dns044.alidns.com, dns050.alidns.com, dns056.alidns.com, dns22.alidns.com, dns26.alidns.com, dns28.alidns.com, dns4.alidns.com, dns45.alidns.com, dns55.alidns.com, dns9.alidns.com, dnsad.alidns.com, dnsan.alidns.com, dnsaw.alidns.com, dnsh.alidns.com, dnsk.alidns.com, dnsq.alidns.com, dnsr.alidns.com, ns.alidns.com, ns014.alidns.com, ns019.alidns.com, ns023.alidns.com, ns024.alidns.com, ns028.alidns.com, ns033.alidns.com, ns051.alidns.com, ns063.alidns.com, ns12.alidns.com, ns29.alidns.com, ns33.alidns.com, ns53.alidns.com, ns57.alidns.com, ns63.alidns.com, nsae.alidns.com, nsax.alidns.com, nsk.alidns.com, nsn.alidns.com, nsq.alidns.com, nsx.alidns.com, vip005.alidns.com, vip019.alidns.com, vip02.alidns.com, vip034.alidns.com, vip049.alidns.com, vip050.alidns.com, vip052.alidns.com, vip054.alidns.com, vip33.alidns.com, vip36.alidns.com, vipae.alidns.com, vipaf.alidns.com, vipaw.alidns.com, vipay.alidns.com, vipp.alidns.com, vipu.alidns.com, vipx.alidns.com
