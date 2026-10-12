@@ -41,6 +41,11 @@
         - dot.pub
   time: 2026-10-11T11:38:35.630582239Z
 - line:
+    host: dot.pub
+    addr: 1.12.12.12
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589441069Z
+- line:
     host: doh.killtw.im
     addr: 1.34.46.92
     extra_hosts: []
@@ -49,7 +54,7 @@
     host: agh.kyusang.win
     addr: 1.230.209.26
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63058238Z
+  time: 2026-10-12T13:37:50.5894414Z
 - line:
     host: doh.centraleu.pi-dns.com
     addr: 2.59.170.20
@@ -72,13 +77,9 @@
 - line:
     host: doh.pi-dns.com
     addr: 2.59.170.20
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760448193Z
-- line:
-    host: pm9352-bd.xyz
-    addr: 2.59.170.20
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972634111Z
+    extra_hosts:
+        - dot.eastus.pi-dns.com
+  time: 2026-10-12T13:37:50.58944167Z
 - line:
     host: kz-pav-w-p-1.nashkan.net
     addr: 2.135.147.99
@@ -99,17 +100,22 @@
     host: africadns1.liquidtelecom.net
     addr: 5.11.11.5
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63058272Z
+  time: 2026-10-12T13:37:50.589441831Z
 - line:
     host: africadns2.liquidtelecom.net
     addr: 5.11.11.11
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63058277Z
+  time: 2026-10-12T13:37:50.589441901Z
 - line:
     host: noads.imbuffering.com
     addr: 5.15.65.138
     extra_hosts: []
   time: 2026-10-11T11:38:35.63058281Z
+- line:
+    host: dns.chadeyron.fr
+    addr: 5.51.213.59
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589442041Z
 - line:
     host: dns.chadeyron.fr
     addr: 5.51.231.211
@@ -120,11 +126,6 @@
     addr: 5.51.245.233
     extra_hosts: []
   time: 2026-10-10T11:25:37.444344973Z
-- line:
-    host: dns.chadeyron.fr
-    addr: 5.51.247.190
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972634542Z
 - line:
     host: ns.data.haus
     addr: 5.75.228.192
@@ -141,15 +142,10 @@
     extra_hosts: []
   time: 2026-10-11T11:38:35.630583241Z
 - line:
-    host: adguard.ihatemy.live
-    addr: 5.78.158.2
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760448384Z
-- line:
     host: dns.ginovs.nl
     addr: 5.79.70.195
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630583291Z
+  time: 2026-10-12T13:37:50.589442111Z
 - line:
     host: mad01.dnscry.pt
     addr: 5.134.118.198
@@ -176,20 +172,20 @@
     extra_hosts: []
   time: 2026-10-11T11:38:35.630583521Z
 - line:
-    host: chromium.dns.nextdns.io
-    addr: 5.161.43.197
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972634853Z
-- line:
     host: dns.nextdns.io
     addr: 5.161.43.197
     extra_hosts: []
   time: 2026-10-11T11:38:35.630583571Z
 - line:
+    host: chromium.dns.nextdns.io
+    addr: 5.161.43.197
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589442182Z
+- line:
     host: adguard.ihatemy.live
     addr: 5.161.194.22
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972634923Z
+  time: 2026-10-12T13:37:50.589442242Z
 - line:
     host: dus01.dnscry.pt
     addr: 5.175.180.171
@@ -214,7 +210,7 @@
     host: nl-dro-w-p-1.nashkan.net
     addr: 5.255.111.70
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630583792Z
+  time: 2026-10-12T13:37:50.589442472Z
 - line:
     host: 8888.google
     addr: 8.8.4.4
@@ -260,7 +256,7 @@
     host: vip3.alidns.com
     addr: 8.212.93.3
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630584313Z
+  time: 2026-10-12T13:37:50.589442532Z
 - line:
     host: vip4.alidns.com
     addr: 8.212.93.4
@@ -280,7 +276,7 @@
     host: vip7.alidns.com
     addr: 8.212.93.7
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630584493Z
+  time: 2026-10-12T13:37:50.589442602Z
 - line:
     host: vip8.alidns.com
     addr: 8.212.93.8
@@ -293,21 +289,21 @@
         - dns9.quad9.net
   time: 2026-10-11T11:38:35.630584583Z
 - line:
+    host: dns9.quad9.net
+    addr: 9.9.9.9
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589442672Z
+- line:
     host: dns-nosec.quad9.net
     addr: 9.9.9.10
     extra_hosts:
         - dns10.quad9.net
-  time: 2026-10-11T11:38:35.630584633Z
-- line:
-    host: dns-nosec.quad9.net
-    addr: 9.9.9.10
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972635364Z
+  time: 2026-10-12T13:37:50.589442743Z
 - line:
     host: dns11.quad9.net
     addr: 9.9.9.11
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630584673Z
+  time: 2026-10-12T13:37:50.589442803Z
 - line:
     host: dns12.quad9.net
     addr: 9.9.9.12
@@ -322,7 +318,7 @@
     host: vip21.alidns.com
     addr: 14.1.112.11
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630584813Z
+  time: 2026-10-12T13:37:50.589442873Z
 - line:
     host: vip22.alidns.com
     addr: 14.1.112.12
@@ -362,32 +358,12 @@
     host: dns.freyja.pw
     addr: 15.204.209.29
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630585174Z
+  time: 2026-10-12T13:37:50.589442933Z
 - line:
     host: dns.dns-53.us
     addr: 15.204.227.22
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630585224Z
-- line:
-    host: doh.dns.apple.com
-    addr: 17.132.88.111
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972635634Z
-- line:
-    host: doh.dns.apple.com
-    addr: 17.132.88.112
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972635935Z
-- line:
-    host: doh.dns.apple.com
-    addr: 17.132.88.115
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972635995Z
-- line:
-    host: doh.dns.apple.com
-    addr: 17.132.88.120
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972636065Z
+  time: 2026-10-12T13:37:50.589443003Z
 - line:
     host: mask-h2.icloud.com
     addr: 17.248.139.228
@@ -459,15 +435,15 @@
     extra_hosts: []
   time: 2026-10-11T11:38:35.630585584Z
 - line:
-    host: mask.icloud.com
-    addr: 17.248.139.237
-    extra_hosts: []
-  time: 2026-10-10T11:25:37.444352865Z
-- line:
     host: mask-h2.icloud.com
     addr: 17.248.139.237
     extra_hosts: []
   time: 2026-10-11T11:38:35.630585625Z
+- line:
+    host: mask.icloud.com
+    addr: 17.248.139.237
+    extra_hosts: []
+  time: 2026-10-10T11:25:37.444352865Z
 - line:
     host: mask-api.icloud.com
     addr: 17.248.207.9
@@ -566,13 +542,18 @@
     host: abe01.dnscry.pt
     addr: 23.137.253.24
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630587127Z
+  time: 2026-10-12T13:37:50.589443273Z
 - line:
     host: doh.beauty
     addr: 23.145.36.51
     extra_hosts:
         - doh.buzz
   time: 2026-10-10T11:25:37.444354608Z
+- line:
+    host: doh.buzz
+    addr: 23.145.36.51
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589443344Z
 - line:
     host: doh.beauty
     addr: 23.149.108.16
@@ -598,17 +579,17 @@
     host: dfw02.dnscry.pt
     addr: 23.230.253.98
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630587357Z
+  time: 2026-10-12T13:37:50.589443404Z
 - line:
     host: dns.efficientdocuments.com
     addr: 23.239.3.190
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630587397Z
+  time: 2026-10-12T13:37:50.589443474Z
 - line:
     host: dns.fizz.studio
     addr: 23.239.10.192
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630587447Z
+  time: 2026-10-12T13:37:50.589443544Z
 - line:
     host: qdns02.nymterm.com
     addr: 24.199.70.134
@@ -633,7 +614,7 @@
     host: dns.burgas.pro
     addr: 31.13.248.149
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630587668Z
+  time: 2026-10-12T13:37:50.589443604Z
 - line:
     host: eliatofani.ovh
     addr: 31.70.73.6
@@ -648,12 +629,12 @@
     host: doh.datahata.by
     addr: 31.130.200.100
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630587808Z
+  time: 2026-10-12T13:37:50.589443674Z
 - line:
     host: dns.ha-dvin.pp.ua
     addr: 31.202.133.115
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630587858Z
+  time: 2026-10-12T13:37:50.589443734Z
 - line:
     host: dns.nic.in
     addr: 36.50.50.50
@@ -693,7 +674,7 @@
     host: dns.internal.hosmatic.com
     addr: 37.114.32.8
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630588218Z
+  time: 2026-10-12T13:37:50.589443805Z
 - line:
     host: securenet.mhsystems.net
     addr: 37.120.173.157
@@ -708,7 +689,7 @@
     host: adguard.shutgaming.net
     addr: 37.120.187.202
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630588349Z
+  time: 2026-10-12T13:37:50.589443865Z
 - line:
     host: resolv.flokinet.net
     addr: 37.156.68.20
@@ -718,7 +699,7 @@
     host: dns.expert
     addr: 37.157.254.69
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630588439Z
+  time: 2026-10-12T13:37:50.589443935Z
 - line:
     host: jackyes.ovh
     addr: 37.187.108.188
@@ -728,12 +709,12 @@
     host: dns.lvolland.fr
     addr: 37.187.149.237
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630588529Z
+  time: 2026-10-12T13:37:50.589443995Z
 - line:
     host: dns.foxyfy.net
     addr: 37.221.95.37
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630588579Z
+  time: 2026-10-12T13:37:50.589444065Z
 - line:
     host: dns.neeb.it
     addr: 37.221.194.95
@@ -745,20 +726,20 @@
     extra_hosts: []
   time: 2026-10-11T11:38:35.630588669Z
 - line:
-    host: steering.nextdns.io
-    addr: 37.252.249.233
+    host: dns.glorydns.com
+    addr: 38.47.180.115
     extra_hosts: []
-  time: 2026-10-08T12:19:30.760450237Z
+  time: 2026-10-12T13:37:50.589444135Z
 - line:
     host: ada.openbld.net
     addr: 38.107.232.115
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630588709Z
+  time: 2026-10-12T13:37:50.589444195Z
 - line:
     host: ada.openbld.net
     addr: 38.107.237.45
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630588759Z
+  time: 2026-10-12T13:37:50.589444265Z
 - line:
     host: doh1.b-cdn.net
     addr: 38.142.94.218
@@ -769,7 +750,7 @@
     host: b-ii.com
     addr: 38.180.230.56
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630588849Z
+  time: 2026-10-12T13:37:50.589444326Z
 - line:
     host: ns1.alidns.com
     addr: 39.96.153.45
@@ -854,22 +835,22 @@
     host: cloud.198.games
     addr: 43.154.23.198
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630589621Z
+  time: 2026-10-12T13:37:50.589445197Z
 - line:
     host: dns.flymc.cc
     addr: 43.154.154.162
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630591043Z
+  time: 2026-10-12T13:37:50.589445267Z
 - line:
     host: blog.kimiblock.top
     addr: 43.161.224.5
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630591093Z
+  time: 2026-10-12T13:37:50.589445327Z
 - line:
     host: blog.kimiblock.top
     addr: 43.161.254.162
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630591143Z
+  time: 2026-10-12T13:37:50.589445397Z
 - line:
     host: ndns.233py.com
     addr: 43.169.13.124
@@ -883,11 +864,6 @@
 - line:
     host: dns.233py.com
     addr: 43.169.15.124
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972637999Z
-- line:
-    host: dns.233py.com
-    addr: 43.169.15.124
     extra_hosts:
         - doh.233py.com
         - edns.233py.com
@@ -895,6 +871,11 @@
         - sdns.233py.com
         - wdns.233py.com
   time: 2026-10-11T11:38:35.630591273Z
+- line:
+    host: dns.233py.com
+    addr: 43.169.15.124
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589445458Z
 - line:
     host: doh.totoro.pub
     addr: 43.174.246.33
@@ -909,12 +890,12 @@
     host: bne01.dnscry.pt
     addr: 43.224.180.137
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630591413Z
+  time: 2026-10-12T13:37:50.589445528Z
 - line:
     host: dns.jiyi.eu
     addr: 43.255.123.52
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630591453Z
+  time: 2026-10-12T13:37:50.589445588Z
 - line:
     host: jp-nrt.doh.sb
     addr: 45.8.222.99
@@ -948,15 +929,10 @@
         - public-dns-b.dns.sb
   time: 2026-10-11T11:38:35.630591724Z
 - line:
-    host: steering.nextdns.io
-    addr: 45.11.104.186
+    host: dns.sb
+    addr: 45.11.45.11
     extra_hosts: []
-  time: 2026-10-08T12:19:30.76045155Z
-- line:
-    host: cleanbrowsing.org
-    addr: 45.32.75.24
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.76045161Z
+  time: 2026-10-12T13:37:50.589445658Z
 - line:
     host: lelux.fi
     addr: 45.32.86.63
@@ -966,7 +942,7 @@
     host: dns.elemental.software
     addr: 45.33.60.119
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630591814Z
+  time: 2026-10-12T13:37:50.589445718Z
 - line:
     host: sink.nolo.ltd
     addr: 45.33.66.148
@@ -981,12 +957,12 @@
     host: dns.liberador.net
     addr: 45.63.105.236
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630591954Z
+  time: 2026-10-12T13:37:50.589445788Z
 - line:
     host: dns.aquilenet.fr
     addr: 45.67.81.23
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630591994Z
+  time: 2026-10-12T13:37:50.589445848Z
 - line:
     host: lon01.dnscry.pt
     addr: 45.67.84.132
@@ -1011,11 +987,6 @@
 - line:
     host: doh-2.seby.io
     addr: 45.76.113.31
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972638399Z
-- line:
-    host: doh-2.seby.io
-    addr: 45.76.113.31
     extra_hosts:
         - doh.seby.io
         - dot.seby.io
@@ -1024,12 +995,12 @@
     host: doh003.280blocker.net
     addr: 45.77.25.253
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630592225Z
+  time: 2026-10-12T13:37:50.589445918Z
 - line:
     host: at.pzhg.me
     addr: 45.77.31.67
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630592275Z
+  time: 2026-10-12T13:37:50.589445989Z
 - line:
     host: dns.mzjtechnology.com
     addr: 45.79.17.103
@@ -1044,7 +1015,7 @@
     host: dns.csswg.org
     addr: 45.79.94.155
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630592405Z
+  time: 2026-10-12T13:37:50.589446049Z
 - line:
     host: dns.startupstack.tech
     addr: 45.79.102.67
@@ -1054,12 +1025,12 @@
     host: dns.falkenthal.org
     addr: 45.79.104.153
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630592495Z
+  time: 2026-10-12T13:37:50.589446119Z
 - line:
     host: adg.jnorton.us
     addr: 45.79.156.126
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630592545Z
+  time: 2026-10-12T13:37:50.589446179Z
 - line:
     host: performance.gosami.xyz
     addr: 45.79.208.98
@@ -1069,7 +1040,7 @@
     host: dns.13evl.com
     addr: 45.79.248.146
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630592635Z
+  time: 2026-10-12T13:37:50.589446249Z
 - line:
     host: fra01.dnscry.pt
     addr: 45.82.120.61
@@ -1079,27 +1050,27 @@
     host: dns.dnshome.de
     addr: 45.86.125.58
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630592725Z
+  time: 2026-10-12T13:37:50.589446309Z
 - line:
     host: dns.dnshome.de
     addr: 45.86.125.59
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630592765Z
+  time: 2026-10-12T13:37:50.589446379Z
 - line:
     host: ams02.dnscry.pt
     addr: 45.86.162.110
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630592815Z
+  time: 2026-10-12T13:37:50.589446439Z
 - line:
     host: anycast.dns.nextdns.io
     addr: 45.90.28.0
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630592855Z
+  time: 2026-10-12T13:37:50.58944651Z
 - line:
     host: anycast.dns.nextdns.io
     addr: 45.90.30.0
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630592906Z
+  time: 2026-10-12T13:37:50.58944657Z
 - line:
     host: gva01.dnscry.pt
     addr: 45.90.59.193
@@ -1114,7 +1085,7 @@
     host: gb-lon-w-p-2.nashkan.net
     addr: 45.91.93.218
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630593036Z
+  time: 2026-10-12T13:37:50.58944664Z
 - line:
     host: naw01.dnscry.pt
     addr: 45.95.38.29
@@ -1124,27 +1095,27 @@
     host: dns.b33.space
     addr: 45.95.80.221
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630593136Z
+  time: 2026-10-12T13:37:50.58944671Z
 - line:
     host: hk-hkg.doh.sb
     addr: 45.125.0.26
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630593176Z
+  time: 2026-10-12T13:37:50.58944677Z
 - line:
     host: dns.kescher.at
     addr: 45.129.181.164
     extra_hosts: []
-  time: 2026-10-10T11:25:37.444360507Z
+  time: 2026-10-12T13:37:50.58944684Z
 - line:
     host: blackhole.myon.lu
     addr: 45.133.117.91
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630593226Z
+  time: 2026-10-12T13:37:50.5894469Z
 - line:
     host: dns.flatuslifir.is
     addr: 45.134.88.121
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630593266Z
+  time: 2026-10-12T13:37:50.589446971Z
 - line:
     host: doh.jeroenhd.nl
     addr: 45.138.53.244
@@ -1166,6 +1137,11 @@
     extra_hosts: []
   time: 2026-10-11T11:38:35.630593446Z
 - line:
+    host: de-ber.doh.sb
+    addr: 45.142.247.194
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589447031Z
+- line:
     host: fra02.dnscry.pt
     addr: 45.147.51.123
     extra_hosts: []
@@ -1179,12 +1155,12 @@
     host: dns.ffnw.de
     addr: 45.154.109.53
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630593587Z
+  time: 2026-10-12T13:37:50.589447101Z
 - line:
     host: cvt01.dnscry.pt
     addr: 45.155.37.165
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630593627Z
+  time: 2026-10-12T13:37:50.589447161Z
 - line:
     host: jhb01.dnscry.pt
     addr: 45.249.91.150
@@ -1194,7 +1170,7 @@
     host: dns.3wv.de
     addr: 46.4.94.249
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630593717Z
+  time: 2026-10-12T13:37:50.589447231Z
 - line:
     host: doh.niyawe.de
     addr: 46.4.112.109
@@ -1204,17 +1180,17 @@
     host: ag.marschi.de
     addr: 46.38.231.33
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630593807Z
+  time: 2026-10-12T13:37:50.589447291Z
 - line:
     host: dns.murgi.de
     addr: 46.38.234.60
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630593857Z
+  time: 2026-10-12T13:37:50.589447361Z
 - line:
     host: c.cicitt.ch
     addr: 46.101.110.57
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630593897Z
+  time: 2026-10-12T13:37:50.589447431Z
 - line:
     host: privatnas.servebeer.com
     addr: 46.124.106.14
@@ -1229,7 +1205,7 @@
     host: cryptostorm.is
     addr: 46.165.221.100
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630594037Z
+  time: 2026-10-12T13:37:50.589448233Z
 - line:
     host: dns.smartguard.io
     addr: 46.165.252.147
@@ -1239,32 +1215,32 @@
     host: dns.decloudus.com
     addr: 46.224.208.209
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630594127Z
+  time: 2026-10-12T13:37:50.589448293Z
 - line:
     host: dns.dekedin.me
     addr: 46.225.105.92
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630594167Z
+  time: 2026-10-12T13:37:50.589448363Z
 - line:
     host: dns.hostux.net
     addr: 46.226.108.173
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630594218Z
+  time: 2026-10-12T13:37:50.589448423Z
 - line:
     host: dns.hostux.net
     addr: 46.226.109.82
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630594268Z
+  time: 2026-10-12T13:37:50.589448493Z
 - line:
     host: dns.cert.ee
     addr: 46.226.143.83
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630594308Z
+  time: 2026-10-12T13:37:50.589448554Z
 - line:
     host: dns.cert.ee
     addr: 46.226.143.86
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630594358Z
+  time: 2026-10-12T13:37:50.589448623Z
 - line:
     host: pdns.faelix.net
     addr: 46.227.200.52
@@ -1299,12 +1275,12 @@
     host: dns.hanmey.de
     addr: 46.253.255.81
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630594668Z
+  time: 2026-10-12T13:37:50.589448684Z
 - line:
     host: vip21.alidns.com
     addr: 47.88.44.151
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630594718Z
+  time: 2026-10-12T13:37:50.589448754Z
 - line:
     host: vip22.alidns.com
     addr: 47.88.44.152
@@ -1334,7 +1310,7 @@
     host: vip7.alidns.com
     addr: 47.88.82.208
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630594989Z
+  time: 2026-10-12T13:37:50.589448824Z
 - line:
     host: vip8.alidns.com
     addr: 47.88.82.209
@@ -1374,12 +1350,12 @@
     host: agh.xinfeng16m.top
     addr: 47.100.62.161
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630595349Z
+  time: 2026-10-12T13:37:50.589448884Z
 - line:
     host: dns.ikataruto.com
     addr: 47.107.121.125
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630595399Z
+  time: 2026-10-12T13:37:50.589448954Z
 - line:
     host: ns1.alidns.com
     addr: 47.118.199.205
@@ -1439,7 +1415,7 @@
     host: vip7.alidns.com
     addr: 47.253.24.27
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63059594Z
+  time: 2026-10-12T13:37:50.589449014Z
 - line:
     host: vip8.alidns.com
     addr: 47.253.24.28
@@ -1449,7 +1425,7 @@
     host: vip7.alidns.com
     addr: 47.254.160.176
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63059603Z
+  time: 2026-10-12T13:37:50.589449084Z
 - line:
     host: vip8.alidns.com
     addr: 47.254.160.177
@@ -1464,7 +1440,7 @@
     host: clean.dnsforge.de
     addr: 49.12.43.208
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63059616Z
+  time: 2026-10-12T13:37:50.589449144Z
 - line:
     host: dnsforge.de
     addr: 49.12.67.122
@@ -1474,7 +1450,7 @@
     host: adguard.abd.ong
     addr: 49.12.99.89
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630596251Z
+  time: 2026-10-12T13:37:50.589449215Z
 - line:
     host: hard.dnsforge.de
     addr: 49.12.222.213
@@ -1484,27 +1460,27 @@
     host: clean.dnsforge.de
     addr: 49.12.223.2
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630596341Z
+  time: 2026-10-12T13:37:50.589449275Z
 - line:
     host: chaos-system.de
     addr: 49.12.230.234
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630596391Z
+  time: 2026-10-12T13:37:50.589449345Z
 - line:
     host: adguard.kiboko.it
     addr: 49.13.60.236
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630596431Z
+  time: 2026-10-12T13:37:50.589449405Z
 - line:
     host: de-fsn-w-p-1.nashkan.net
     addr: 49.13.95.125
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630596481Z
+  time: 2026-10-12T13:37:50.589449475Z
 - line:
     host: h.gjrick.tw
     addr: 49.159.112.157
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630596531Z
+  time: 2026-10-12T13:37:50.589449545Z
 - line:
     host: adguard.kantinyoyok.xyz
     addr: 49.212.198.36
@@ -1521,8 +1497,7 @@
     addr: 49.212.198.36
     extra_hosts:
         - axaxa.fun
-        - dns.kugoapps.com
-  time: 2026-10-09T12:10:59.972642287Z
+  time: 2026-10-12T13:37:50.589449605Z
 - line:
     host: catchen121299.top
     addr: 49.212.198.51
@@ -1544,14 +1519,8 @@
     addr: 49.212.198.51
     extra_hosts:
         - dns.daarrk.tech
-  time: 2026-10-08T12:19:30.760455467Z
-- line:
-    host: catchen121299.top
-    addr: 49.212.198.51
-    extra_hosts:
-        - dns.daarrk.tech
-        - lesuo.top
-  time: 2026-10-09T12:10:59.972642357Z
+        - maqgie.xyz
+  time: 2026-10-12T13:37:50.589449676Z
 - line:
     host: adguard.ajinga.net
     addr: 49.212.198.52
@@ -1561,7 +1530,8 @@
         - cynntex.fun
         - deep-henchman-excuse.cfd
         - dns.cybertonic.tech
-  time: 2026-10-08T12:19:30.760455537Z
+        - do-39574-tr.xyz
+  time: 2026-10-12T13:37:50.589449736Z
 - line:
     host: adguard.ajinga.net
     addr: 49.212.198.52
@@ -1576,17 +1546,6 @@
         - myatris.sbs
         - xholgm.top
   time: 2026-10-11T11:38:35.630596661Z
-- line:
-    host: adguard.ajinga.net
-    addr: 49.212.198.52
-    extra_hosts:
-        - adguard.londonwebnerd.cloud
-        - atris.cyou
-        - cynntex.fun
-        - deep-henchman-excuse.cfd
-        - dns.cybertonic.tech
-        - xholgm.top
-  time: 2026-10-09T12:10:59.972642417Z
 - line:
     host: adg.yybyy.wiki
     addr: 49.212.207.51
@@ -1604,16 +1563,7 @@
         - ads.hunga1k47.com
         - ag.brianlee.fun
         - dns-free.link
-        - dns.mathewakhil.online
-  time: 2026-10-09T12:10:59.972642487Z
-- line:
-    host: adg.yybyy.wiki
-    addr: 49.212.207.51
-    extra_hosts:
-        - ads.hunga1k47.com
-        - ag.brianlee.fun
-        - dns-free.link
-  time: 2026-10-08T12:19:30.760455607Z
+  time: 2026-10-12T13:37:50.589449806Z
 - line:
     host: dns.auapi.fun
     addr: 49.212.235.34
@@ -1626,21 +1576,7 @@
     host: dns.auapi.fun
     addr: 49.212.235.34
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972642547Z
-- line:
-    host: dns.butterfly87.sbs
-    addr: 49.212.235.44
-    extra_hosts:
-        - dns.f97.xyz
-        - dns.vod11.xyz
-        - lifeisa.live
-  time: 2026-10-09T12:10:59.972642617Z
-- line:
-    host: dns.butterfly87.sbs
-    addr: 49.212.235.44
-    extra_hosts:
-        - dns.f97.xyz
-  time: 2026-10-08T12:19:30.760455738Z
+  time: 2026-10-12T13:37:50.589449866Z
 - line:
     host: dns.butterfly87.sbs
     addr: 49.212.235.44
@@ -1653,6 +1589,12 @@
         - pepetio.xyz
   time: 2026-10-11T11:38:35.630596801Z
 - line:
+    host: dns.butterfly87.sbs
+    addr: 49.212.235.44
+    extra_hosts:
+        - dns.f97.xyz
+  time: 2026-10-12T13:37:50.589449936Z
+- line:
     host: dns.zzuhacker.cn
     addr: 49.235.74.116
     extra_hosts: []
@@ -1661,17 +1603,17 @@
     host: adguard.shoupperuser.com
     addr: 50.116.59.251
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630596892Z
+  time: 2026-10-12T13:37:50.589449996Z
 - line:
     host: dns-privacy.puregeni.us
     addr: 51.77.106.89
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630596932Z
+  time: 2026-10-12T13:37:50.589450066Z
 - line:
     host: dns.kawa.tf
     addr: 51.77.149.139
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630596982Z
+  time: 2026-10-12T13:37:50.589450126Z
 - line:
     host: ns1.flodns.net
     addr: 51.77.227.77
@@ -1681,27 +1623,22 @@
     host: ns2.flodns.net
     addr: 51.77.227.78
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630597072Z
+  time: 2026-10-12T13:37:50.589450197Z
 - line:
     host: dns.infosec.xyz
     addr: 51.79.160.237
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630597112Z
-- line:
-    host: dns.doh.best
-    addr: 51.79.178.52
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760456068Z
+  time: 2026-10-12T13:37:50.589450267Z
 - line:
     host: doh.30x.me
     addr: 51.83.134.179
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630597162Z
+  time: 2026-10-12T13:37:50.589450327Z
 - line:
     host: dns.liberador.net
     addr: 51.91.192.251
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630597202Z
+  time: 2026-10-12T13:37:50.589450397Z
 - line:
     host: fr-dns1.bancuh.com
     addr: 51.158.99.7
@@ -1726,22 +1663,22 @@
     host: cleanbrowsing.org
     addr: 51.161.115.44
     extra_hosts: []
-  time: 2026-10-10T11:25:37.444366185Z
+  time: 2026-10-12T13:37:50.589450457Z
 - line:
     host: dns.alloxr.info
     addr: 51.178.29.75
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599045Z
+  time: 2026-10-12T13:37:50.589450527Z
 - line:
     host: dns.crystalyx.net
     addr: 51.178.82.98
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599085Z
+  time: 2026-10-12T13:37:50.589450587Z
 - line:
     host: dns.hellozhao.com
     addr: 51.178.136.114
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599135Z
+  time: 2026-10-12T13:37:50.589450657Z
 - line:
     host: shield1.eranext.net
     addr: 51.222.16.174
@@ -1756,17 +1693,17 @@
     host: dns.charraud.eu
     addr: 54.38.32.102
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599275Z
+  time: 2026-10-12T13:37:50.589450718Z
 - line:
     host: adguard.alu.dog
     addr: 54.38.55.250
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599315Z
+  time: 2026-10-12T13:37:50.589450787Z
 - line:
     host: dns.dns-53.uk
     addr: 54.38.215.19
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599365Z
+  time: 2026-10-12T13:37:50.589450858Z
 - line:
     host: dns.panszelescik.pl
     addr: 57.128.237.78
@@ -1781,22 +1718,22 @@
     host: dns.beardic.cn
     addr: 58.87.96.15
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599496Z
+  time: 2026-10-12T13:37:50.589450918Z
 - line:
     host: dns.chunghwamc.com
     addr: 59.127.0.184
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599546Z
+  time: 2026-10-12T13:37:50.589450988Z
 - line:
     host: dns.jhangy.us
     addr: 59.127.175.174
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599586Z
+  time: 2026-10-12T13:37:50.589451048Z
 - line:
     host: dns.imaicool.com
     addr: 60.205.247.82
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599636Z
+  time: 2026-10-12T13:37:50.589451118Z
 - line:
     host: family.dns.dremaxx.com
     addr: 62.3.50.42
@@ -1806,12 +1743,12 @@
     host: de-dus.doh.sb
     addr: 62.133.35.15
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599726Z
+  time: 2026-10-12T13:37:50.589451178Z
 - line:
     host: dns.dnsguard.pub
     addr: 62.192.153.243
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599766Z
+  time: 2026-10-12T13:37:50.589451248Z
 - line:
     host: dns.maybe.icu
     addr: 62.210.6.110
@@ -1821,7 +1758,7 @@
     host: dns.k3nny.fr
     addr: 62.210.125.225
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599856Z
+  time: 2026-10-12T13:37:50.589451308Z
 - line:
     host: tsm01.dnscry.pt
     addr: 63.133.223.138
@@ -1836,7 +1773,7 @@
     host: us-jac-w-f-1.nashkan.net
     addr: 64.44.177.36
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630599996Z
+  time: 2026-10-12T13:37:50.589451379Z
 - line:
     host: doh.sz-dns.com
     addr: 64.44.177.156
@@ -1845,19 +1782,9 @@
 - line:
     host: doh.dns.apple.com
     addr: 64.78.200.1
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.97264406Z
-- line:
-    host: doh.dns.apple.com
-    addr: 64.78.200.1
     extra_hosts:
         - doh.dns.apple.com.v.aaplimg.com
   time: 2026-10-11T11:38:35.630600086Z
-- line:
-    host: doh.dns.apple.com
-    addr: 64.78.201.1
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.97264413Z
 - line:
     host: doh.dns.apple.com
     addr: 64.78.201.1
@@ -1868,7 +1795,7 @@
     host: adg.geili.me
     addr: 64.118.135.26
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630600177Z
+  time: 2026-10-12T13:37:50.589451439Z
 - line:
     host: sg-w-f-1.nashkan.net
     addr: 64.120.95.36
@@ -1878,12 +1805,12 @@
     host: dns.7vpn.com
     addr: 64.176.188.144
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630600267Z
+  time: 2026-10-12T13:37:50.589451509Z
 - line:
     host: dns.iamanuragh.in
     addr: 65.20.80.92
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630600317Z
+  time: 2026-10-12T13:37:50.589451579Z
 - line:
     host: fi-hel-w-f-2.nashkan.net
     addr: 65.21.253.73
@@ -1933,23 +1860,13 @@
     host: agh.gloom.nexus
     addr: 68.74.137.173
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630600767Z
-- line:
-    host: dot.cox.net
-    addr: 68.105.28.11
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760457511Z
+  time: 2026-10-12T13:37:50.589451639Z
 - line:
     host: doh.cox.net
     addr: 68.105.28.11
     extra_hosts:
         - dot.cox.net
   time: 2026-10-11T11:38:35.630600808Z
-- line:
-    host: dot.cox.net
-    addr: 68.105.28.12
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760457571Z
 - line:
     host: doh.cox.net
     addr: 68.105.28.12
@@ -1977,21 +1894,11 @@
     extra_hosts: []
   time: 2026-10-11T11:38:35.630601038Z
 - line:
-    host: dns.sarakas.net
-    addr: 70.253.80.157
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760457641Z
-- line:
     host: dns.sarak.as
     addr: 70.253.80.157
     extra_hosts:
         - dns.sarakas.net
   time: 2026-10-11T11:38:35.630601088Z
-- line:
-    host: dns.sarakas.net
-    addr: 70.253.80.158
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760457711Z
 - line:
     host: dns.sarak.as
     addr: 70.253.80.158
@@ -2002,7 +1909,7 @@
     host: ag.ff0x.ca
     addr: 71.19.243.34
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630601178Z
+  time: 2026-10-12T13:37:50.589451709Z
 - line:
     host: doh.aaaab3n.moe
     addr: 71.135.4.118
@@ -2012,18 +1919,18 @@
     host: dns.chilimac.net
     addr: 71.163.23.245
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630601268Z
+  time: 2026-10-12T13:37:50.589451769Z
+- line:
+    host: dns.eddi.net
+    addr: 72.18.77.77
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.58945184Z
 - line:
     host: dns.eddi.net
     addr: 72.18.77.77
     extra_hosts:
         - doh.eddi.net
   time: 2026-10-11T11:38:35.630601308Z
-- line:
-    host: dns.eddi.net
-    addr: 72.18.77.77
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972644931Z
 - line:
     host: us-kan-w-p-1.nashkan.net
     addr: 72.18.215.51
@@ -2033,7 +1940,7 @@
     host: adguard.jfchenier.ca
     addr: 74.57.128.83
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630601398Z
+  time: 2026-10-12T13:37:50.5894519Z
 - line:
     host: ordns.he.net
     addr: 74.82.42.42
@@ -2043,18 +1950,19 @@
     host: dns.narl.app
     addr: 74.208.208.172
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630601489Z
+  time: 2026-10-12T13:37:50.58945197Z
 - line:
     host: dns.christian.moe
     addr: 75.119.137.239
     extra_hosts:
         - dns.imchristian.de
-  time: 2026-10-11T11:38:35.630601539Z
+  time: 2026-10-12T13:37:50.58945203Z
 - line:
-    host: p0.freedns.controld.com
+    host: p2.freedns.controld.com
     addr: 76.76.2.11
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760458232Z
+    extra_hosts:
+        - p3.freedns.controld.com
+  time: 2026-10-12T13:37:50.5894521Z
 - line:
     host: family.freedns.controld.com
     addr: 76.76.2.11
@@ -2067,25 +1975,15 @@
         - uncensored.freedns.controld.com
   time: 2026-10-11T11:38:35.630601579Z
 - line:
-    host: uncensored.freedns.controld.com
-    addr: 76.76.2.11
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972645202Z
-- line:
     host: dns.controld.com
     addr: 76.76.2.22
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630601629Z
-- line:
-    host: arashi.net.eu.org
-    addr: 76.76.21.61
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972645332Z
+  time: 2026-10-12T13:37:50.58945217Z
 - line:
     host: arashi.net.eu.org
     addr: 76.76.21.98
     extra_hosts: []
-  time: 2026-10-10T11:25:37.444368769Z
+  time: 2026-10-12T13:37:50.58945223Z
 - line:
     host: arashi.net.eu.org
     addr: 76.76.21.142
@@ -2093,19 +1991,19 @@
   time: 2026-10-10T11:25:37.444368819Z
 - line:
     host: arashi.net.eu.org
-    addr: 76.76.21.164
+    addr: 76.76.21.241
     extra_hosts: []
-  time: 2026-10-08T12:19:30.760458433Z
+  time: 2026-10-12T13:37:50.589452301Z
 - line:
     host: ahoj.email
     addr: 77.68.29.63
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630601669Z
+  time: 2026-10-12T13:37:50.589452361Z
 - line:
     host: dns.connect.fail
     addr: 77.68.50.239
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630601719Z
+  time: 2026-10-12T13:37:50.589452431Z
 - line:
     host: dns.kuuhaku.moe
     addr: 77.68.88.220
@@ -2114,14 +2012,14 @@
 - line:
     host: common.dot.dns.yandex.net
     addr: 77.88.8.1
-    extra_hosts:
-        - secondary.dns.yandex.ru
-  time: 2026-10-11T11:38:35.630601809Z
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589452491Z
 - line:
     host: common.dot.dns.yandex.net
     addr: 77.88.8.1
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972645593Z
+    extra_hosts:
+        - secondary.dns.yandex.ru
+  time: 2026-10-11T11:38:35.630601809Z
 - line:
     host: safe.dot.dns.yandex.net
     addr: 77.88.8.2
@@ -2135,6 +2033,16 @@
         - secondary.family.dns.yandex.ru
   time: 2026-10-11T11:38:35.630601899Z
 - line:
+    host: family.dot.dns.yandex.net
+    addr: 77.88.8.3
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589452561Z
+- line:
+    host: family.dot.dns.yandex.net
+    addr: 77.88.8.7
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589452621Z
+- line:
     host: family.dns.yandex.ru
     addr: 77.88.8.7
     extra_hosts:
@@ -2144,7 +2052,7 @@
     host: common.dot.dns.yandex.net
     addr: 77.88.8.8
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630601989Z
+  time: 2026-10-12T13:37:50.589452691Z
 - line:
     host: safe.dns.yandex.ru
     addr: 77.88.8.88
@@ -2155,7 +2063,7 @@
     host: abn01.dnscry.pt
     addr: 77.247.127.107
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630602079Z
+  time: 2026-10-12T13:37:50.589452761Z
 - line:
     host: dot-de.blahdns.com
     addr: 78.46.244.143
@@ -2165,12 +2073,12 @@
     host: adfree.usableprivacy.net
     addr: 78.47.163.141
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63060217Z
+  time: 2026-10-12T13:37:50.589454805Z
 - line:
     host: dns.b72.com
     addr: 78.94.217.198
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63060222Z
+  time: 2026-10-12T13:37:50.589454875Z
 - line:
     host: nl-ams.doh.sb
     addr: 78.142.193.50
@@ -2250,7 +2158,7 @@
     host: adguard.piekacz.pl
     addr: 79.184.69.228
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630602891Z
+  time: 2026-10-12T13:37:50.589454945Z
 - line:
     host: ueni.dyndns.org
     addr: 79.229.133.250
@@ -2285,7 +2193,7 @@
     host: 3dns.eu
     addr: 80.147.149.90
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630603221Z
+  time: 2026-10-12T13:37:50.589455006Z
 - line:
     host: doh.kekew.info
     addr: 80.152.203.134
@@ -2300,23 +2208,18 @@
     host: dns.t53.de
     addr: 80.156.145.201
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630603351Z
+  time: 2026-10-12T13:37:50.589455076Z
 - line:
     host: dns.mihanentalpo.me
     addr: 80.249.144.245
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630603401Z
+  time: 2026-10-12T13:37:50.589455146Z
 - line:
     host: muxyuji.ru
     addr: 80.249.149.178
     extra_hosts:
         - www.muxyuji.ru
   time: 2026-10-11T11:38:35.630603441Z
-- line:
-    host: www.muxyuji.ru
-    addr: 80.249.149.178
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760460867Z
 - line:
     host: zrh1-ns01.monzoon.net
     addr: 80.254.79.157
@@ -2336,7 +2239,7 @@
     host: ns3.opennameserver.org
     addr: 81.169.136.222
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630603622Z
+  time: 2026-10-12T13:37:50.589455206Z
 - line:
     host: dns.nas-server.ru
     addr: 81.177.141.15
@@ -2351,17 +2254,17 @@
     host: dns-tls.bitwiseshift.net
     addr: 81.187.221.24
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630603762Z
+  time: 2026-10-12T13:37:50.589455276Z
 - line:
     host: addns1.m-it.ro
     addr: 81.196.104.182
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630603802Z
+  time: 2026-10-12T13:37:50.589455336Z
 - line:
     host: dns.jichi.io
     addr: 81.243.96.113
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630603852Z
+  time: 2026-10-12T13:37:50.589455406Z
 - line:
     host: dns.tesem.dog
     addr: 82.31.124.121
@@ -2376,32 +2279,32 @@
     host: cloud.tezoi.com
     addr: 82.64.29.93
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630603992Z
+  time: 2026-10-12T13:37:50.589455476Z
 - line:
     host: dns.lepilleur.com
     addr: 82.64.228.251
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630604032Z
+  time: 2026-10-12T13:37:50.589455536Z
 - line:
     host: dns.kebree.fr
     addr: 82.65.176.187
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630604082Z
+  time: 2026-10-12T13:37:50.589455607Z
 - line:
     host: adb-home.xaoimoon.fr
     addr: 82.65.209.69
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630604123Z
+  time: 2026-10-12T13:37:50.589455667Z
 - line:
     host: dns.freopc.fr
     addr: 82.65.237.72
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630604173Z
+  time: 2026-10-12T13:37:50.589455737Z
 - line:
     host: adguard.lege.despagne.net
     addr: 82.66.195.182
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630604213Z
+  time: 2026-10-12T13:37:50.589455797Z
 - line:
     host: dns.maitrekuc.fr
     addr: 82.66.247.174
@@ -2416,7 +2319,7 @@
     host: mil01.dnscry.pt
     addr: 82.118.16.121
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630604353Z
+  time: 2026-10-12T13:37:50.589455867Z
 - line:
     host: doh.funil.de
     addr: 82.149.226.45
@@ -2431,12 +2334,12 @@
     host: dns.hshoe.cn
     addr: 82.158.225.136
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630604483Z
+  time: 2026-10-12T13:37:50.589455927Z
 - line:
     host: dns.albony.xyz
     addr: 82.180.145.196
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630604533Z
+  time: 2026-10-12T13:37:50.589455997Z
 - line:
     host: skydragoness.com
     addr: 82.221.134.26
@@ -2446,17 +2349,12 @@
     host: dns.molinero.dev
     addr: 83.32.192.90
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630604623Z
+  time: 2026-10-12T13:37:50.589456068Z
 - line:
     host: dandelionsprout.asuscomm.com
     addr: 83.108.190.153
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630604663Z
-- line:
-    host: www.inpssh.online
-    addr: 83.110.6.204
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972650171Z
+  time: 2026-10-12T13:37:50.589456128Z
 - line:
     host: inpssh.online
     addr: 83.110.6.204
@@ -2472,7 +2370,7 @@
     host: dns.comss.one
     addr: 83.220.169.155
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630604804Z
+  time: 2026-10-12T13:37:50.589456198Z
 - line:
     host: dns.yatima.tv
     addr: 83.229.70.182
@@ -2487,7 +2385,7 @@
     host: dns.keweon.center
     addr: 84.16.252.138
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630604944Z
+  time: 2026-10-12T13:37:50.589456258Z
 - line:
     host: tyo01.dnscry.pt
     addr: 84.33.12.158
@@ -2517,7 +2415,7 @@
     host: dns.colorfreedom.org
     addr: 85.214.236.96
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630605214Z
+  time: 2026-10-12T13:37:50.589456328Z
 - line:
     host: dns.schlagheck.berlin
     addr: 85.215.156.33
@@ -2547,12 +2445,12 @@
     host: child-noads.joindns4.eu
     addr: 86.54.11.11
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630605485Z
+  time: 2026-10-12T13:37:50.589456388Z
 - line:
     host: child.joindns4.eu
     addr: 86.54.11.12
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630605535Z
+  time: 2026-10-12T13:37:50.589456458Z
 - line:
     host: noads.joindns4.eu
     addr: 86.54.11.13
@@ -2577,12 +2475,12 @@
     host: child-noads.joindns4.eu
     addr: 86.54.11.211
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630605755Z
+  time: 2026-10-12T13:37:50.589456518Z
 - line:
     host: child.joindns4.eu
     addr: 86.54.11.212
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630605805Z
+  time: 2026-10-12T13:37:50.589456589Z
 - line:
     host: noads.joindns4.eu
     addr: 86.54.11.213
@@ -2602,17 +2500,17 @@
     host: cloudns.bosco.ovh
     addr: 87.106.240.124
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630605985Z
+  time: 2026-10-12T13:37:50.589456658Z
 - line:
     host: dns.b72.com
     addr: 87.128.10.46
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630606035Z
+  time: 2026-10-12T13:37:50.589456719Z
 - line:
     host: dns.faked.org
     addr: 87.128.111.190
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630606075Z
+  time: 2026-10-12T13:37:50.589456789Z
 - line:
     host: dns.yandex.ru
     addr: 87.250.251.101
@@ -2622,12 +2520,12 @@
     host: meganerd.nl
     addr: 87.253.131.216
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630606166Z
+  time: 2026-10-12T13:37:50.589456849Z
 - line:
     host: adguard.onlyfriends.info
     addr: 88.87.69.93
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630606216Z
+  time: 2026-10-12T13:37:50.589456919Z
 - line:
     host: pihole1.hoerli.net
     addr: 88.99.65.186
@@ -2637,12 +2535,12 @@
     host: dns.glf.wtf
     addr: 88.99.93.80
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630606306Z
+  time: 2026-10-12T13:37:50.589456979Z
 - line:
     host: dns.luma-medien.com
     addr: 88.99.142.87
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630606346Z
+  time: 2026-10-12T13:37:50.589457049Z
 - line:
     host: doh.mmmalia.com
     addr: 88.112.34.201
@@ -2668,7 +2566,7 @@
     host: ahoj.email
     addr: 88.208.224.60
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972651243Z
+  time: 2026-10-12T13:37:50.58945711Z
 - line:
     host: ahoj.email
     addr: 88.208.224.60
@@ -2684,17 +2582,17 @@
     host: zdn.ro
     addr: 89.43.174.10
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630606666Z
+  time: 2026-10-12T13:37:50.589457179Z
 - line:
     host: dns.farshidhakimy.de
     addr: 89.57.45.206
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630606706Z
+  time: 2026-10-12T13:37:50.58945725Z
 - line:
     host: adfreedns.top
     addr: 89.58.3.251
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630606757Z
+  time: 2026-10-12T13:37:50.58945731Z
 - line:
     host: dns.kescher.at
     addr: 89.58.18.85
@@ -2704,7 +2602,7 @@
     host: dns.gayanalysing.co.uk
     addr: 89.58.59.189
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630606847Z
+  time: 2026-10-12T13:37:50.58945738Z
 - line:
     host: jurre-home.duckdns.org
     addr: 89.98.172.5
@@ -2714,7 +2612,7 @@
     host: dns.mikeliu.org
     addr: 89.116.247.119
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630606937Z
+  time: 2026-10-12T13:37:50.58945744Z
 - line:
     host: par01.dnscry.pt
     addr: 89.117.2.17
@@ -2724,12 +2622,12 @@
     host: tj.jamesxue.xyz
     addr: 89.208.251.213
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630607027Z
+  time: 2026-10-12T13:37:50.58945751Z
 - line:
-    host: unicast.censurfridns.dk
+    host: unicast.uncensoreddns.org
     addr: 89.233.43.71
     extra_hosts: []
-  time: 2026-10-08T12:19:30.760463502Z
+  time: 2026-10-12T13:37:50.58945757Z
 - line:
     host: unicast.censurfridns.dk
     addr: 89.233.43.71
@@ -2755,12 +2653,12 @@
     host: dns.brono.cloud
     addr: 91.99.208.109
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630607257Z
+  time: 2026-10-12T13:37:50.58945764Z
 - line:
     host: dns.abdullahabas.de
     addr: 91.99.249.235
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630607297Z
+  time: 2026-10-12T13:37:50.589457711Z
 - line:
     host: home.wriedts.de
     addr: 91.106.133.47
@@ -2770,12 +2668,12 @@
     host: dns.arkbotech.com
     addr: 91.107.198.189
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630607387Z
+  time: 2026-10-12T13:37:50.589457771Z
 - line:
     host: dns.busold.ws
     addr: 91.107.223.231
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630607438Z
+  time: 2026-10-12T13:37:50.589457841Z
 - line:
     host: opennic.i2pd.xyz
     addr: 91.190.185.43
@@ -2792,11 +2690,6 @@
     extra_hosts:
         - doh.nic.lv
   time: 2026-10-11T11:38:35.630607568Z
-- line:
-    host: doh.nic.lv
-    addr: 91.198.156.20
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760463893Z
 - line:
     host: dns.warpnine.de
     addr: 91.204.45.202
@@ -2827,7 +2720,7 @@
     addr: 91.239.100.100
     extra_hosts:
         - anycast.uncensoreddns.org
-  time: 2026-10-11T11:38:35.630607848Z
+  time: 2026-10-12T13:37:50.589457901Z
 - line:
     host: dns.skrep.in
     addr: 92.39.210.239
@@ -2847,12 +2740,12 @@
     host: de-fra-w-p-1.nashkan.net
     addr: 92.118.190.116
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630608028Z
+  time: 2026-10-12T13:37:50.589457971Z
 - line:
     host: dns.3wv.de
     addr: 92.205.21.178
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630608068Z
+  time: 2026-10-12T13:37:50.589458031Z
 - line:
     host: home27.duckdns.org
     addr: 92.254.21.26
@@ -2862,17 +2755,17 @@
     host: adguard.maison.gifino.fr
     addr: 93.4.84.37
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630608159Z
+  time: 2026-10-12T13:37:50.589458101Z
 - line:
     host: adguard.depieri.net
     addr: 93.66.239.94
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630608209Z
+  time: 2026-10-12T13:37:50.589458161Z
 - line:
     host: block.abstergo.it
     addr: 93.67.83.156
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630608249Z
+  time: 2026-10-12T13:37:50.589458232Z
 - line:
     host: eyg01.dnscry.pt
     addr: 93.95.115.21
@@ -2887,7 +2780,7 @@
     host: dns.immanuelschaffer.de
     addr: 94.16.111.86
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630608389Z
+  time: 2026-10-12T13:37:50.589458302Z
 - line:
     host: dns.scarx.net
     addr: 94.16.116.146
@@ -2908,23 +2801,18 @@
     host: dns.clanto.cloud
     addr: 94.23.71.64
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972652425Z
+  time: 2026-10-12T13:37:50.589458362Z
 - line:
     host: dns.digitalsize.net
     addr: 94.130.135.203
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630608569Z
+  time: 2026-10-12T13:37:50.589458432Z
 - line:
     host: dns.adguard-dns.com
     addr: 94.140.14.14
     extra_hosts:
         - dns.adguard.com
-  time: 2026-10-11T11:38:35.630608609Z
-- line:
-    host: dns-family.adguard.com
-    addr: 94.140.14.15
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972652626Z
+  time: 2026-10-12T13:37:50.589458492Z
 - line:
     host: dns-family.adguard.com
     addr: 94.140.14.15
@@ -2932,15 +2820,20 @@
         - family.adguard-dns.com
   time: 2026-10-11T11:38:35.630608659Z
 - line:
+    host: dns-family.adguard.com
+    addr: 94.140.14.15
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589458562Z
+- line:
     host: d.adguard-dns.com
     addr: 94.140.14.49
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630608709Z
+  time: 2026-10-12T13:37:50.589458632Z
 - line:
     host: dns-unfiltered.adguard.com
     addr: 94.140.14.140
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972652756Z
+  time: 2026-10-12T13:37:50.589458692Z
 - line:
     host: dns-unfiltered.adguard.com
     addr: 94.140.14.140
@@ -2957,24 +2850,24 @@
     host: dns-unfiltered.adguard.com
     addr: 94.140.14.141
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972652816Z
+  time: 2026-10-12T13:37:50.589458762Z
 - line:
     host: dns.adguard-dns.com
     addr: 94.140.15.15
     extra_hosts:
         - dns.adguard.com
-  time: 2026-10-11T11:38:35.63060884Z
+  time: 2026-10-12T13:37:50.589458823Z
+- line:
+    host: dns-family.adguard.com
+    addr: 94.140.15.16
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589458893Z
 - line:
     host: dns-family.adguard.com
     addr: 94.140.15.16
     extra_hosts:
         - family.adguard-dns.com
   time: 2026-10-11T11:38:35.63060889Z
-- line:
-    host: dns-family.adguard.com
-    addr: 94.140.15.16
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972653017Z
 - line:
     host: dns.sindominio.net
     addr: 94.142.242.248
@@ -2999,12 +2892,12 @@
     host: dns.kastner-online.de
     addr: 95.111.236.127
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63060911Z
+  time: 2026-10-12T13:37:50.589458953Z
 - line:
     host: bts01.dnscry.pt
     addr: 95.131.202.105
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63060916Z
+  time: 2026-10-12T13:37:50.589459023Z
 - line:
     host: ntwrkh.pro
     addr: 95.163.153.254
@@ -3014,22 +2907,22 @@
     host: ae-fuj-w-p-3.nashkan.net
     addr: 95.174.68.73
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63060925Z
+  time: 2026-10-12T13:37:50.589459093Z
 - line:
     host: ae-fuj-w-p-2.nashkan.net
     addr: 95.174.68.142
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63060929Z
+  time: 2026-10-12T13:37:50.589459153Z
 - line:
     host: ae-fuj-w-p-1.nashkan.net
     addr: 95.174.68.242
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63060934Z
+  time: 2026-10-12T13:37:50.589459223Z
 - line:
     host: dns.joey01245.nl
     addr: 95.179.152.253
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63060938Z
+  time: 2026-10-12T13:37:50.589459283Z
 - line:
     host: dns.smartguard.io
     addr: 95.179.161.138
@@ -3049,12 +2942,12 @@
     host: cube.neubsi.at
     addr: 95.216.74.122
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630609561Z
+  time: 2026-10-12T13:37:50.589459354Z
 - line:
     host: dns.froth.zone
     addr: 95.216.99.249
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630609611Z
+  time: 2026-10-12T13:37:50.589459414Z
 - line:
     host: fuchur.pentament.de
     addr: 95.216.187.185
@@ -3069,18 +2962,13 @@
     host: dns.braene.com
     addr: 95.217.6.67
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630609751Z
+  time: 2026-10-12T13:37:50.589459484Z
 - line:
     host: ns.nwps.fi
     addr: 95.217.11.63
     extra_hosts:
         - public.ns.nwps.fi
   time: 2026-10-11T11:38:35.630609791Z
-- line:
-    host: public.ns.nwps.fi
-    addr: 95.217.11.63
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760465726Z
 - line:
     host: eu1.dns.lavate.ch
     addr: 95.217.25.217
@@ -3095,7 +2983,7 @@
     host: dns.home.daniil.it
     addr: 95.229.168.3
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630609931Z
+  time: 2026-10-12T13:37:50.589459544Z
 - line:
     host: gb-cov-w-f-1.nashkan.net
     addr: 96.9.215.92
@@ -3110,18 +2998,13 @@
     host: dns.foxyfy.net
     addr: 96.44.178.68
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630610062Z
+  time: 2026-10-12T13:37:50.589459614Z
 - line:
     host: doh.xfinity.com
     addr: 96.106.7.232
     extra_hosts:
         - doh2.gslb2.xfinity.com
   time: 2026-10-11T11:38:35.630610112Z
-- line:
-    host: doh2.gslb2.xfinity.com
-    addr: 96.106.7.232
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972653868Z
 - line:
     host: doh.xfinity.com
     addr: 96.106.7.234
@@ -3136,7 +3019,7 @@
     host: adguard.gbrossi.com.br
     addr: 100.69.180.29
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630610242Z
+  time: 2026-10-12T13:37:50.589459684Z
 - line:
     host: dns.tuna.tsinghua.edu.cn
     addr: 101.6.6.6
@@ -3183,7 +3066,7 @@
     host: agh-yz.russel053.com
     addr: 103.1.223.110
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630610612Z
+  time: 2026-10-12T13:37:50.589459744Z
 - line:
     host: public.dns.iij.jp
     addr: 103.2.57.5
@@ -3228,7 +3111,7 @@
     host: au-syd-w-f-1.nashkan.net
     addr: 103.73.65.33
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630611013Z
+  time: 2026-10-12T13:37:50.589459815Z
 - line:
     host: dns1.nordvpn.com
     addr: 103.86.96.100
@@ -3238,12 +3121,12 @@
     host: dns-malwaresec.nordthreatprotection.com
     addr: 103.86.96.107
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630611103Z
+  time: 2026-10-12T13:37:50.589459875Z
 - line:
     host: dns-cybersec.nordthreatprotection.com
     addr: 103.86.96.108
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630611153Z
+  time: 2026-10-12T13:37:50.589459945Z
 - line:
     host: dns2.nordvpn.com
     addr: 103.86.99.100
@@ -3253,22 +3136,17 @@
     host: dns-malwaresec.nordthreatprotection.com
     addr: 103.86.99.107
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630611243Z
+  time: 2026-10-12T13:37:50.589460005Z
 - line:
     host: dns-cybersec.nordthreatprotection.com
     addr: 103.86.99.108
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630611283Z
+  time: 2026-10-12T13:37:50.589460075Z
 - line:
     host: antivirus.bebasid.com
     addr: 103.87.68.195
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630611333Z
-- line:
-    host: internetsehat.bebasid.com
-    addr: 103.87.68.196
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.97265459Z
+  time: 2026-10-12T13:37:50.589460145Z
 - line:
     host: family-adblock.bebasid.com
     addr: 103.87.68.196
@@ -3319,7 +3197,7 @@
     host: dns.gi.co.id
     addr: 103.141.154.3
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630613787Z
+  time: 2026-10-12T13:37:50.589460205Z
 - line:
     host: dns.mtoo.vip
     addr: 103.145.85.248
@@ -3337,15 +3215,10 @@
         - family.dns.ningkelle.id
   time: 2026-10-11T11:38:35.630613927Z
 - line:
-    host: family.dns.ningkelle.id
-    addr: 103.150.116.100
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760466648Z
-- line:
     host: dns.diarbagus.id
     addr: 103.150.191.84
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630613967Z
+  time: 2026-10-12T13:37:50.589460275Z
 - line:
     host: dns.repinger.com
     addr: 103.151.140.139
@@ -3360,7 +3233,7 @@
     host: dns.bebasid.com
     addr: 103.155.191.184
     extra_hosts: []
-  time: 2026-10-09T12:10:59.97265479Z
+  time: 2026-10-12T13:37:50.589460336Z
 - line:
     host: dns.bebasid.com
     addr: 103.155.191.184
@@ -3371,17 +3244,17 @@
     host: dns.caliph.dev
     addr: 103.155.191.224
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630614148Z
+  time: 2026-10-12T13:37:50.589460405Z
 - line:
     host: dns.engineer.web.id
     addr: 103.160.63.242
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630614198Z
+  time: 2026-10-12T13:37:50.589460466Z
 - line:
     host: dns.spil.co.id
     addr: 103.161.196.196
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630614238Z
+  time: 2026-10-12T13:37:50.589460536Z
 - line:
     host: dns.nguyendn.com
     addr: 103.176.20.107
@@ -3401,12 +3274,12 @@
     host: d.apemlegit.my.id
     addr: 103.181.143.111
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630614418Z
+  time: 2026-10-12T13:37:50.589460596Z
 - line:
     host: doh.zephyrus.id
     addr: 103.193.179.121
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630614468Z
+  time: 2026-10-12T13:37:50.589460666Z
 - line:
     host: query.hdns.io
     addr: 103.196.38.200
@@ -3416,7 +3289,7 @@
     host: dns.goldplate.org
     addr: 103.196.152.126
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630614558Z
+  time: 2026-10-12T13:37:50.589460736Z
 - line:
     host: han01.dnscry.pt
     addr: 103.199.16.93
@@ -3436,22 +3309,22 @@
     host: dns.ashleyjackson.net
     addr: 103.230.156.210
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630614739Z
+  time: 2026-10-12T13:37:50.589460796Z
 - line:
     host: adl.adfilter.net
     addr: 103.249.238.124
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630614779Z
+  time: 2026-10-12T13:37:50.589460866Z
 - line:
     host: cloudflare-dns.com
     addr: 104.16.248.249
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630614829Z
+  time: 2026-10-12T13:37:50.589460926Z
 - line:
     host: cloudflare-dns.com
     addr: 104.16.249.249
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630614879Z
+  time: 2026-10-12T13:37:50.589460997Z
 - line:
     host: tor.cloudflare-dns.com
     addr: 104.18.28.190
@@ -3466,47 +3339,37 @@
     host: geg01.dnscry.pt
     addr: 104.36.86.181
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630615009Z
-- line:
-    host: doh.dns.sb
-    addr: 104.128.62.173
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972655381Z
+  time: 2026-10-12T13:37:50.589461057Z
 - line:
     host: lax01.dnscry.pt
     addr: 104.156.154.11
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630615059Z
+  time: 2026-10-12T13:37:50.589461127Z
 - line:
     host: ada.openbld.net
     addr: 104.167.199.135
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630615099Z
+  time: 2026-10-12T13:37:50.589461197Z
 - line:
     host: adguard.easez.net
     addr: 104.171.252.111
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630615149Z
+  time: 2026-10-12T13:37:50.589461257Z
 - line:
     host: coe01.dnscry.pt
     addr: 104.192.102.132
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630615189Z
+  time: 2026-10-12T13:37:50.589461327Z
 - line:
     host: dns.bobstrecansky.com
     addr: 104.200.18.74
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630615239Z
+  time: 2026-10-12T13:37:50.589461387Z
 - line:
     host: lax02.dnscry.pt
     addr: 104.200.67.194
     extra_hosts: []
   time: 2026-10-11T11:38:35.630615279Z
-- line:
-    host: pm9352-bd.xyz
-    addr: 104.219.250.37
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972655712Z
 - line:
     host: doh.centraleu.pi-dns.com
     addr: 104.219.250.37
@@ -3529,8 +3392,9 @@
 - line:
     host: doh.pi-dns.com
     addr: 104.219.250.37
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.76046757Z
+    extra_hosts:
+        - dot.eastus.pi-dns.com
+  time: 2026-10-12T13:37:50.589461458Z
 - line:
     host: sg-w-p-1.nashkan.net
     addr: 104.234.167.66
@@ -3540,27 +3404,27 @@
     host: ns.00dani.me
     addr: 104.236.116.148
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63061542Z
+  time: 2026-10-12T13:37:50.589461518Z
 - line:
     host: dns.f4a.fun
     addr: 104.238.165.18
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63061546Z
+  time: 2026-10-12T13:37:50.589461588Z
 - line:
     host: dns.bofh.in
     addr: 104.244.72.39
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63061551Z
+  time: 2026-10-12T13:37:50.589461668Z
 - line:
     host: ca.doh.cloudveil.org
     addr: 104.248.104.66
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63061555Z
+  time: 2026-10-12T13:37:50.589461738Z
 - line:
     host: vip21.alidns.com
     addr: 106.11.30.113
     extra_hosts: []
-  time: 2026-10-11T11:38:35.6306156Z
+  time: 2026-10-12T13:37:50.589461808Z
 - line:
     host: vip22.alidns.com
     addr: 106.11.30.114
@@ -3570,7 +3434,7 @@
     host: vip21.alidns.com
     addr: 106.11.41.151
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63061569Z
+  time: 2026-10-12T13:37:50.589461868Z
 - line:
     host: vip22.alidns.com
     addr: 106.11.41.152
@@ -3580,7 +3444,7 @@
     host: dns.b612.me
     addr: 106.55.44.79
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63061578Z
+  time: 2026-10-12T13:37:50.589461939Z
 - line:
     host: sm2.doh.pub
     addr: 106.55.91.174
@@ -3595,12 +3459,12 @@
     host: dns.girino.org
     addr: 107.173.187.132
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63061592Z
+  time: 2026-10-12T13:37:50.589461999Z
 - line:
     host: adguard1.jsanagustin.net
     addr: 108.61.82.9
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63061596Z
+  time: 2026-10-12T13:37:50.589462069Z
 - line:
     host: nsec.arnor.org
     addr: 108.61.208.139
@@ -3610,17 +3474,17 @@
     host: dns.keviland.com
     addr: 108.175.15.215
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630616051Z
+  time: 2026-10-12T13:37:50.589462129Z
 - line:
     host: dns.dynx.pro
     addr: 109.70.74.38
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630616101Z
+  time: 2026-10-12T13:37:50.589462199Z
 - line:
     host: dns.dynx.pro
     addr: 109.70.74.68
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630616141Z
+  time: 2026-10-12T13:37:50.589462259Z
 - line:
     host: dns.kuuhaku.moe
     addr: 109.74.205.250
@@ -3630,12 +3494,12 @@
     host: dns.marasov.id
     addr: 109.123.236.250
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630616231Z
+  time: 2026-10-12T13:37:50.589462329Z
 - line:
     host: dns.kamilszczepanski.com
     addr: 109.173.160.28
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630616281Z
+  time: 2026-10-12T13:37:50.589462399Z
 - line:
     host: us-nyc-w-p-1.nashkan.net
     addr: 109.205.61.98
@@ -3645,27 +3509,27 @@
     host: adguard.bonsirven.eu
     addr: 109.205.183.11
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630616371Z
+  time: 2026-10-12T13:37:50.58946246Z
 - line:
     host: adguard.gambini.org
     addr: 109.223.193.147
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630616411Z
+  time: 2026-10-12T13:37:50.589462529Z
 - line:
     host: doh.defaultroutes.de
     addr: 109.230.224.150
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630616461Z
+  time: 2026-10-12T13:37:50.58946259Z
 - line:
     host: dns.levonet.sk
     addr: 109.236.119.2
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630616501Z
+  time: 2026-10-12T13:37:50.58946266Z
 - line:
     host: dns.levonet.sk
     addr: 109.236.120.2
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630616551Z
+  time: 2026-10-12T13:37:50.58946272Z
 - line:
     host: adguard.bitteeinbyte.de
     addr: 109.250.196.10
@@ -3673,19 +3537,14 @@
   time: 2026-10-10T11:25:37.444383942Z
 - line:
     host: adguard.bitteeinbyte.de
-    addr: 109.250.196.89
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760468752Z
-- line:
-    host: adguard.bitteeinbyte.de
-    addr: 109.250.196.231
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972656754Z
-- line:
-    host: adguard.bitteeinbyte.de
     addr: 109.250.196.245
     extra_hosts: []
   time: 2026-10-11T11:38:35.630616591Z
+- line:
+    host: adguard.bitteeinbyte.de
+    addr: 109.250.197.128
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.58946279Z
 - line:
     host: area51.mywire.org
     addr: 109.250.204.40
@@ -3693,9 +3552,9 @@
   time: 2026-10-10T11:25:37.444383992Z
 - line:
     host: area51.mywire.org
-    addr: 109.250.204.86
+    addr: 109.250.204.64
     extra_hosts: []
-  time: 2026-10-08T12:19:30.760468812Z
+  time: 2026-10-12T13:37:50.58946286Z
 - line:
     host: area51.mywire.org
     addr: 109.250.204.162
@@ -3731,12 +3590,12 @@
     host: dns.853852.xyz
     addr: 112.118.125.209
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630616912Z
+  time: 2026-10-12T13:37:50.58946292Z
 - line:
     host: 2.dns.noridev.moe
     addr: 112.163.234.61
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630616962Z
+  time: 2026-10-12T13:37:50.58946299Z
 - line:
     host: syd.adfilter.net
     addr: 112.213.32.219
@@ -3746,7 +3605,7 @@
     host: tungdnsne.duckdns.org
     addr: 113.179.20.238
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630617052Z
+  time: 2026-10-12T13:37:50.58946305Z
 - line:
     host: fwgw.orangepipc.mywire.org
     addr: 113.210.64.89
@@ -3761,12 +3620,12 @@
     host: dns.jundev.org
     addr: 114.33.26.67
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630617142Z
+  time: 2026-10-12T13:37:50.589463121Z
 - line:
     host: adguard.shuting.idv.tw
     addr: 114.34.0.56
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630617182Z
+  time: 2026-10-12T13:37:50.589463181Z
 - line:
     host: dns.hujiayucc.cn
     addr: 114.66.33.239
@@ -3791,12 +3650,17 @@
     host: dns.lista.my.id
     addr: 116.90.211.184
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630617413Z
+  time: 2026-10-12T13:37:50.589463251Z
 - line:
     host: dns.decky.eu
     addr: 116.202.98.177
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630617453Z
+  time: 2026-10-12T13:37:50.589463311Z
+- line:
+    host: doh.libredns.gr
+    addr: 116.202.176.26
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589463381Z
 - line:
     host: doh.libredns.gr
     addr: 116.202.176.26
@@ -3804,15 +3668,10 @@
         - dot.libredns.gr
   time: 2026-10-11T11:38:35.630617503Z
 - line:
-    host: dot.libredns.gr
-    addr: 116.202.176.26
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760469403Z
-- line:
     host: dns.ihaveacloud.com
     addr: 116.202.234.21
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630617543Z
+  time: 2026-10-12T13:37:50.589463451Z
 - line:
     host: dns.shareworx.net
     addr: 116.203.12.0
@@ -3837,7 +3696,7 @@
     host: dns.roedel.cloud
     addr: 116.203.135.71
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630617773Z
+  time: 2026-10-12T13:37:50.589463511Z
 - line:
     host: dns.4-the.win
     addr: 116.204.197.27
@@ -3848,13 +3707,7 @@
     host: dns.4-the.win
     addr: 116.204.197.27
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972657415Z
-- line:
-    host: ag.ssrahul96.xyz
-    addr: 118.27.125.235
-    extra_hosts:
-        - dns.maolaohei.xyz
-  time: 2026-10-09T12:10:59.972657485Z
+  time: 2026-10-12T13:37:50.589463582Z
 - line:
     host: ag.ssrahul96.xyz
     addr: 118.27.125.235
@@ -3874,6 +3727,14 @@
         - vtcuong.site
   time: 2026-10-11T11:38:35.630617863Z
 - line:
+    host: adguard.neon0404.space
+    addr: 118.27.125.235
+    extra_hosts:
+        - ag.ssrahul96.xyz
+        - doh.boje8.me
+        - hkname.freecdn.one
+  time: 2026-10-12T13:37:50.589463642Z
+- line:
     host: dns.tipsy.coffee
     addr: 118.163.170.2
     extra_hosts: []
@@ -3890,6 +3751,11 @@
         - doh.pub
         - dot.pub
   time: 2026-10-11T11:38:35.630618004Z
+- line:
+    host: dot.pub
+    addr: 120.53.53.53
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589463712Z
 - line:
     host: ns1.alidns.com
     addr: 120.76.107.45
@@ -3934,7 +3800,7 @@
     host: dns.kxy.ink
     addr: 123.207.116.149
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630618404Z
+  time: 2026-10-12T13:37:50.589463772Z
 - line:
     host: www.c-dns.com
     addr: 124.70.37.233
@@ -3959,7 +3825,7 @@
     host: dns.daw.dev
     addr: 128.140.45.83
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630618634Z
+  time: 2026-10-12T13:37:50.589463842Z
 - line:
     host: dns.nick-slowinski.de
     addr: 128.140.89.73
@@ -3969,7 +3835,7 @@
     host: dns.gutwe.in
     addr: 128.140.110.120
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630618725Z
+  time: 2026-10-12T13:37:50.589463912Z
 - line:
     host: doh.ersei.net
     addr: 128.210.6.106
@@ -3979,7 +3845,7 @@
     host: dns.flwagners.com
     addr: 128.242.11.227
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630618815Z
+  time: 2026-10-12T13:37:50.589463972Z
 - line:
     host: dns.practicallyunhackable.com
     addr: 128.254.206.25
@@ -4010,19 +3876,19 @@
     addr: 130.225.244.166
     extra_hosts:
         - deic-lgb.anycast.uncensoreddns.org
-  time: 2026-10-11T11:38:35.630619085Z
+  time: 2026-10-12T13:37:50.589467739Z
 - line:
     host: deic-ore.anycast.censurfridns.dk
     addr: 130.226.161.34
     extra_hosts:
         - deic-ore.anycast.uncensoreddns.org
-  time: 2026-10-11T11:38:35.630619135Z
+  time: 2026-10-12T13:37:50.58946781Z
 - line:
     host: adfiltro.fun
     addr: 133.167.212.21
     extra_hosts:
         - alleesph.online
-  time: 2026-10-09T12:10:59.972658006Z
+  time: 2026-10-12T13:37:50.58946787Z
 - line:
     host: adfiltro.fun
     addr: 133.167.212.21
@@ -4037,7 +3903,8 @@
         - callies-online.site
         - cloudbenders.fun
         - d2.shabi.icu
-  time: 2026-10-09T12:10:59.972658066Z
+        - najiakeji.top
+  time: 2026-10-12T13:37:50.58946794Z
 - line:
     host: 3jjxxl.tech
     addr: 133.167.212.22
@@ -4054,20 +3921,6 @@
         - qqmcfw.tech
         - xbcpb668.com
   time: 2026-10-11T11:38:35.630619225Z
-- line:
-    host: 3jjxxl.tech
-    addr: 133.167.212.22
-    extra_hosts:
-        - callies-online.site
-        - cloudbenders.fun
-        - d2.shabi.icu
-        - polisitogel.beauty
-  time: 2026-10-08T12:19:30.760473471Z
-- line:
-    host: edgy-dns.com
-    addr: 133.167.212.25
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760473541Z
 - line:
     host: dns.pernika.net
     addr: 133.167.212.25
@@ -4106,7 +3959,7 @@
     host: blocker.thethorsens.org
     addr: 134.195.187.39
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630619536Z
+  time: 2026-10-12T13:37:50.58946801Z
 - line:
     host: pihole2.hoerli.net
     addr: 134.255.228.135
@@ -4121,12 +3974,12 @@
     host: dns.dns-53.com
     addr: 135.148.138.185
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630619676Z
+  time: 2026-10-12T13:37:50.58946807Z
 - line:
     host: dns.andrewnw.xyz
     addr: 135.181.83.162
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630619716Z
+  time: 2026-10-12T13:37:50.58946814Z
 - line:
     host: kids.ns.nwps.fi
     addr: 135.181.103.31
@@ -4146,7 +3999,7 @@
     host: dns.coderoria.com
     addr: 136.243.156.176
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630619906Z
+  time: 2026-10-12T13:37:50.5894682Z
 - line:
     host: v.dnscrypt.uk
     addr: 136.244.65.20
@@ -4166,17 +4019,17 @@
     host: dns.is0mino.com
     addr: 138.199.222.186
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630620087Z
+  time: 2026-10-12T13:37:50.58946827Z
 - line:
     host: cluster-0.gac.edu
     addr: 138.236.128.100
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630620137Z
+  time: 2026-10-12T13:37:50.58946833Z
 - line:
     host: cluster-1.gac.edu
     addr: 138.236.128.101
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630620177Z
+  time: 2026-10-12T13:37:50.5894684Z
 - line:
     host: doh.captnemo.in
     addr: 139.59.48.222
@@ -4219,7 +4072,7 @@
     host: adblock.krctech.dev
     addr: 139.99.44.3
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630620537Z
+  time: 2026-10-12T13:37:50.589468471Z
 - line:
     host: dns.nodoa.me
     addr: 139.162.80.84
@@ -4234,7 +4087,7 @@
     host: dns.b612.me
     addr: 139.199.163.65
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630620678Z
+  time: 2026-10-12T13:37:50.589468531Z
 - line:
     host: ns8.alidns.com
     addr: 139.224.142.101
@@ -4292,22 +4145,27 @@
         - vip21.alidns.com
   time: 2026-10-11T11:38:35.630621178Z
 - line:
+    host: vip21.alidns.com
+    addr: 140.205.1.1
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589468601Z
+- line:
     host: vip2.alidns.com
     addr: 140.205.1.2
     extra_hosts:
         - vip22.alidns.com
   time: 2026-10-11T11:38:35.630621218Z
 - line:
+    host: vip3.alidns.com
+    addr: 140.205.1.5
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589468661Z
+- line:
     host: vip23.alidns.com
     addr: 140.205.1.5
     extra_hosts:
         - vip3.alidns.com
   time: 2026-10-11T11:38:35.630621268Z
-- line:
-    host: vip3.alidns.com
-    addr: 140.205.1.5
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972662635Z
 - line:
     host: vip24.alidns.com
     addr: 140.205.1.6
@@ -4333,6 +4191,11 @@
         - vip7.alidns.com
   time: 2026-10-11T11:38:35.630621449Z
 - line:
+    host: vip7.alidns.com
+    addr: 140.205.1.13
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589468731Z
+- line:
     host: vip28.alidns.com
     addr: 140.205.1.14
     extra_hosts:
@@ -4342,7 +4205,7 @@
     host: vip21.alidns.com
     addr: 140.205.29.113
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630621539Z
+  time: 2026-10-12T13:37:50.589468791Z
 - line:
     host: vip22.alidns.com
     addr: 140.205.29.114
@@ -4352,7 +4215,7 @@
     host: vip21.alidns.com
     addr: 140.205.103.201
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630621629Z
+  time: 2026-10-12T13:37:50.589468861Z
 - line:
     host: vip22.alidns.com
     addr: 140.205.103.202
@@ -4372,7 +4235,7 @@
     host: 1a.ns.ozer.im
     addr: 141.94.89.163
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630621809Z
+  time: 2026-10-12T13:37:50.589468932Z
 - line:
     host: hole.elbschloss.xyz
     addr: 142.132.188.241
@@ -4382,7 +4245,7 @@
     host: dns.alvosec.com
     addr: 142.132.230.65
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630621899Z
+  time: 2026-10-12T13:37:50.589468992Z
 - line:
     host: lis01.dnscry.pt
     addr: 143.20.12.32
@@ -4407,7 +4270,7 @@
     host: dns.comff.net
     addr: 144.76.199.177
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63062213Z
+  time: 2026-10-12T13:37:50.589469062Z
 - line:
     host: doh-ca.naftalie.net
     addr: 144.217.242.233
@@ -4422,12 +4285,12 @@
     host: au-syd.doh.sb
     addr: 146.19.0.66
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63062227Z
+  time: 2026-10-12T13:37:50.589469122Z
 - line:
     host: dns.korzhyk.pp.ua
     addr: 146.59.87.16
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63062231Z
+  time: 2026-10-12T13:37:50.589469192Z
 - line:
     host: doh.opendns.com
     addr: 146.112.41.2
@@ -4459,16 +4322,6 @@
     extra_hosts: []
   time: 2026-10-11T11:38:35.63062258Z
 - line:
-    host: dot1.applied-privacy.net
-    addr: 146.255.56.98
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760474783Z
-- line:
-    host: dot1.appliedprivacy.net
-    addr: 146.255.56.98
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972663226Z
-- line:
     host: doh.applied-privacy.net
     addr: 146.255.56.98
     extra_hosts:
@@ -4485,27 +4338,27 @@
     host: de-fra.doh.sb
     addr: 147.78.178.170
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630622721Z
+  time: 2026-10-12T13:37:50.589469252Z
 - line:
     host: de-fra.doh.sb
     addr: 147.78.178.171
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630622761Z
+  time: 2026-10-12T13:37:50.589469322Z
 - line:
     host: de-fra.doh.sb
     addr: 147.78.178.172
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630622811Z
+  time: 2026-10-12T13:37:50.589469382Z
 - line:
     host: de-fra.doh.sb
     addr: 147.78.178.173
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630622851Z
+  time: 2026-10-12T13:37:50.589469453Z
 - line:
     host: de-fra.doh.sb
     addr: 147.78.178.174
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630622901Z
+  time: 2026-10-12T13:37:50.589469523Z
 - line:
     host: galileo.math.unipd.it
     addr: 147.162.22.1
@@ -4535,12 +4388,12 @@
     host: dns.mikrotikrumahan.my.id
     addr: 149.28.144.189
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630623131Z
+  time: 2026-10-12T13:37:50.589469583Z
 - line:
     host: dns.886886886.xyz
     addr: 149.88.64.107
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630623171Z
+  time: 2026-10-12T13:37:50.589469653Z
 - line:
     host: dnsenc.com
     addr: 149.104.186.91
@@ -4550,17 +4403,17 @@
     host: dns9.quad9.net
     addr: 149.112.112.9
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630623261Z
+  time: 2026-10-12T13:37:50.589469713Z
 - line:
     host: dns10.quad9.net
     addr: 149.112.112.10
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630623312Z
+  time: 2026-10-12T13:37:50.589469783Z
 - line:
     host: dns11.quad9.net
     addr: 149.112.112.11
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630623352Z
+  time: 2026-10-12T13:37:50.589469843Z
 - line:
     host: dns12.quad9.net
     addr: 149.112.112.12
@@ -4591,7 +4444,7 @@
     host: family.canadianshield.cira.ca
     addr: 149.112.121.30
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630623622Z
+  time: 2026-10-12T13:37:50.589469913Z
 - line:
     host: private.canadianshield.cira.ca
     addr: 149.112.122.10
@@ -4606,23 +4459,12 @@
     host: family.canadianshield.cira.ca
     addr: 149.112.122.30
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630623762Z
+  time: 2026-10-12T13:37:50.589469974Z
 - line:
     host: alpha-dns.quad9.net
     addr: 149.112.149.112
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630623802Z
-- line:
-    host: chromium.dns.nextdns.io
-    addr: 149.248.36.234
-    extra_hosts:
-        - dns.nextdns.io
-  time: 2026-10-08T12:19:30.760475635Z
-- line:
-    host: dns.dnswarden.com
-    addr: 149.248.217.117
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972663817Z
+  time: 2026-10-12T13:37:50.589470043Z
 - line:
     host: dns.dnswarden.com
     addr: 149.248.217.117
@@ -4634,6 +4476,12 @@
         - sg1.dnswarden.com
   time: 2026-10-11T11:38:35.630623852Z
 - line:
+    host: dns.dnswarden.com
+    addr: 149.248.217.117
+    extra_hosts:
+        - doh.us.dnswarden.com
+  time: 2026-10-12T13:37:50.589470114Z
+- line:
     host: dns.olpploiopkuyhiopsfrt.info
     addr: 150.95.255.38
     extra_hosts: []
@@ -4643,22 +4491,16 @@
     addr: 150.107.200.31
     extra_hosts:
         - darkness.is.my.waifu.cz
+        - megumin.is.my.waifu.cz
         - yunyun.is.my.waifu.cz
-  time: 2026-10-08T12:19:30.760475765Z
-- line:
-    host: aqua.is.my.waifu.cz
-    addr: 150.107.200.31
-    extra_hosts:
-        - darkness.is.my.waifu.cz
-  time: 2026-10-09T12:10:59.972663887Z
+  time: 2026-10-11T11:38:35.630623942Z
 - line:
     host: aqua.is.my.waifu.cz
     addr: 150.107.200.31
     extra_hosts:
         - darkness.is.my.waifu.cz
         - megumin.is.my.waifu.cz
-        - yunyun.is.my.waifu.cz
-  time: 2026-10-11T11:38:35.630623942Z
+  time: 2026-10-12T13:37:50.589470174Z
 - line:
     host: dns.sstomp.nl
     addr: 151.80.145.143
@@ -4688,6 +4530,11 @@
 - line:
     host: masters-of-cloud.de
     addr: 152.53.119.76
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589470244Z
+- line:
+    host: masters-of-cloud.de
+    addr: 152.53.119.76
     extra_hosts:
         - www.masters-of-cloud.de
   time: 2026-10-11T11:38:35.630624213Z
@@ -4695,12 +4542,12 @@
     host: dns.datenquark.de
     addr: 152.53.130.105
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630624263Z
+  time: 2026-10-12T13:37:50.589470304Z
 - line:
     host: dns.kapite.in
     addr: 152.53.130.210
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630624303Z
+  time: 2026-10-12T13:37:50.589470374Z
 - line:
     host: dns.psociety.de
     addr: 152.53.173.36
@@ -4710,7 +4557,7 @@
     host: dns.n23.io
     addr: 152.53.176.11
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630624393Z
+  time: 2026-10-12T13:37:50.589470434Z
 - line:
     host: nicsezcheckfbi.gov
     addr: 153.31.113.36
@@ -4735,7 +4582,7 @@
     host: dns.foximao.cn
     addr: 154.212.208.25
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630624624Z
+  time: 2026-10-12T13:37:50.589470504Z
 - line:
     host: iterator.lazada.com
     addr: 155.102.176.81
@@ -4780,7 +4627,7 @@
     host: dns.kusoneko.moe
     addr: 155.138.131.15
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630625034Z
+  time: 2026-10-12T13:37:50.589470564Z
 - line:
     host: tor.vasi.li
     addr: 155.138.148.63
@@ -4805,7 +4652,7 @@
     host: dns.brahma.world
     addr: 157.90.124.62
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630625254Z
+  time: 2026-10-12T13:37:50.589470635Z
 - line:
     host: resolver4.dns.openinternet.io
     addr: 157.131.42.41
@@ -4815,17 +4662,17 @@
     host: dns.envs.net
     addr: 157.180.15.214
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630625345Z
+  time: 2026-10-12T13:37:50.589470705Z
 - line:
     host: dnspub.restena.lu
     addr: 158.64.1.29
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630625395Z
+  time: 2026-10-12T13:37:50.589470765Z
 - line:
     host: dns.asysec.com
     addr: 158.69.207.80
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630625435Z
+  time: 2026-10-12T13:37:50.589470835Z
 - line:
     host: do.shimul.me
     addr: 159.65.149.35
@@ -4840,7 +4687,7 @@
     host: dns.caspervk.net
     addr: 159.69.4.2
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630625575Z
+  time: 2026-10-12T13:37:50.589470895Z
 - line:
     host: dns.shareworx.net
     addr: 159.69.100.236
@@ -4875,7 +4722,7 @@
     host: dns.brembeck.cloud
     addr: 159.195.62.166
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630625885Z
+  time: 2026-10-12T13:37:50.589470965Z
 - line:
     host: sa01.dns4me.net
     addr: 160.119.253.209
@@ -4885,12 +4732,12 @@
     host: dns.23-4.cn
     addr: 160.202.238.204
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630625976Z
+  time: 2026-10-12T13:37:50.589471025Z
 - line:
     host: dns.hakim.one
     addr: 160.250.95.28
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630626026Z
+  time: 2026-10-12T13:37:50.589471096Z
 - line:
     host: dns.bebasid.com
     addr: 160.250.227.196
@@ -4901,19 +4748,7 @@
     host: dns.bebasid.com
     addr: 160.250.227.196
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972664939Z
-- line:
-    host: 3dcosas.xyz
-    addr: 160.251.64.80
-    extra_hosts:
-        - adguard.johanliebert.top
-        - bestwon203.com
-  time: 2026-10-09T12:10:59.972664999Z
-- line:
-    host: 3dcosas.xyz
-    addr: 160.251.64.80
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760476887Z
+  time: 2026-10-12T13:37:50.589471156Z
 - line:
     host: 3dcosas.xyz
     addr: 160.251.64.80
@@ -4936,6 +4771,11 @@
         - tuskythehusky.tech
   time: 2026-10-11T11:38:35.630626116Z
 - line:
+    host: edgy-dns.com
+    addr: 160.251.64.80
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589471226Z
+- line:
     host: doh-primary-pool.goodbyegambling.com
     addr: 161.35.136.3
     extra_hosts: []
@@ -4944,7 +4784,7 @@
     host: 5g.o0o.re
     addr: 161.129.34.134
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630626206Z
+  time: 2026-10-12T13:37:50.589471296Z
 - line:
     host: fezgate.ovh
     addr: 162.19.227.251
@@ -4964,12 +4804,12 @@
     host: opera.cloudflare-dns.com
     addr: 162.159.61.5
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630626386Z
+  time: 2026-10-12T13:37:50.589471356Z
 - line:
     host: dns.cloudflare.com
     addr: 162.159.61.8
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630626436Z
+  time: 2026-10-12T13:37:50.589471426Z
 - line:
     host: odoh.cloudflare-dns.com
     addr: 162.159.62.1
@@ -5004,12 +4844,12 @@
     host: adblockersite.com
     addr: 164.90.207.7
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630626707Z
+  time: 2026-10-12T13:37:50.589471486Z
 - line:
     host: dns.christerwaren.fi
     addr: 164.132.7.242
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630626747Z
+  time: 2026-10-12T13:37:50.589471557Z
 - line:
     host: sgn01.dnscry.pt
     addr: 165.99.131.95
@@ -5039,7 +4879,7 @@
     host: dns.fullaccesstointernet.jp.eu.org
     addr: 167.179.78.123
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630627017Z
+  time: 2026-10-12T13:37:50.589471617Z
 - line:
     host: dns.technologycage.com
     addr: 167.235.31.95
@@ -5049,29 +4889,29 @@
     host: dns.cloudfiction.eu
     addr: 167.235.50.40
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630627107Z
+  time: 2026-10-12T13:37:50.589471687Z
 - line:
     host: dns-doh-no-safe-search.dnsforfamily.com
     addr: 167.235.236.107
     extra_hosts:
         - dns-doh.dnsforfamily.com
         - dns-dot.dnsforfamily.com
-  time: 2026-10-11T11:38:35.630627157Z
+  time: 2026-10-12T13:37:50.589471747Z
 - line:
     host: doh.rezhajul.io
     addr: 167.253.158.187
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630627207Z
+  time: 2026-10-12T13:37:50.589471817Z
 - line:
     host: dns.hinet.net
     addr: 168.95.1.1
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630627247Z
+  time: 2026-10-12T13:37:50.589471887Z
 - line:
     host: dns.hinet.net
     addr: 168.95.192.1
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630627298Z
+  time: 2026-10-12T13:37:50.589471947Z
 - line:
     host: dns.sev.monster
     addr: 168.235.111.72
@@ -5081,7 +4921,7 @@
     host: ca02.dns4me.net
     addr: 169.48.27.179
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630627388Z
+  time: 2026-10-12T13:37:50.589472017Z
 - line:
     host: jnb01.dnscry.pt
     addr: 169.239.128.124
@@ -5121,7 +4961,7 @@
     host: vip3.alidns.com
     addr: 170.33.32.210
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630627748Z
+  time: 2026-10-12T13:37:50.589472077Z
 - line:
     host: vip4.alidns.com
     addr: 170.33.32.211
@@ -5141,7 +4981,7 @@
     host: vip7.alidns.com
     addr: 170.33.32.214
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630627929Z
+  time: 2026-10-12T13:37:50.589472147Z
 - line:
     host: vip8.alidns.com
     addr: 170.33.32.215
@@ -5161,7 +5001,7 @@
     host: vip3.alidns.com
     addr: 170.33.73.26
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630628109Z
+  time: 2026-10-12T13:37:50.589472208Z
 - line:
     host: vip4.alidns.com
     addr: 170.33.73.27
@@ -5184,6 +5024,11 @@
         - vip21.alidns.com
   time: 2026-10-11T11:38:35.630628289Z
 - line:
+    host: vip21.alidns.com
+    addr: 170.33.80.8
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589472278Z
+- line:
     host: vip2.alidns.com
     addr: 170.33.80.9
     extra_hosts:
@@ -5193,7 +5038,7 @@
     host: vip3.alidns.com
     addr: 170.33.80.10
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972666051Z
+  time: 2026-10-12T13:37:50.589472338Z
 - line:
     host: vip23.alidns.com
     addr: 170.33.80.10
@@ -5219,6 +5064,11 @@
         - vip6.alidns.com
   time: 2026-10-11T11:38:35.630628519Z
 - line:
+    host: vip7.alidns.com
+    addr: 170.33.80.14
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589472408Z
+- line:
     host: vip27.alidns.com
     addr: 170.33.80.14
     extra_hosts:
@@ -5239,16 +5089,10 @@
         - steering.nextdns.io
   time: 2026-10-11T11:38:35.63062866Z
 - line:
-    host: chromium.dns.nextdns.io
-    addr: 170.39.227.247
-    extra_hosts:
-        - dns.nextdns.io
-  time: 2026-10-08T12:19:30.760477739Z
-- line:
     host: atl01.dnscry.pt
     addr: 170.249.237.154
     extra_hosts: []
-  time: 2026-10-11T11:38:35.6306287Z
+  time: 2026-10-12T13:37:50.589472478Z
 - line:
     host: shield.afixer.app
     addr: 171.240.251.81
@@ -5268,12 +5112,12 @@
     host: opera.cloudflare-dns.com
     addr: 172.64.41.5
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63062888Z
+  time: 2026-10-12T13:37:50.589472538Z
 - line:
     host: dns.cloudflare.com
     addr: 172.64.41.8
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63062893Z
+  time: 2026-10-12T13:37:50.589472608Z
 - line:
     host: odoh.cloudflare-dns.com
     addr: 172.64.42.1
@@ -5288,13 +5132,18 @@
     host: yyz01.dnscry.pt
     addr: 172.93.167.214
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63062906Z
+  time: 2026-10-12T13:37:50.589472668Z
 - line:
     host: dns.bebasid.com
     addr: 172.104.53.194
     extra_hosts:
         - unfiltered.dns.bebasid.com
   time: 2026-10-11T11:38:35.63062911Z
+- line:
+    host: dns.bebasid.com
+    addr: 172.104.53.194
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589472739Z
 - line:
     host: dns.kuuhaku.moe
     addr: 172.104.92.233
@@ -5309,7 +5158,7 @@
     host: dns.9999.sg
     addr: 172.104.175.59
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630629251Z
+  time: 2026-10-12T13:37:50.589472799Z
 - line:
     host: dns.therifleman.name
     addr: 172.104.206.174
@@ -5329,7 +5178,7 @@
     host: dns.horcrux.vip
     addr: 172.232.185.183
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630629431Z
+  time: 2026-10-12T13:37:50.589472869Z
 - line:
     host: dns.pccoach.nl
     addr: 172.233.59.98
@@ -5339,22 +5188,22 @@
     host: adguard.hartley.cloud
     addr: 172.233.147.42
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630629521Z
+  time: 2026-10-12T13:37:50.589472929Z
 - line:
     host: dns.edgy.network
     addr: 172.233.221.184
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630629561Z
+  time: 2026-10-12T13:37:50.589472999Z
 - line:
     host: doh.archuser.org
     addr: 172.233.221.243
     extra_hosts: []
   time: 2026-10-11T11:38:35.630629611Z
 - line:
-    host: dns.edgy.network
-    addr: 172.234.26.72
+    host: dns.edgeburnmedia.com
+    addr: 172.234.27.233
     extra_hosts: []
-  time: 2026-10-08T12:19:30.76047826Z
+  time: 2026-10-12T13:37:50.589473069Z
 - line:
     host: dns.edgeburnmedia.com
     addr: 172.234.27.233
@@ -5362,20 +5211,10 @@
         - sdns22.gkonuralp.com
   time: 2026-10-11T11:38:35.630629651Z
 - line:
-    host: dns.edgeburnmedia.com
-    addr: 172.234.27.233
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972666452Z
-- line:
     host: dns.edgy.network
     addr: 172.234.195.206
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630629701Z
-- line:
-    host: dns.edgy.network
-    addr: 172.234.212.139
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.76047833Z
+  time: 2026-10-12T13:37:50.589473129Z
 - line:
     host: dns.bebasid.com
     addr: 172.235.254.88
@@ -5383,11 +5222,10 @@
         - unfiltered.dns.bebasid.com
   time: 2026-10-11T11:38:35.630629741Z
 - line:
-    host: glacius.top
-    addr: 172.236.104.43
-    extra_hosts:
-        - revelio.top
-  time: 2026-10-08T12:19:30.76047839Z
+    host: dns.bebasid.com
+    addr: 172.235.254.88
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.5894732Z
 - line:
     host: fidelius.top
     addr: 172.236.104.43
@@ -5409,12 +5247,6 @@
         - revelio.top
   time: 2026-10-11T11:38:35.630629831Z
 - line:
-    host: glacius.top
-    addr: 172.236.104.157
-    extra_hosts:
-        - revelio.top
-  time: 2026-10-08T12:19:30.76047846Z
-- line:
     host: dns.hakutakucn.com
     addr: 172.237.129.108
     extra_hosts:
@@ -5424,18 +5256,18 @@
     host: dns.hakutakucn.com
     addr: 172.237.129.108
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972666582Z
-- line:
-    host: dns.hakutakucn.com
-    addr: 172.237.129.236
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972666642Z
+  time: 2026-10-12T13:37:50.58947326Z
 - line:
     host: dns.hakutakucn.com
     addr: 172.237.129.236
     extra_hosts:
         - www.dltuykfgp.top
   time: 2026-10-11T11:38:35.630629922Z
+- line:
+    host: dns.hakutakucn.com
+    addr: 172.237.129.236
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.58947333Z
 - line:
     host: dns.hakutakucn.com
     addr: 172.237.129.242
@@ -5446,13 +5278,7 @@
     host: dns.hakutakucn.com
     addr: 172.237.129.242
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972666712Z
-- line:
-    host: glacius.top
-    addr: 172.238.172.122
-    extra_hosts:
-        - revelio.top
-  time: 2026-10-08T12:19:30.760478721Z
+  time: 2026-10-12T13:37:50.58947339Z
 - line:
     host: fidelius.top
     addr: 172.238.172.122
@@ -5467,22 +5293,12 @@
     host: dns.edgy.network
     addr: 172.238.172.149
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630630062Z
-- line:
-    host: dns.edgy.network
-    addr: 172.238.172.213
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760478791Z
+  time: 2026-10-12T13:37:50.58947346Z
 - line:
     host: dns.edgeburnmedia.com
-    addr: 172.238.172.228
+    addr: 172.239.49.232
     extra_hosts: []
-  time: 2026-10-08T12:19:30.760478851Z
-- line:
-    host: dns.edgeburnmedia.com
-    addr: 172.238.176.31
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760478921Z
+  time: 2026-10-12T13:37:50.58947352Z
 - line:
     host: dns.edgeburnmedia.com
     addr: 172.239.49.232
@@ -5491,19 +5307,9 @@
   time: 2026-10-11T11:38:35.630630112Z
 - line:
     host: dns.edgeburnmedia.com
-    addr: 172.239.49.232
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972666843Z
-- line:
-    host: dns.edgeburnmedia.com
-    addr: 172.239.57.230
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760478991Z
-- line:
-    host: dns.edgeburnmedia.com
     addr: 172.239.193.67
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972666913Z
+  time: 2026-10-12T13:37:50.58947359Z
 - line:
     host: dns.edgeburnmedia.com
     addr: 172.239.193.67
@@ -5514,13 +5320,13 @@
     host: dns.cahlen.com
     addr: 173.20.169.71
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630630202Z
+  time: 2026-10-12T13:37:50.58947366Z
 - line:
     host: dns.furrix.zone
     addr: 173.208.212.205
     extra_hosts:
         - dns.marbledfennec.net
-  time: 2026-10-08T12:19:30.760479121Z
+  time: 2026-10-12T13:37:50.589473721Z
 - line:
     host: dns.furrix.zone
     addr: 173.208.212.205
@@ -5528,11 +5334,6 @@
         - dns.marbledfennec.net
         - multi.dns.marbledfennec.net
   time: 2026-10-11T11:38:35.630630242Z
-- line:
-    host: dns.furrix.zone
-    addr: 173.208.212.205
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972667043Z
 - line:
     host: dns.scott-smith.us
     addr: 173.230.149.113
@@ -5564,16 +5365,16 @@
     extra_hosts: []
   time: 2026-10-11T11:38:35.630633557Z
 - line:
-    host: dot.tiar.app
-    addr: 174.138.29.175
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760479191Z
-- line:
     host: doh.tiar.app
     addr: 174.138.29.175
     extra_hosts:
         - dot.tiar.app
   time: 2026-10-11T11:38:35.630633597Z
+- line:
+    host: dns.rubyfish.cn
+    addr: 175.24.154.66
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.58947379Z
 - line:
     host: dns.rubyfish.cn
     addr: 175.24.154.66
@@ -5590,12 +5391,12 @@
     host: dns.svoi.dev
     addr: 176.9.25.158
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630633737Z
+  time: 2026-10-12T13:37:50.589473861Z
 - line:
     host: de.dns.privex.io
     addr: 176.9.54.219
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630633777Z
+  time: 2026-10-12T13:37:50.589473931Z
 - line:
     host: dns.ourvau.lt
     addr: 176.9.242.147
@@ -5603,16 +5404,6 @@
         - dns.redvau.lt
         - dns.vault81.de
   time: 2026-10-11T11:38:35.630633827Z
-- line:
-    host: dns.redvau.lt
-    addr: 176.9.242.147
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760479322Z
-- line:
-    host: dns.vault81.de
-    addr: 176.9.242.147
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972667173Z
 - line:
     host: nsec.arnor.org
     addr: 176.10.125.47
@@ -5638,11 +5429,6 @@
     addr: 176.123.163.193
     extra_hosts: []
   time: 2026-10-11T11:38:35.630634048Z
-- line:
-    host: dns.chadeyron.fr
-    addr: 176.182.153.130
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760479452Z
 - line:
     host: dns.yunzheng.space
     addr: 177.177.83.83
@@ -5674,12 +5460,7 @@
     addr: 178.33.118.153
     extra_hosts:
         - dns-2.wil.cloud
-  time: 2026-10-11T11:38:35.630634278Z
-- line:
-    host: doh.42l.fr
-    addr: 178.105.16.6
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760479582Z
+  time: 2026-10-12T13:37:50.589473991Z
 - line:
     host: doh.42l.fr
     addr: 178.105.16.6
@@ -5695,72 +5476,72 @@
     host: dns.keweon.center
     addr: 178.162.228.11
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634418Z
+  time: 2026-10-12T13:37:50.589474061Z
 - line:
     host: dns.keweon.center
     addr: 178.162.228.12
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634458Z
+  time: 2026-10-12T13:37:50.589474121Z
 - line:
     host: dns.keweon.center
     addr: 178.162.228.17
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634508Z
+  time: 2026-10-12T13:37:50.589474191Z
 - line:
     host: dns.keweon.center
     addr: 178.162.228.20
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634549Z
+  time: 2026-10-12T13:37:50.589474251Z
 - line:
     host: dns.keweon.center
     addr: 178.162.228.42
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634599Z
+  time: 2026-10-12T13:37:50.589474322Z
 - line:
     host: dns.keweon.center
     addr: 178.162.228.44
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634639Z
+  time: 2026-10-12T13:37:50.589474382Z
 - line:
     host: dns.keweon.center
     addr: 178.162.228.51
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634689Z
+  time: 2026-10-12T13:37:50.589474452Z
 - line:
     host: dns.keweon.center
     addr: 178.162.228.53
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634729Z
+  time: 2026-10-12T13:37:50.589474522Z
 - line:
     host: dns.keweon.center
     addr: 178.162.228.115
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634779Z
+  time: 2026-10-12T13:37:50.589474582Z
 - line:
     host: dns.keweon.center
     addr: 178.162.228.117
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634819Z
+  time: 2026-10-12T13:37:50.589474652Z
 - line:
     host: dns.keweon.center
     addr: 178.162.231.57
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634869Z
+  time: 2026-10-12T13:37:50.589474712Z
 - line:
     host: dns.keweon.center
     addr: 178.162.231.59
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634909Z
+  time: 2026-10-12T13:37:50.589474783Z
 - line:
     host: dns.keweon.center
     addr: 178.162.231.69
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634959Z
+  time: 2026-10-12T13:37:50.589474843Z
 - line:
     host: dns.keweon.center
     addr: 178.162.231.73
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630634999Z
+  time: 2026-10-12T13:37:50.589474913Z
 - line:
     host: nsc.torgues.net
     addr: 178.208.3.9
@@ -5775,7 +5556,7 @@
     host: comss.ru
     addr: 178.248.239.174
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630635139Z
+  time: 2026-10-12T13:37:50.589474973Z
 - line:
     host: dns.velyn.my.id
     addr: 182.8.211.174
@@ -5795,12 +5576,12 @@
     host: dns.api.integration.globuscs.info
     addr: 184.196.17.44
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63063532Z
+  time: 2026-10-12T13:37:50.589475043Z
 - line:
     host: doh.webnmail.de
     addr: 185.16.60.194
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63063537Z
+  time: 2026-10-12T13:37:50.589475113Z
 - line:
     host: ee-tll.doh.sb
     addr: 185.37.252.146
@@ -5851,17 +5632,17 @@
     host: dns.dremaxx.de
     addr: 185.44.82.158
     extra_hosts: []
-  time: 2026-10-08T12:19:30.760480674Z
+  time: 2026-10-12T13:37:50.589475173Z
 - line:
     host: dns.kukal.cz
     addr: 185.47.221.200
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63063582Z
+  time: 2026-10-12T13:37:50.589475243Z
 - line:
     host: getdnsapi.net
     addr: 185.49.141.38
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630635861Z
+  time: 2026-10-12T13:37:50.589475304Z
 - line:
     host: pro.shecan.ir
     addr: 185.51.200.1
@@ -5879,15 +5660,10 @@
         - uk-lon.doh.sb
   time: 2026-10-11T11:38:35.630635951Z
 - line:
-    host: uk-lon.doh.sb
-    addr: 185.64.79.5
-    extra_hosts: []
-  time: 2026-10-08T12:19:30.760480805Z
-- line:
     host: dns.fancyorg.at
     addr: 185.69.161.122
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630636001Z
+  time: 2026-10-12T13:37:50.589475373Z
 - line:
     host: dns.kuuhaku.moe
     addr: 185.70.9.10
@@ -5897,7 +5673,7 @@
     host: wikimedia-dns.org
     addr: 185.71.138.138
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630636091Z
+  time: 2026-10-12T13:37:50.589475434Z
 - line:
     host: dns.digitale-gesellschaft.ch
     addr: 185.95.218.42
@@ -5908,18 +5684,18 @@
     host: dns.digitale-gesellschaft.ch
     addr: 185.95.218.42
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972668626Z
-- line:
-    host: dns.digitale-gesellschaft.ch
-    addr: 185.95.218.43
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972668686Z
+  time: 2026-10-12T13:37:50.589475504Z
 - line:
     host: dns.digitale-gesellschaft.ch
     addr: 185.95.218.43
     extra_hosts:
         - dns2.digitale-gesellschaft.ch
   time: 2026-10-11T11:38:35.630636181Z
+- line:
+    host: dns.digitale-gesellschaft.ch
+    addr: 185.95.218.43
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589475564Z
 - line:
     host: resolv1.trash.net
     addr: 185.95.219.170
@@ -5944,7 +5720,7 @@
     host: asia.tri-dns.net
     addr: 185.111.159.59
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630636411Z
+  time: 2026-10-12T13:37:50.589475634Z
 - line:
     host: dns1.dnscrypt.ca
     addr: 185.111.188.46
@@ -5959,7 +5735,7 @@
     host: dns.dremaxx.de
     addr: 185.121.169.47
     extra_hosts: []
-  time: 2026-10-08T12:19:30.760481195Z
+  time: 2026-10-12T13:37:50.589475694Z
 - line:
     host: dns.dremaxx.de
     addr: 185.121.169.47
@@ -6036,12 +5812,12 @@
     host: abel.waringer-atg.de
     addr: 185.183.159.34
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630637183Z
+  time: 2026-10-12T13:37:50.589475764Z
 - line:
     host: dns.foxyfy.net
     addr: 185.184.223.150
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630637223Z
+  time: 2026-10-12T13:37:50.589475834Z
 - line:
     host: adguard.ihatemy.live
     addr: 185.187.152.2
@@ -6056,12 +5832,12 @@
     host: dns.circl.lu
     addr: 185.194.94.71
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630637363Z
+  time: 2026-10-12T13:37:50.589475894Z
 - line:
     host: dns.l337.site
     addr: 185.195.69.126
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630637403Z
+  time: 2026-10-12T13:37:50.589475965Z
 - line:
     host: omr01.dnscry.pt
     addr: 185.207.125.100
@@ -6079,6 +5855,11 @@
         - doh.sb
         - public-dns-a.dns.sb
   time: 2026-10-11T11:38:35.630637543Z
+- line:
+    host: dns.sb
+    addr: 185.222.222.222
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589476025Z
 - line:
     host: opennic2.i2pd.xyz
     addr: 185.226.181.19
@@ -6099,18 +5880,13 @@
     addr: 185.228.168.10
     extra_hosts:
         - doh.cleanbrowsing.org
-  time: 2026-10-11T11:38:35.630637723Z
-- line:
-    host: adult-filter-dns.cleanbrowsing.org
-    addr: 185.228.168.10
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972669287Z
+  time: 2026-10-12T13:37:50.589476095Z
 - line:
     host: doh.cleanbrowsing.org
     addr: 185.228.168.168
     extra_hosts:
         - family-filter-dns.cleanbrowsing.org
-  time: 2026-10-11T11:38:35.630637763Z
+  time: 2026-10-12T13:37:50.589476155Z
 - line:
     host: dns.anon.no
     addr: 185.231.100.108
@@ -6160,7 +5936,7 @@
     host: cfdjb.org
     addr: 188.22.242.50
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630638224Z
+  time: 2026-10-12T13:37:50.589476225Z
 - line:
     host: root.hagezi.org
     addr: 188.34.161.210
@@ -6180,17 +5956,17 @@
     host: dns.npe.bz
     addr: 188.40.244.189
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630638404Z
+  time: 2026-10-12T13:37:50.589476285Z
 - line:
     host: dns.karl.one
     addr: 188.68.33.96
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630638444Z
+  time: 2026-10-12T13:37:50.589476355Z
 - line:
     host: dns.grqu.de
     addr: 188.68.40.234
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630638494Z
+  time: 2026-10-12T13:37:50.589476426Z
 - line:
     host: dukun.de
     addr: 188.68.50.215
@@ -6212,10 +5988,15 @@
     extra_hosts: []
   time: 2026-10-11T11:38:35.630638675Z
 - line:
+    host: dns2.nextdns.io
+    addr: 188.172.251.1
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589476486Z
+- line:
     host: dns.adnull.com
     addr: 188.190.191.78
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630638715Z
+  time: 2026-10-12T13:37:50.589476556Z
 - line:
     host: rumpelsepp.org
     addr: 188.245.45.16
@@ -6225,23 +6006,17 @@
     host: dns.deadsec.net
     addr: 188.245.165.100
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630638805Z
+  time: 2026-10-12T13:37:50.589476616Z
 - line:
     host: dns.stevenz.net
     addr: 192.3.4.22
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630638855Z
-- line:
-    host: dns.stevenz.net
-    addr: 192.3.4.22
-    extra_hosts:
-        - doh.sz-dns.com
-  time: 2026-10-09T12:10:59.972669938Z
+  time: 2026-10-12T13:37:50.589476686Z
 - line:
     host: affsoft.cc
     addr: 192.64.119.49
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630638895Z
+  time: 2026-10-12T13:37:50.589476746Z
 - line:
     host: haf01.dnscry.pt
     addr: 192.71.218.121
@@ -6256,7 +6031,7 @@
     host: dns.islandnet.com
     addr: 192.99.139.168
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639035Z
+  time: 2026-10-12T13:37:50.589476816Z
 - line:
     host: dns1.in-berlin.de
     addr: 192.109.42.41
@@ -6271,17 +6046,17 @@
     host: cph01.dnscry.pt
     addr: 192.121.119.19
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639176Z
+  time: 2026-10-12T13:37:50.589476886Z
 - line:
     host: dns.bermeitinger.eu
     addr: 192.145.47.80
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639216Z
+  time: 2026-10-12T13:37:50.589476956Z
 - line:
     host: adguard.ruby.ci
     addr: 192.248.190.14
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639266Z
+  time: 2026-10-12T13:37:50.589477017Z
 - line:
     host: odvr.nic.cz
     addr: 193.17.47.1
@@ -6291,7 +6066,7 @@
     host: dns.hahnjo.de
     addr: 193.30.122.186
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639356Z
+  time: 2026-10-12T13:37:50.589477087Z
 - line:
     host: doh.bortzmeyer.fr
     addr: 193.70.85.11
@@ -6301,22 +6076,22 @@
     host: adguard.marto.si
     addr: 193.95.243.186
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639446Z
+  time: 2026-10-12T13:37:50.589477157Z
 - line:
     host: adg.tshost.no
     addr: 193.108.130.22
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639486Z
+  time: 2026-10-12T13:37:50.589477217Z
 - line:
     host: dns.b612.me
     addr: 193.112.16.45
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639536Z
+  time: 2026-10-12T13:37:50.589477287Z
 - line:
     host: dns.b612.me
     addr: 193.112.107.80
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639576Z
+  time: 2026-10-12T13:37:50.589477347Z
 - line:
     host: dns.foxyfy.net
     addr: 193.142.58.115
@@ -6327,12 +6102,12 @@
     host: dns.foxyfy.net
     addr: 193.142.58.115
     extra_hosts: []
-  time: 2026-10-09T12:10:59.97267066Z
+  time: 2026-10-12T13:37:50.589477417Z
 - line:
     host: ro-buc-w-f-1.nashkan.net
     addr: 193.142.58.137
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639666Z
+  time: 2026-10-12T13:37:50.589477477Z
 - line:
     host: ro-buc-w-p-1.nashkan.net
     addr: 193.142.58.179
@@ -6342,22 +6117,22 @@
     host: dns.blokada.org
     addr: 193.180.80.1
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639756Z
+  time: 2026-10-12T13:37:50.589477548Z
 - line:
     host: dns.blokada.org
     addr: 193.180.80.2
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639806Z
+  time: 2026-10-12T13:37:50.589477608Z
 - line:
     host: dns.belnet.be
     addr: 193.190.182.53
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639847Z
+  time: 2026-10-12T13:37:50.589477678Z
 - line:
     host: dns.belnet.be
     addr: 193.190.198.16
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630639897Z
+  time: 2026-10-12T13:37:50.589477738Z
 - line:
     host: doh.dns4all.eu
     addr: 194.0.5.3
@@ -6378,7 +6153,7 @@
     host: dns.dremaxx.de
     addr: 194.28.99.248
     extra_hosts: []
-  time: 2026-10-08T12:19:30.760482918Z
+  time: 2026-10-12T13:37:50.589477808Z
 - line:
     host: trf01.dnscry.pt
     addr: 194.32.107.48
@@ -6410,22 +6185,22 @@
     host: dns.foxyfy.net
     addr: 194.53.137.2
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972671071Z
+  time: 2026-10-12T13:37:50.589477878Z
 - line:
     host: dns.clanless.ovh
     addr: 194.55.13.76
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630640307Z
+  time: 2026-10-12T13:37:50.589477938Z
 - line:
     host: adguard.bonis.de
     addr: 194.59.156.9
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630640357Z
+  time: 2026-10-12T13:37:50.589478009Z
 - line:
     host: dns.floriantinney.de
     addr: 194.97.157.22
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630640397Z
+  time: 2026-10-12T13:37:50.589478069Z
 - line:
     host: lastentarvike.fi
     addr: 194.100.93.136
@@ -6457,12 +6232,12 @@
     addr: 194.242.2.3
     extra_hosts:
         - adblock.doh.mullvad.net
-  time: 2026-10-11T11:38:35.630640668Z
+  time: 2026-10-12T13:37:50.589478139Z
 - line:
     host: base.dns.mullvad.net
     addr: 194.242.2.4
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630640718Z
+  time: 2026-10-12T13:37:50.589478199Z
 - line:
     host: extended.dns.mullvad.net
     addr: 194.242.2.5
@@ -6472,12 +6247,12 @@
     host: family.dns.mullvad.net
     addr: 194.242.2.6
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630640808Z
+  time: 2026-10-12T13:37:50.589478269Z
 - line:
     host: all.dns.mullvad.net
     addr: 194.242.2.9
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630640858Z
+  time: 2026-10-12T13:37:50.589478329Z
 - line:
     host: waw01.dnscry.pt
     addr: 195.3.221.162
@@ -6493,12 +6268,12 @@
     host: dns.anon.no
     addr: 195.35.113.73
     extra_hosts: []
-  time: 2026-10-10T11:25:37.444408379Z
+  time: 2026-10-12T13:37:50.589478399Z
 - line:
     host: dns.cctld.kg
     addr: 195.38.160.7
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630640988Z
+  time: 2026-10-12T13:37:50.589478459Z
 - line:
     host: sto01.dnscry.pt
     addr: 195.72.60.66
@@ -6508,12 +6283,12 @@
     host: dns.cert.ee
     addr: 195.80.119.99
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630641078Z
+  time: 2026-10-12T13:37:50.58947853Z
 - line:
     host: dns.cert.ee
     addr: 195.80.119.101
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630641128Z
+  time: 2026-10-12T13:37:50.589478599Z
 - line:
     host: syd02.dnscry.pt
     addr: 195.114.14.74
@@ -6522,14 +6297,14 @@
 - line:
     host: dns.comss.one
     addr: 195.133.25.16
-    extra_hosts:
-        - router.comss.one
-  time: 2026-10-11T11:38:35.630641219Z
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.58947866Z
 - line:
     host: dns.comss.one
     addr: 195.133.25.16
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972671792Z
+    extra_hosts:
+        - router.comss.one
+  time: 2026-10-11T11:38:35.630641219Z
 - line:
     host: doh.zknt.org
     addr: 195.201.21.251
@@ -6539,12 +6314,12 @@
     host: dns.kerekes.xyz
     addr: 195.201.39.149
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630641309Z
+  time: 2026-10-12T13:37:50.58947873Z
 - line:
     host: dns.a47.me
     addr: 195.201.131.183
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630641349Z
+  time: 2026-10-12T13:37:50.58947879Z
 - line:
     host: dns.iamninja.ru
     addr: 195.208.119.157
@@ -6554,12 +6329,12 @@
     host: cubedns.com
     addr: 195.244.44.44
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630641439Z
+  time: 2026-10-12T13:37:50.58947886Z
 - line:
     host: cubedns.com
     addr: 195.244.44.45
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630641489Z
+  time: 2026-10-12T13:37:50.58947892Z
 - line:
     host: naganohara-yoimiya.momokko.moe
     addr: 198.23.146.171
@@ -6569,7 +6344,7 @@
     host: dns.foxyfy.net
     addr: 198.46.188.14
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630641579Z
+  time: 2026-10-12T13:37:50.58947899Z
 - line:
     host: safeservedns.com
     addr: 198.54.117.10
@@ -6589,18 +6364,18 @@
     host: ams01.dnscry.pt
     addr: 198.140.141.46
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630641759Z
+  time: 2026-10-12T13:37:50.589479051Z
+- line:
+    host: rgnet-iad.anycast.uncensoreddns.org
+    addr: 198.180.150.12
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.58947912Z
 - line:
     host: rgnet-iad.anycast.censurfridns.dk
     addr: 198.180.150.12
     extra_hosts:
         - rgnet-iad.anycast.uncensoreddns.org
   time: 2026-10-11T11:38:35.63064181Z
-- line:
-    host: rgnet-iad.anycast.censurfridns.dk
-    addr: 198.180.150.12
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972672313Z
 - line:
     host: kiri.nonexiste.net
     addr: 198.199.103.49
@@ -6610,17 +6385,17 @@
     host: agh.fltn.us
     addr: 198.251.67.7
     extra_hosts: []
-  time: 2026-10-11T11:38:35.6306419Z
+  time: 2026-10-12T13:37:50.589479181Z
 - line:
     host: dns.cmrg.net
     addr: 199.58.83.33
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63064194Z
+  time: 2026-10-12T13:37:50.589479251Z
 - line:
     host: chromium.dns.nextdns.io
     addr: 199.119.65.94
     extra_hosts: []
-  time: 2026-10-09T12:10:59.972672513Z
+  time: 2026-10-12T13:37:50.589479321Z
 - line:
     host: dns.nextdns.io
     addr: 199.119.65.94
@@ -6650,12 +6425,17 @@
     host: adguard.pangerl.it
     addr: 202.61.240.61
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63064221Z
+  time: 2026-10-12T13:37:50.589479381Z
 - line:
     host: dns.gnb09.id
     addr: 202.70.133.124
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63064226Z
+  time: 2026-10-12T13:37:50.589479451Z
+- line:
+    host: adg.rueiliu.space
+    addr: 202.172.26.36
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589479511Z
 - line:
     host: adg.rueiliu.space
     addr: 202.172.26.36
@@ -6666,23 +6446,10 @@
         - hydra.plan9-ns1.com
   time: 2026-10-11T11:38:35.6306423Z
 - line:
-    host: adg.rueiliu.space
-    addr: 202.172.26.36
-    extra_hosts:
-        - dns.labnekotest.site
-        - dns.zui.lol
-  time: 2026-10-09T12:10:59.972672714Z
-- line:
-    host: adg.rueiliu.space
-    addr: 202.172.26.36
-    extra_hosts:
-        - dns.labnekotest.site
-  time: 2026-10-08T12:19:30.760484762Z
-- line:
     host: dns.slinkyman.net
     addr: 203.29.240.52
     extra_hosts: []
-  time: 2026-10-11T11:38:35.63064235Z
+  time: 2026-10-12T13:37:50.589479581Z
 - line:
     host: per.adfilter.net
     addr: 203.29.241.76
@@ -6722,7 +6489,7 @@
     host: adguard1.leadmon.net
     addr: 204.9.92.87
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630642661Z
+  time: 2026-10-12T13:37:50.589479641Z
 - line:
     host: doh.sunoaki.net
     addr: 204.10.79.38
@@ -6733,7 +6500,7 @@
     addr: 204.12.237.197
     extra_hosts:
         - dns.marbledfennec.net
-  time: 2026-10-08T12:19:30.760484952Z
+  time: 2026-10-12T13:37:50.589479712Z
 - line:
     host: dns.furrix.zone
     addr: 204.12.237.197
@@ -6741,11 +6508,6 @@
         - dns.marbledfennec.net
         - multi.dns.marbledfennec.net
   time: 2026-10-11T11:38:35.630642761Z
-- line:
-    host: dns.furrix.zone
-    addr: 204.12.237.197
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972672844Z
 - line:
     host: dns.unx.io
     addr: 206.189.240.157
@@ -6755,22 +6517,22 @@
     host: adb.aadityakushwaha.com
     addr: 207.154.211.203
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630642851Z
+  time: 2026-10-12T13:37:50.589479772Z
 - line:
     host: dns.cloudtrust.solutions
     addr: 207.154.238.154
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630642891Z
+  time: 2026-10-12T13:37:50.589479842Z
 - line:
     host: dns.d4d.moe
     addr: 207.207.210.107
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630642941Z
+  time: 2026-10-12T13:37:50.589479912Z
 - line:
     host: dns.d4d.moe
     addr: 207.207.210.229
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630642981Z
+  time: 2026-10-12T13:37:50.589479972Z
 - line:
     host: ns3.com
     addr: 207.246.68.103
@@ -6805,16 +6567,16 @@
     extra_hosts: []
   time: 2026-10-11T11:38:35.630643252Z
 - line:
-    host: resolver1-fs.opendns.com
-    addr: 208.67.222.123
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972673174Z
-- line:
     host: familyshield.opendns.com
     addr: 208.67.222.123
     extra_hosts:
         - resolver1-fs.opendns.com
   time: 2026-10-11T11:38:35.630643302Z
+- line:
+    host: resolver1-fs.opendns.com
+    addr: 208.67.222.123
+    extra_hosts: []
+  time: 2026-10-12T13:37:50.589480042Z
 - line:
     host: dns.opendns.com
     addr: 208.67.222.222
@@ -6826,32 +6588,27 @@
     host: cleanbrowsing.org
     addr: 208.167.248.121
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630643392Z
+  time: 2026-10-12T13:37:50.589480102Z
 - line:
     host: sea01.dnscry.pt
     addr: 209.182.225.103
     extra_hosts: []
   time: 2026-10-11T11:38:35.630643432Z
 - line:
-    host: dns.dyn1.de
-    addr: 209.208.26.145
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972673304Z
-- line:
     host: adguardhome.atakorah.com
     addr: 209.250.246.198
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630643482Z
+  time: 2026-10-12T13:37:50.589480173Z
 - line:
     host: dns.mnet-online.de
     addr: 212.18.0.5
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630643522Z
+  time: 2026-10-12T13:37:50.589480233Z
 - line:
     host: dns.mnet-online.de
     addr: 212.18.3.5
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630643572Z
+  time: 2026-10-12T13:37:50.589480303Z
 - line:
     host: doh.quickline.ch
     addr: 212.60.61.246
@@ -6860,25 +6617,15 @@
   time: 2026-10-11T11:38:35.630643612Z
 - line:
     host: doh.quickline.ch
-    addr: 212.60.61.246
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972673435Z
-- line:
-    host: doh.quickline.ch
     addr: 212.60.63.246
     extra_hosts:
         - dot.quickline.ch
   time: 2026-10-11T11:38:35.630643662Z
 - line:
-    host: doh.quickline.ch
-    addr: 212.60.63.246
-    extra_hosts: []
-  time: 2026-10-09T12:10:59.972673495Z
-- line:
     host: dns.comss.one
     addr: 212.109.195.93
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630643712Z
+  time: 2026-10-12T13:37:50.589480363Z
 - line:
     host: dns.peb-schmidt.de
     addr: 212.132.117.52
@@ -6893,7 +6640,7 @@
     host: dns.fehlsprache.de
     addr: 212.227.88.232
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630643843Z
+  time: 2026-10-12T13:37:50.589480433Z
 - line:
     host: dns.szpadel.ovh
     addr: 213.32.25.25
@@ -6903,12 +6650,12 @@
     host: doh.kooman.org
     addr: 213.136.13.36
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630643933Z
+  time: 2026-10-12T13:37:50.589480503Z
 - line:
     host: dnstls.mobik.com
     addr: 213.142.225.9
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630643983Z
+  time: 2026-10-12T13:37:50.589480563Z
 - line:
     host: dns.lars-lehmann.net
     addr: 213.155.91.68
@@ -6918,17 +6665,17 @@
     host: dns.csaonline.de
     addr: 213.166.247.100
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630644073Z
+  time: 2026-10-12T13:37:50.589480633Z
 - line:
     host: dns.beta.gandi.net
     addr: 213.167.231.6
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630644113Z
+  time: 2026-10-12T13:37:50.589480694Z
 - line:
     host: adguard.bonis.de
     addr: 213.183.86.9
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630644163Z
+  time: 2026-10-12T13:37:50.589480764Z
 - line:
     host: doh.sunoaki.net
     addr: 213.188.209.115
@@ -6948,7 +6695,7 @@
     host: ns2.opennameserver.org
     addr: 213.202.211.221
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630644343Z
+  time: 2026-10-12T13:37:50.589480824Z
 - line:
     host: dns.lgprk.com
     addr: 213.226.127.98
@@ -6968,17 +6715,23 @@
     host: zal01.dnscry.pt
     addr: 216.73.159.26
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630644524Z
+  time: 2026-10-12T13:37:50.589480894Z
 - line:
     host: den01.dnscry.pt
     addr: 216.120.201.105
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630644574Z
+  time: 2026-10-12T13:37:50.589480954Z
 - line:
     host: ca-yyc.doh.sb
     addr: 216.128.181.13
     extra_hosts: []
   time: 2026-10-11T11:38:35.630644614Z
+- line:
+    host: ca-yyc.doh.sb
+    addr: 216.128.181.13
+    extra_hosts:
+        - ca-yyz.doh.sb
+  time: 2026-10-12T13:37:50.589481024Z
 - line:
     host: vpsus3.pzhg.me
     addr: 216.189.147.50
@@ -6993,7 +6746,7 @@
     host: man01.dnscry.pt
     addr: 216.245.140.20
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630644754Z
+  time: 2026-10-12T13:37:50.589481084Z
 - line:
     host: hkg02.dnscry.pt
     addr: 216.250.97.148
@@ -7043,7 +6796,7 @@
     host: adguard.pggns.de
     addr: 217.154.148.131
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630645115Z
+  time: 2026-10-12T13:37:50.589481154Z
 - line:
     host: dnscache0.ns71.net
     addr: 217.154.173.29
@@ -7073,17 +6826,17 @@
     host: dns.aa.net.uk
     addr: 217.169.20.22
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630645385Z
+  time: 2026-10-12T13:37:50.589481224Z
 - line:
     host: dns.aa.net.uk
     addr: 217.169.20.23
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630645425Z
+  time: 2026-10-12T13:37:50.589481285Z
 - line:
     host: dns.artikel10.org
     addr: 217.197.91.153
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630645475Z
+  time: 2026-10-12T13:37:50.589481355Z
 - line:
     host: dns.reitmeier.me
     addr: 217.255.209.223
@@ -7103,12 +6856,12 @@
     host: 1.dns.noridev.moe
     addr: 220.77.190.196
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630645615Z
+  time: 2026-10-12T13:37:50.589481415Z
 - line:
     host: dns.ares-taiwan.com
     addr: 220.132.163.223
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630645655Z
+  time: 2026-10-12T13:37:50.589481485Z
 - line:
     host: ihctw.synology.me
     addr: 220.134.236.85
@@ -7118,7 +6871,7 @@
     host: dns.david888.com
     addr: 220.135.223.18
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630645745Z
+  time: 2026-10-12T13:37:50.589481545Z
 - line:
     host: pdns.itxe.net
     addr: 221.131.165.165
@@ -7128,129 +6881,7 @@
     host: agh.printk.info
     addr: 222.99.114.172
     extra_hosts: []
-  time: 2026-10-11T11:38:35.630645836Z
-- line:
-    host: dns.alidns.com
-    addr: 223.5.5.5
-    extra_hosts:
-        - dns008.alidns.com
-        - dns021.alidns.com
-        - dns027.alidns.com
-        - dns030.alidns.com
-        - dns033.alidns.com
-        - dns034.alidns.com
-        - dns036.alidns.com
-        - dns041.alidns.com
-        - dns047.alidns.com
-        - dns36.alidns.com
-        - dns49.alidns.com
-        - dns57.alidns.com
-        - dns59.alidns.com
-        - dns62.alidns.com
-        - dns8.alidns.com
-        - dnsad.alidns.com
-        - dnsak.alidns.com
-        - dnsap.alidns.com
-        - dnsaq.alidns.com
-        - dnsas.alidns.com
-        - dnsm.alidns.com
-        - ns006.alidns.com
-        - ns008.alidns.com
-        - ns033.alidns.com
-        - ns037.alidns.com
-        - ns04.alidns.com
-        - ns040.alidns.com
-        - ns048.alidns.com
-        - ns053.alidns.com
-        - ns057.alidns.com
-        - ns15.alidns.com
-        - ns27.alidns.com
-        - ns29.alidns.com
-        - ns3.alidns.com
-        - ns37.alidns.com
-        - ns54.alidns.com
-        - ns64.alidns.com
-        - nsas.alidns.com
-        - nsb.alidns.com
-        - nsf.alidns.com
-        - nso.alidns.com
-        - nsp.alidns.com
-        - vip001.alidns.com
-        - vip007.alidns.com
-        - vip009.alidns.com
-        - vip024.alidns.com
-        - vip029.alidns.com
-        - vip035.alidns.com
-        - vip041.alidns.com
-        - vip042.alidns.com
-        - vip048.alidns.com
-        - vip056.alidns.com
-        - vip060.alidns.com
-        - vip064.alidns.com
-        - vip13.alidns.com
-        - vip17.alidns.com
-        - vip48.alidns.com
-        - vip58.alidns.com
-        - vip63.alidns.com
-        - vipaa.alidns.com
-        - vipan.alidns.com
-        - vipap.alidns.com
-        - vipas.alidns.com
-        - vipau.alidns.com
-        - vipm.alidns.com
-        - vipt.alidns.com
-  time: 2026-10-08T12:19:30.760486926Z
-- line:
-    host: dns.alidns.com
-    addr: 223.5.5.5
-    extra_hosts:
-        - dns012.alidns.com
-        - dns018.alidns.com
-        - dns041.alidns.com
-        - dns047.alidns.com
-        - dns05.alidns.com
-        - dns34.alidns.com
-        - dns39.alidns.com
-        - dns60.alidns.com
-        - dnsah.alidns.com
-        - dnsar.alidns.com
-        - dnse.alidns.com
-        - dnsk.alidns.com
-        - dnsp.alidns.com
-        - dnsw.alidns.com
-        - ns005.alidns.com
-        - ns025.alidns.com
-        - ns027.alidns.com
-        - ns046.alidns.com
-        - ns10.alidns.com
-        - ns17.alidns.com
-        - ns19.alidns.com
-        - ns35.alidns.com
-        - ns5.alidns.com
-        - ns50.alidns.com
-        - ns61.alidns.com
-        - ns63.alidns.com
-        - nsaa.alidns.com
-        - nsk.alidns.com
-        - nsn.alidns.com
-        - nsq.alidns.com
-        - nsr.alidns.com
-        - vip.alidns.com
-        - vip001.alidns.com
-        - vip004.alidns.com
-        - vip033.alidns.com
-        - vip034.alidns.com
-        - vip04.alidns.com
-        - vip042.alidns.com
-        - vip054.alidns.com
-        - vip056.alidns.com
-        - vip057.alidns.com
-        - vip060.alidns.com
-        - vip14.alidns.com
-        - vip34.alidns.com
-        - vip52.alidns.com
-        - vipu.alidns.com
-  time: 2026-10-09T12:10:59.972675008Z
+  time: 2026-10-12T13:37:50.589481615Z
 - line:
     host: dns.alidns.com
     addr: 223.5.5.5
@@ -7802,126 +7433,69 @@
   time: 2026-10-11T11:38:35.630645886Z
 - line:
     host: dns.alidns.com
-    addr: 223.6.6.6
+    addr: 223.5.5.5
     extra_hosts:
-        - dns008.alidns.com
-        - dns021.alidns.com
-        - dns027.alidns.com
-        - dns030.alidns.com
-        - dns033.alidns.com
-        - dns034.alidns.com
-        - dns036.alidns.com
-        - dns041.alidns.com
-        - dns047.alidns.com
-        - dns36.alidns.com
-        - dns49.alidns.com
-        - dns57.alidns.com
-        - dns59.alidns.com
-        - dns62.alidns.com
-        - dns8.alidns.com
-        - dnsad.alidns.com
-        - dnsak.alidns.com
-        - dnsap.alidns.com
-        - dnsaq.alidns.com
-        - dnsas.alidns.com
-        - dnsm.alidns.com
-        - ns006.alidns.com
-        - ns008.alidns.com
-        - ns033.alidns.com
-        - ns037.alidns.com
-        - ns04.alidns.com
-        - ns040.alidns.com
-        - ns048.alidns.com
-        - ns053.alidns.com
-        - ns057.alidns.com
-        - ns15.alidns.com
-        - ns27.alidns.com
-        - ns29.alidns.com
-        - ns3.alidns.com
-        - ns37.alidns.com
-        - ns54.alidns.com
-        - ns64.alidns.com
-        - nsas.alidns.com
-        - nsb.alidns.com
-        - nsf.alidns.com
-        - nso.alidns.com
-        - nsp.alidns.com
-        - vip001.alidns.com
-        - vip007.alidns.com
-        - vip009.alidns.com
-        - vip024.alidns.com
-        - vip029.alidns.com
-        - vip035.alidns.com
-        - vip041.alidns.com
-        - vip042.alidns.com
-        - vip048.alidns.com
-        - vip056.alidns.com
-        - vip060.alidns.com
-        - vip064.alidns.com
-        - vip13.alidns.com
-        - vip17.alidns.com
-        - vip48.alidns.com
-        - vip58.alidns.com
-        - vip63.alidns.com
-        - vipaa.alidns.com
-        - vipan.alidns.com
-        - vipap.alidns.com
-        - vipas.alidns.com
-        - vipau.alidns.com
-        - vipm.alidns.com
-        - vipt.alidns.com
-  time: 2026-10-08T12:19:30.760486996Z
-- line:
-    host: dns.alidns.com
-    addr: 223.6.6.6
-    extra_hosts:
-        - dns012.alidns.com
-        - dns018.alidns.com
-        - dns041.alidns.com
-        - dns047.alidns.com
-        - dns05.alidns.com
+        - dns005.alidns.com
+        - dns009.alidns.com
+        - dns013.alidns.com
+        - dns017.alidns.com
+        - dns031.alidns.com
+        - dns035.alidns.com
+        - dns037.alidns.com
+        - dns04.alidns.com
+        - dns046.alidns.com
+        - dns056.alidns.com
+        - dns16.alidns.com
+        - dns27.alidns.com
+        - dns31.alidns.com
+        - dns33.alidns.com
         - dns34.alidns.com
-        - dns39.alidns.com
-        - dns60.alidns.com
-        - dnsah.alidns.com
-        - dnsar.alidns.com
-        - dnse.alidns.com
-        - dnsk.alidns.com
-        - dnsp.alidns.com
-        - dnsw.alidns.com
-        - ns005.alidns.com
-        - ns025.alidns.com
-        - ns027.alidns.com
-        - ns046.alidns.com
-        - ns10.alidns.com
-        - ns17.alidns.com
-        - ns19.alidns.com
-        - ns35.alidns.com
-        - ns5.alidns.com
-        - ns50.alidns.com
-        - ns61.alidns.com
-        - ns63.alidns.com
-        - nsaa.alidns.com
-        - nsk.alidns.com
-        - nsn.alidns.com
-        - nsq.alidns.com
-        - nsr.alidns.com
-        - vip.alidns.com
-        - vip001.alidns.com
-        - vip004.alidns.com
+        - dns35.alidns.com
+        - dns47.alidns.com
+        - dnsaa.alidns.com
+        - dnsc.alidns.com
+        - dnsi.alidns.com
+        - dnsv.alidns.com
+        - ns02.alidns.com
+        - ns022.alidns.com
+        - ns029.alidns.com
+        - ns032.alidns.com
+        - ns038.alidns.com
+        - ns059.alidns.com
+        - ns11.alidns.com
+        - ns14.alidns.com
+        - ns37.alidns.com
+        - ns49.alidns.com
+        - nsa.alidns.com
+        - nsae.alidns.com
+        - nsax.alidns.com
+        - nse.alidns.com
+        - vip015.alidns.com
+        - vip020.alidns.com
+        - vip021.alidns.com
+        - vip029.alidns.com
         - vip033.alidns.com
-        - vip034.alidns.com
-        - vip04.alidns.com
-        - vip042.alidns.com
-        - vip054.alidns.com
-        - vip056.alidns.com
-        - vip057.alidns.com
-        - vip060.alidns.com
-        - vip14.alidns.com
-        - vip34.alidns.com
-        - vip52.alidns.com
+        - vip038.alidns.com
+        - vip043.alidns.com
+        - vip061.alidns.com
+        - vip09.alidns.com
+        - vip13.alidns.com
+        - vip16.alidns.com
+        - vip32.alidns.com
+        - vip33.alidns.com
+        - vip43.alidns.com
+        - vip46.alidns.com
+        - vip50.alidns.com
+        - vip56.alidns.com
+        - vip63.alidns.com
+        - vipae.alidns.com
+        - vipaj.alidns.com
+        - vipas.alidns.com
+        - vipav.alidns.com
+        - vipc.alidns.com
+        - vipk.alidns.com
         - vipu.alidns.com
-  time: 2026-10-09T12:10:59.972675078Z
+  time: 2026-10-12T13:37:50.589481675Z
 - line:
     host: dns.alidns.com
     addr: 223.6.6.6
@@ -8471,3 +8045,68 @@
         - vipy.alidns.com
         - vipz.alidns.com
   time: 2026-10-11T11:38:35.630645926Z
+- line:
+    host: dns.alidns.com
+    addr: 223.6.6.6
+    extra_hosts:
+        - dns005.alidns.com
+        - dns009.alidns.com
+        - dns013.alidns.com
+        - dns017.alidns.com
+        - dns031.alidns.com
+        - dns035.alidns.com
+        - dns037.alidns.com
+        - dns04.alidns.com
+        - dns046.alidns.com
+        - dns056.alidns.com
+        - dns16.alidns.com
+        - dns27.alidns.com
+        - dns31.alidns.com
+        - dns33.alidns.com
+        - dns34.alidns.com
+        - dns35.alidns.com
+        - dns47.alidns.com
+        - dnsaa.alidns.com
+        - dnsc.alidns.com
+        - dnsi.alidns.com
+        - dnsv.alidns.com
+        - ns02.alidns.com
+        - ns022.alidns.com
+        - ns029.alidns.com
+        - ns032.alidns.com
+        - ns038.alidns.com
+        - ns059.alidns.com
+        - ns11.alidns.com
+        - ns14.alidns.com
+        - ns37.alidns.com
+        - ns49.alidns.com
+        - nsa.alidns.com
+        - nsae.alidns.com
+        - nsax.alidns.com
+        - nse.alidns.com
+        - vip015.alidns.com
+        - vip020.alidns.com
+        - vip021.alidns.com
+        - vip029.alidns.com
+        - vip033.alidns.com
+        - vip038.alidns.com
+        - vip043.alidns.com
+        - vip061.alidns.com
+        - vip09.alidns.com
+        - vip13.alidns.com
+        - vip16.alidns.com
+        - vip32.alidns.com
+        - vip33.alidns.com
+        - vip43.alidns.com
+        - vip46.alidns.com
+        - vip50.alidns.com
+        - vip56.alidns.com
+        - vip63.alidns.com
+        - vipae.alidns.com
+        - vipaj.alidns.com
+        - vipas.alidns.com
+        - vipav.alidns.com
+        - vipc.alidns.com
+        - vipk.alidns.com
+        - vipu.alidns.com
+  time: 2026-10-12T13:37:50.589481745Z
