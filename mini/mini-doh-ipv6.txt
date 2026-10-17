@@ -10,6 +10,7 @@
 2001:19f0:5c00:1819:ae1f:6bff:fef5:ff3a  # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2001:19f0:6401:b0b:5400:5ff:feb5:b25d    # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2001:19f0:7001:5e19:5400:2ff:fec8:7b5a   # chromium.dns.nextdns.io, firefox.dns.nextdns.io
+2001:19f0:ac01:170:5400:2ff:fec8:72c8    # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2001:1a88:10:ffff::1                     # doh.quickline.ch
 2001:1a88:10:ffff::2                     # doh.quickline.ch
 2001:4860:4860::64                       # dns64.dns.google
@@ -24,7 +25,7 @@
 2400:8901::2000:89ff:fe5c:96d3           # dns.bebasid.com, unfiltered.dns.bebasid.com
 2401:3bc0:b:2::2                         # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2401:c080:3000:29db:5400:4ff:fe27:6832   # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-2406:7540:1600:0:103:155:191:184         # dns.bebasid.com
+2406:7540:1600:0:103:155:191:184         # dns.bebasid.com, unfiltered.dns.bebasid.com
 2406:7540:2500:0:103:155:191:224         # dns.caliph.dev
 2408:4009:500::1                         # vip1.alidns.com
 2408:4009:500::2                         # vip2.alidns.com
@@ -40,7 +41,7 @@
 2408:4009:501::4                         # ns8.alidns.com
 240b:4006::9                             # vip9.alidns.com
 240b:4006::10                            # vip10.alidns.com
-2600:3c0c::2000:b3ff:fe8f:cbd9           # dns.bebasid.com
+2600:3c0c::2000:b3ff:fe8f:cbd9           # dns.bebasid.com, unfiltered.dns.bebasid.com
 2600:6c7f:f000:202::7                    # doh-01.spectrum.com
 2600:6c7f:f000:202::8                    # doh-02.spectrum.com
 2600:6c7f:f000:202::9                    # doh-03.spectrum.com
@@ -90,7 +91,6 @@
 2803:f800:53::8                          # dns.cloudflare.com
 2803:f800:54::1                          # odoh.cloudflare-dns.com
 2803:f800:54::2                          # dooh.cloudflare-dns.com
-2a00:11c0:39:353::3                      # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2a02:6b8::feed:ff                        # common.dot.dns.yandex.net
 2a02:6b8:0:1::feed:ff                    # common.dot.dns.yandex.net
 2a02:6ca3:0:1::2                         # dns.levonet.sk
@@ -101,7 +101,7 @@
 2a06:98c1:52::8                          # dns.cloudflare.com
 2a06:98c1:53::1                          # odoh.cloudflare-dns.com
 2a06:98c1:53::2                          # dooh.cloudflare-dns.com
-2a06:9f44:f3e0:b00b:beba::51d            # family-adblock.bebasid.com
+2a06:9f44:f3e0:b00b:beba::51d            # family-adblock.bebasid.com, internetsehat.bebasid.com
 2a07:e340::2                             # dns.mullvad.net
 2a07:e340::3                             # adblock.dns.mullvad.net
 2a07:e340::4                             # base.dns.mullvad.net
@@ -110,6 +110,6 @@
 2a07:e340::9                             # all.dns.mullvad.net
 2a09:8280:1::1:7432                      # max.rethinkdns.com
 2a0b:4341:b02:166:5054:ff:fe53:ab1       # chromium.dns.nextdns.io, firefox.dns.nextdns.io
-2a0e:6902:2002:12b:5054:ff:fed7:6b78     # chromium.dns.nextdns.io, firefox.dns.nextdns.io
+2a0e:6901:410:25:5054:ff:fe1c:7c81       # chromium.dns.nextdns.io, firefox.dns.nextdns.io
 2a10:50c0::ad1:ff                        # dns.adguard.com
 2a10:50c0::ad2:ff                        # dns.adguard.com
