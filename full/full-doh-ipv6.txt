@@ -15,7 +15,7 @@
 2001:470:1f23:139::b:b                   # mru02.dnscry.pt
 2001:470:f829:8593:3::7                  # doh.max.net.id
 2001:558:fd00:ca::5                      # doh.xfinity.com, doh2.gslb2.xfinity.com
-2001:558:fd00:ca::a                      # doh.xfinity.com, doh2.gslb2.xfinity.com
+2001:558:fd00:ca::a                      # doh.xfinity.com
 2001:558:fe21:6b:96:113:151:145          # dot.xfinity.com
 2001:578:3f::30                          # doh.cox.net, dot.cox.net
 2001:620:0:ff::2                         # dns.switch.ch
@@ -52,9 +52,9 @@
 2001:8d8:100f:f000::200                  # project-evoex.de
 2001:910:800::12                         # ns0.fdn.fr
 2001:910:800::40                         # ns1.fdn.fr
-2001:9e8:4003:976a:6b4:feff:fe9b:eb1d    # area51.mywire.org
 2001:9e8:4003:ad3d:6b4:feff:fe9b:eb1d    # area51.mywire.org
 2001:9e8:4003:c367:6b4:feff:fe9b:eb1d    # area51.mywire.org
+2001:9e8:4003:dded:6b4:feff:fe9b:eb1d    # area51.mywire.org
 2001:9e8:4039:7761:21a:8cff:fe43:9654    # adguard.bitteeinbyte.de
 2001:a18:1::29                           # dnspub.restena.lu
 2001:a60::53:1                           # dns.mnet-online.de
@@ -80,10 +80,8 @@
 2001:148f:ffff::1                        # odvr.nic.cz
 2001:19f0:5:3bd7:5400:4ff:fe05:da83      # kronos.plan9-dns.com
 2001:19f0:5:6d5c:5400:2ff:feed:db51      # adguard1.jsanagustin.net
-2001:19f0:6401:b0b:5400:5ff:feb5:b25d    # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
-2001:19f0:6c01:2f4b:5400:3ff:fed9:e6d6   # dns.smartguard.io
+2001:19f0:6401:b0b:5400:5ff:feb5:b25d    # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io
 2001:19f0:7002:cf2:5400:4ff:fe4a:f0f0    # dns.fullaccesstointernet.jp.eu.org
-2001:19f0:8001:1e9d:5400:2ff:fec8:70cf   # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2001:19f0:9002:de4:5400:4ff:fe08:7de3    # pluton.plan9-dns.com
 2001:19f0:ac01:170:5400:2ff:fec8:72c8    # steering.nextdns.io
 2001:19f0:b001:322:5400:2ff:fe2b:4238    # tor.vasi.li
@@ -110,8 +108,8 @@
 2001:4610:a:1ef::b767                    # dandelionsprout.asuscomm.com
 2001:4860:4860::64                       # dns64.dns.google
 2001:4860:4860::6464                     # dns64.dns.google
-2001:4860:4860::8844                     # 8888.google, google-public-dns-b.google.com
-2001:4860:4860::8888                     # 8888.google
+2001:4860:4860::8844                     # 8888.google, dns.google, dns.google.com, google-public-dns-b.google.com
+2001:4860:4860::8888                     # 8888.google, dns.google, dns.google.com, google-public-dns-a.google.com
 2001:4b98:dc2:41:216:3eff:fe16:1080      # dns.hostux.net
 2001:4b98:dc2:41:216:3eff:fe25:d0f0      # dns.hostux.net
 2001:4b98:dc2:41:216:3eff:fece:3e55      # dns.hostux.net
@@ -130,14 +128,14 @@
 2003:180:2:1000:0:4:0:53                 # dns.telekom.de
 2003:180:2:4000:0:4:0:53                 # dns.telekom.de
 2003:180:2:7000:0:4:0:53                 # dns.telekom.de
-2003:180:2:8100:0:4:0:53                 # dns.telekom.de
 2003:180:2:b000:0:4:0:53                 # dns.telekom.de
 2400:3200::1                             # dns.alidns.com, dns009.alidns.com, dns013.alidns.com, dns014.alidns.com, dns023.alidns.com, dns027.alidns.com, dns03.alidns.com, dns035.alidns.com, dns046.alidns.com, dns051.alidns.com, dns052.alidns.com, dns053.alidns.com, dns054.alidns.com, dns057.alidns.com, dns060.alidns.com, dns062.alidns.com, dns064.alidns.com, dns07.alidns.com, dns09.alidns.com, dns1.alidns.com, dns11.alidns.com, dns13.alidns.com, dns17.alidns.com, dns19.alidns.com, dns22.alidns.com, dns23.alidns.com, dns24.alidns.com, dns26.alidns.com, dns3.alidns.com, dns35.alidns.com, dns38.alidns.com, dns45.alidns.com, dns49.alidns.com, dns5.alidns.com, dns50.alidns.com, dns51.alidns.com, dns6.alidns.com, dns62.alidns.com, dns64.alidns.com, dnsaa.alidns.com, dnsac.alidns.com, dnsad.alidns.com, dnsaf.alidns.com, dnsai.alidns.com, dnsar.alidns.com, dnsau.alidns.com, dnse.alidns.com, dnsf.alidns.com, dnsg.alidns.com, dnsi.alidns.com, dnsn.alidns.com, dnsp.alidns.com, dnsr.alidns.com, dnsu.alidns.com, dnsw.alidns.com, ns003.alidns.com, ns006.alidns.com, ns009.alidns.com, ns012.alidns.com, ns018.alidns.com, ns023.alidns.com, ns024.alidns.com, ns025.alidns.com, ns029.alidns.com, ns03.alidns.com, ns030.alidns.com, ns031.alidns.com, ns035.alidns.com, ns037.alidns.com, ns038.alidns.com, ns046.alidns.com, ns05.alidns.com, ns058.alidns.com, ns061.alidns.com, ns09.alidns.com, ns13.alidns.com, ns17.alidns.com, ns21.alidns.com, ns25.alidns.com, ns27.alidns.com, ns30.alidns.com, ns31.alidns.com, ns32.alidns.com, ns35.alidns.com, ns36.alidns.com, ns43.alidns.com, ns50.alidns.com, ns55.alidns.com, nsa.alidns.com, nsaf.alidns.com, nsam.alidns.com, nsan.alidns.com, nsao.alidns.com, nsar.alidns.com, nsas.alidns.com, nsax.alidns.com, nsb.alidns.com, nsm.alidns.com, nsp.alidns.com, nsx.alidns.com, nsy.alidns.com, vip002.alidns.com, vip007.alidns.com, vip010.alidns.com, vip011.alidns.com, vip012.alidns.com, vip015.alidns.com, vip017.alidns.com, vip019.alidns.com, vip020.alidns.com, vip026.alidns.com, vip03.alidns.com, vip030.alidns.com, vip035.alidns.com, vip036.alidns.com, vip038.alidns.com, vip041.alidns.com, vip044.alidns.com, vip045.alidns.com, vip046.alidns.com, vip047.alidns.com, vip052.alidns.com, vip059.alidns.com, vip060.alidns.com, vip063.alidns.com, vip08.alidns.com, vip11.alidns.com, vip15.alidns.com, vip16.alidns.com, vip17.alidns.com, vip20.alidns.com, vip34.alidns.com, vip36.alidns.com, vip46.alidns.com, vip50.alidns.com, vip52.alidns.com, vip61.alidns.com, vip64.alidns.com, vipaa.alidns.com, vipab.alidns.com, vipae.alidns.com, vipaf.alidns.com, vipag.alidns.com, vipal.alidns.com, vipau.alidns.com, vipav.alidns.com, vipax.alidns.com, vipd.alidns.com, vipg.alidns.com, vipl.alidns.com, vipn.alidns.com, vipq.alidns.com, vipv.alidns.com, vipx.alidns.com
 2400:3200:2000:10::1                     # vip21.alidns.com
 2400:3200:2000:11::1                     # vip22.alidns.com
 2400:3200:baba::1                        # dns.alidns.com, dns009.alidns.com, dns013.alidns.com, dns014.alidns.com, dns023.alidns.com, dns027.alidns.com, dns03.alidns.com, dns035.alidns.com, dns046.alidns.com, dns051.alidns.com, dns052.alidns.com, dns053.alidns.com, dns054.alidns.com, dns057.alidns.com, dns060.alidns.com, dns062.alidns.com, dns064.alidns.com, dns07.alidns.com, dns09.alidns.com, dns1.alidns.com, dns11.alidns.com, dns13.alidns.com, dns17.alidns.com, dns19.alidns.com, dns22.alidns.com, dns23.alidns.com, dns24.alidns.com, dns26.alidns.com, dns3.alidns.com, dns35.alidns.com, dns38.alidns.com, dns45.alidns.com, dns49.alidns.com, dns5.alidns.com, dns50.alidns.com, dns51.alidns.com, dns6.alidns.com, dns62.alidns.com, dns64.alidns.com, dnsaa.alidns.com, dnsac.alidns.com, dnsad.alidns.com, dnsaf.alidns.com, dnsai.alidns.com, dnsar.alidns.com, dnsau.alidns.com, dnse.alidns.com, dnsf.alidns.com, dnsg.alidns.com, dnsi.alidns.com, dnsn.alidns.com, dnsp.alidns.com, dnsr.alidns.com, dnsu.alidns.com, dnsw.alidns.com, ns003.alidns.com, ns006.alidns.com, ns009.alidns.com, ns012.alidns.com, ns018.alidns.com, ns023.alidns.com, ns024.alidns.com, ns025.alidns.com, ns029.alidns.com, ns03.alidns.com, ns030.alidns.com, ns031.alidns.com, ns035.alidns.com, ns037.alidns.com, ns038.alidns.com, ns046.alidns.com, ns05.alidns.com, ns058.alidns.com, ns061.alidns.com, ns09.alidns.com, ns13.alidns.com, ns17.alidns.com, ns21.alidns.com, ns25.alidns.com, ns27.alidns.com, ns30.alidns.com, ns31.alidns.com, ns32.alidns.com, ns35.alidns.com, ns36.alidns.com, ns43.alidns.com, ns50.alidns.com, ns55.alidns.com, nsa.alidns.com, nsaf.alidns.com, nsam.alidns.com, nsan.alidns.com, nsao.alidns.com, nsar.alidns.com, nsas.alidns.com, nsax.alidns.com, nsb.alidns.com, nsm.alidns.com, nsp.alidns.com, nsx.alidns.com, nsy.alidns.com, vip002.alidns.com, vip007.alidns.com, vip010.alidns.com, vip011.alidns.com, vip012.alidns.com, vip015.alidns.com, vip017.alidns.com, vip019.alidns.com, vip020.alidns.com, vip026.alidns.com, vip03.alidns.com, vip030.alidns.com, vip035.alidns.com, vip036.alidns.com, vip038.alidns.com, vip041.alidns.com, vip044.alidns.com, vip045.alidns.com, vip046.alidns.com, vip047.alidns.com, vip052.alidns.com, vip059.alidns.com, vip060.alidns.com, vip063.alidns.com, vip08.alidns.com, vip11.alidns.com, vip15.alidns.com, vip16.alidns.com, vip17.alidns.com, vip20.alidns.com, vip34.alidns.com, vip36.alidns.com, vip46.alidns.com, vip50.alidns.com, vip52.alidns.com, vip61.alidns.com, vip64.alidns.com, vipaa.alidns.com, vipab.alidns.com, vipae.alidns.com, vipaf.alidns.com, vipag.alidns.com, vipal.alidns.com, vipau.alidns.com, vipav.alidns.com, vipax.alidns.com, vipd.alidns.com, vipg.alidns.com, vipl.alidns.com, vipn.alidns.com, vipq.alidns.com, vipv.alidns.com, vipx.alidns.com
 2400:4052:3a00:d900:be24:11ff:fe2b:c18b  # dns.soldier.terumi.club
-2400:52e0:1a05::1120:1                   # doh2.b-cdn.net
+2400:52e0:1a00::1070:1                   # doh1.b-cdn.net
+2400:52e0:1a00::1232:1                   # doh2.b-cdn.net
 2400:52e0:1a05::1431:1                   # doh1.b-cdn.net, doh2.b-cdn.net
 2400:6180:0:d0::f7:1001                  # sg-dns1.bancuh.com
 2400:6180:0:d0::5f73:4001                # doh.tiar.app, dot.tiar.app
@@ -167,7 +165,7 @@
 2402:f000:1:416:101:6:6:6                # dns.tuna.tsinghua.edu.cn
 2403:2c80::26                            # hk-hkg.doh.sb
 2403:3a00:101:21:49:212:235:34           # dns.auapi.fun, moamao.shop
-2403:3a00:101:21:49:212:235:44           # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top, dns.vod11.xyz, doh.sublime9.xyz, lifeisa.live, pepetio.xyz
+2403:3a00:101:21:49:212:235:44           # dns.butterfly87.sbs, dns.f97.xyz, dns.lsho.top, dns.vod11.xyz, doh.sublime9.xyz, pepetio.xyz
 2403:3a00:107:29:133:167:212:21          # adfiltro.fun, alleesph.online, doh.cnetwork.cloud
 2403:3a00:107:29:133:167:212:22          # 3jjxxl.tech, callies-online.site, cloudbenders.fun, d2.shabi.icu, greatideasforlife.lol, kavkaz.monster, najiakeji.top, nanopi.cybergroove.net, polisitogel.beauty, polisitogel.hair, qqmcfw.tech, xbcpb668.com
 2403:3a00:201:17:112:78:125:221          # himedns.com, sg.yepdns.com
@@ -253,7 +251,7 @@
 2602:f7f8:b:401::a                       # mia01.dnscry.pt
 2602:f953:6:25::a                        # ott01.dnscry.pt
 2602:f964:1:24::a                        # grr01.dnscry.pt
-2602:f992:e0:c0::2                       # dns.furrix.zone, dns.marbledfennec.net
+2602:f992:e0:c0::2                       # dns.furrix.zone, dns.marbledfennec.net, multi.dns.marbledfennec.net
 2602:f992:ec:1::2                        # dns.furrix.zone, dns.marbledfennec.net
 2602:f9f3:0:2::193                       # iah01.dnscry.pt
 2602:fa08:5::75                          # bom02.dnscry.pt
@@ -274,6 +272,7 @@
 2602:ffbb:100:4::2                       # doh.dns.sb, us-chi.doh.sb
 2603:c020:5:3566:beef:beef:beef:beef     # dns.ofdoom.net
 2603:c020:4000:3d34:6160:20db:353b:24d3  # o.rsaikat.com
+2603:c020:4002:be00:780d:ac99:b43f:299a  # dns.stevenz.net, doh.sz-dns.com
 2603:c020:4023:6701:0:bd8:1e0b:6001      # dns.listo.click
 2603:c020:800b:ac01:848b:d155:8652:cd03  # dns.almir1904.eu
 2603:c020:800f:c5af:9fd:880f:6224:4cd4   # ad.tzockt.beer
@@ -310,8 +309,9 @@
 2605:80:8:8::                            # ag.ff0x.ca
 2605:380:58:554::1                       # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2605:3a40:3::17e                         # us-nyc.doh.sb
+2605:6f01:2000:12c::232                  # dns.stevenz.net, doh.sz-dns.com
 2605:fa80:1:17::a                        # ind01.dnscry.pt
-2606:1a40::11                            # family.freedns.controld.com, freedns.controld.com, p1.freedns.controld.com, p2.freedns.controld.com, uncensored.freedns.controld.com
+2606:1a40::11                            # family.freedns.controld.com, freedns.controld.com, p0.freedns.controld.com, p1.freedns.controld.com, p2.freedns.controld.com, p3.freedns.controld.com, uncensored.freedns.controld.com
 2606:1a40::22                            # dns.controld.com
 2606:2040:140:131::2                     # ada.openbld.net
 2606:2040:1800:bb::2                     # ada.openbld.net
@@ -331,6 +331,7 @@
 2606:6080:2001:10c5::a                   # pidoh.mapledns.net
 2606:65c0:10:20e:1621:d963:131c:bd4c     # las01.dnscry.pt
 2606:65c0:40:4:5f3:54c4:8d10:9b98        # dtw01.dnscry.pt
+2606:6680:27:1::2fa1:9182                # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2606:6680:29:1::5859:a37b                # fnt01.dnscry.pt
 2606:6680:35:1::506d:8ce2                # sjc01.dnscry.pt
 2606:6680:37:1::c984:4ba3                # bei01.dnscry.pt
@@ -376,7 +377,7 @@
 2620:10a:80bc::10                        # private.canadianshield.cira.ca
 2620:10a:80bc::20                        # protected.canadianshield.cira.ca
 2620:10a:80bc::30                        # family.canadianshield.cira.ca
-2620:119:35::35                          # dns.opendns.com, dns.umbrella.com
+2620:119:35::35                          # dns.opendns.com, dns.umbrella.com, resolver1.opendns.com
 2620:119:35::123                         # familyshield.opendns.com
 2620:119:53::53                          # dns.opendns.com, dns.umbrella.com, resolver2.opendns.com
 2620:119:53::123                         # familyshield.opendns.com
@@ -388,8 +389,26 @@
 2620:149:9cc::12                         # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2620:149:9cc::13                         # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2620:149:9cc::15                         # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+2620:149:a08:3000::42                    # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+2620:149:a08:4000::42                    # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2620:149:a0c:3000::1c2                   # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2620:149:a0c:4000::1c2                   # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+2620:149:a25:3000::52                    # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+2620:149:a25:4000::52                    # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
+2620:149:a42:980::9                      # mask-api.icloud.com
+2620:149:a42:980::11                     # mask-api.icloud.com
+2620:149:a42:980::2:4                    # mask-api.icloud.com
+2620:149:a42:980::2:6                    # mask-api.icloud.com
+2620:149:a42:a03::4                      # mask-h2.icloud.com
+2620:149:a42:a03::7                      # mask-h2.icloud.com, mask.icloud.com
+2620:149:a42:a03::a                      # mask.icloud.com
+2620:149:a42:a04::4                      # mask-h2.icloud.com
+2620:149:a42:a04::6                      # mask.icloud.com
+2620:149:a42:a04::8                      # mask.icloud.com
+2620:149:a42:a05::4                      # mask-h2.icloud.com
+2620:149:a42:a05::7                      # mask-h2.icloud.com
+2620:149:a42:a05::8                      # mask.icloud.com
+2620:149:a42:aff::2:1                    # mask-api.icloud.com
 2620:149:a43:200::6                      # mask-h2.icloud.com
 2620:149:a43:200::7                      # mask-h2.icloud.com
 2620:149:a43:200::a                      # mask-h2.icloud.com
@@ -399,26 +418,27 @@
 2620:149:a43:20a::8                      # mask-h2.icloud.com
 2620:149:a43:20a::a                      # mask-h2.icloud.com
 2620:149:a43:304::4                      # mask.icloud.com
-2620:149:a43:304::5                      # mask-h2.icloud.com, mask.icloud.com
-2620:149:a43:304::6                      # mask-h2.icloud.com, mask.icloud.com
-2620:149:a43:304::7                      # mask-h2.icloud.com
+2620:149:a43:304::5                      # mask.icloud.com
+2620:149:a43:304::6                      # mask-h2.icloud.com
 2620:149:a43:305::12                     # mask-h2.icloud.com, mask.icloud.com
-2620:149:a43:305::13                     # mask.icloud.com
 2620:149:a43:308::12                     # mask-h2.icloud.com
 2620:149:a43:308::13                     # mask.icloud.com
 2620:149:a43:309::4                      # mask-h2.icloud.com
 2620:149:a43:309::5                      # mask-h2.icloud.com, mask.icloud.com
-2620:149:a43:309::6                      # mask-h2.icloud.com, mask.icloud.com
+2620:149:a43:309::6                      # mask-h2.icloud.com
 2620:149:a43:309::7                      # mask-h2.icloud.com, mask.icloud.com
-2620:149:a43:309::8                      # mask-h2.icloud.com, mask.icloud.com
 2620:149:a43:309::9                      # mask-h2.icloud.com, mask.icloud.com
 2620:149:a43:380::8                      # mask-api.icloud.com
 2620:149:a43:380::2:1                    # mask-api.icloud.com
 2620:149:a43:380::2:4                    # mask-api.icloud.com
 2620:149:a43:380:8::1                    # mask-api.icloud.com
-2620:149:a43:4ff::7                      # mask-api.icloud.com
+2620:149:1363::b                         # mask-api.icloud.com
+2620:149:1363:1::7                       # mask-h2.icloud.com, mask.icloud.com
+2620:149:1363:1::d                       # mask-h2.icloud.com
+2620:149:1363:1::e                       # mask-h2.icloud.com
+2620:149:1363:2::9                       # mask.icloud.com
+2620:149:1363:2::f                       # mask.icloud.com
 2620:149:136b:2::e                       # mask.icloud.com
-2620:149:136b:2::f                       # mask-h2.icloud.com
 2620:171:80c::1                          # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2620:171:80d::1                          # doh.dns.apple.com, doh.dns.apple.com.v.aaplimg.com
 2803:f800:53::3                          # chrome.cloudflare-dns.com
@@ -519,6 +539,7 @@
 2a01:4f9:3100:3b2b:0:a:0:21              # dns.envs.net
 2a01:4f9:c010:2b9f::2                    # fuchur.pentament.de
 2a01:4f9:c010:9863::1                    # resolver-eu.haringstad.com
+2a01:4f9:c010:d7f4::1                    # dns.anon.no
 2a01:4f9:c010:e00e::2                    # dns.vaioswolke.xyz
 2a01:4f9:c011:aa31::1                    # kids.ns.nwps.fi
 2a01:4f9:c011:addc::1                    # dns.braene.com
@@ -603,7 +624,6 @@
 2a03:94e0:1804::1                        # ns4.opennameserver.org
 2a03:94e0:271f::5b1                      # trf01.dnscry.pt
 2a03:94e3:222b::1032                     # ams01.dnscry.pt
-2a03:94e3:2317::                         # dns.anon.no
 2a03:b0c0:1:d0::ebe:d001                 # doh.dnscrypt.uk
 2a03:b0c0:3:d0::2b46:d001                # c.cicitt.ch
 2a03:c7c0:52:2641:180::13                # mad01.dnscry.pt
@@ -665,7 +685,7 @@
 2a07:e340::6                             # family.dns.mullvad.net
 2a07:e340::9                             # all.dns.mullvad.net
 2a07:efc0:1001:a5ce::b4b4                # ams02.dnscry.pt
-2a09::                                   # dns.sb, doh.sb
+2a09::                                   # dns.sb, doh.sb, public-dns-a.dns.sb
 2a09:0:1:a::a                            # de-fra.doh.sb
 2a09:0:8::15                             # de-dus.doh.sb
 2a09:0:11::5                             # uk-lon.doh.sb
@@ -695,7 +715,7 @@
 2a0c:8fc0:1749:66:18::16                 # muc01.dnscry.pt
 2a0c:8fc1:6441::412:ab34                 # tyo01.dnscry.pt
 2a0c:9a40:8f40:0:207:180:3:189           # sao01.dnscry.pt
-2a0c:9a40:e100::53                       # dns.dremaxx.de, open.dns.dremaxx.com
+2a0c:9a40:e100::53                       # dns.dremaxx.de
 2a0c:9a40:e100::f53                      # family.dns.dremaxx.com
 2a0c:9a40:e101::53                       # dns.dremaxx.de, open.dns.dremaxx.com
 2a0c:9a40:e101::f53                      # family.dns.dremaxx.com
@@ -710,7 +730,7 @@
 2a0d:d8c0:0:f043::6927                   # cvt01.dnscry.pt
 2a0d:d900:110::                          # dus03.dnscry.pt
 2a0d:f302:110:6517::1                    # vie01.dnscry.pt
-2a0e:6901:201:6:5054:ff:fe21:a3b5        # chromium.dns.nextdns.io, dns.nextdns.io, dns2.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
+2a0e:6901:301:a:5054:ff:fe14:4256        # chromium.dns.nextdns.io, dns.nextdns.io, dns1.nextdns.io, firefox.dns.nextdns.io, steering.nextdns.io
 2a0e:6901:410:25:5054:ff:fe1c:7c81       # steering.nextdns.io
 2a0e:6a80:3:669::                        # fra01.dnscry.pt
 2a0e:97c0:38f::2                         # dns.home.daniil.it
